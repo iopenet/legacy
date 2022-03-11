@@ -1,0 +1,387 @@
+/*
+ * Theme XCL DEFAULT
+ * @version   2.3.1
+ * @author    Nuno Luciano ( https://github.com/gigamaster )
+ * @copyright 2005-2022 The XOOPSCube Project
+*  @license   https://github.com/xoopscube/xcl/blob/master/BSD_license.txt
+ * @link      https://github.com/xoopscube
+ */
+
+/* -------------------- -------------------- UI-DEV-MODE */
+/* 	TODO : Toggle display block - none */
+
+.ui-dev-mode {
+    background          : rgb(10, 10, 10);
+    color               : rgb(0, 204, 255);
+    font-size           : 12px;
+    display             : var(--dev-mode);
+}
+.dev-mode{ border: 1px solid rgb(0, 204, 255);}
+
+/* -------------------- -------------------- MODULES */
+
+.activity {
+    font-size: var(--font-14);
+}
+.avatar { margin: 0 .5em; vertical-align: bottom;}
+
+.map-box {
+    width: 90%;
+}
+.user-x { color: #ff2e2e
+}
+
+.user-photo{
+    background          : var(--color-3);
+}
+
+.user-tumb{
+    width               : 6em;
+    height              : 6em;
+    padding             : 0;
+    display             : table-cell;
+    text-align          : center;
+    margin              : 0 auto;
+    border-radius       : var(--border-radius);
+}
+
+/* -------------------- -------------------- CKEDITOR */
+
+textarea.cke_source {
+background-color: #111 !important;
+}
+
+
+
+/* -------------------- -------------------- FORUM */
+#top-message,
+.top-category,
+.category-top-forums,
+.category-top,
+
+#forum-topics {
+    background          : none; /* var(--color-2); */
+    border              : var(--border);
+    border-radius       : var(--border-radius);
+    padding             : var(--space-4);
+}
+.subcategories {}
+
+.category-desc {}
+.subcategory-desc{}
+.forum-description {}
+
+.activity {
+    background: var(--color-2);
+    border-radius:var(--border-radius);
+}
+.d3f_wrap {
+
+}
+ul.d3f_eachbranch {
+    list-style-type:none;
+}
+
+.topic-title {
+    border-bottom : var(--border);
+}
+
+.post {
+    margin-bottom: 1em;
+}
+.post-author {
+    /*border:1px dotted cyan;*/
+    font-size: var(--font-14);
+    min-width: 20%;
+}
+.iteminfo {
+
+}
+.post-title > h3 {
+    margin: 1em auto .5em;
+}
+.post-content {
+    background: var(--bg-linear);
+    border-radius: var(--border-radius);
+    border: var(--border);
+    padding: var(--space-6);
+    border:1px dotted dodgerblue;
+}
+
+.preview-post {
+  background: var(--bg-linear) ;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+:is(section.top-category) :is(h3) {
+    color: var(--blue-2);
+    text-transform :uppercase;
+    font-size: 14px;
+    margin: .5em 0;
+}
+:is(section.top-category) :is(h4) {
+    background: var(--bg-linear);
+}
+
+
+/* Forum Activity */
+:is(footer.activity) :is(div) {
+    color: var(--body-color);
+    margin: auto .25em;
+}
+
+
+
+
+
+
+.block-login .ssl {
+    font-size: var(--font-16);
+}
+/* class = "pagenavi pagination" */
+/* a href=' « ' + a href ' 1 ' +  <strong>(2)<s/strong> */
+.pagenavi, .pagination {
+    text-align: center;
+    margin-top: var(--space-7);
+}
+.pagenavi a {
+    background: var(--button-bg);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: var(--space-2) var(--space-4);
+}
+.pagenavi a:hover {
+    background: var(--ui-state-hover-bg);
+    border: var(--ui-state-hover-border);
+    color: var(--ui-state-hover-color);
+}
+
+/* -------------------- -------------------- Message */
+/* Mail tab active overrides the default properties */
+.mail-tab-active {
+    background: var(--tab-bg-on) !important;
+    /*border: 1px solid var(--link-hover) !important;*/
+    color: var(--tab-color-on) !important;
+}
+.mail-list-item {
+    border-bottom: 1px solid hsl(219, 17%, 21%);
+}
+.mail-list-avatar {
+    border-radius: 50%;
+    height: 20px;
+    margin: auto .25em;
+    width: 20px;
+    vertical-align: -0.125em;
+}
+.mail-list-author {
+   width: 200px;
+}
+.mail-list-subject {
+    font-size: var(--font-14);
+}
+.mail-list-date {
+    font-size: small;
+}
+
+/* -------------------- -------------------- Pico form content filters */
+
+ul.content-filter,
+ul.layout-list {
+    list-style-type     : none;
+    display             : block;
+    flex-basis: auto;
+    margin              : 0 0 .25em;
+    padding             : .25em;
+}
+ul.layout-list li {
+    margin              : .15em;
+    /*white-space         : nowrap;*/
+    /*overflow            : hidden;*/
+    /*text-overflow       : ellipsis;*/
+}
+
+/* -------------------- -------------------- THEME STYLE GUIDE */
+
+.component {
+    margin-bottom       : 2rem;
+    gap                 : 2rem;
+}
+
+.component-ref {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: var(--bg-linear);
+    border-left: var(--border);
+}
+.component-ref li {
+    margin-bottom: var(--space-2);
+    padding: var(--space-2) var(--space-6);
+}
+.component-ref li:hover {
+    background: var(--color-2);
+    border-color:var(--blue-2)
+}
+
+
+/* Dialog Help */
+#help-data {
+    display:block;
+}
+.xcl-progress-loading {
+    width: 70%;
+    margin:25% auto;
+    height: 1.5em;
+    border-radius: 5px;
+    border: 1px solid;
+    color: rgba(25, 100, 190, 0.74);
+    outline: 1px solid transparent;
+}
+.xcl-progress-loading {
+    -webkit-filter: drop-shadow(0.2em 0.2em 0.2em rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0.2em 0.2em 0.2em rgba(0, 0, 0, 0.5));
+}
+.xcl-progress-loading:before, .xcl-progress-loading:after {
+    content: '';
+    top: .2em;
+    left: .2em;
+    right: .2em;
+    bottom: .2em;
+    border-radius: .25em;
+    display: block;
+    position: absolute;
+    overflow: hidden;
+}
+.xcl-progress-loading:after {
+    right: 100%;
+    -webkit-animation: xcLoaderBarInfine 10s infinite linear, xcLoaderBarScroll 3s infinite linear;
+    animation: xcLoaderBarInfine 10s infinite linear, xcLoaderBarScroll 3s infinite linear;
+    box-shadow: inset 0 0.5em 0.5em rgba(25, 100, 190, 0.25), inset 0 -0.5em 0.5em rgba(8, 30, 63, 0.5);
+    background-image: repeating-linear-gradient(45deg, rgb(8, 55, 86) 0px, rgb(8, 55, 86) 4px, rgb(19, 109, 151) 5px, rgb(19, 109, 151) 9px);
+    background-size: 27px 13px;
+}
+
+/* XelFinder */
+
+.xelfinder a > svg[class^="button-"] {
+    background  : transparent;
+    transition  : 0.5s ease;
+}
+.xelfinder a:hover > svg[class^="button-"],
+.xelfinder a:active > svg[class^="button-"] {
+    background  : transparent;
+    color : var(--link-hover);
+}
+.xelfinder a > .button-blue {color: #027dde;}
+.xelfinder a > .button-green {color: #528742;}
+.xelfinder a > .button-orange {color: #f0aa15;}
+
+
+#iframe-xelfinder {border : none}
+
+#iframe-api {border : none}
+
+.modal-view {
+    z-index:300;
+    display:none;
+    padding-top:0;
+    position:fixed;
+    left:0;
+    top:0;
+
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height: 100%;
+    overflow:auto;
+    background-color:rgba(21,25,27,.8);
+    overscroll-behavior: contain;
+}
+.modal-show {
+    display : flex
+}
+
+.modal-close {
+    background      : var(--button-bg);
+    border          : var(--button-border);
+    border-radius   : var(--button-radius);
+    box-shadow      : var(--button-shadow);
+    color           : var(--button-color);
+    cursor          : pointer;
+    padding         : var(--space-2) var(--space-4);
+    position        : inherit;
+    right           : 5%;
+    top             : 5px;
+    transition      : var(--button-transition);
+}
+.modal-close:hover {
+    background      : var(--button-bg-on);
+    border          : var(--button-border-on);
+    box-shadow      : var(--button-shadow-on);
+    color           : var(--button-color-on);
+}
+
+body.no-scroll {
+    /*height: 100vh;*/
+    /*overflow-y: hidden;*/
+    /*position    : fixed;*/
+    /*width       : 100%;*/
+    /*top         : 0;*/
+    /*left        : 0;*/
+}
+
+
+
+
+#ui-scroll-top {
+    /*background-color: #1f242d;*/
+    background: linear-gradient(145deg, hsl(220, 15%, 15%), hsl(220, 21%, 15%));
+    border-radius: var(--border-radius);
+    bottom: 30px;
+    /*box-shadow: 0 5px 5px hsl(210deg 10% 12% / 90%);*/
+    box-shadow: 5px 5px 10px #1a1e25, -5px -5px 10px #2c323d;
+    display: inline-block;
+    height: 50px;
+    opacity: 0;
+    position: fixed;
+    right: 30px;
+    text-align: center;
+    transition: background-color .3s,
+                box-shadow ease .3s,
+                opacity .5s,
+                visibility .5s;
+    visibility: hidden;
+    width: 50px;
+    z-index: 1000;
+
+}
+#ui-scroll-top::after {
+    content: "\21EA";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #face74;
+}
+#ui-scroll-top:hover {
+    background: #333;
+    box-shadow: inset 5px 5px 8px 1px rgba(0, 0, 0, 0.2),6px 6px 15px 3px rgba(45, 50, 60, 1), inset -5px -5px 8px 0 rgba(55, 65, 75, 0.3), inset -1px -2px 2px 0 rgba(45, 50, 60, 0.4),-6px -6px 15px 3px rgba(45, 50, 60, 0.6);
+    cursor: pointer;
+}
+#ui-scroll-top:active {
+    background: #232831;
+}
+#ui-scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.d3f_iconexp {
+    display: block;
+    list-style-type: none;
+    margin: 1em;
+    padding: 0;
+}

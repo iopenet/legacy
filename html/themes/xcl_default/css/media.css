@@ -1,0 +1,102 @@
+/*
+ * Theme XCL DEFAULT
+ * @version   2.3.1
+ * @author    Nuno Luciano ( https://github.com/gigamaster )
+ * @copyright 2005-2022 The XOOPSCube Project
+*  @license   https://github.com/xoopscube/xcl/blob/master/BSD_license.txt
+ * @link      https://github.com/xoopscube
+ */
+
+/* -------------------- -------------------- Media Queries */
+
+/*@media (prefers-reduced-motion) {
+    *, *::before, *::after {
+        -webkit-animation: none !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+@media print {
+    body {color:black; background:none;}
+    input {box-shadow: none;}
+}
+
+/* TODO : review space calc scaling
+@media screen and (max-width: 64em) {
+    :root {
+        --space-unit: calc(var(--font-size) * 1.6) !important;
+    }
+    section, article {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 52em) {
+    :root {
+        --space-unit: calc(var(--font-size) / 1.5) !important;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    :root {
+        --space-unit: calc(var(--font-size) / 2) !important;
+    }
+    main {
+        margin: 0 auto;
+    }
+    main .content {
+        padding: var(--space-2) var(--space-1);
+    }
+    section, article {
+        padding: 0;
+    }
+}*/
+
+
+
+/*!* Small Screen Device sm- 640px *!
+@media screen and (max-width:40em) {
+    :root {
+        --space-unit: calc(var(--font-size) / 2) !important;
+    }
+    !* Force default prefix p-*!
+    [layout*=p],[self*=p] {padding:.25em !important;}
+    !* Default Small Prefixed sm-*!
+    [layout*=sm-p],[self*=sm-p] {padding:.25em !important;}
+    [layout*=sm-m],[self*=sm-m] {margin:auto !important;}
+}*/
+
+
+
+
+/*
+    ORDER BY : DESKTOP FIRST
+    USING MAX-WIDTH
+    --//--
+    ORDER BY MOBILE FIRST
+    USING MIN-WIDTH
+*/
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    body{
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    body{
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    body{
+    }
+}
+
+@media (max-width: 575.98px) {
+    body{
+    }
+}

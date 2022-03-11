@@ -1,0 +1,234 @@
+/*
+ * Theme XCL DEFAULT
+ * @version   2.3.1
+ * @author    Nuno Luciano ( https://github.com/gigamaster )
+ * @copyright 2005-2022 The XOOPSCube Project
+*  @license   https://github.com/xoopscube/xcl/blob/master/BSD_license.txt
+ * @link      https://github.com/xoopscube
+ */
+
+/* -------------------- -------------------- BLOCKS */
+
+/* ALL BLOCKS Parent Container */
+[class^="block-"]:not([class*="-title"]),
+[class^="block-"]:not([class*="-content"]) {
+    /*border: var(--block-border);*/
+    /*border-radius: var(--block-radius);*/
+}
+
+/* All Blocks Title */
+[class^="block-title"] {
+    color           : var(--block-title-color);
+    font            : var(--block-title-font);
+    padding         : var(--block-title-space);
+    margin          : 0
+}
+
+/* All Blocks Content */
+[class="block-content"] {
+    /*border              : var(--block-border);*/
+    /*border-radius       : var(--block-radius);*/
+    /*background          : var(--block-bg);*/
+    /*box-shadow          : var(--block-shadow);*/
+    padding          : var(--block-space);
+    /*transition          : none;*/
+}
+
+/* Target single or multiple blocks by setting block [order/weight]
+   1. Dashboard > Block Management
+   2. Select a Block
+   3. Define a custom "Order/Weight"
+   eg. block title [Welcome] with block order [ 10 ]
+   Theme Smarty variable for the custom CSS class "b-<{$block.weight}>" */
+    [class^="block-"][class*="b-10"] > div[class*="-title"] {
+    /*background          : var(--block-bg);*/
+    }
+
+    [class^="block-"][class*="b-10"] > div[class*="-content"] {
+    background          : inherit;
+    }
+
+
+/* BLOCKS CUSTOM CSS */
+.block-left {
+    border          : var(--block-border);
+    border-radius   : var(--block-radius);
+    margin          : 0 0 1rem;
+}
+
+.block-left .block-title {
+    background      : var(--block-left-title-bg);
+    border          : var(--block-left-title-border);
+    color           : var(--block-left-title-color);
+    font-size       : var(--block-left-title-size);
+    padding         : var(--block-left-title-space);
+}
+
+.block-left .block-content {}
+
+.block-right {
+    margin          : 0 0 1.5rem;
+}
+.block-right .block-title {
+    background      : var(--block-right-title-bg);
+    border          : var(--block-right-title-border);
+    color           : var(--block-right-title-color);
+    font-size       : var(--block-right-title-size);
+    padding         : var(--block-right-title-space);
+}
+.block-right .block-content {}
+
+/* -------------------- -------------------- BLOCKS MENU */
+/*.block-main-menu ul,*/
+/*.block-messages ul,*/
+/*.block-menu ul,*/
+/*.block-list ul,*/
+/*.block-subcategories ul,*/
+/*.block-tags ul,*/
+/*.block-user-menu ul,*/
+/*.block-waiting ul,*/
+div[class^="block-"] ul{
+    display             : block;
+    list-style-type     : none;
+    margin              : 0;
+    padding             : 0;
+}
+/* BLOCK TAGS scale */
+.block-tags ul {
+    margin              : 0;
+    padding             : var(--b-menu-space);
+}
+/*.block-main-menu ul li,*/
+/*.block-messages ul li,*/
+/*.block-menu ul li,*/
+/*.block-list ul li,*/
+/*.block-subcategories ul li,*/
+/*.block-tags ul li,*/
+/*.block-user-menu ul li,*/
+/*.block-waiting ul li,*/
+div[class^="block-"] ul li {
+    /*margin-bottom       : var(--space-1);*/
+    display             : flex;
+    text-decoration     : none;
+}
+/*.block-main-menu li a,*/
+/*.block-messages li a,*/
+/*.block-menu li a,*/
+/*.block-list li a,*/
+/*.block-subcategories li a,*/
+/*.block-user-menu li a,*/
+/*.block-waiting li a ,*/
+div[class^="block-"] li a {
+    background          : var(--b-menu-bg);
+    border              : var(--b-menu-border);
+    border-radius       : var(--b-menu-radius);
+    box-shadow          : var(--b-menu-shadow);
+    color               : var(--b-menu-color);
+    display             : block;
+    padding             : var(--b-menu-space);
+    transition          : all var(--transition-time) var(--transition-cube);
+    width               : 100%;
+}
+/*.block-main-menu li a:hover,*/
+/*.block-messages li a:hover,*/
+/*.block-menu li a:hover,*/
+/*.block-subcategories li a:hover,*/
+/*.block-user-menu li a:hover,*/
+/*.block-waiting li a:hover,*/
+div[class^="block-"] li a:hover {
+    background          : var(--b-menu-bg-on);
+    border              : var(--b-menu-border-on);
+    border-radius       : var(--b-menu-radius-on);
+    box-shadow          : var(--b-menu-shadow-on);
+    color               : var(--b-menu-color-on);
+    display             : block;
+    padding             : var(--b-menu-space);
+    transition          : all var(--transition-time) var(--transition-cube);
+}
+
+/* -------------------- -------------------- BLOCK MAIN MENU */
+
+ul#main-menu {}
+ul#main-menu li {}
+ul#main-menu li a {}
+ul#main-menu li a.menu-sub {
+    white-space         : nowrap;
+    overflow            : hidden;
+    text-overflow       : ellipsis;
+    padding-left        : 2em;
+}
+
+ul#user-menu {}
+ul#user-menu li {}
+ul#user-menu li a {}
+
+/* -------------------- -------------------- BLOCK USER MENU */
+
+.user-menu-admin,
+.user-menu-comments,
+.user-menu-edit,
+.user-menu-email,
+.user-menu-logout,
+.user-menu-top {
+}
+
+.block-new-users {
+    font-size           : var(--font-16);
+}
+
+/* -------------------- -------------------- CARD */
+
+.card,
+.theme-features > div > div {
+    background          : var(--card-bg);
+    border              : var(--card-border);
+    border-radius       : var(--card-radius);
+    padding             : var(--card-space);
+    transition          : all 0.2s ease;
+}
+.card:hover,
+.theme-features > div > div:hover {
+    box-shadow          : var(--card-shadow);
+
+}
+.card-title{
+    font-size           : var(--card-title);
+    margin-top          : .5rem;
+    padding             : var(--card-space);
+}
+
+.card-subtitle {
+    font-size           : var(--card-subtitle);
+    padding             : var(--card-space);
+}
+.card-media {
+    background          : var(--card-bg);
+}
+.card-media img {
+    height              : 200px;
+    object-fit          : cover;
+    width               : 100%;
+}
+.card-content {
+    background          : var(--bg-linear);
+    font-size           : var(--card-content);
+    padding             : var(--card-space);
+}
+.card-footer {
+    font-size           : var(--card-footer);
+    padding             : var(--card-space);
+}
+
+ul.column-2 {
+    border              : var(--border);
+    padding             : var(--space-2);
+    -webkit-column-count: 2;
+    /*-moz-column-count   : 2;*/
+    column-count        : 2;
+    -webkit-column-gap  : 40px;
+    /*-moz-column-gap     : 40px;*/
+    column-gap          : 40px;
+    -webkit-column-rule : var(--border);
+    /*-moz-column-rule    : 1px solid lightgrey;*/
+    column-rule         : var(--border);
+}

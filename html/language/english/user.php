@@ -1,4 +1,5 @@
 <?php
+// gigamaster, 2020 XCL/PHP7
 // $Id: user.php,v 1.2 2008/08/27 16:20:51 minahito Exp $
 //%%%%%%		File Name user.php 		%%%%%
 define('_US_NOTREGISTERED', 'Not registered?  Click <a href="register.php">here</a>.');
@@ -12,7 +13,7 @@ define('_US_INCORRECTLOGIN', 'Incorrect Login!');
 define('_US_LOGGINGU', 'Thank you for logging in, %s.');
 
 // 2001-11-17 ADD
-define('_US_NOACTTPADM', 'The selected user has been deactivated or has not been activated yet.<br />Please contact the administrator for details.');
+define('_US_NOACTTPADM', 'The selected user has been deactivated or has not been activated yet.<br>Please contact the administrator for details.');
 define('_US_ACTKEYNOT', 'Activation key not correct!');
 define('_US_ACONTACT', 'Selected account is already activated!');
 define('_US_ACTLOGIN', 'Your account has been activated. Please login with the registered password.');
@@ -35,7 +36,7 @@ define('_US_SUBMIT', 'Submit');
 define('_US_USERNAME', 'Username');
 define('_US_FINISH', 'Finish');
 define('_US_REGISTERNG', 'Could not register new user.');
-define('_US_MAILOK', 'Receive occasional email notices <br />from administrators and moderators?');
+define('_US_MAILOK', 'Receive occasional email notices <br>from administrators and moderators?');
 define('_US_DISCLAIMER', 'Disclaimer');
 define('_US_IAGREE', 'I agree to the above');
 define('_US_UNEEDAGREE', 'Sorry, you have to agree to our disclaimer to get registered.');
@@ -47,7 +48,7 @@ define('_US_USERKEYFOR', 'User activation key for %s');
 
 define('_US_YOURREGISTERED', 'You are now registered. An email containing an user activation key has been sent to the email account you provided. Please follow the instructions in the mail to activate your account. ');
 define('_US_YOURREGMAILNG', 'You are now registered. However, we were unable to send the activation mail to your email account due to an internal error that had occurred on our server. We are sorry for the inconvenience, please send the webmaster an email notifying him/her of the situation.');
-define('_US_YOURREGISTERED2', 'You are now registered.  Please wait for your account to be activated by the adminstrators.  You will receive an email once you are activated.  This could take a while so please be patient.');
+define('_US_YOURREGISTERED2', 'You are now registered.  Please wait for your account to be activated by the administrators.  You will receive an email once you are activated.  This could take a while so please be patient.');
 
 // %s is your site name
 define('_US_NEWUSERREGAT', 'New user registration at %s');
@@ -92,7 +93,7 @@ define('_US_LOCATION', 'Location');
 define('_US_OCCUPATION', 'Occupation');
 define('_US_INTEREST', 'Interest');
 define('_US_SIGNATURE', 'Signature');
-define('_US_EXTRAINFO', 'Extra Info');
+define('_US_EXTRAINFO', 'Resume');
 define('_US_EDITPROFILE', 'Edit Profile');
 define('_US_LOGOUT', 'Logout');
 define('_US_INBOX', 'Inbox');

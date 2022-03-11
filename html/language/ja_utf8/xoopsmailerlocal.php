@@ -1,33 +1,8 @@
 <?php
 // $Id: xoopsmailerlocal.php,v 1.2 2008/09/21 06:36:10 minahito Exp $
-//  ------------------------------------------------------------------------ //
-//                XOOPS - PHP Content Management System                      //
-//                    Copyright (c) 2000 XOOPS.org                           //
-//                       <http://www.xoops.org/>                             //
-//  ------------------------------------------------------------------------ //
-//  This program is free software; you can redistribute it and/or modify     //
-//  it under the terms of the GNU General Public License as published by     //
-//  the Free Software Foundation; either version 2 of the License, or        //
-//  (at your option) any later version.                                      //
-//                                                                           //
-//  You may not change or alter any portion of this comment or credits       //
-//  of supporting developers from this source code or any supporting         //
-//  source code which is considered copyrighted (c) material of the          //
-//  original comment or credit authors.                                      //
-//                                                                           //
-//  This program is distributed in the hope that it will be useful,          //
-//  but WITHOUT ANY WARRANTY; without even the implied warranty of           //
-//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            //
-//  GNU General Public License for more details.                             //
-//                                                                           //
-//  You should have received a copy of the GNU General Public License        //
-//  along with this program; if not, write to the Free Software              //
-//  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA //
-//  ------------------------------------------------------------------------ //
-// Author: NobuNobu (Nobuki@Kowa.ORG)                                        //
-// URL:  http://jp.xoops.org                                                 //
-// Project: The XOOPS Project                                                //
-// ------------------------------------------------------------------------- //
+// Author: NobuNobu (Nobuki@Kowa.ORG)
+// URL:  https://jp.xoops.org
+// Project: The XOOPS Project
 
 if (!defined('XOOPS_ROOT_PATH')) {
     exit();
@@ -36,7 +11,7 @@ if (!defined('XOOPS_ROOT_PATH')) {
 class XoopsMailerLocal extends XoopsMailer
 {
 
-    public function XoopsMailerLocal()
+    public function __construct()
     {
         $this->multimailer = new XoopsMultiMailerLocal();
         $this->reset();
@@ -70,46 +45,46 @@ class XoopsMailerLocal extends XoopsMailer
 
     /*-------------------------------------
      PHP FORM MAIL 1.01 by TOMO
-     URL : http://www.spencernetwork.org/
+     URL : https://www.spencernetwork.org/
      E-Mail : groove@spencernetwork.org
     --------------------------------------*/
     public function STRtoJIS($str, $from_charset)
     {
         if (function_exists('mb_convert_encoding')) { //Use mb_string extension if exists.
-            $str_JIS  = mb_convert_encoding(mb_convert_kana($str, "KV", $from_charset), "JIS", $from_charset);
-        } elseif ($from_charset=='EUC-JP') {
+            $str_JIS  = mb_convert_encoding(mb_convert_kana($str, 'KV', $from_charset), 'JIS', $from_charset);
+        } elseif ('EUC-JP' == $from_charset) {
             $str_JIS = '';
             $mode = 0;
-            $b = unpack("C*", $str);
+            $b = unpack('C*', $str);
             $n = count($b);
             for ($i = 1; $i <= $n; $i++) {
-                if ($b[$i] == 0x8E) {
-                    if ($mode != 2) {
+                if (0x8E == $b[$i]) {
+                    if (2 != $mode) {
                         $mode = 2;
-                        $str_JIS .= pack("CCC", 0x1B, 0x28, 0x49);
+                        $str_JIS .= pack('CCC', 0x1B, 0x28, 0x49);
                     }
                     $b[$i+1] -= 0x80;
-                    $str_JIS .= pack("C", $b[$i+1]);
+                    $str_JIS .= pack('C', $b[$i + 1]);
                     $i++;
                 } elseif ($b[$i] > 0x8E) {
-                    if ($mode != 1) {
+                    if (1 != $mode) {
                         $mode = 1;
-                        $str_JIS .= pack("CCC", 0x1B, 0x24, 0x42);
+                        $str_JIS .= pack('CCC', 0x1B, 0x24, 0x42);
                     }
                     $b[$i] -= 0x80;
                     $b[$i+1] -= 0x80;
-                    $str_JIS .= pack("CC", $b[$i], $b[$i+1]);
+                    $str_JIS .= pack('CC', $b[$i], $b[$i + 1]);
                     $i++;
                 } else {
-                    if ($mode != 0) {
+                    if (0 != $mode) {
                         $mode = 0;
-                        $str_JIS .= pack("CCC", 0x1B, 0x28, 0x42);
+                        $str_JIS .= pack('CCC', 0x1B, 0x28, 0x42);
                     }
-                    $str_JIS .= pack("C", $b[$i]);
+                    $str_JIS .= pack('C', $b[$i]);
                 }
             }
-            if ($mode != 0) {
-                $str_JIS .= pack("CCC", 0x1B, 0x28, 0x42);
+            if (0 != $mode) {
+                $str_JIS .= pack('CCC', 0x1B, 0x28, 0x42);
             }
         }
         return $str_JIS;
@@ -121,14 +96,14 @@ class XoopsMultiMailerLocal extends XoopsMultiMailer
 
     public $needs_encode;
 
-    public function XoopsMultiMailerLocal()
+    public function __construct()
     {
-        $this->XoopsMultiMailer();
+        parent::__construct();
 
         $this->needs_encode = true;
         if (function_exists('mb_convert_encoding')) {
             $mb_overload = ini_get('mbstring.func_overload');
-            if (($this->Mailer == 'mail') && (intval($mb_overload) & 1)) { //check if mbstring extension overloads mail()
+            if (('mail' == $this->Mailer) && ((int)$mb_overload & 1)) { //check if mbstring extension overloads mail()
                 $this->needs_encode = false;
             }
         }
@@ -153,7 +128,7 @@ class XoopsMultiMailerLocal extends XoopsMultiMailer
                 if ($this->needs_encode || $force) {
                     $enc = mb_internal_encoding();
                     mb_internal_encoding('ISO-2022-JP');
-                    $eol = $this->Mailer=='mail'?(defined('XCUBE_MAILERLOCAL_MAIL_LE')?XCUBE_MAILERLOCAL_MAIL_LE:"\r\n"):"\n";    // XXX: this for bugs in PHP mail() subject with linefeed handling
+                    $eol = 'mail' == $this->Mailer ?(defined('XCUBE_MAILERLOCAL_MAIL_LE')?XCUBE_MAILERLOCAL_MAIL_LE:"\r\n"):"\n";    // XXX: this for bugs in PHP mail() subject with linefeed handling
                     $encoded = mb_encode_mimeheader($str, 'ISO-2022-JP', 'B', $eol, 9); // offset strlen("Subject: ") as 9
                     mb_internal_encoding($enc);
                 } else {
@@ -170,7 +145,7 @@ class XoopsMultiMailerLocal extends XoopsMultiMailer
             if (function_exists('mb_convert_encoding')) { //Using mb_string extension if exists.
                 if ($this->needs_encode || $force) {
                     $str_encoding = mb_detect_encoding($str, 'ASCII,'.$encode_charset);
-                    if ($str_encoding == 'ASCII') { // Return original if string from only ASCII chars.
+                    if ('ASCII' == $str_encoding) { // Return original if string from only ASCII chars.
                         return $str;
                     } elseif ($str_encoding != $encode_charset) { // Maybe this case may not occur.
                         $str = mb_convert_encoding($str, $encode_charset, $str_encoding);
@@ -184,7 +159,7 @@ class XoopsMultiMailerLocal extends XoopsMultiMailer
                         if (!$partstr_length) {
                             break;
                         }
-                        if ($encode_charset == 'ISO-2022-JP') {
+                        if ('ISO-2022-JP' == $encode_charset) {
                             //Should Adjust next cutting place for SO & SI char insertion.
                             if ((substr($partstr, 0, 3)===chr(27).'$B')
                               && (substr($str, $cut_start, 3) !== chr(27).'$B')) {

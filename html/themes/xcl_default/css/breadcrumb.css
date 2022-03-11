@@ -1,0 +1,86 @@
+/*
+ * Theme XCL DEFAULT
+ * @version   2.3.1
+ * @author    Nuno Luciano ( https://github.com/gigamaster )
+ * @copyright 2005-2022 The XOOPSCube Project
+*  @license   https://github.com/xoopscube/xcl/blob/master/BSD_license.txt
+ * @link      https://github.com/xoopscube
+ */
+
+/* -------------------- -------------------- BREADCRUMB NAVIGATION */
+
+ul.breadcrumb {
+    background          : var(--breadcrumbs-bg);
+    border              : var(--breadcrumbs-border);
+    border-radius       : var(--breadcrumbs-radius);
+    box-shadow          : var(--breadcrumbs-shadow);
+    display             : flex;
+    list-style-type     : none;
+    margin              : var(--breadcrumbs-margin);
+    max-width           : 45em; /* 45x16 = 720 px */
+    padding             : var(--breadcrumbs-space);
+    width               : fit-content;
+    /* Required by Firefox */
+    width               : -moz-fit-content;
+}
+
+ul.breadcrumb li {
+    margin              : var(--breadcrumbs-space);
+    white-space         : nowrap;
+    overflow            : hidden;
+    text-overflow       : ellipsis;
+}
+
+ul.breadcrumb li a:link,
+ul.breadcrumb li a:visited {
+    background          : var(--bc-link-bg);
+    border              : var(--bc-link-border);
+    border-radius       : var(--bc-link-radius);
+    box-shadow          : var(--bc-link-shadow-on);
+    color               : var(--bc-link);
+    display             : block;
+    padding             : var(--bc-link-space);
+    transition          : var(--bc-transition);
+}
+
+ul.breadcrumb li+[aria-current],
+    /* Last element with a link */
+ul.breadcrumb li [aria-current]:last-of-type {
+    background          : var(--bc-link-bg-on );
+    border              : var(--bc-link-border-on);
+    color               : var(--bc-link-on);
+    padding             : var(--bc-link-space);
+    transition          : var(--bc-transition);
+}
+
+ul.breadcrumb li a:focus,
+ul.breadcrumb li a:hover,
+/*ul.breadcrumb li [aria-current],*/
+ul.breadcrumb li [aria-current]:hover,
+ul.breadcrumb li [aria-current]:focus {
+    background          : var(--bc-link-bg-on );
+    border              : var(--bc-link-border-on);
+    box-shadow          : var(--bc-link-shadow-on);
+    color               : var(--bc-link-on);
+}
+    /* Truncate after home and module top category*/
+ul.breadcrumb li:nth-child(n+3) > a {
+    white-space         : nowrap;
+    overflow            : hidden;
+    text-overflow       : ellipsis;
+}
+    /* Do Not Shrink home and module top category*/
+ul.breadcrumb li:nth-child(-n+2) {
+    flex                : 0 0 auto;
+}
+ul.breadcrumb li:nth-last-child(1) {
+    text-overflow       : clip;
+    overflow            : visible;
+}
+
+ul.breadcrumb li:last-child {
+    border-radius       : var(--bc-link-radius);
+    box-shadow          : var(--bc-link-shadow-on);
+    color               : var(--bc-link-on);
+    flex                : 0 0 auto;
+}

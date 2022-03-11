@@ -1,0 +1,178 @@
+/*
+ * Theme XCL DEFAULT
+ * @version   2.3.1
+ * @author    Nuno Luciano ( https://github.com/gigamaster )
+ * @copyright 2005-2022 The XOOPSCube Project
+*  @license   https://github.com/xoopscube/xcl/blob/master/BSD_license.txt
+ * @link      https://github.com/xoopscube
+ */
+
+/* -------------------- -------------------- -------------------- -------------------- Tabs */
+
+
+/*!TODO specificity*/
+table.outer:not(:where([id^="cke_"] *, [class^="cke_"] *)) {
+    background      : var(--table-bg);
+    border-collapse : collapse;
+    color           : var(--table-color);
+    font            : var(--table-font);
+    text-align      : left;
+    width           : var(--table-width);
+    margin          : var(--table-margin);
+    padding         : var(--table-padding);
+
+    animation       : responsive 5s infinite ease-in-out;
+}
+.box-table{
+    overflow        : hidden;
+    margin          : 0 auto;
+    display         : block;
+    width           : 95%;
+    padding         : 2.5%;
+}
+table.outer thead {
+    background: var(--table-thead);
+}
+table.outer thead th {
+    background-color: var(--table-bg);
+    text-align      : center;
+    padding         : var(--table-space);
+    /*vertical-align  : top;*/
+    border-bottom   : var(--table-border);
+
+}
+table.outer tbody {
+    background: var(--table-tbody);
+}
+table.outer tbody td,
+table.outer tbody tr {
+    border          : none;
+    padding         : var(--table-space);
+}
+
+
+
+table.outer tbody tr:nth-child(odd) {
+    background      : var(--table-bg-odd);
+}
+
+table.outer tbody tr:nth-child(even) {
+    background      : var(--table-bg-even);
+}
+
+
+table.outer tbody tr:hover {
+    background      : var(--table-tr-on);
+}
+
+table.outer tfoot {
+    background      : var(--table-tfoot);
+}
+/*tfoot {*/
+/*    display: table-footer-group;*/
+/*    vertical-align: middle;*/
+/*    border-color: inherit;*/
+/*}*/
+
+/* = Responsive table
+------------------------*/
+
+/* TODO : review this (reset-new) and templates! */
+@media only screen and (max-width: 800px){
+
+    table {
+        width           : 100%;
+        border-collapse : collapse;
+        border-spacing  : 0;
+    }
+
+    th,
+
+    td{
+        margin          : 0;
+        vertical-align  : top;
+    }
+
+    th{
+        text-align      : left;
+    }
+
+    table{
+        display         : block;
+        position        : relative;
+        width           : 100%;
+    }
+
+    thead{
+        display         : block;
+        float           : left;
+    }
+
+    tbody{
+        display         : block;
+        width           : auto;
+        position        : relative;
+        overflow-x      : auto;
+        white-space     : nowrap;
+    }
+
+    thead tr{
+        display         : block;
+    }
+
+    th{
+        display         : block;
+        text-align      : right;
+    }
+
+    tbody tr{
+        display         : inline-block;
+        vertical-align  : top;
+    }
+
+    td{
+        display         : block;
+        min-height      : 1.25em;
+        text-align      : left;
+    }
+
+    th{
+        border-bottom   : 0;
+        border-left     : 0;
+    }
+
+    td{
+        border-left     : 0;
+        border-right    : 0;
+        border-bottom   : 0;
+    }
+}
+/* = Error
+------------------------*/
+.error_table {
+    display             : block;
+    background          : #E05E5E;
+    color               : #D1D1D1;
+    text-align          : center;
+    font-size           : 3em;
+    width               : 90%;
+    padding             : 5%;
+}
+/* = Loader
+------------------------*/
+.loading_table{
+    background          : #d35400;
+    color               : #ecf0f1;
+    text-align          : center;
+    width               : 0;
+    display             : block;
+    overflow            : hidden;
+    height              : 1em;
+    padding             :0.5em;
+    animation           : table_loader 10s infinite ease;
+}
+@keyframes table_loader{50%{width:100%}}
+@-webkit-keyframes table_loader{50%{width:100%}}
+@-moz-keyframes table_loader{50%{width:100%}}
+/*@-ms-keyframes table_loader{50%{width:100%}}*/
+/*@-o-keyframes table_loader{ 50%{width:100%}}*/

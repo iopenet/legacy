@@ -1,0 +1,21 @@
+/*
+ * Theme XCL DEFAULT
+ * @version   2.3.1
+ * @author    Nuno Luciano ( https://github.com/gigamaster )
+ * @copyright 2005-2022 The XOOPSCube Project
+*  @license   https://github.com/xoopscube/xcl/blob/master/BSD_license.txt
+ * @link      https://github.com/xoopscube
+ */
+
+
+.message-item {
+    border-bottom: 1px solid hsl(219, 17%, 21%);
+}
+
+.message-item :is(svg, .mail-open, img) {
+    fill: currentColor;
+    vertical-align: middle;
+    width:1.15em;
+    height:1.15em;
+}
+

@@ -1,0 +1,114 @@
+/*
+ * Theme XCL DEFAULT
+ * @version   2.3.1
+ * @author    Nuno Luciano ( https://github.com/gigamaster )
+ * @copyright 2005-2022 The XOOPSCube Project
+*  @license   https://github.com/xoopscube/xcl/blob/master/BSD_license.txt
+ * @link      https://github.com/xoopscube
+ */
+
+/* -------------------- -------------------- MAIN */
+
+header {
+    background      : var(--header-bg);
+    color           : var(--header-color);
+    font-family     : var(--header-font);
+    font-size       : var(--header-size);
+    font-weight     : var(--header-weight);
+    height          : var(--header-height);
+    margin          : var(--header-margin);
+    padding         : var(--header-space);
+    width           : var(--header-width);
+}
+
+header .sitelogo {
+    animation       : bottom 1s .2s both;
+}
+
+header .sitename {
+
+    animation       : bottom 1s .4s both;
+}
+
+header .search {
+    animation       : bottom 1s .6s both;
+}
+/* Hero gets smaller while you shrink the page*/
+.hero {
+    min-height: 200px;
+    height: 60vw;
+    max-height: 500px;
+}
+/* Hero work without media queries*/
+.hero-top {
+    min-height: 200px;
+    height: calc(500px + (200 - 500) * (100vw - 600px) / (1200 - 600));
+    max-height: 500px;
+}
+
+aside.side-left {
+    animation       : var(--aside-left-animation);
+    background      : var(--aside-left-bg);
+    border          : var(--aside-left-border);
+    border-radius   : var(--aside-left-radius);
+    box-shadow      : var(--aside-left-shadow);
+    height          : var(--aside-left-height);
+    padding         : var(--aside-left-space);
+    width           : var(--aside-left-width);
+    min-width       : 240px;
+}
+
+aside.side-right {
+    animation       : right 1s .4s both;
+    background      : var(--aside-right-bg);
+    border          : var(--aside-right-border);
+    border-radius   : var(--aside-right-radius);
+    box-shadow      : var(--aside-right-shadow);
+    height          : var(--aside-right-height);
+    padding         : var(--aside-right-space);
+    width           : var(--aside-right-width);
+}
+
+main {
+    margin          : var(--main-margin);
+    width           : var(--main-width) !important;
+}
+
+section.render-view {
+    /*margin-bottom   : var(--space-8);*/
+}
+
+section.render-view .content {
+    display         : block;
+    max-width       : 1020px;
+    width           : 100%;
+}
+
+section {
+    margin-left     : auto;
+    margin-right    : auto;
+}
+
+main > section.full-width {
+    background      : var(--color-2);
+    left            : 50%;
+    margin-left     : -50vw;
+    margin-right    : -50vw;
+    overflow-x      : hidden;
+    padding         : var(--space-6);
+    position        : relative;
+    right           : 50%;
+    width           : 100vw;
+}
+
+body > footer {
+    background      : var(--footer-bg);
+    color           : var(--footer-color);
+    font-family     : var(--footer-font);
+    font-size       : var(--footer-size);
+    font-weight     : var(--footer-weight);
+    height          : var(--footer-height);
+    margin          : var(--footer-margin);
+    padding         : var(--footer-space);
+    width           : var(--footer-width) !important;
+}

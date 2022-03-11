@@ -1,4 +1,13 @@
 <?php
+/**
+ * cache time class object
+ * @package    kernel
+ * @version    XCL 2.3.1
+ * @author     Other authors gigamaster, 2020 XCL/PHP7
+ * @author     Other authors Minahito, 2007/05/15
+ * @copyright  (c) 2005-2022 The XOOPSCube Project
+ * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ */
 
 if (!defined('XOOPS_ROOT_PATH')) {
     exit();
@@ -26,7 +35,7 @@ class XoopsCachetime extends XoopsObject
 class XoopsCachetimeHandler extends XoopsObjectHandler
 {
     public $_mResult;
-    
+
     public function __construct(&$db)
     {
         parent::__construct($db);
@@ -34,31 +43,31 @@ class XoopsCachetimeHandler extends XoopsObjectHandler
         //
         // This handler not connects to database.
         //
-        $this->_mResult = array(
-            "0"       => _NOCACHE,
-            "30"      => sprintf(_SECONDS, 30),
-            "60"      => _MINUTE,
-            "300"     => sprintf(_MINUTES, 5),
-            "1800"    => sprintf(_MINUTES, 30),
-            "3600"    => _HOUR,
-            "18000"   => sprintf(_HOURS, 5),
-            "86400"   => _DAY,
-            "259200"  => sprintf(_DAYS, 3),
-            "604800"  => _WEEK,
-            "2592000" => _MONTH
-        );
+        $this->_mResult = [
+            '0'       => _NOCACHE,
+            '30'      => sprintf(_SECONDS, 30),
+            '60'      => _MINUTE,
+            '300'     => sprintf(_MINUTES, 5),
+            '1800'    => sprintf(_MINUTES, 30),
+            '3600'    => _HOUR,
+            '18000'   => sprintf(_HOURS, 5),
+            '86400'   => _DAY,
+            '259200'  => sprintf(_DAYS, 3),
+            '604800'  => _WEEK,
+            '2592000' => _MONTH
+        ];
     }
     public function XoopsCachetimeHandler(&$db)
     {
         return self::__construct($db);
     }
-    
+
     public function &create()
     {
         $ret =new XoopsCachetime();
         return $ret;
     }
-    
+
     public function &get($cachetime)
     {
         if (isset($this->_mResult[$cachetime])) {
@@ -68,15 +77,15 @@ class XoopsCachetimeHandler extends XoopsObjectHandler
 
             return $obj;
         }
-        
+
         $ret = null;
         return $ret;
     }
 
     public function &getObjects($criteria = null, $key_as_id = false)
     {
-        $ret = array();
-        
+        $ret = [];
+
         foreach ($this->_mResult as $cachetime => $label) {
             $obj =new XoopsCachetime();
             $obj->setVar('cachetime', $cachetime);
@@ -88,10 +97,10 @@ class XoopsCachetimeHandler extends XoopsObjectHandler
             }
             unset($obj);
         }
-        
+
         return $ret;
     }
-    
+
     public function insert(&$obj)
     {
         return false;
