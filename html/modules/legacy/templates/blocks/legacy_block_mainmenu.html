@@ -1,9 +1,36 @@
-<ul id="mainmenu">
-      <li><a class="menuTop" href="<{$xoops_url}>/"><{$smarty.const._MB_LEGACY_HOME}></a></li>
-<{foreach item=module from=$block.modules}>
-      <li><a class="menuMain" href="<{$xoops_url}>/modules/<{$module.directory}>/"><{$module.name}></a></li>
-<{foreach item=sublink from=$module.sublinks}>
-        <li><a class="menuSub" href="<{$sublink.url}>"><{$sublink.name}></a></li>
-<{/foreach}>
-<{/foreach}>
-</ul>
+<style>
+    <{if $xoops_dirname}>body.<{$xoops_dirname}> ul#main-menu li a.<{$xoops_dirname}><{/if}> {
+    color: var(--link-active);
+    
+    }
+</style>
+<{* Dev-Mode Toggle *}>
+<div class="ui-dev-mode"><{$smarty.template}></div>
+
+<div class="block-main-menu">
+
+    <ul id="main-menu" >
+        <li><a class="menu-top" href="<{$xoops_url}>/">
+                <{$smarty.const._MB_LEGACY_HOME}>
+            </a>
+        </li>
+        <{foreach item=module from=$block.modules}>
+            <li>
+                <a class="<{$module.directory}> menuMain"
+                    href="<{$xoops_url}>/modules/<{$module.directory}>/">
+                    <{$module.name}>
+                </a>
+            </li>
+            <{foreach item=sublink from=$module.sublinks}>
+                <li><a class="menu-sub" href="<{$sublink.url}>">
+                    <{* Smarty Truncate for Modules sub-links eg: D3Forum and Pico
+                    This truncates a variable to a character length, the default is 80.
+                    As an optional second parameter, you can specify a string of text to display at the end if the variable was truncated. *}>
+                        <{$sublink.name|truncate:30}>
+                    </a>
+                </li>
+                <{/foreach}>
+        <{/foreach}>
+    </ul>
+
+</div>

@@ -31,7 +31,7 @@ define('_THREADED', 'スレッド表示');
 define('_OLDESTFIRST', '古いものから');
 define('_NEWESTFIRST', '新しいものから');
 define('_MORE', 'もっと...');
-define("_MULTIPAGE", "[pagebreak]タグを本文内に記入することでページ区切りを挿入することができます。");
+define('_MULTIPAGE', '[pagebreak]タグを本文内に記入することでページ区切りを挿入することができます。');
 define('_IFNOTRELOAD', 'ページが自動的に更新されない場合は<a href="%s">ここ</a>をクリックしてください');
 define('_WARNINSTALL2', '注意：ファイル%sがサーバ上に存在します。インストール完了後は必ず削除してください。');
 define('_WARNINWRITEABLE', '注意：ファイル%sへの書き込みが可能となっています。このファイルのパーミッション設定を変更してください。');
@@ -100,8 +100,8 @@ define('_OPTIONS', 'オプション');
 define('_QUOTE', '引用');      //-no use
 define('_LIST', '一覧');
 define('_LOGIN', 'ログイン');
-define('_USERNAME', 'ユーザ名: ');
-define('_PASSWORD', 'パスワード: ');
+define('_USERNAME', 'ユーザ名');
+define('_PASSWORD', 'パスワード');
 define('_SELECT', '選択');
 define('_IMAGE', '画像');
 define('_SEND', '送信');
@@ -174,21 +174,28 @@ define('_DAYS', '%s日');
 define('_WEEK', '1週間');
 define('_MONTH', '1ヶ月');
 
-define('_HELP', "ヘルプ");
+define('_HELP', 'ヘルプ');
 
-define('_CATEGORY', "カテゴリ");
-define('_TAG', "タグ");
-define('_STATUS', "ステータス");
-define('_STATUS_DELETED', "削除済み");
-define('_STATUS_REJECTED', "却下");
-define('_STATUS_POSTED', "投稿済み");
-define('_STATUS_PUBLISHED', "承認済み");
+define('_CATEGORY', 'カテゴリ');
+define('_TAG', 'タグ');
+define('_STATUS', 'ステータス');
+define('_STATUS_DELETED', '削除済み');
+define('_STATUS_REJECTED', '却下');
+define('_STATUS_POSTED', '投稿済み');
+define('_STATUS_PUBLISHED', '承認済み');
 
 //%%%%% Group %%%%%
-define('_GROUP', "グループ");
-define('_MEMBER', "メンバー");
-define('_GROUP_RANK_GUEST', "ゲスト");
-define('_GROUP_RANK_ASSOCIATE', "準会員");
-define('_GROUP_RANK_REGULAR', "会員");
-define('_GROUP_RANK_STAFF', "スタッフ");
-define('_GROUP_RANK_OWNER', "オーナー");
+define('_GROUP', 'グループ');
+define('_MEMBER', 'メンバー');
+define('_GROUP_RANK_GUEST', 'ゲスト');
+define('_GROUP_RANK_ASSOCIATE', '準会員');
+define('_GROUP_RANK_REGULAR', '会員');
+define('_GROUP_RANK_STAFF', 'スタッフ');
+define('_GROUP_RANK_OWNER', 'オーナー');
+
+//%%%%% System %%%%%
+define('_DEBUG_MODE', 'Debug');
+define('_DEBUG_MODE_PHP', 'PHP');
+define('_DEBUG_MODE_SQL', 'SQL');
+define('_DEBUG_MODE_SMARTY', 'Smarty');
+define('_DEBUG_MODE_DESC', 'Disable debug mode in production. Admin > Settings > Debug mode [Off].');

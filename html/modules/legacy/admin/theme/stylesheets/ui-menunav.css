@@ -1,0 +1,181 @@
+/*
+XOOPSCube Theme : XCL Admin Flex Grid
+Distribution : XCL 2.3 Alpha
+Version : 0.7.0
+Author : Nuno Luciano aka Gigamaster
+Date : 2020-06-11
+URL : https://github.com/xoopscube/xcl/
+
+
+    -------------------- -------------------- -------------------- -------------------- NAV IMPORT */
+
+    @import "./ui-nav-aside.css";        /*      Nav-side            */
+    @import "./ui-nav-header.css";      /*      Nav-header          */
+
+    /* -------------------- -------------------- -------------------- NAV ADMIN */
+
+    .admintitle {
+    border-bottom   : 3px solid var(--ui-border);
+    margin-bottom   : 1em;
+    }
+
+    .adminavi,
+    .adminavi-sub,
+    .admin-menu {
+
+    background      : var(  --ui-color6   );
+
+    /* border-radius   : var(  --ui-border-radius      ); */
+    border-bottom-left-radius: var(  --ui-border-radius      );;
+    border-bottom-right-radius: var(  --ui-border-radius      );;
+
+    /* box-shadow   : 0 4px 8px rgba(159, 162, 177, 0.8); */
+    display         : flex;
+    flex-wrap       : wrap;
+    margin          : 1em auto 2em;
+    max-width       : 100%;
+    overflow        : hidden;
+
+    }
+
+    .adminavi-sub {
+
+    /* box-shadow   : var(  --ui-shadow-3     ); */
+    font-size       : var(  --size-2       );
+    margin          : 0 auto 2em;
+    text-align      : center;
+    list-style-type : none;
+    }
+
+
+
+    a.adminavi-item {
+
+    border-bottom   : 2px solid transparent;
+    color           : var(  --ui-link      );
+    padding         : 10px;
+    text-decoration : none;
+    transition      : .3s;
+
+    }
+
+    a.adminavi-item:not(.selected) {
+
+    background      : transparent;
+    }
+
+    a.adminavi-item:not(.selected):hover {
+    color           : var(  --ui-link-hover     );
+    border-bottom   : 2px solid var(  --ui-link-hover       );
+
+    }
+
+
+    a.adminavi-item.selected,
+    a.adminavi-item.selected:active {
+
+    color           : var(  --ui-link-hover     );
+    border-bottom   : 2px solid var(  --ui-link-hover       );
+    outline-width   : 0;
+    }
+
+
+
+
+
+    /* fix this > remove altsys css */
+
+    /* .admin-menu, */
+    .altsys_mymenu {
+
+    align-items     : flex-start;
+    background      : var(  --ui-color4      );
+
+    border          : 0px;
+    border-radius   : 5px;
+    box-shadow      : var(  --ui-shadow-2     );
+
+    display         : flex;
+    flex-flow       : row;
+    flex-wrap       : wrap;
+
+    }
+
+    .admin-menu > div,
+    .altsys_mymenu > div {
+
+    background      : var(  --ui-color4      );
+    border-radius   : 5px;
+    padding         : 1rem;
+
+    }
+/* -------------------- dropdown MENU */
+
+div.dropdown {
+    /*position            : relative;*/
+    display             : inline-block;
+}
+div.dropdown a.dropdown-toggle {
+    background          : var(--d-toggle-bg);
+    border              : var(--d-toggle-border);
+    border-radius       : var(--d-toggle-radius);
+    color               : var(--link);
+    cursor              : pointer;
+    display             : block;
+    font                : var(--d-toggle-font);
+    margin              : 0;
+    padding             : var(--d-toggle-space);
+    transition          : var(--d-toggle-transition);
+    width               : max-content;
+}
+div.dropdown a.dropdown-toggle:hover {
+    background          : var(--d-toggle-bg-on);
+    box-shadow          : var(--d-toggle-shadow);
+    color               : var(--link-hover);
+}
+div.dropdown.isopen div.dropdown-content {
+    display             : block;
+    z-index             : var(--z-above);
+}
+div.dropdown-content {
+    background          : var(--dropdown-bg);
+    border-radius       : var(--dropdown-radius);
+    box-shadow          : var(--dropdown-shadow);
+    display             : none;
+
+    min-width           : var(--dropdown-width);
+    padding             : var(--dropdown-space);
+    position            : absolute;
+    right               : 1px; /* Fix device Viewport */
+    text-align          : left;
+    top                 : 100%;
+    transition          : var(--dropdown-transition);
+}
+div.dropdown div.dropdown-content ul {
+    margin              : 0;
+    padding             : 0;
+    list-style          : none;
+}
+div.dropdown div.dropdown-content ul li {
+    background          : transparent;
+    padding             : 0;
+    width               : 100%;
+}
+/* Dropdown links */
+div.dropdown div.dropdown-content a {
+    border-radius       : var(--dropdown-radius);
+    color               : var(--link);
+    display             : block;
+    font                : var(--dropdown-font) !important;
+    padding             : var(--dropdown-space);
+    text-decoration     : none;
+}
+/* Change color of dropdown links on hover */
+div.dropdown div.dropdown-content a:hover {
+    background          : var(--dropdown-bg-on);
+    color               : var(--link-hover);
+}
+
+div.dropdown div.dropdown-content a > svg {
+    margin-right        : var(--dropdown-space);
+}
