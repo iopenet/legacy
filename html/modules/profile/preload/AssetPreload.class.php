@@ -1,8 +1,13 @@
 <?php
 /**
- * @file
- * @package profile
- * @version $Id$
+ * @package    profile
+ * @version    2.3.1
+ * @author     Nuno Luciano (aka gigamaster), 2020, XCL PHP7
+ * @author     Kilica
+ * @copyright  2005-2022 The XOOPSCube Project
+ * @license    Legacy : https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    Cube : https://github.com/xoopscube/xcl/blob/master/BSD_license.txt
+ * @link       https://github.com/xoopscube/
  */
 
 if (!defined('XOOPS_ROOT_PATH')) {
@@ -21,7 +26,7 @@ class Profile_AssetPreload extends XCube_ActionFilter
         if (!$this->mRoot->mContext->hasAttribute('module.profile.HasSetAssetManager')) {
             $delegate =new XCube_Delegate();
             $delegate->register('Module.profile.Event.GetAssetManager');
-            $delegate->add(array(&$this, 'getManager'));
+            $delegate->add([&$this, 'getManager']);
             $this->mRoot->mContext->setAttribute('module.profile.HasSetAssetManager', true);
         }
         $file = XOOPS_MODULE_PATH.'/profile/class/DelegateFunctions.class.php';
@@ -36,15 +41,17 @@ class Profile_AssetPreload extends XCube_ActionFilter
 
     /**
      * @private
+     * @param $obj
      */
     public function getManager(&$obj)
     {
-        require_once XOOPS_MODULE_PATH . "/profile/class/AssetManager.class.php";
+        require_once XOOPS_MODULE_PATH . '/profile/class/AssetManager.class.php';
         $obj = Profile_AssetManager::getSingleton();
     }
 
     /**
      * @private
+     * @param $user
      */
     public function deleteProfile(&$user)
     {

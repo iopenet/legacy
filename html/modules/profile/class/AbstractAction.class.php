@@ -1,8 +1,12 @@
 <?php
 /**
- * @file
- * @package profile
- * @version $Id$
+ * @package    profile
+ * @version    XCL 2.3.1
+ * @author     Other authors  gigamaster, 2020 XCL/PHP7
+ * @author     Original Author Kilica
+ * @copyright  2005-2022 The XOOPSCube Project
+ * @license    Legacy : https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    Cube : https://github.com/xoopscube/xcl/blob/master/BSD_license.txt
  */
 
 if (!defined('XOOPS_ROOT_PATH')) {

@@ -1,8 +1,19 @@
 <?php
+/**
+ * @package    profile
+ * @version    2.3.1
+ * @author     Nuno Luciano (aka gigamaster), 2020, XCL PHP7
+ * @author     Kilica
+ * @copyright  2005-2022 The XOOPSCube Project
+ * @license    Legacy : https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    Cube : https://github.com/xoopscube/xcl/blob/master/BSD_license.txt
+ * @link       https://github.com/xoopscube/
+ */
 
 if (!defined('XOOPS_ROOT_PATH')) {
     exit();
 }
+
 /*
 define ("PROFILE_FRAME_PERFORM_SUCCESS", 1);
 define ("PROFILE_FRAME_PERFORM_FAIL", 2);
@@ -16,6 +27,7 @@ define ("PROFILE_FRAME_VIEW_INPUT", 5);
 define ("PROFILE_FRAME_VIEW_PREVIEW", 6);
 define ("PROFILE_FRAME_VIEW_CANCEL", 7);
 */
+
 class Profile_ActionFrame
 {
     public $mActionName = null;
@@ -27,12 +39,12 @@ class Profile_ActionFrame
      */
     public $mCreateAction = null;
     
-    public function Profile_ActionFrame($admin)
+    public function __construct($admin)
     {
         $this->mAdminFlag = $admin;
         $this->mCreateAction =new XCube_Delegate();
         $this->mCreateAction->register('Profile_ActionFrame.CreateAction');
-        $this->mCreateAction->add(array(&$this, '_createAction'));
+        $this->mCreateAction->add([&$this, '_createAction']);
     }
 
     public function setActionName($name)
@@ -56,8 +68,8 @@ class Profile_ActionFrame
         //
         // Create action object by mActionName
         //
-        $className = "Profile_" . ucfirst($actionFrame->mActionName) . "Action";
-        $fileName = ucfirst($actionFrame->mActionName) . "Action";
+        $className = 'Profile_' . ucfirst($actionFrame->mActionName) . 'Action';
+        $fileName = ucfirst($actionFrame->mActionName) . 'Action';
         if ($actionFrame->mAdminFlag) {
             $fileName = XOOPS_MODULE_PATH . "/profile/admin/actions/${fileName}.class.php";
         } else {
@@ -65,7 +77,7 @@ class Profile_ActionFrame
         }
     
         if (!file_exists($fileName)) {
-            die("file_exists on _createAction");
+            die('file_exists on _createAction');
         }
         
         require_once $fileName;
@@ -86,7 +98,7 @@ class Profile_ActionFrame
         //
         $this->mCreateAction->call(new XCube_Ref($this));
         
-        if (!(is_object($this->mAction) && is_a($this->mAction, 'Profile_Action'))) {
+        if (!(is_object($this->mAction) && $this->mAction instanceof \Profile_Action)) {
             die();    //< TODO
         }
     
@@ -108,7 +120,7 @@ class Profile_ActionFrame
             $controller->executeForward(XOOPS_URL . '/');
         }
     
-        if (xoops_getenv("REQUEST_METHOD") == "POST") {
+        if ('POST' == xoops_getenv('REQUEST_METHOD')) {
             $viewStatus = $this->mAction->execute($controller, $controller->mRoot->mContext->mXoopsUser);
         } else {
             $viewStatus = $this->mAction->getDefaultView($controller, $controller->mRoot->mContext->mXoopsUser);
@@ -148,7 +160,7 @@ class Profile_ActionFrame
 
 class Profile_Action
 {
-    public function Profile_Action()
+    public function __construct()
     {
     }
     
