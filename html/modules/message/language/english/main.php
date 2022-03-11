@@ -28,7 +28,7 @@ define('_MD_MESSAGE_TEMPLATE7', 'Sent Box');
 define('_MD_MESSAGE_TEMPLATE8', 'New message');
 define('_MD_MESSAGE_TEMPLATE9', 'To');
 define('_MD_MESSAGE_TEMPLATE10', 'Date');
-define('_MD_MESSAGE_TEMPLATE11', 'Message');
+define('_MD_MESSAGE_TEMPLATE11', 'Message Read');
 define('_MD_MESSAGE_TEMPLATE12', 'From');
 define('_MD_MESSAGE_TEMPLATE13', 'Reply');
 define('_MD_MESSAGE_TEMPLATE14', 'Delete');
@@ -38,7 +38,7 @@ define('_MD_MESSAGE_TEMPLATE17', 'Read');
 define('_MD_MESSAGE_TEMPLATE18', 'Order');
 define('_MD_MESSAGE_TEMPLATE19', 'Lock');
 define('_MD_MESSAGE_TEMPLATE20', 'Unlock');
-define('_MD_MESSAGE_TEMPLATE21', 'Send email');
+define('_MD_MESSAGE_TEMPLATE21', 'Forward to email');
 define('_MD_MESSAGE_TEMPLATE22', 'Status');
 
 define('_MD_MESSAGE_ADDFAVORITES', 'Add to favorites');
@@ -52,14 +52,14 @@ define('_MD_MESSAGE_FAVORITES5', 'Delete');
 
 define('_MD_MESSAGE_SETTINGS', 'Private Message Settings');
 define('_MD_MESSAGE_SETTINGS_MSG1', 'Use private message');
-define('_MD_MESSAGE_SETTINGS_MSG2', 'Forword to email');
+define('_MD_MESSAGE_SETTINGS_MSG2', 'Forward to Email');
 define('_MD_MESSAGE_SETTINGS_MSG3', 'change settings');
 define('_MD_MESSAGE_SETTINGS_MSG4', 'Fail updating !');
 define('_MD_MESSAGE_SETTINGS_MSG5', 'You cannot use private message. Please modify settings.');
 define('_MD_MESSAGE_SETTINGS_MSG6', 'The selected user cannot receive the message.');
-define('_MD_MESSAGE_SETTINGS_MSG7', 'The message is displayed in mail.');
-define('_MD_MESSAGE_SETTINGS_MSG8', 'Number of messages displayed per page');
-define('_MD_MESSAGE_SETTINGS_MSG9', 'Use default module settings if value is 0.');
+define('_MD_MESSAGE_SETTINGS_MSG7', 'Display message in the mail.');
+define('_MD_MESSAGE_SETTINGS_MSG8', 'Number of messages per page');
+define('_MD_MESSAGE_SETTINGS_MSG9', 'Default settings (15) if value is 0.');
 define('_MD_MESSAGE_SETTINGS_MSG10', 'Blacklist');
 define('_MD_MESSAGE_SETTINGS_MSG11', 'Separate User IDs with a comma.');
 define('_MD_MESSAGE_SETTINGS_MSG12', '{0} was added to the blacklist.');
@@ -74,15 +74,15 @@ define('_MD_MESSAGE_SETTINGS_MSG19', 'The user does not exist.');
 define('_MD_MESSAGE_MAILSUBJECT', 'You have a New Private Message');
 define('_MD_MESSAGE_MAILBODY', '{0} login, please.');
 
-define('_MD_MESSAGE_ADDBLACKLIST', 'This user was added to the blacklist.');
+define('_MD_MESSAGE_ADDBLACKLIST', 'Blacklist User');
 
-define('_MD_MESSAGE_DELETEMSG1', 'The parameter is illegal.');
-define('_MD_MESSAGE_DELETEMSG2', 'It is not selected.');
+define('_MD_MESSAGE_DELETEMSG1', 'The parameter is incorrect.');
+define('_MD_MESSAGE_DELETEMSG2', 'No Items Selected.');
 
 define('_MD_MESSAGE_SEARCH', 'Search');
 
 if (!defined('LEGACY_MAIL_LANG')) {
     define('LEGACY_MAIL_LANG', 'en');
-    define('LEGACY_MAIL_CHAR', 'iso-8859-1');
-    define('LEGACY_MAIL_ENCO', '7bit');
+    define('LEGACY_MAIL_CHAR', 'iso-8859-1'); // UTF-8
+    define('LEGACY_MAIL_ENCO', '7bit'); // 8bit
 }

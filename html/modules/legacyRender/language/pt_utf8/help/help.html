@@ -1,0 +1,593 @@
+<section id="help-module">
+
+
+    <nav id="help-menu">
+        <ul>
+            <li><a href="#help-overview" class="ui-btn">Renderer</a>
+            <li><a href="#help-htaccess" class="ui-btn">htaccess</a>
+            <li><a href="#help-theme" class="ui-btn">Themes</a>
+            <li><a href="#help-template" class="ui-btn">Template</a>
+            <li><a href="#help-development" class="ui-btn">Contribution</a>
+            <li><a href="#help-design" class="ui-btn">Design</a>
+        </ul>
+    </nav>
+
+
+    <hr>
+
+
+    <article id="help-overview">
+        <h3>Outline</h3>
+        <ul>
+            <li>This rendering engine (renderer) ensures compatibility with legacy themes of XOOPS 2/XOOPS-JP2.
+            <li>It has neither override nor the fall-back mechanism.
+            <li>Smarty is used for rendering and the cache management.
+            <li>The renderer uses manifesto.ini.php for specs and details.
+        </ul>
+    </article>
+
+
+    <hr>
+
+
+    <article id="help-banner">
+        <h3>Advert Banner Management</h3>
+        <p>Client login</p>
+    </article>
+
+
+    <hr>
+
+
+    <article id="help-htaccess">
+        <h3>htaccess</h3>
+        <p>rewrite url rule</p>
+    </article>
+
+
+    <hr>
+
+
+    <article id="help-theme">
+        <h3>Additional Themes</h3>
+        <p>Themes can be installed from Xupdate Store or from theme-developers' websites etc.
+
+        <h4>Uploading Themes</h4>
+        <p>Distributed themes are mostly compressed.
+            To use a theme, the uncompressed files must be upload into the /themes directory of your site.
+        <p>The Theme folder must include theme.html and manifesto.ini.php.
+            First download the theme and expand it on your local machine. Then upload the entire folder.
+
+        <h4>Theme Selection</h4>
+        <p>Theme Management allows you to simple click the "Select" button next to the theme
+            that you want to use as the default theme or main theme of your site.
+        <p>Any theme that is "checked" in the "Control" column, will be available in the Theme Selection Block.
+            If you allow users to see this Block, they will then be able to select their favorite theme.
+
+        <h4>Uninstall a Theme</h4>
+        <p>The render system manages themes without using the database.
+            So, to delete a theme, simply delete it's directory from the "theme" directory.
+    </article>
+
+
+    <hr>
+
+
+    <article id="help-template">
+        <h3>Template Management</h3>
+        <p>The list of Template Sets is displayed in Template Management.
+        <p>XCL comes with a default Template Set.
+            By default, when modules are installed, their templates become part of this default set.
+        <p>The default Template Set cannot be deleted nor modified.
+            To customize the templates in your site, first 'Clone' the default template set.
+        <p>The 'Clone' button is on the right, in the Control column.
+        <p>Once you have a new Template Set, you should first make it the Active set
+            by clicking the "Select" button in the Control column.
+        <p>The actual template files can now be edited in the Template File Management article.
+        <p>If you have a template set in tar.gz format, you can also upload this to your site through the admin interface.
+        <p>Simply click on the "Upload a Template Set" link in Template Management.
+        <h4>Template File Management</h4>
+        <ul>
+            <li>The list of template files is displayed, and each file can be edited by clicking the edit icon ( a pencil )
+                in the rightmost column.</li>
+        </ul>
+    </article>
+
+
+    <hr>
+
+
+
+    <article id="help-development">
+        <h4>TODO</h4>
+        <ul>
+            <li>Components related to "Theme selection".</li>
+            <li>The action filter that guarantees "Theme selection block" and operation is shifted.</li>
+            <li>Theme options, designer's license presentation and README mark.</li>
+        </ul>
+    </article>
+
+
+    <hr>
+
+
+    <article id="help-design">
+        <h3>Theme folder structure</h3>
+        <p>
+            A theme is a collection of files (html, css, javascript) with <strong>Smarty Render Variables</strong> and <strong>Constants</strong> that are assigned from PHP
+            (core, module or preload). These are referenced by preceding them with a dollar sign $ (like php) eg.: <code>&lt;{$smarty.const._MD_PROFILE_LANG_CONTROL}&gt;</code><br>
+            Variables assigned from within a template with the <code>&lt;{assign}&gt;</code> function are also displayed this way.<br>
+            You can easily include a partial <strong>component</strong> anywhere using Smarty Render <code>include</code> that define the presentation layer.<br>
+        </p>
+        <p>Technically, themes only require four files : manifesto.ini.php, screenshot.png, style.css, theme.html.
+            <br>The folder <strong>assets</strong> usually contains all the assets used in the theme, including images, stylesheets, and javascript files.<br>
+            This is an example of the files and folders that are found in a typical XT theme folder structure.</p>
+<pre><code class="language-treeview">
+xt-theme-html5
+|-- assets/
+|   |-- css/
+|   |-- image/
+|   `-- js/
+|-- manifesto.ini.php
+|-- screenshot.png
+|-- style.css
+`-- theme.html
+</code></pre>
+
+        <p>You must place a <strong>theme</strong> in the "themes" folder of your  installation.
+            Each individual theme is contained in a directory named after the theme itself.<br>
+            For example, the themes released for XCL 2.3.x are using a naming convention to enhance clarity and to clearly identify their contents.<br>
+            A theme name starting with a prefix : </p>
+        <ul>
+            <li>"xt-" simple theme, often relying on xLayout Helper Flexbox</li>
+            <li>"ui-" custom User Interface (icon set, language constants, modules templates).</li>
+            <li>"ui-framework-theme-name" using a CSS Framework eg.: ui-bootstrap-blog, ui-metro-magazine</li>
+        </ul>
+
+
+        <h2>Default System Themes</h2>
+        <p>The "admin" and "default" theme names are reserved for the Core backend and frontend.<br>
+            Core themes are all lowercase and might use an underscore (_) in the name.<br>
+            A name convention is said to be a matter of dogma. So, you are free to adopt what is must convient to you and your project.<br>
+            This is an example of the files and folders that are found in typical theme folder structure:</p>
+<pre><code class="language-treeview">
+ui-default-jquery
+|-- component/    # custom include partial template
+|-- css/
+|-- images/
+|-- js/
+|-- language/    # custom language constants
+|-- templates/
+|   |-- content/    # custom module templates
+|   |-- forum/    # custom module templates
+|   `-- user/    # custom module templates
+|-- .gitignore
+|-- .htaccess
+|-- CHANGELOG.md
+|-- manifesto.ini.php
+|-- README.md
+|-- screenshot.png
+|-- style.css
+|-- theme.html
+`-- theme_assign.php
+</code></pre>
+                <!--<script>Prism.highlightAll();</script>-->
+    </article>
+
+
+    <hr>
+
+
+    <article id="theme-layout">
+
+        <h3>Layout</h3>
+        <p>XCL-UI is defined with two custom HTML attributes.</p>
+        <p><code>layout</code> — used on container(parent) element to set the layout of its children (column or row)</p>
+        <p><code>self</code> — used on container(child) element to set size, align or order of display for element itself</p>
+<pre><code class="lang-html"><!--
+<div layout="direction vertically-horizontally reverse">
+<div self="size align order display">
+    ...
+</div>
+</div>
+--></code></pre>
+
+        <!-- Layout column and row -->
+
+        <fieldset layout="column" self="size-1">
+            <legend>column</legend>
+            <div self="left" title="div self=left"><code>div self="left"</code></div>
+            <div self="center" title="div self=center"><code>div self="center"</code></div>
+            <div self="right" title="div self=right"><code>div self="right"</code></div>
+        </fieldset>
+
+        <!-- toggle code -->
+        <p><input class='switch' type='checkbox' name='layout-column' onclick="slideToggle('.layout-column', this)" value='0'>
+            <label for="layout-column">Layout Column source code</label></p>
+        <!--  layout column code -->
+        <div class="layout-column" style="display:none">
+<pre><code class="lang-html"><!--
+<div layout="direction vertically-horizontally reverse space">
+    <div self="size align order display space">
+        ...
+    </div>
+</div>
+--></code></pre>
+        </div>
+
+
+        <fieldset layout="row" self="size-x1">
+            <legend>row</legend>
+            <div layout="row center-stretch">
+                <div self="size-1of2" title="div self=size-1of2"><code>self="size-1of2"</code></div>
+                <div self="size-1of2" title="div self=size-1of2"><code>self="size-1of2"</code></div>
+            </div>
+        </fieldset>
+
+        <!-- toggle code -->
+        <p><input class='switch' type='checkbox' name='layout-row' onclick="slideToggle('.layout-row', this)" value='0'>
+            <label for="layout-row">Layout Row source code</label></p>
+        <!--  layout column row -->
+        <div class="layout-row" style="display:none">
+<pre><code class="lang-html"><!--
+<div layout="direction vertically-horizontally reverse space">
+    <div self="size align order display space">
+        ...
+    </div>
+</div>
+--></code></pre>
+        </div>
+
+        <!-- Layout Row with class "shadow-in" and child self size -->
+        <fieldset layout="rows my-4" self="size-x1">
+            <legend>rows</legend>
+            <div layout="rows mt-4" class="shadow-in">
+
+                <div self="size-1of5">size-1of5 [width: 20%]</div>
+                <div self="size-1of4">size-1of4 [width: 25%]</div>
+                <div self="size-1of3">size-1of3 [width: 33.33%]</div>
+                <div self="size-1of2">self=size-1of2 [width: 50%]</div>
+                <div self="center m-n2">self=center m-n2 [margin negative 2]</div>
+
+                <div layout="row center-justify" class="shadow-out">
+                    <span>Row center-justify class=shadow-out</span>
+                    <span>justify</span>
+                </div>
+
+            </div>
+        </fieldset>
+
+        <p>use rows and columns for flexbox wrap, otherwise it will break the container!</p>
+
+    </article>
+
+
+    <hr>
+
+
+    <article id="theme-buttons">
+
+        <h3>Buttons</h3>
+
+        <fieldset layout="row wrap" self="size-1">
+            <legend>column</legend>
+
+            <a href="#" class="btn">btn</a>
+            <a href="#" class="btn btn-danger">btn-danger</a>
+            <a href="#" class="btn">btn</a>
+            <a href="#" class="btn">btn</a>
+            <a href="#" class="badge">badge</a>
+
+        </fieldset>
+
+        <fieldset layout="rows" self="size-1">
+            <legend>rows</legend>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-light">Light</button>
+            <button type="button" class="btn btn-dark">Dark</button>
+
+            <button type="button" class="btn btn-link">Link</button>
+        </fieldset>
+
+
+
+        <h3>Buttons jQuery UI Widget</h3>
+
+        <script>
+            $( function() {
+                $( ".widget button" )
+                    .eq( 0 ).button()
+                    .end().eq( 1 ).button( {
+                    icon: "ui-icon-gear",
+                    showLabel: false
+                } ).end().eq( 2 ).button( {
+                    icon: "ui-icon-gear"
+                } ).end().eq( 3 ).button( {
+                    icon: "ui-icon-gear",
+                    iconPosition: "end"
+                } ).end().eq( 4 ).button( {
+                    icon: "ui-icon-gear",
+                    iconPosition: "top"
+                } ).end().eq( 5 ).button( {
+                    icon: "ui-icon-gear",
+                    iconPosition: "bottom"
+                } );
+            } );
+        </script>
+
+        <div class="widget">
+            <h3>Widget</h3>
+            <button>Button with only text</button>
+            <button>Button with icon only</button>
+            <button>Button with icon on the left</button>
+            <button>Button with icon on the right</button>
+            <button>Button with icon on the top</button>
+            <button>Button with icon on the bottom</button>
+        </div>
+
+        <div class="css">
+            <h3>CSS</h3>
+            <button class="ui-button ui-widget ui-corner-all">
+                Button with only text
+            </button>
+            <button class="ui-button ui-widget ui-corner-all ui-button-icon-only" title="Button with icon only">
+                <span class="ui-icon ui-icon-gear"></span> Button with icon only
+            </button>
+            <button class="ui-button ui-widget ui-corner-all">
+                <span class="ui-icon ui-icon-gear"></span> Button with icon on the left
+            </button>
+            <button class="ui-button ui-widget ui-corner-all">
+                Button with icon on the right <span class="ui-icon ui-icon-gear"></span>
+            </button>
+            <button class="ui-button ui-widget ui-corner-all">
+                <span class="ui-icon ui-icon-gear ui-widget-icon-block"></span> Button with icon on the top
+            </button>
+            <button class="ui-button ui-widget ui-corner-all">
+                Button with icon on the bottom <span class="ui-icon ui-icon-gear ui-widget-icon-block"></span>
+            </button>
+        </div>
+
+    </article>
+
+
+    <hr>
+
+
+    <article id="theme-cursors">
+
+        <h3>
+            CSS cursors classname
+        </h3>
+        <div layout="rows spread" class="cursor">
+            <div self="p-2 m-1" class="alias">alias</div>
+            <div self="p-2 m-1" class="all-scroll">all-scroll</div>
+            <div self="p-2 m-1" class="auto">auto</div>
+            <div self="p-2 m-1" class="cell">cell</div>
+            <div self="p-2 m-1" class="context-menu">context-menu</div>
+            <div self="p-2 m-1" class="copy">copy</div>
+            <div self="p-2 m-1" class="crosshair">crosshair</div>
+            <div self="p-2 m-1" class="default">default</div>
+            <div self="p-2 m-1" class="help">help</div>
+            <div self="p-2 m-1" class="grab">grab</div>
+            <div self="p-2 m-1" class="grabbing">grabbing</div>
+            <div self="p-2 m-1" class="none"> none</div>
+            <div self="p-2 m-1" class="pointer">pointer</div>
+            <div self="p-2 m-1" class="progress">progress</div>
+            <div self="p-2 m-1" class="wait">wait</div>
+            <div self="p-2 m-1" class="text">text</div>
+            <div self="p-2 m-1" class="vertical-text">vertical-text</div>
+            <div self="p-2 m-1" class="move">move</div>
+            <div self="p-2 m-1" class="not-allowed">not-allowed</div>
+            <div self="p-2 m-1" class="no-drop">no-drop</div>
+            <div self="p-2 m-1" class="col-resize">col-resize</div>
+            <div self="p-2 m-1" class="row-resize">row-resize</div>
+            <div self="p-2 m-1" class="n-resize">n-resize</div>
+            <div self="p-2 m-1" class="e-resize">e-resize</div>
+            <div self="p-2 m-1" class="s-resize">s-resize</div>
+            <div self="p-2 m-1" class="w-resize">w-resize</div>
+            <div self="p-2 m-1" class="ns-resize">ns-resize</div>
+            <div self="p-2 m-1" class="ew-resize">ew-resize</div>
+            <div self="p-2 m-1" class="ne-resize">ne-resize</div>
+            <div self="p-2 m-1" class="nw-resize">nw-resize</div>
+            <div self="p-2 m-1" class="se-resize">se-resize</div>
+            <div self="p-2 m-1" class="sw-resize">sw-resize</div>
+            <div self="p-2 m-1" class="nesw-resize">nesw-resize</div>
+            <div self="p-2 m-1" class="nwse-resize">nwse-resize</div>
+            <div self="p-2 m-1" class="zoom-in">zoom-in</div>
+            <div self="p-2 m-1" class="zoom-out">zoom-out</div>
+            <div self="p-2 m-1" class="cursor-image">cursor with custom image:</div>
+        </div>
+
+        <details>
+            <summary>Resources</summary>
+            <p><a  href="https://www.w3.org/TR/css-ui-3/#pointing-keyboard" target="_blank">W3 (CSS3 UI) Pointing Devices and Keyboards</a></p>
+            <p><a href="https://jwarby.github.io/jquery-awesome-cursor/" target="_blank">jQuery Awesome Cursor</a></p>
+        </details>
+
+    </article>
+
+
+    <hr>
+
+
+    <article id="theme-dialog">
+
+        <h3>Dialog Widget</h3>
+
+        <p>jQuery Dialog Widget Description: Open content in an interactive overlay.</p>
+
+        <p><a class="ui-button" href="https://api.jqueryui.com/dialog/" target="_blank">Documentation</a></p>
+
+        <p>Examples</p>
+
+        <!-- dialog example -->
+        <div self="size-x1">
+
+        <script>
+            $( function() {
+                $( "#dialog" ).dialog({
+                    autoOpen: false,
+                    show: {
+                        effect: "blind",
+                        duration: 500
+                    },
+                    hide: {
+                        effect: "blind",
+                        duration: 500
+                    }
+                });
+                $( "#opener" ).on( "click", function() {
+                    $( "#dialog" ).dialog( "open" );
+                });
+            } );
+        </script>
+
+        <div id="dialog" title="Basic dialog">
+            <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the &apos;x&apos; icon.</p>
+        </div>
+
+        <button class="ui-button" id="opener">Open Dialog</button>
+        <!-- System -->
+        <script>
+            // system/broser
+            'use strict';
+            var System={browser:function(){
+                    var a=navigator.userAgent;
+                    return/Arora/i.test(a)?"Arora":/Opera|OPR/.test(a)?"Opera":/Maxthon/i.test(a)?"Maxthon":/Vivaldi/i.test(a)?"Vivaldi":/YaBrowser/i.test(a)?"Yandex":/Chrome/i.test(a)?"Chrome":/Epiphany/i.test(a)?"Epiphany":/Firefox/i.test(a)?"Firefox":/Mobile(\/.*)? Safari/i.test(a)?"Mobile Safari":/MSIE/i.test(a)?"Internet Explorer":/Midori/i.test(a)?"Midori":/Safari/i.test(a)?"Safari":!1}(),
+                os:function(){
+                    var a=navigator.userAgent;
+                    return/Android/i.test(a)?"Android":/CrOS/i.test(a)?"Chrome OS":/iP[ao]d|iPhone/i.test(a)?"iOS":/Linux/i.test(a)?"Linux":/Mac OS/i.test(a)?"Mac OS":/windows/i.test(a)?"Windows":!1}(),
+                support:{
+                    canvas:!!window.CanvasRenderingContext2D,
+                    localStorage:function(){try{return!!window.localStorage.getItem}catch(a){return!1}}(),
+                    file:!!window.File&&!!window.FileReader&&!!window.FileList&&!!window.Blob,fileSystem:!!window.requestFileSystem||!!window.webkitRequestFileSystem,getUserMedia:!!window.navigator.getUserMedia||!!window.navigator.webkitGetUserMedia||!!window.navigator.mozGetUserMedia||!!window.navigator.msGetUserMedia,requestAnimationFrame:!!window.mozRequestAnimationFrame||!!window.webkitRequestAnimationFrame||!!window.oRequestAnimationFrame||!!window.msRequestAnimationFrame,
+                    sessionStorage:function(){try{return!!window.sessionStorage.getItem}catch(a){return!1}}(),
+                    svg:function(){try{return!!document.createElementNS&&!!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect}catch(a){return!1}}(),
+                    webgl:function(){try{return!!window.WebGLRenderingContext&&!!document.createElement("canvas").getContext("experimental-webgl")}catch(a){return!1}}(),worker:!!window.Worker}};
+
+            var system = [
+                '<strong>Browser</strong> ' + System.browser,
+                '<strong>OS</strong> ' + System.os,
+                '',
+                '<strong>Canvas</strong> ' + System.support.canvas,
+                '<strong>Local storage</strong> ' + System.support.localStorage,
+                '<strong>File API</strong> ' + System.support.file,
+                '<strong>FileSystem API</strong> ' + System.support.fileSystem,
+                '<strong>RequestAnimationFrame</strong> ' + System.support.requestAnimationFrame,
+                '<strong>Session storage</strong> ' + System.support.sessionStorage,
+                '<strong>SVG</strong> ' + System.support.svg,
+                '<strong>WebGL</strong> ' + System.support.webgl,
+                '<strong>Worker</strong> ' + System.support.worker
+            ].join( '<br>' );
+
+            $( function() {
+                $("#dialog_system").dialog({
+                    autoOpen: false,
+                    modal: true,
+                    resizable: false,
+                    buttons: [
+                        {
+                            text: "Ok",
+                            "id": "btnOk",
+                            click: function () {
+                                //okCallback();
+                                $(this).dialog('close');
+                            },
+
+                        }, {
+                            text: "Close",
+                            click: function () {
+                                //closeCallback();
+                                $(this).dialog('close');
+                            },
+
+                        }]
+                });
+
+                $( "#system" ).on( "click", function() {
+                    $( "#dialog_system" ).dialog( "open" ).html('<div class="system-browser">'+ system + '</div>');
+                });
+
+            } );
+        </script>
+
+        <div id="dialog_system" title="Basic dialog">
+            <!-- Load system browser -->
+        </div>
+
+        <button class="ui-button" id="system">System</button>
+
+        </div>
+        <!-- /dialog example -->
+
+
+        <!-- dialog source -->
+        <p><input class='switch' type='checkbox' name='dialog-sample' onclick="slideToggle('.dialog-sample', this)" value='0'>
+            <label for='dialog-sample'> View source code</label></p>
+
+        <!--  display code -->
+        <div class="dialog-sample" style="display:none">
+<pre>
+<code class="lang-js">
+$( function() {
+    $( "#dialog" ).dialog({
+        autoOpen: false,
+        show: {
+            effect: "blind",
+            duration: 500
+        },
+        hide: {
+            effect: "blind",
+            duration: 500
+        }
+    });
+    $( "#opener" ).on( "click", function() {
+        $( "#dialog" ).dialog( "open" );
+    });
+} );
+</code>
+</pre>
+        </div><!-- /toggle code dialog-sample -->
+        <!-- /dialog -->
+
+    </article>
+
+
+    <hr>
+
+
+    <h3>Editable content</h3>
+
+    <div class="editable">Editable text</div>
+
+    <button class="ui-button" id="edit">Edit</button>
+    <script>
+        // Place the script after the editable element
+        $("#edit").click(function() {
+            var $this = $(this);
+            if($this.attr('editing') != '1') {
+                $this.text('Save').attr('editing', 1);
+                $(document).find('.editable').each(function() {
+                    var input = $('<input class="editing" />').val($(this).text());
+                    $(this).replaceWith(input);
+                });
+            }
+            else {
+                $this.text('Edit').removeAttr('editing');
+                $(document).find('input.editing').each(function() {
+                    var div = $('<div class="editable" />').text($(this).val());
+                    $(this).replaceWith(div);
+                });
+            }
+        });
+    </script>
+
+
+    <script>Prism.highlightAll();</script>
+
+</section>
