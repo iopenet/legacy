@@ -14,9 +14,10 @@ The XOOPSCube Project
 <br>
 \\\\\———————————————/////
 <br>
+2002 — 2022
+<br>
 ....................
 <br>
-
 </h2>
 <p align="center">Open Source Software can be freely used, changed, and shared (in modified or unmodified form) by anyone!</p>
 
