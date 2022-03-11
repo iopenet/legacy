@@ -1,61 +1,100 @@
-## XOOPS Cube Legacy 2.3.0 Alpha
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/2.0.0/active.svg)](https://github.com/xoopscube/xcl)
+![License GPL](https://img.shields.io/badge/License-GPL-green)
+![License BSD](https://img.shields.io/badge/License-BSD-blue)
+![X-Updare Store](https://img.shields.io/badge/X--Update%20Store-Pending-red)
 
-2019-02-11 Merge and fix branch 2.3.0 
+<h2 align="center">
+🎇🎆✨🎆🎇
+<br>
+The XOOPSCube Project
+<br>
+ /////———————————————\\\\\
+<br>
+ Celebrates The 20th Anniversary 
+<br>
+\\\\\———————————————/////
+<br>
+....................
+<br>
 
-2019-01-29 Prepare to merge PHP7 branch and merge XCL 2.3.0 alpha User Interface.
+</h2>
+<p align="center">Open Source Software can be freely used, changed, and shared (in modified or unmodified form) by anyone!</p>
 
+                First developed nearly 20 years ago, the original XOOPS was based on PHPNuke forks,  
+                although about 70 to 80% of the code was rewritten, as Kazumi Ono (onokazu) wrote on  
+                the release announcement. Goghs Cheng (goghs) and Kazumi Ono (onokazu) used "OOPS",  
+                an acronym that stands for "Object-Oriented Portal System".  
+                - Xoops.org was launched on December 12, 2001. 
+                - A few weeks later, on New Year's Day 2002, XOOPS RC1 was released. 
+                - And the next year, in April 2003, XOOPS2 was released by Kazumi Ono 
+                - Finally, in May 2005, Onokazu announced the development of XOOPSCube.  
+                The XOOSCube Project developoment was lead by Kazuhisa Minato (minahito)
+                and the core team members Nobunobu, Onokazu, Tom_G3X, Ryuji, Kilica.
+                The new core was enriched with C++ features, object-oriented programming, 
+                following concept of oops like polymorphism, inheritance, encapsulation, 
+                abstraction. The Japanese XOOPS community contributed to the development 
+                of the Package Legacy, a set of modules to ensure backward compatibility.
 
-TOC
-====
+- [XOOPS2 released by Kazumi Ono](https://xoops.org/modules/news/article.php?storyid=747)
+- [XOOPS: Onokazu is one of Most Valued People of Open Source CMS](https://xoops.org/modules/news/article.php?storyid=4508)
 
-* [About](#about)
-* [License](#license)
-* [Requirements](#requirements)
-* [Features](#features)
-* [Download](#download)
-* [Installation](#installation)
-* [Overview](#overview)
-* [Screenshots](#screenshots)
-* [Extensibility](#extensibility)
-* [Modules](#modules)
-* [Themes](#themes)
-* [Documentation](#documentation)
-* [Site and Support](#site-and-support)
-* [Contribute](#contribute)
+-----
 
-***
+# XOOPSCUBE - Simple, Secure and Scalable
+
+## Web Application Platform
+
+## Self-host  
+
+XOOPSCube is a self-hosted open source application that runs on the most popular web server stack - Apache, MySQL, PHP. Self-hosted platforms are decentralized, allow for superior accessibility for customizing functions and style, which means you are not dependent on a centralized service and are free to choose your hosting service. This allows for extreme mobility when your number of users increase.
+
+## Compatibility mode
+
+XOOPSCube Legacy compatibility mode features a mechanism in which the XOOPSCube Web Application Platform emulates the older version, and mimics the XOOPS2 content management system in order to allow older or incompatible modules and themes to remain compatible with the newer software architecture. 
+
+## Backward compatibility  
+
+Legacy backward compatibility is a property of XOOPSCube that allows for interoperability with the older XOOPS2 system.  
+It refers to the ability of newer versions of XOOPSCube to run modules or themes that worked under the previous version.
+
+## Minimalist software
+  
+In computing, minimalism refers to the application of minimalist philosophies and principles in the design and use of hardware and software. Minimalism, in this sense, means designing systems that use the least hardware and software resources possible.  
+
+-----
 
 About
 ====
 
-**XOOPS Cube** is an Open Source Web Application Platform built with PHP and MySQL empowering webmasters to make a custom content management system and create dynamic and content rich websites with ease.
+**XOOPSCube** is an Open Source Web Application Platform built with PHP and MySQL empowering webmasters to make a custom content management system and create dynamic and content rich websites with ease.
 
-**XOOPS Cube Legacy** is a Simple, Secure and Scalable content management system and the package distribution of XOOPS Cube Project Team.
+**XOOPSCube Legacy** is a Simple, Secure and Scalable content management system and the package distribution of The XOOPSCube Project Team.
 
-**The XOOPS Cube Project** is friendly managed, developed and supported by a volunteer group with a multidisciplinary focus to provide a variety of different perspectives and ideas to consider in further development and design. XCL Team spirit  aims to strengthen everyone's social network, share the essential knowledge and understanding of the “spirit of open source” necessary to encourage creativity.
+**The XOOPSCube Project** is friendly managed, developed and supported by a volunteer group with a multidisciplinary focus to provide a variety of different perspectives and ideas to consider in further development and design. XCL Team spirit  aims to strengthen everyone's social network, share the essential knowledge and understanding of the “spirit of open source” necessary to encourage creativity.
+
 
 ***
 
 License
 ====
 
-### XOOPS Cube  
+### XOOPSCube - XCube Core  
 
-XOOPS Cube was started from scratch and the XOOPS Cube Core source code is released under the BSD licence.
+XOOPSCube was started from scratch and the minimalist XCube Core source code is released under the BSD licence.
 
  
-### XOOPS Cube Legacy  
+### XOOPSCube - Package Legacy  
 
-XOOPS Cube Legacy source code which is one of base modules to ensure compatibility with old versions of Xoops 2 is released under a GPL licence.
+XOOPSCube Legacy source code which is a set of modules to ensure compatibility with old versions of Xoops2 is released under a GPL licence.
 
 ***
 
 Requirements
 ====
 
-Whether you plan to create your own personal or corporate community web site with news, forums, blog, photo album, portfolio, etc. You need a reliable Web Host running Apache, MySQL and PHP.
-
-XOOPS Cube will run smoothly on a LAMP environment. In most cases your site will be hosted on the popular open source web platform consisting of Linux, Apache, MySQL, and PHP. Though XOOPS Cube can run on any other Operating System (OS) as well.
+Whether you plan to create your own personal or corporate community web site with news, forums, photo gallery, portfolio, etc.   
+XOOPSCube will run smoothly on the most popular open source web server stack consisting of Linux, Apache, MySQL, and PHP.   
+Though XOOPSCube can run on any other Operating System (OS) as well.
 
 
 <table>
@@ -69,21 +108,21 @@ Database</th>
 Language</th>
 </tr>
 <tr>
-<td align="center">Apache version 2.xx</td>
-<td align="center">MySQL version 5.xx</td>
-<td align="center">PHP version 5.xx</td>
+<td align="center">Apache version 2.4.+</td>
+<td align="center">MySQL version 5.6.+</td>
+<td align="center">PHP version 7.2.+</td>
 </tr>
 <tr>
-<td align="center"><a href="http://apache.org/"><img src="http://xoopscube.org/uploads/fckeditor/logo-apache.png" alt="Apache" title="Apache" /></a></td>
-<td align="center"><br />
+<td align="center"><a href="https://apache.org/"><img src="https://raw.githubusercontent.com/xoopscube/artwork-social-media/master/icons/apache.svg" width="48px" height="48px" alt="Apache" title="Apache"></a></td>
+<td align="center"><br>
 <br />
-<a href="http://mysql.com/"><img src="http://xoopscube.org/uploads/fckeditor/logo-mysql.png" alt="Mysql" title="Mysql" /></a></td>
-<td align="center"><a href="http://php.net/"><img src="http://xoopscube.org/uploads/fckeditor/logo-php.png" alt="php" title="php" /></a></td>
+<a href="https://mysql.com/"><img src="https://raw.githubusercontent.com/xoopscube/artwork-social-media/master/icons/mysql.svg" width="48px" height="48px" alt="Mysql" title="Mysql"></a></td>
+<td align="center"><a href="https://php.net/"><img src="https://raw.githubusercontent.com/xoopscube/artwork-social-media/master/icons/php.svg" width="48px" height="48px" alt="php" title="php"></a></td>
 </tr>
 <tr>
-<td align="center">http://apache.org/</td>
-<td align="center">http://www.mysql.com/</td>
-<td align="center">http://php.net/</td>
+<td align="center">https://apache.org/</td>
+<td align="center">https://www.mysql.com/</td>
+<td align="center">https://php.net/</td>
 </tr>
 </table>
 
@@ -91,10 +130,10 @@ Language</th>
 
 Useful Wikipedia articles with tables comparing general and technical information of Proprietary software, Free and open-source software.  
 
-<img src="http://xoopscube.org/uploads/fckeditor/server_database.png"> <a href="http://en.wikipedia.org/wiki/List_of_AMP_packages"> Local Test Server</a> : List of Apache–MySQL–PHP packages  
-<img src="http://xoopscube.org/uploads/fckeditor/script_edit.png"> <a href="http://en.wikipedia.org/wiki/Source_code_editor"> Source Code Editor</a> : Some well-known source code editors  
-<img src="http://xoopscube.org/uploads/fckeditor/picture_edit.png"> <a href="http://en.wikipedia.org/wiki/Comparison_of_raster_graphics_editors"> Graphics Editor</a> : Comparison of raster graphics editors  
-<img src="http://xoopscube.org/uploads/fckeditor/computer_go.png"> <a href="http://en.wikipedia.org/wiki/FTP_clients"> FTP Clients</a> : Comparison of FTP client software  
+<img src="https://xoopscube.org/uploads/fckeditor/server_database.png"> <a href="http://en.wikipedia.org/wiki/List_of_AMP_packages"> Local Test Server</a> : List of Apache–MySQL–PHP packages  
+<img src="https://xoopscube.org/uploads/fckeditor/script_edit.png"> <a href="http://en.wikipedia.org/wiki/Source_code_editor"> Source Code Editor</a> : Some well-known source code editors  
+<img src="https://xoopscube.org/uploads/fckeditor/picture_edit.png"> <a href="http://en.wikipedia.org/wiki/Comparison_of_raster_graphics_editors"> Graphics Editor</a> : Comparison of raster graphics editors  
+<img src="https://xoopscube.org/uploads/fckeditor/computer_go.png"> <a href="http://en.wikipedia.org/wiki/FTP_clients"> FTP Clients</a> : Comparison of FTP client software  
 
 ***
 
