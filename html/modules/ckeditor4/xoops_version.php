@@ -1,40 +1,39 @@
 <?php
 /**
- * @file
- * @package ckeditor4
- * @version $Id$
+ * CKEditor4 module for XCL
+ * @package    CKEditor4
+ * @version    2.3.1
+ * @author     Other authors Nuno Luciano (aka gigamaster), 2020, XCL PHP7
+ * @author     Naoki Sawada (aka nao-pon) <https://xoops.hypweb.net/>
+ * @copyright  2005-2022 The XOOPSCube Project
+ * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
  */
 
-if (!defined('XOOPS_ROOT_PATH')) exit();
+if (!defined('XOOPS_ROOT_PATH')) {
+	exit();
+}
 
 //
-// Define a basic manifesto.
+// Module manifesto.
 //
 $modversion['name'] = _MI_CKEDITOR4_LANG_CKEDITOR4;
-$modversion['version'] = 0.74;
-$modversion['description'] = _MI_CKEDITOR4_DESC_CKEDITOR4 . ' (CKEditor 4.11.2 Full version + Upload Image plugin)';
-$modversion['author'] = "nao-pon http://xoops.hypweb.net/";
-$modversion['credits'] = "Naoki Sawada aka nao-pon";
+$modversion['version'] = 2.31;
+$modversion['description'] = 'v4.16.2 [ 11-08-2021 ] '._MI_CKEDITOR4_DESC_CKEDITOR4;
+$modversion['author'] = "Naoki Sawada (aka nao-pon). Nuno Luciano (aka gigamaster), 2020 XCL PHP7 ";
+$modversion['credits'] = "Naoki Sawada (aka nao-pon) https://xoops.hypweb.net/";
 $modversion['help'] = "help.html";
 $modversion['license'] = "GPL";
 $modversion['official'] = 0;
-$modversion['image'] = "images/mydhtml.png";
+$modversion['image'] = "images/module_ckeditor.svg";
 $modversion['dirname'] = "ckeditor4";
 
 $modversion['cube_style'] = true;
 $modversion['disable_legacy_2nd_installer'] = false;
 
-// TODO After you made your SQL, remove the following comment-out.
-// $modversion['sqlfile']['mysql'] = "sql/mysql.sql";
-##[cubson:tables]
-##[/cubson:tables]
-
 //
-// Templates. You must never change [cubson] chunk to get the help of cubson.
+// Templates
 //
 $modversion['templates'][]['file'] = 'ckeditor4_textarea.html';
-##[cubson:templates]
-##[/cubson:templates]
 
 //
 // Admin panel setting
@@ -67,6 +66,15 @@ $modversion['config'][] = array(
 		'formtype'		=> 'textarea' ,
 		'valuetype'		=> 'string' ,
 		'default'		=> 'Full'
+)
+
+;$modversion['config'][] = array(
+        'name'			=> 'uiColor' ,
+        'title'			=> '_MI_CKEDITOR4_TOOLBAR_UI_COLOR',
+        'description'	=> '_MI_CKEDITOR4_TOOLBAR_UI_COLOR_DESC',
+        'formtype'		=> 'color' ,
+        'valuetype'		=> 'string' ,
+        'default'		=> '#405060'
 ) ;
 
 $modversion['config'][] = array(
@@ -102,7 +110,7 @@ $modversion['config'][] = array(
 		'description'	=> '_MI_CKEDITOR4_TOOLBAR_GUEST_DESC',
 		'formtype'		=> 'textarea' ,
 		'valuetype'		=> 'string' ,
-		'default'		=> '[["PasteText","-","Undo","Redo" ],["Bold","Italic","Underline","Strike","-","TextColor","-","RemoveFormat","FontSize"],["NumberedList","BulletedList","Outdent","Indent","Blockquote"],["Link","Image","Smiley","PageBreak"],["Maximize", "ShowBlocks","-","About"]]'
+		'default'		=> '[["PasteText","-","Undo","Redo" ],["Bold","Italic","Underline","Strike","-","TextColor","-","RemoveFormat","FontSize"],["NumberedList","BulletedList","Outdent","Indent","Blockquote"],["Link","Image","Smiley","PageBreak"],["Maximize", "ShowBlocks"]]'
 ) ;
 
 $modversion['config'][] = array(
@@ -207,4 +215,3 @@ $modversion['config'][] = array(
 ) ;
 
 $modversion['onUpdate'] = 'admin/onupdate.inc.php';
-?>
