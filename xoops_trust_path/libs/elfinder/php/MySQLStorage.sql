@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS `elfinder_file`
     PRIMARY KEY (`id`),
     UNIQUE KEY `parent_name` (`parent_id`, `name`),
     KEY `parent_id` (`parent_id`)
-) ENGINE = InnoDB;
+) ENGINE=InnoDB;
 
 INSERT INTO `elfinder_file`
 (`id`, `parent_id`, `name`, `content`, `size`, `mtime`, `mime`, `read`, `write`, `locked`, `hidden`, `width`, `height`)
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `elfinder_trash`
     PRIMARY KEY (`id`),
     UNIQUE KEY `parent_name` (`parent_id`, `name`),
     KEY `parent_id` (`parent_id`)
-) ENGINE = InnoDB;
+) ENGINE=InnoDB;
 
 INSERT INTO `elfinder_trash`
 (`id`, `parent_id`, `name`, `content`, `size`, `mtime`, `mime`, `read`, `write`, `locked`, `hidden`, `width`, `height`)
