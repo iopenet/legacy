@@ -30,7 +30,7 @@
  * {cycle name=row values="one,two,three" reset=true}
  * {cycle name=row}
  * </pre>
- * @link http://smarty.php.net/manual/en/language.function.cycle.php {cycle}
+ * @link https://smarty.php.net/manual/en/language.function.cycle.php {cycle}
  *       (Smarty online manual)
  * @author Monte Ohrt <monte at ohrt dot com>
  * @author credit to Mark Priatel <mpriatel@rogers.com>
@@ -103,4 +103,4 @@ function smarty_function_cycle($params, &$smarty)
 
 /* vim: set expandtab: */
 
-
+?>

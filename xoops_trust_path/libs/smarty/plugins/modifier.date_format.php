@@ -19,7 +19,7 @@ require_once $smarty->_get_plugin_filepath('shared', 'make_timestamp');
  *         - string: input date string
  *         - format: strftime format for output
  *         - default_date: default date if $string is empty
- * @link http://smarty.php.net/manual/en/language.modifier.date.format.php
+ * @link https://smarty.php.net/manual/en/language.modifier.date.format.php
  *          date_format (Smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param string
@@ -55,4 +55,4 @@ function smarty_modifier_date_format($string, $format = '%b %e, %Y', $default_da
 
 /* vim: set expandtab: */
 
-
+?>

@@ -12,7 +12,7 @@
  * Type:     function<br>
  * Name:     popup_init<br>
  * Purpose:  initialize overlib
- * @link http://smarty.php.net/manual/en/language.function.popup.init.php {popup_init}
+ * @link https://smarty.php.net/manual/en/language.function.popup.init.php {popup_init}
  *          (Smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param array
@@ -37,4 +37,4 @@ function smarty_function_popup_init($params, &$smarty)
 
 /* vim: set expandtab: */
 
-
+?>

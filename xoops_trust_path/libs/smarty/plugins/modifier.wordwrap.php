@@ -12,7 +12,7 @@
  * Type:     modifier<br>
  * Name:     wordwrap<br>
  * Purpose:  wrap a string of text at a given length
- * @link http://smarty.php.net/manual/en/language.modifier.wordwrap.php
+ * @link https://smarty.php.net/manual/en/language.modifier.wordwrap.php
  *          wordwrap (Smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param string
@@ -26,4 +26,4 @@ function smarty_modifier_wordwrap($string,$length=80,$break="\n",$cut=false)
     return wordwrap($string,$length,$break,$cut);
 }
 
-
+?>

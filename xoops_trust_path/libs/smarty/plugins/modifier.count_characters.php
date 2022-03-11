@@ -12,7 +12,7 @@
  * Type:     modifier<br>
  * Name:     count_characteres<br>
  * Purpose:  count the number of characters in a text
- * @link http://smarty.php.net/manual/en/language.modifier.count.characters.php
+ * @link https://smarty.php.net/manual/en/language.modifier.count.characters.php
  *          count_characters (Smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param string
@@ -29,4 +29,4 @@ function smarty_modifier_count_characters($string, $include_spaces = false)
 
 /* vim: set expandtab: */
 
-
+?>

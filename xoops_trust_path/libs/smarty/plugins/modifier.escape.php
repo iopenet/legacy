@@ -12,7 +12,7 @@
  * Type:     modifier<br>
  * Name:     escape<br>
  * Purpose:  Escape the string according to escapement type
- * @link http://smarty.php.net/manual/en/language.modifier.escape.php
+ * @link https://smarty.php.net/manual/en/language.modifier.escape.php
  *          escape (Smarty online manual)
  * @author   Monte Ohrt <monte at ohrt dot com>
  * @param string
@@ -90,4 +90,4 @@ function smarty_modifier_escape($string, $esc_type = 'html', $char_set = 'ISO-88
 
 /* vim: set expandtab: */
 
-
+?>
