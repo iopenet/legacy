@@ -1,51 +1,96 @@
 <div class="adminnavi">
-  <a href="./index.php"><{$smarty.const._MI_USER_NAME}></a>
+  <a href="<{$xoops_url}>/admin.php">Dashboard</a>
+  &raquo;&raquo; <a href="./index.php"><{$smarty.const._MI_USER_NAME}></a>
   &raquo;&raquo; <span class="adminnaviTitle"><a href="./index.php?action=GroupList"><{$smarty.const._AD_USER_LANG_GROUP_LIST}></a></span>
 </div>
 
-<h3 class="admintitle"><{$smarty.const._AD_USER_LANG_GROUP_LIST}></h3>
+<{include file="./components/user-overview.html"}>
 
-<ul class="toptab">
-  <li class="add"><a href="index.php?action=GroupEdit"><{$smarty.const._AD_USER_LANG_GROUP_NEW}></a></li>
-</ul>
+<h2 class="admintitle"><{$smarty.const._AD_USER_LANG_GROUP_LIST}></h2>
+
+<div class="ui-dev-mode"><{$smarty.template}></div>
+
+
+<div layout="row center-justify" class="control-action">
+
+    <a class="ui-btn ui-btn-small" href="index.php?action=GroupEdit"><{$smarty.const._AD_USER_LANG_GROUP_NEW}></a>
+
+    <div class="control-view">
+        <{* <button id="list" class="ui-btn" data-id="1" type="button" title="View List">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <path d="M9 5v4h12V5M9 19h12v-4H9m0-1h12v-4H9M4 9h4V5H4m0 14h4v-4H4m0-1h4v-4H4v4z" fill="currentColor"/></svg>
+        </button>
+
+        <button id="grid" class="ui-btn" data-id="2" type="button" title="View Grid">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <path d="M16 5v6h5V5m-11 6h5V5h-5m6 13h5v-6h-5m-6 6h5v-6h-5m-6 6h5v-6H4m0-1h5V5H4v6z" fill="currentColor"/></svg>
+        </button>
+
+        <button id="filter" class="ui-btn" type="button" data-id="3" onclick="slideToggle('.module-filter', this)"  title="View Filter">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <path d="M7 11h10v2H7zM4 7h16v2H4zm6 8h4v2h-4z" fill="currentColor"/></svg>
+        </button> *}>
+
+        <button class="help-admin ui-btn" type='button' data-id='4' data-module='user' data-help-article='#help-groups' title="Help">
+            <span class="ui-icon ui-icon-help"></span>
+        </button>
+    </div>
+
+</div>
+
 
 <table class="outer">
+    <thead>
   <tr>
     <th>&nbsp;</th>
     <th><{$smarty.const._AD_USER_LANG_GROUP_GID}>
-      <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.GROUP_SORT_KEY_GROUPID}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>" /></a>
-      <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.GROUP_SORT_KEY_GROUPID}>"><img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>" /></a></th>
+      <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.GROUP_SORT_KEY_GROUPID}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>"></a>
+      <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.GROUP_SORT_KEY_GROUPID}>"><img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>"></a></th>
     <th><{$smarty.const._AD_USER_LANG_GROUP_NAME}>
-      <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.GROUP_SORT_KEY_NAME}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>" /></a>
-      <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.GROUP_SORT_KEY_NAME}>"><img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>" /></a></th>
+      <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.GROUP_SORT_KEY_NAME}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>"></a>
+      <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.GROUP_SORT_KEY_NAME}>"><img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>"></a></th>
     <th><{$smarty.const._AD_USER_LANG_GROUP_DESC}>
-      <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.GROUP_SORT_KEY_DESCRIPTION}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>" /></a>
-      <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.GROUP_SORT_KEY_DESCRIPTION}>"><img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>" /></a></th>
+      <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.GROUP_SORT_KEY_DESCRIPTION}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>"></a>
+      <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.GROUP_SORT_KEY_DESCRIPTION}>"><img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>"></a></th>
     <th><{$smarty.const._AD_USER_LANG_GROUP_TYPE}>
-      <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.GROUP_SORT_KEY_GROUP_TYPE}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>" /></a>
-      <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.GROUP_SORT_KEY_GROUP_TYPE}>"><img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>" /></a></th>
+      <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.GROUP_SORT_KEY_GROUP_TYPE}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>"></a>
+      <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.GROUP_SORT_KEY_GROUP_TYPE}>"><img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>"></a></th>
     <th><{$smarty.const._AD_USER_LANG_GROUP_AMMO}></th>
     <th><{$smarty.const._AD_USER_LANG_CONTROL}></th>
   </tr>
+</thead>
+<tbody>
   <{foreach item=group from=$objects}>
     <tr class="<{cycle values='odd,even'}>">
-      <td class="user_list_image"><img src="<{"icons/group.png"|theme}>" alt="<{$smarty.const._AD_USER_LANG_GROUP}>" title="<{$smarty.const._AD_USER_LANG_GROUP}>" /></td>
+      <td class="user_list_image"><i title="<{$smarty.const._AD_USER_LANG_GROUP}>"><img src="<{"icons/icon-user-group.svg"|theme}>" class="svg"></i></td>
       <td class="user_list_id"><{$group->getShow('groupid')}></td>
       <td class="user_list_title"><{$group->getShow('name')}></td>
       <td class="user_list_description"><{$group->getShow('description')}></td>
       <td class="user_list_type"><{$group->getShow('group_type')}></td>
       <td class="user_list_number"><{$group->getUserCount()|xoops_escape}></td>
       <td class="user_list_control">
-        <a href="index.php?action=GroupEdit&amp;groupid=<{$group->getShow('groupid')}>"><img src="<{"icons/edit.png"|theme}>" alt="<{$smarty.const._EDIT}>" title="<{$smarty.const._EDIT}>" /></a>
+        <a href="index.php?action=GroupEdit&amp;groupid=<{$group->getShow('groupid')}>" title="<{$smarty.const._EDIT}>">
+          <img src="<{"icons/icon-user-edit.svg"|theme}>" class="svg">
+        </a>
         <{if $group->get('groupid') > $smarty.const.XOOPS_GROUP_ANONYMOUS }>
-          <a href="index.php?action=GroupDelete&amp;groupid=<{$group->getShow('groupid')}>"><img src="<{"icons/delete.png"|theme}>" alt="<{$smarty.const._DELETE}>" title="<{$smarty.const._DELETE}>" /></a>
+          <a href="index.php?action=GroupDelete&amp;groupid=<{$group->getShow('groupid')}>" title="<{$smarty.const._DELETE}>" class="red">
+            <img src="<{"icons/icon-user-delete.svg"|theme}>" class="svg">
+          </a>
         <{/if}>
-        <a href="index.php?action=GroupProperty&amp;groupid=<{$group->getShow('groupid')}>"><img src="<{"icons/property.png"|theme}>" alt="<{$smarty.const._AD_USER_LANG_GROUP_PROPERTY}>" title="<{$smarty.const._AD_USER_LANG_GROUP_PROPERTY}>" /></a>
-        <a href="index.php?action=GroupPerm&amp;groupid=<{$group->getShow('groupid')}>"><img src="<{"icons/permission.png"|theme}>" alt="<{$smarty.const._AD_USER_LANG_GROUP_PERMISSION}>" title="<{$smarty.const._AD_USER_LANG_GROUP_PERMISSION}>" /></a>
-        <a href="index.php?action=GroupMember&amp;groupid=<{$group->getShow('groupid')}>"><img src="<{"icons/members.png"|theme}>" alt="<{$smarty.const._AD_USER_LANG_GROUP_ASSIGN}>" title="<{$smarty.const._AD_USER_LANG_GROUP_ASSIGN}>" /></a>
+        <a href="index.php?action=GroupProperty&amp;groupid=<{$group->getShow('groupid')}>" title="<{$smarty.const._AD_USER_LANG_GROUP_PROPERTY}>">
+          <img src="<{"icons/icon-user-check.svg"|theme}>" class="svg">
+        </a>
+        <a href="index.php?action=GroupPerm&amp;groupid=<{$group->getShow('groupid')}>" title="<{$smarty.const._AD_USER_LANG_GROUP_PERMISSION}>">
+          <img src="<{"icons/icon-user-permission.svg"|theme}>" class="svg">
+        </a>
+        <a href="index.php?action=GroupMember&amp;groupid=<{$group->getShow('groupid')}>" title="<{$smarty.const._AD_USER_LANG_GROUP_ASSIGN}>">
+          <img src="<{"icons/icon-user-assign.svg"|theme}>" class="svg">
+        </a>
       </td>
     </tr>
   <{/foreach}>
+</tbody>
 </table>
 
 <div class="pagenavi"><{xoops_pagenavi pagenavi=$pageNavi}></div>
+
