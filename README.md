@@ -1,6 +1,6 @@
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/2.0.0/active.svg)](https://github.com/xoopscube/xcl)
-![License GPL](https://img.shields.io/badge/License-GPL-green)
-![License BSD](https://img.shields.io/badge/License-BSD-blue)
+[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 ![X-Updare Store](https://img.shields.io/badge/X--Update%20Store-Pending-red)
 
 <h2 align="center">
@@ -215,5 +215,59 @@ We encourage everyone in the community to contribute their knowledge and experti
 [enhancement request](https://github.com/xoopscube/legacy/issues)   
 [bug report](https://github.com/xoopscube/legacy/issues)   
 [patch](https://github.com/xoopscube/legacy/pulls)  
+
+
+## The Contributors
+
+
+
+The XOOPSCube project and available distributions have been developed and supported by a group of volunteers with a multidisciplinary approach and multicultural collaboration providing a variety of different perspectives and ideas to consider in future development and design.
+
+We encourage all members of the open source community to promote curiosity in learning and encourage the adoption of these core values: integrity, passion and respect.
+
+
+| 10key         | Aaki          | Argon         | Asunta        | Bandit-x      | 
+|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
+| Beduino       | Bindi         | Bluemooninc   | Domifara      | Fugafuga      |
+| Gara          | Gigamaster    | GIJOE         | Gusagi        | Halt          | 
+| Hamanaka      | Hiroki        | Hypweb (Nao-pon) | Hxrr       | JardaR        |
+| idaikobo      | Kilica        | kimura363     | Leco          | Lumbago       | 
+| Marijuana     | Marine        | Mat           | Matchan       | Metal         | 
+| Mikhail Miguel| Minahito      | Moegiiro      | Mumincacao    | Masarap       | 
+| Naao          | Nao-pon       | Neko88        | Nobunobu      | Nor           | 
+| Nbuy (Nobu)   | Ohsepoa       | OhYear        | Ohwada        | Okuhiki       | 
+| Onokazu       | Orrisroot     | Otneg         | Plusangel     | Pcboy         |
+| Roger         | RyujiAMANO    | Sacchan       |  Sak-Axyz     | Salamander    | 
+| Shige-p       | Shiraga       | Slayer_cg     | Sohgo         | Sow           |
+| Suin          | Toemon        | Tokitam       | Tohokuaiki    | Tom_g3x       | 
+| Tomoro        | Wanderer      | Wanikoo       |
+
+
+      —///////////////////////—
+
+_When you know who you are, you know what to do, you know what story to tell, and the stories that you want to hear and see. We share the essential knowledge and understanding of “open source” necessary to create tools that encourage creativity and free speech._
+
+
+>"Learn everything you can.
+Try everything that comes along.
+Look at everything there is to see.
+Search, experiment, make mistakes, fail, stand up.
+Turn religious, turn conservative, turn radical.
+And then forget all about it and find your way to create."
+
+-----
+
+### Big Thanks
+
+
+<p align="center">
+<a href="https://www.jetbrains.com/">JetBrains</a> is an active participant in the <a href="https://www.jetbrains.com/opensource/">Open Source community</a>
+<br>
+Big thanks to the JetBrains Team for supporting XOOPSCube Project ^_^/</p>
+
+<p align=center><img src="https://raw.githubusercontent.com/xoopscube/artwork-social-media/master/logo/jetbrains-logo-variant-3-256.png" alt="Big thanks to the JetBrains Team for supporting XOOPSCube Project" title="Big thanks to the JetBrains Team for supporting XOOPSCube Project" /></p>
+
+-----
+
 
 
