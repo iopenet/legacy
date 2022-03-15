@@ -14,14 +14,15 @@ eval( ' function xoops_module_install_' . $mydirname . '( $module ) { return xel
 if ( ! function_exists( 'xelfinder_oninstall_base' ) ) {
 
 	function xelfinder_oninstall_base( $module, $mydirname ) {
-		// transations on module install
+		// transactions on module install
 
 		global $ret; // TODO :-D
 
 		// for Cube 2.1
 		if ( defined( 'XOOPS_CUBE_LEGACY' ) ) {
 
-			$root =& XCube_Root::getSingleton();
+			//$root =& XCube_Root::getSingleton();
+            $root = XCube_Root::getSingleton();
 
 			$root->mDelegateManager->add( 'Legacy.Admin.Event.ModuleInstall.' . ucfirst( $mydirname ) . '.Success', 'xelfinder_message_append_oninstall' );
 

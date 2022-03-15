@@ -20,7 +20,8 @@ if ( ! function_exists( 'xelfinder_onupdate_base' ) ) {
 
 		// for Cube 2.1
 		if ( defined( 'XOOPS_CUBE_LEGACY' ) ) {
-			$root =& XCube_Root::getSingleton();
+			//$root =& XCube_Root::getSingleton();
+            $root = XCube_Root::getSingleton();
 			$root->mDelegateManager->add( 'Legacy.Admin.Event.ModuleUpdate.' . ucfirst( $mydirname ) . '.Success', 'xelfinder_message_append_onupdate' );
 			$msgs = [];
 		} else {

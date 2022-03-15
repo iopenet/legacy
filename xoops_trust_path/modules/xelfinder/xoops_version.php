@@ -23,8 +23,8 @@ $constpref = '_MI_' . strtoupper( $mydirname );
 $modversion['name'] = 'xelFinder';
 //$modversion['name'] = $constpref.'_NAME') ;
 $modversion['description']      = constant( $constpref . '_DESC' );
-$modversion['version']          = 2.59;
-$modversion['detailed_version'] = '2.59.0';
+$modversion['version']          = 2.61;
+$modversion['detailed_version'] = '2.61.0';
 $modversion['credits']          = 'Naoki Sawada (aka Nao-pon). Nuno Luciano (aka gigamaster) 2020 XCL PHP7';
 $modversion['author']           = 'Naoki Sawada (aka Nao-pon) <Hypweb.net>';
 $modversion['cube_style']       = true;
@@ -445,14 +445,6 @@ mailbbs:mailbbs:modules/mailbbs/imgs:MailBBS
 		'default'     => ''
 	],
 	[
-		'name'        => 'creative_cloud_apikey',
-		'title'       => $constpref . '_CREATIVE_CLOUD_APIKEY',
-		'description' => $constpref . '_CREATIVE_CLOUD_APIKEY_DESC',
-		'formtype'    => 'textbox',
-		'valuetype'   => 'string',
-		'default'     => ''
-	],
-	[
 		'name'        => 'online_convert_apikey',
 		'title'       => $constpref . '_ONLINE_CONVERT_APIKEY',
 		'description' => $constpref . '_ONLINE_CONVERT_APIKEY_DESC',
@@ -691,6 +683,14 @@ mailbbs:mailbbs:modules/mailbbs/imgs:MailBBS
 		'formtype'    => 'yesno',
 		'valuetype'   => 'int',
 		'default'     => 1
+	],
+	[
+		'name'		  => 'check_name_view' ,
+		'title'		  => $constpref.'_CHECK_NAME_VIEW',
+		'description' => $constpref.'_CHECK_NAME_VIEW_DESC',
+		'formtype'	  => 'yesno' ,
+		'valuetype'	  => 'int' ,
+		'default'	  => 0
 	],
 	[
 		'name'        => 'connector_url',
