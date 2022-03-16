@@ -1,6 +1,6 @@
 <?php
 /*
- * Created on 2012/01/20 by nao-pon https://xoops.hypweb.net/
+ * Created on 2012/01/20 by nao-pon http://xoops.hypweb.net/
  * $Id: xoops_elFinder.class.php,v 1.1 2012/01/20 13:32:02 nao-pon Exp $
  */
 
@@ -25,21 +25,21 @@ class xoops_elFinder {
 	protected static $dbCharset = '';
 	
 	/**
-	 * Log file path
-	 *
-	 * @var string
-	 **/
+	* Log file path
+	*
+	* @var string
+	**/
 	protected $file = '';
-
-	protected $defaultVolumeOptions = [
-		'dateFormat' => 'y/m/d H:i',
-		'mimeDetect' => 'auto',
-		'tmbSize'    => 48,
-		'tmbCrop'    => true,
-		'defaults'   => [ 'read' => true, 'write' => false, 'hidden' => false, 'locked' => false ]
-	];
 	
-	protected $writeCmds = [
+	protected $defaultVolumeOptions = array(
+			'dateFormat' => 'y/m/d H:i',
+			'mimeDetect' => 'auto',
+			'tmbSize'	 => 48,
+			'tmbCrop'	 => true,
+			'defaults' => array('read' => true, 'write' => false, 'hidden' => false, 'locked' => false)
+	);
+	
+	protected $writeCmds = array(
 		'archive',
 		'chmod',
 		'cut',
@@ -56,14 +56,14 @@ class xoops_elFinder {
 		'resize',
 		'rm',
 		'upload'
-	];
+	);
 	
-	public function __construct( $mydirname, $opt = [] ) {
+	public function __construct($mydirname, $opt = array()) {
 		global $xoopsUser, $xoopsModule;
 		
-		if ( ! is_object( $xoopsModule ) ) {
-			$module_handler = xoops_getHandler( 'module' );
-			$mModule        = $module_handler->getByDirname( $mydirname );
+		if (!is_object($xoopsModule)) {
+			$module_handler = xoops_getHandler('module');
+			$mModule = $module_handler->getByDirname($mydirname);
 		} else {
 			$mModule = $xoopsModule;
 		}
@@ -86,12 +86,13 @@ class xoops_elFinder {
 	}
 	
 	public function getUserRoll() {
-		return [
-			'isAdmin'        => (bool) $this->isAdmin,
-			'uid'            => (int) $this->uid,
-			'mygids'         => (array) $this->mygids,
-			'inSpecialGroup' => (bool) $this->inSpecialGroup
-		];
+		$res = array(
+			'isAdmin'        => (bool)$this->isAdmin,
+			'uid'            => (int)$this->uid,
+			'mygids'         => (array)$this->mygids,
+			'inSpecialGroup' => (bool)$this->inSpecialGroup
+		);
+		return $res;
 	}
 	
 	public function getUid() {
