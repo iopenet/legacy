@@ -192,6 +192,9 @@
 ::-webkit-scrollbar-track {
     background-color: var( --trackBG );
 }
+textarea::-webkit-resizer {
+    background-color: var( --thumbBG );
+}
 
 /* Firefox Scrollbar */
 :root {

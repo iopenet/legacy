@@ -25,7 +25,7 @@
         data-help-file="block.html" // !TODO if module's
         data-help-article="help-overview" // article id from module's help file
        <button class="help-admin ui-btn" type='button' data-module='legacy' data-help-article='#help-version'>Help Admin</button>
-        or just a button with icon:
+        or a button with icon:
         <button class="help-admin ui-btn" type='button' data-module='legacy' data-help-article='#help-version'>
             <span class="ui-icon ui-icon-help"></span>
         </button>
@@ -53,21 +53,21 @@
                 // Modify the close button
                 // eh. show text or icon, or both
                 // Customize close button style
-                $button.removeClass( "ui-dialog-titlebar-close" )
-                    .css( "float", "right" )
-                    .button( "option", {
-                        //icons: {primary: false},
-                        icons: true,
-                        //text: true,
-                        text: false,
-                        label: "Close"
-                    });
+                // $button.removeClass( "ui-dialog-titlebar-close" )
+                //     .css( { width: "auto", margin: "0", float: "right", padding: "0" } )
+                //     .button( "option", {
+                //         //icons: {primary: false},
+                //         icons: true,
+                //         //text: true,
+                //         text: false,
+                //         label: "Close",
+                //     });
 
             },
             autoOpen: false,
             maxWidth:600,
             maxHeight: 600,
-            width: 400,
+            width: 520,
             height: 480,
 
             show: {
@@ -85,12 +85,12 @@
 
             var module = $(this).data('module');
             var helpArticle = $(this).data('help-article');
-            console.log('module=',module);
-            console.log('helpArticle=',helpArticle);
+            // console.log('module=',module);
+            // console.log('helpArticle=',helpArticle);
 
             $( "#dialog-help" ).dialog( "open" );
 
-            $('#help-data').delay(3200).html('<div class="xcl-progress-loading"></div>');
+            $('#help-data').delay(3000).html('<div class="xcl-progress-loading"></div>');
 
             setTimeout(function() {
                 $('#help-data').delay(3000).load('<{$xoops_url}>/modules/legacy/admin/index.php?action=Help&dirname='+module+' '+helpArticle, function() {

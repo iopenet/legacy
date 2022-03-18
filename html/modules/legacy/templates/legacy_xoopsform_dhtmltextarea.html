@@ -1,15 +1,15 @@
 <a name='moresmiley'></a>
-<a href="#" onclick='xoopsCodeUrl("<{$element->getId()}>", "<{$smarty.const._ENTERURL}>", "<{$smarty.const._ENTERWEBTITLE}>"); return false;'>
+<a href="#" class="ui-button" onclick='xoopsCodeUrl("<{$element->getId()}>", "<{$smarty.const._ENTERURL}>", "<{$smarty.const._ENTERWEBTITLE}>"); return false;'>
     <img class='svg' src='<{$xoops_url}>/images/icons/url.svg' alt='url'></a>&nbsp;
-<a href="#" onclick='javascript:xoopsCodeEmail("<{$element->getId()}>", "<{$smarty.const._ENTEREMAIL}>"); return false;'>
+<a href="#" class="ui-button" onclick='javascript:xoopsCodeEmail("<{$element->getId()}>", "<{$smarty.const._ENTEREMAIL}>"); return false;'>
     <img class='svg' src='<{$xoops_url}>/images//icons/mail.svg' alt='email'></a>&nbsp;
-<a href="#" onclick='javascript:xoopsCodeImg("<{$element->getId()}>", "<{$smarty.const._ENTERIMGURL}>", "<{$smarty.const._ENTERIMGPOS}>", "<{$smarty.const._IMGPOSRORL|xoops_escape}>", "<{$smarty.const._ERRORIMGPOS}>"); return false;'>
+<a href="#" class="ui-button" onclick='javascript:xoopsCodeImg("<{$element->getId()}>", "<{$smarty.const._ENTERIMGURL}>", "<{$smarty.const._ENTERIMGPOS}>", "<{$smarty.const._IMGPOSRORL|xoops_escape}>", "<{$smarty.const._ERRORIMGPOS}>"); return false;'>
     <img class='svg' src='<{$xoops_url}>/images//icons/imgsrc.svg' alt='imgsrc'></a>&nbsp;
-<a href="#" onclick='javascript:openWithSelfMain("<{$xoops_url}>/imagemanager.php?target=<{$element->getId()}>","imgmanager",400,430); return false;'>
+<a href="#" class="ui-button" onclick='javascript:openWithSelfMain("<{$xoops_url}>/imagemanager.php?target=<{$element->getId()}>","imgmanager",400,430); return false;'>
     <img class='svg' src='<{$xoops_url}>/images//icons/image.svg' alt='image'></a>&nbsp;
-<a href="#" onclick='javascript:xoopsCodeCode("<{$element->getId()}>", "<{$smarty.const._ENTERCODE}>"); return false;'>
+<a href="#" class="ui-button" onclick='javascript:xoopsCodeCode("<{$element->getId()}>", "<{$smarty.const._ENTERCODE}>"); return false;'>
     <img class='svg' src='<{$xoops_url}>/images//icons/code.svg' alt='code'></a>&nbsp;
-<a href="#" onclick='javascript:xoopsCodeQuote("<{$element->getId()}>", "<{$smarty.const._ENTERQUOTE}>"); return false;'>
+<a href="#" class="ui-button" onclick='javascript:xoopsCodeQuote("<{$element->getId()}>", "<{$smarty.const._ENTERQUOTE}>"); return false;'>
     <img class='svg' src='<{$xoops_url}>/images//icons/quote.svg' alt='quote'></a><br>
 <select id='<{$element->getId()}>Size' onchange='setVisible("<{$element->_xoopsHiddenText}>");setElementSize("<{$element->_xoopsHiddenText}>",this.options[this.selectedIndex].value);'>
     <option value='SIZE'><{$smarty.const._SIZE}></option>
@@ -275,16 +275,16 @@
 </select>
 <span id='<{$element->_xoopsHiddenText}>'><{$smarty.const._EXAMPLE}></span>
 <br>
-<a href="#" onclick='javascript:setVisible("<{$element->_xoopsHiddenText}>");makeBold("<{$element->_xoopsHiddenText}>"); return false;'>
+<a href="#" class="ui-button" onclick='javascript:setVisible("<{$element->_xoopsHiddenText}>");makeBold("<{$element->_xoopsHiddenText}>"); return false;'>
     <img class="svg" src='<{$xoops_url}>/images/icons/bold.svg' alt='bold'></a>&nbsp;
-<a href="#" onclick='javascript:setVisible("<{$element->_xoopsHiddenText}>");makeItalic("<{$element->_xoopsHiddenText}>"); return false;'>
-    <img class="svg" src='<{$xoops_url}>/images//icons/italic.svg' alt='italic' /></a>&nbsp;
-<a href="#" onclick='javascript:setVisible("<{$element->_xoopsHiddenText}>");makeUnderline("<{$element->_xoopsHiddenText}>"); return false;'>
-    <img class="svg" src='<{$xoops_url}>/images//icons/underline.svg' alt='underline' /></a>&nbsp;
-<a href="#" onclick='javascript:setVisible("<{$element->_xoopsHiddenText}>");makeLineThrough("<{$element->_xoopsHiddenText}>"); return false;'>
-    <img class="svg" src='<{$xoops_url}>/images//icons/linethrough.svg' alt='linethrough' /></a>&nbsp;&nbsp;
-<input type='text' id='<{$element->getId()}>Addtext' size='20' />&nbsp;
-<input type='button' onclick='xoopsCodeText("<{$element->getId()}>", "<{$element->_xoopsHiddenText}>", "<{$smarty.const._ENTERTEXTBOX}>")' class='formButton' value='<{$smarty.const._ADD}>' />
+<a href="#" class="ui-button" onclick='javascript:setVisible("<{$element->_xoopsHiddenText}>");makeItalic("<{$element->_xoopsHiddenText}>"); return false;'>
+    <img class="svg" src='<{$xoops_url}>/images//icons/italic.svg' alt='italic'></a>&nbsp;
+<a href="#" class="ui-button" onclick='javascript:setVisible("<{$element->_xoopsHiddenText}>");makeUnderline("<{$element->_xoopsHiddenText}>"); return false;'>
+    <img class="svg" src='<{$xoops_url}>/images//icons/underline.svg' alt='underline'></a>&nbsp;
+<a href="#" class="ui-button" onclick='javascript:setVisible("<{$element->_xoopsHiddenText}>");makeLineThrough("<{$element->_xoopsHiddenText}>"); return false;'>
+    <img class="svg" src='<{$xoops_url}>/images//icons/linethrough.svg' alt='linethrough'></a>&nbsp;&nbsp;
+<input type='text' id='<{$element->getId()}>Addtext' size='20'>&nbsp;
+<input type='button' onclick='xoopsCodeText("<{$element->getId()}>", "<{$element->_xoopsHiddenText}>", "<{$smarty.const._ENTERTEXTBOX}>")' class='formButton' value='<{$smarty.const._ADD}>'>
 <br><br>
 <textarea id='<{$element->getId()}>' name='<{$element->getName()}>' <{if $class}>class='<{$class}>' <{/if}>cols='<{$element->getCols()}>' rows='<{$element->getRows()}>' onselect="xoopsSavePosition('<{$element->getId()}>');" onclick="xoopsSavePosition('<{$element->getId()}>');" onkeyup="xoopsSavePosition('<{$element->getId()}>');"<{if $element->getExtra()}><{$element->getExtra()}><{/if}>><{$element->getValue()}>
 </textarea><br>
