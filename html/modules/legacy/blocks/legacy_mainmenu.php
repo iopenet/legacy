@@ -8,7 +8,7 @@
  * @author     Kilica, 2008/09/25
  * @author     Kazumi Ono (aka onokazu)
  * @copyright  (c) 2000-2003 XOOPS.org
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    GPL 2.0
  * @brief      This file has been modified for Legacy from XOOPS2 System module block
  */
 

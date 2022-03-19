@@ -7,8 +7,8 @@
  * @author     Nuno Luciano (aka gigamaster), 2020, XCL PHP7
  * @author     Minahito
  * @author     Kazumi Ono (aka onokazu)
- * @copyright  (c) 20002-2003 Author
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @copyright  (c) 20002-2003 Authors
+ * @license   GPL 2.0
  */
 
 // path to your xoops main directory

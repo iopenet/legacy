@@ -10,13 +10,13 @@
 
     .nav-mobile {
 
-        background      : var(  --ui-color5      );
+        background      : var(  --color-5      );
 
-        border-color    : var(  --ui-border-color   );
-        border-radius   : 0 var(--ui-border-radius  ) 0 0;
-        border-style    : var(  --ui-border-style   );
-        border-width    : var(  --ui-border-width   );
-        box-shadow      : var(  --ui-shadow-3     );
+        border-color    : var(  --border-color   );
+        border-radius   : 0 var(--border-radius  ) 0 0;
+        border-style    : var(  --border-style   );
+        border-width    : var(  --border-width   );
+        box-shadow      : var(  --shadow-3     );
 
         /* border-top-right-radius  : 5px;
         border-bottom-right-radius: 5px; */
@@ -45,7 +45,7 @@
 
         background      : var(  --ui-aside-bg   );
 
-        color           : var(  --ui-color1         );
+        color           : var(  --color-1         );
 
         grid-area       : nav-aside;
 
@@ -141,7 +141,7 @@
 
     .nav-side-menu li:last-child .nav-block:hover {
 
-        border-bottom-right-radius: var(    --ui-border-radius  );
+        border-bottom-right-radius: var(    --border-radius  );
 
     }
 

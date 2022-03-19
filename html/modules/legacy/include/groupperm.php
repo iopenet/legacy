@@ -3,7 +3,7 @@
  * @package    xoops2
  * @version    $Id: groupperm.php,v 1.3 2008/09/25 15:12:38 kilica Exp $
  * @copyright  (c) 2000-2003 XOOPS.org
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    GPL 2.0
  * @brief      This file has been moved from XOOPS2 for some things which need
  *             full-compatibility with XOOPS2.
  */

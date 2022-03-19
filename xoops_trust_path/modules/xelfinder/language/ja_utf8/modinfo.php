@@ -49,7 +49,7 @@ define( $constpref.'_USE_SHARECAD_PREVIEW_DESC','ShareCAD.org を利用しプレ
 define( $constpref.'_USE_GOOGLE_PREVIEW' ,      'Google Docs プレビュー有効' );
 define( $constpref.'_USE_GOOGLE_PREVIEW_DESC',  'Google Docs を利用しプレビュー可能なファイルタイプを拡大します。Google Docs プレビュー利用時に Google Docs へコンテンツ URL を通知します。' );
 define( $constpref.'_USE_OFFICE_PREVIEW' ,      'Office Online プレビュー有効' );
-define( $constpref.'_USE_OFFICE_PREVIEW_DESC',  'Office Online  を利用しプレビュー可能なファイルタイプを拡大します。Office Online プレビュー利用時は products.office.com へコンテンツ URL を通知します。' );
+define( $constpref.'_USE_OFFICE_PREVIEW_DESC',  '注：Microsoftは、組み込みのテレメトリクライアントを介して使用データを収集するだけでなく、ConnectedServicesの個々の使用を記録および保存します。 コンテンツのURLはproducts.office.comによって収集されます' );
 define( $constpref.'_MAIL_NOTIFY_GROUP' ,       'メール通知(グループ)' );
 define( $constpref.'_MAIL_NOTIFY_GROUP_DESC',   '選択したグループに属するユーザーによるファイル追加を管理グループメンバーにメール通知します。' );
 define( $constpref.'_FTP_NAME' ,                'FTP ネットボリューム表示名' );

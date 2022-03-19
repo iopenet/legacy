@@ -4,7 +4,7 @@
  * @version    2.3.1
  * @author     Original Author Kilica
  * @copyright  2005-2022 The XOOPSCube Project
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    GPL 2.0
  */
 
 if (!defined('XOOPS_ROOT_PATH')) {

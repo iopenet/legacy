@@ -4,7 +4,7 @@
  * @package Legacy
  * @version $Id: AbstractFilterForm.class.php,v 1.3 2008/09/25 15:11:30 kilica Exp $
  * @copyright (c) 2005-2022 XOOPS Cube Project
- * @license https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license GPL 2.0
  *
  */
 

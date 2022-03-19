@@ -16,6 +16,9 @@
     box-sizing: border-box;
 }
 
+a { cursor: pointer;
+}
+
 /* Remove list styles (bullets/numbers) */
 ol, ul {
     list-style: none;

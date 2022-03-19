@@ -4,7 +4,7 @@
  * @package Legacy
  * @version $Id: Legacy_Controller.class.php,v 1.22 2008/11/14 09:45:23 mumincacao Exp $
  * @copyright  (c) 2005-2022 The XOOPSCube Project
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    GPL 2.0
  *
  */
 

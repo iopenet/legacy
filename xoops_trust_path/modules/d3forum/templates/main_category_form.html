@@ -110,12 +110,13 @@
             <!-- submit or delete -->
             </div>
             <div self="sm-full">
-                <button type="submit" class="ui-button" name="categoryman_post" value="<{$smarty.const._SUBMIT}>">
-                    <img class="svg check" src="<{$xoops_url}>/images/icons/check.svg"> <{$smarty.const._SUBMIT}></button>
                 <{if $page == 'categorymanager' && $children_count == 0}>
                 <button type="submit" class="ui-button delete" name="categoryman_delete" value="<{$smarty.const._DELETE}>" onclick="return confirm('<{$smarty.const._MD_D3FORUM_MSG_CONFIRMDELETERECURSIVE}>')">
                     <img class="svg delete" src="<{$xoops_url}>/images/icons/delete.svg" alt=""> <{$smarty.const._DELETE}></button>
                 <{/if}>
+                <button type="submit" class="ui-button" name="categoryman_post" value="<{$smarty.const._SUBMIT}>">
+                    <img class="svg check" src="<{$xoops_url}>/images/icons/check.svg"> <{$smarty.const._SUBMIT}>
+                </button>
             </div>
         </div>
 

@@ -12,7 +12,7 @@
 	::selection {
 
 		background-color		: rgba(15, 15, 15, 0.85);
-		color								: var(  --ui-color2	 );
+		color								: var(  --color-2	 );
 
 		}
 

@@ -5,9 +5,7 @@
  * @author     Nuno Luciano (aka gigamaster), 2020, XCL PHP7
  * @author     Kilica
  * @copyright  2005-2022 The XOOPSCube Project
- * @license    Legacy : https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
- * @license    Cube : https://github.com/xoopscube/xcl/blob/master/BSD_license.txt
- * @link       https://github.com/xoopscube/
+ * @license    GPL 2.0
  */
 
 if (!defined('XOOPS_ROOT_PATH')) {

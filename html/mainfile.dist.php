@@ -8,7 +8,7 @@
  * @author     Minahito, 2007/09/22
  * @author     Kazumi Ono (aka onokazu)
  * @copyright  (c) 2002 Author
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    GPL 2.0
  */
 
 if ( !defined('XOOPS_MAINFILE_INCLUDED') ) {

@@ -9,7 +9,7 @@
  * @author     Other authors Minahito, 2007/05/15
  * @author     Kazumi Ono (aka onokazu)
  * @copyright  (c) 2000-2003 XOOPS.org
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    GPL 2.0
  */
 
 //

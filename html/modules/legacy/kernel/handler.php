@@ -4,7 +4,7 @@
  * @package Legacy
  * @version $Id: handler.php,v 1.7 2008/11/14 10:46:37 mumincacao Exp $
  * @copyright  (c) 2005-2022 The XOOPSCube Project
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    GPL 2.0
  *
  */
 

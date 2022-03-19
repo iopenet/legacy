@@ -14,7 +14,6 @@
 <div class="tips">
     <ul>
         <li><{$smarty.const._AD_LEGACY_TIPS_SMILES}></li>
-        <li><a href="<{$xoops_url}>/modules/legacy/admin/index.php?action=Help&amp;dirname=legacy"><{$smarty.const._HELP}></a>
         </li>
     </ul>
 </div>
@@ -34,7 +33,7 @@
 <div layout="row center-justify" class="control-action">
 
     <div>
-        <a class="ui-btn ui-btn-small selected" href="index.php?action=SmilesEdit"><{$smarty.const._AD_LEGACY_LANG_CREATE_NEW}></a>
+        <a class="ui-btn ui-btn-small selected" href="index.php?action=SmilesEdit"><{$smarty.const._AD_LEGACY_LANG_SMILES_NEW}></a>
         <a class="ui-btn ui-btn-small selected" href="index.php?action=SmilesUpload"><{$smarty.const._AD_LEGACY_LANG_SMILES_UPLOAD}></a>
     </div>
 
@@ -62,8 +61,7 @@
             </svg>
         </button> *}>
 
-        <button class="help-admin ui-btn" type='button' data-module='legacy' data-help-article='#help-todo'
-                title="Help">
+        <button class="help-admin ui-btn" type='button' data-module='legacy' data-help-article='#help-smilies' title="<{$smarty.const._HELP}>">
             <span class="ui-icon ui-icon-help"></span>
         </button>
     </div>

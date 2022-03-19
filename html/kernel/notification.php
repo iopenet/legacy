@@ -8,7 +8,7 @@
  * @author     Other authors Minahito, 2007/06/23
  * @author     Michael van Dam	<mvandam@caltech.edu>
  * @copyright  (c) 2000-2003 XOOPS.org
- * @license    Legacy : https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    Legacy : GPL 2.0
  */
 
 if (!defined('XOOPS_ROOT_PATH')) {

@@ -1,7 +1,7 @@
 <div class="adminnavi" aria-label="breadcrumb">
-  <a href="<{$xoops_url}>/admin.php">Dashboard</a>
-  &raquo;&raquo; <a href="./index.php"><{$smarty.const._MI_LEGACY_NAME}></a>
-  &raquo;&raquo; <span class="adminnaviTitle" aria-current="page"><a href="./index.php?action=ActSearch"><{$smarty.const._MI_LEGACY_MENU_ACTIONSEARCH}></a></span>
+    <a href="<{$xoops_url}>/admin.php">Dashboard</a>
+    &raquo;&raquo; <a href="./index.php"><{$smarty.const._MI_LEGACY_NAME}></a>
+    &raquo;&raquo; <span class="adminnaviTitle" aria-current="page"><a href="./index.php?action=ActSearch"><{$smarty.const._MI_LEGACY_MENU_ACTIONSEARCH}></a></span>
 </div>
 
 <div class="ui-dev-mode"><{$smarty.template}></div>
@@ -12,10 +12,10 @@
 <div class="tips"><{$smarty.const._AD_LEGACY_LANG_ACTIONSEARCH_INFO}></div>
 
 <div class="legacy_actionsearch_form">
-<form action="index.php" method="get">
-  <{xoops_input type=hidden name=action value=ActSearch}>
-  <{xoops_token form=$actionForm}>
-  <input type="text" size="40" name="keywords" <{if $actionForm}>value="<{$actionForm->get('keywords')|xoops_escape:edit}>"<{/if}> />
-  <input class="button-search" type="submit" value="<{$smarty.const._SEARCH}>">
-</form>
+    <form action="index.php" method="get">
+        <{xoops_input type=hidden name=action value=ActSearch}>
+        <{xoops_token form=$actionForm}>
+        <input type="text" size="40" name="keywords" <{if $actionForm}>value="<{$actionForm->get('keywords')|xoops_escape:edit}>"<{/if}>>
+        <input class="button-search" type="submit" value="<{$smarty.const._SEARCH}>">
+    </form>
 </div>

@@ -4,7 +4,7 @@
  * @package Legacy
  * @version $Id: index.php,v 1.3 2008/09/25 14:31:43 kilica Exp $
  * @copyright Copyright 2005-2022 XOOPSCube Project
- * @license   https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license   GPL 2.0
  *
  */
 

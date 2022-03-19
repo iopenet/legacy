@@ -4,7 +4,7 @@
  * @package Legacy
  * @version $Id: imagecategory.php,v 1.4 2008/09/25 15:11:28 kilica Exp $
  * @copyright (c) 2005-2022 XOOPS Cube Project
- * @license   https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license   GPL 2.0
  *
  */
 
@@ -39,9 +39,9 @@ class LegacyImagecategoryObject extends XoopsSimpleObject
         }
         $this->initVar('imgcat_id', XOBJ_DTYPE_INT, '', false);
         $this->initVar('imgcat_name', XOBJ_DTYPE_STRING, '', true, 100);
-        $this->initVar('imgcat_maxsize', XOBJ_DTYPE_INT, '50000', true);
-        $this->initVar('imgcat_maxwidth', XOBJ_DTYPE_INT, '120', true);
-        $this->initVar('imgcat_maxheight', XOBJ_DTYPE_INT, '120', true);
+        $this->initVar('imgcat_maxsize', XOBJ_DTYPE_INT, '1024000', true);
+        $this->initVar('imgcat_maxwidth', XOBJ_DTYPE_INT, '800', true);
+        $this->initVar('imgcat_maxheight', XOBJ_DTYPE_INT, '400', true);
         $this->initVar('imgcat_display', XOBJ_DTYPE_BOOL, '1', true);
         $this->initVar('imgcat_weight', XOBJ_DTYPE_INT, '0', true);
         $this->initVar('imgcat_type', XOBJ_DTYPE_STRING, 'C', true, 1);

@@ -6,8 +6,7 @@
  * @author     domifara, 2011/5/21
  * @author     original: Naoki Sawada (aka nao-pon) <https://xoops.hypweb.net/>
  * @copyright  2005-2022 The XOOPSCube Project
- * @license    Legacy : https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
- * @license    Cube : https://github.com/xoopscube/xcl/blob/master/BSD_license.txt
+ * @license    GPL 2.0
  */
 
 CKEDITOR.editorConfig = function (config) {

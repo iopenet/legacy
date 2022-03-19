@@ -1,10 +1,12 @@
 <nav>
     <ul>
         <li class="nav-logo">
-            <a href="<{$xoops_url}>/admin.php"><img src="<{"design/logo.png"|theme}>" alt="<{$legacy_sitename|xoops_escape}>" title="<{$smarty.const._CPHOME}>"></a>
+            <a href="<{$xoops_url}>/admin.php" title="<{$smarty.const._CPHOME}>">
+                <img src="<{"design/logo.png"|theme}>" alt="<{$legacy_sitename|xoops_escape}>">
+            </a>
         <li>
-            <a class="btnav" href="<{$xoops_url}>/">
-            <i class="i-home"></i></a>
+            <a class="btnav" href="<{$xoops_url}>/admin.php">
+            <i class="i-dashboard"></i></a>
         <li>
             <a class="btnav" href="<{$xoops_url}>/modules/legacy/admin/index.php?action=PreferenceList" accesskey="p" title="[p] <{$smarty.const._PREFERENCES}>">
                 <i class="i-preferences"></i></a>

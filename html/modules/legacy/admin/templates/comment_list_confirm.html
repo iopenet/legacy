@@ -29,7 +29,6 @@
 	<{xoops_input type=hidden name=confirm value=1}>
 
 <table class="outer">
-
 	<thead>
 		<tr>
 			<th><{$smarty.const._MD_LEGACY_LANG_COM_ID}></th>
@@ -40,7 +39,6 @@
 			<th><{$smarty.const._DELETE}></th>
 		</tr>
 	</thead>
-
 	<tbody>
 	<{foreach item=cid from=$cids}>
 		<tr class="<{cycle values='odd,even'}>">
@@ -60,26 +58,25 @@
 					<{$smarty.const._AD_LEGACY_LANG_NO_CHANGE}>
 				<{else}>
 					(<{if $commentObjects[$cid]->getShow('com_status') == 1}>
-		<{$smarty.const._CM_PENDING}>
+						<{$smarty.const._CM_PENDING}>
 					<{elseif $commentObjects[$cid]->getShow('com_status') == 2}>
-		<{$smarty.const._CM_ACTIVE}>
+						<{$smarty.const._CM_ACTIVE}>
 					<{elseif $commentObjects[$cid]->getShow('com_status') == 3}>
-		<{$smarty.const._CM_HIDDEN}>
+						<{$smarty.const._CM_HIDDEN}>
 					<{/if}>)
 					&raquo;
 					<b class="message-warning">
 					<{if $actionForm->get('status',$cid) == 1}>
-		<{$smarty.const._CM_PENDING}>
+						<{$smarty.const._CM_PENDING}>
 					<{elseif $actionForm->get('status',$cid) == 2}>
-		<{$smarty.const._CM_ACTIVE}>
+						<{$smarty.const._CM_ACTIVE}>
 					<{elseif $actionForm->get('status',$cid) == 3}>
-		<{$smarty.const._CM_HIDDEN}>
+						<{$smarty.const._CM_HIDDEN}>
 					<{/if}></b>
 				<{/if}>
 				<input type="hidden" name="status[<{$cid}>]" value="<{$actionForm->get('status',$cid)}>">
 			</td>
 			<td class="legacy_list_select">
-
 					<{if $actionForm->get('delete',$cid) == 1}>
 						<b class="message-warning">
 						<{$smarty.const._YES}>
@@ -97,16 +94,14 @@
 		</tr>
 	<{/foreach}>
 	</tbody>
-
 	<tfoot class="foot">
 		<tr>
 			<tdcolspan="6">
+			<input class="button-cancel" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
 				<input class="button-update" type="submit" value="<{$smarty.const._AD_LEGACY_LANG_UPDATE}>">
-				<input class="button-cancel" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
 			</td>
 		</tr>
 	</tfoot>
-
 </table>
 
 </form>

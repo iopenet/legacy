@@ -9,7 +9,7 @@
  * @author     Other authors onokazu, 12/25/2002
  * @author     Josh Barger <joshb@npt.com>
  * @copyright  (c) 2002  Josh Barger
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    GPL 2.0
  */
 
 /**

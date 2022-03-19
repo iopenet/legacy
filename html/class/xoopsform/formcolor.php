@@ -6,7 +6,7 @@
  * @version    XCL 2.3.1
  * @author     Other authors gigamaster, 2020 XCL/PHP7
  * @copyright  2005-2022 The XOOPSCube Project
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    GPL 2.0
  * @brief      only accept 7 character hex strings
  *             refer also to regular expression (regex) in template
  */

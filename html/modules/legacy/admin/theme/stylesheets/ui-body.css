@@ -25,7 +25,7 @@
     body {
         background      : var(  --ui-body-bg    );
         color           : var(  --ui-body-color );
-        font-family     : var(  --ui-font-family );
+        font-family     : var(  --font-family );
         font-size       : var(  --font-size   );
         font-weight     : var(  --font-weight );
 
@@ -57,6 +57,7 @@
     a:link,
     a:visited {
         color           : var(  --ui-link );
+        cursor          : pointer;
         display         : inline-block;
         text-decoration : none;
     }
@@ -84,7 +85,7 @@
     }
 
     blockquote {
-        border-left     : 3px solid var(  --ui-color3  );
+        border-left     : 3px solid var(  --color-3  );
         font-style      : italic;
         font-size       : var(  --size-3   );
         padding         : var(  --space-5   ) var(  --space-7  );
@@ -97,14 +98,18 @@
     }
 
     pre {
-        border-left     : 3px solid var( --ui-color4 );
-        /* color           : var(--ui-color1); */
+        border-left     : 3px solid var( --color-4 );
+        /* color           : var(--color-1); */
         padding         : var(--space-3) ;
+    }
+
+    h1, h2, h3, h4 {
+        font-weight     : 300;
+        width           : 100%;
     }
 
     h1 {
         font-size       : var(  --size-5   );
-        font-weight     : 300;
         margin          : 0 0 var(  --space-3  );
 
     }
@@ -114,16 +119,17 @@
     }
     h3 {
         font-size       : var(  --size-3   );
-        margin          : 0 0 var(  --space-3  );
+        margin          : var(  --space-6  ) 0;
     }
     h4 {
         font-size       : var(  --size-2   );
-        margin          : var(  --space-4  ) 0;
+        margin          : var(  --space-6  ) 0;
     }
     h5 {
         font-size       : var(  --size-2   );
         letter-spacing  : 1px;
-        margin          : var(  --space-5  ) 0;
+        text-transform  : uppercase;
+        margin          : var(  --space-6  ) 0;
     }
     h6 {
         font-size       : 12px;
@@ -132,27 +138,23 @@
         margin          : var(  --space-6  ) 0;
     }
 
-   h2, h3, h4 {
-        font-weight     : 300;
-        margin          : var(  --space-3   ) 0;
-        width           : 100%;
-    }
 
     hr {
         border          : 0;
-        border-top      : 1px solid var(  --ui-color5    );
+        border-top      : 1px solid var(  --color-5    );
         margin          : 3em 0;
         height: 5px;
         /*  background-image: radial-gradient(
             farthest-side at 50% -50%,
             hsla(0, 0%, 0%, 0.5),
             hsla(0, 0%, 0%, 0)); */
-        background-image : linear-gradient(90deg, transparent, var(  --ui-color6   ), transparent);
+        background-image : linear-gradient(90deg, transparent, var(  --color-6   ), transparent);
     }
 
     p {
         font-size       : var(  --size-2   );
         margin          : var(  --space-5  ) 0;
+        line-height     : 1.5;
     }
 
 

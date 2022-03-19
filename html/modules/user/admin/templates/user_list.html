@@ -68,13 +68,14 @@
 
 </div>
 
+<div class="user-search" style="display: none">
+    <{include file="./components/user-search.html"}>
+</div>
 
 <form name="userlistform" method="post" action="./index.php?action=UserList">
     <{xoops_token form=$actionForm}>
 
-    <div class="user-search" style="display: none">
-        <{include file="./components/user-search.html"}>
-    </div>
+
     <div class="user-filter" style="display: none">
         <{include file="./components/user-filter.html"}>
     </div>

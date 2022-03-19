@@ -7,7 +7,7 @@
  * @version    XCL 2.3.1
  * @author     Minahito, 2007/05/15
  * @copyright  (c) 2005-2022 The XOOPSCube Project
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    GPL 2.0
  */
 
 if (!defined('XOOPS_ROOT_PATH')) {

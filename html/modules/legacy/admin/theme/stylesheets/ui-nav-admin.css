@@ -16,9 +16,9 @@
 .adminavi,
 .adminavi-sub {
 
-	background			: var(  --ui-color2			);
+	background			: var(  --color-2			);
 
-	border-radius		: var(  --ui-border-radius	);
+	border-radius		: var(  --border-radius	);
 
 	box-shadow			: 0 10px 20px rgba(159, 162, 177, 0.8);
 
@@ -30,7 +30,7 @@
 
 .adminavi-sub {
 
-	box-shadow			: var(  --ui-shadow-3		);
+	box-shadow			: var(  --shadow-3		);
 	font-size				: var(  --size-2			);
 	margin					: var(  --space-4		) 0 0;
 	text-align			: center;
@@ -77,11 +77,11 @@ a.adminavi-item.selected:active {
 .altsys_mymenu {
 
 align-items				: flex-start;
-background      	: var(--ui-color4);
+background      	: var(--color-4);
 
 border          	: 0px;
 border-radius   	: 5px;
-box-shadow      	: var(--ui-shadow-2);
+box-shadow      	: var(--shadow-2);
 
 display         	: flex;
 flex-flow       	: row;
@@ -92,7 +92,7 @@ flex-wrap       	: wrap;
 .admin-menu > div,
 .altsys_mymenu > div {
 
-background				: var(--ui-color4);
+background				: var(--color-4);
 border-radius   	: 5px;
 padding         	: 1rem;
 

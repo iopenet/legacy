@@ -15,7 +15,7 @@ URL : https://github.com/xoopscube/xcl/
     /* -------------------- -------------------- -------------------- NAV ADMIN */
 
     .admintitle {
-    border-bottom   : 3px solid var(--ui-border);
+    border-bottom   : 3px solid var(--border);
     margin-bottom   : 1em;
     }
 
@@ -23,11 +23,11 @@ URL : https://github.com/xoopscube/xcl/
     .adminavi-sub,
     .admin-menu {
 
-    background      : var(  --ui-color6   );
+    background      : var(  --color-6   );
 
-    /* border-radius   : var(  --ui-border-radius      ); */
-    border-bottom-left-radius: var(  --ui-border-radius      );;
-    border-bottom-right-radius: var(  --ui-border-radius      );;
+    /* border-radius   : var(  --border-radius      ); */
+    border-bottom-left-radius: var(  --border-radius      );;
+    border-bottom-right-radius: var(  --border-radius      );;
 
     /* box-shadow   : 0 4px 8px rgba(159, 162, 177, 0.8); */
     display         : flex;
@@ -40,7 +40,7 @@ URL : https://github.com/xoopscube/xcl/
 
     .adminavi-sub {
 
-    /* box-shadow   : var(  --ui-shadow-3     ); */
+    /* box-shadow   : var(  --shadow-3     ); */
     font-size       : var(  --size-2       );
     margin          : 0 auto 2em;
     text-align      : center;
@@ -89,11 +89,11 @@ URL : https://github.com/xoopscube/xcl/
     .altsys_mymenu {
 
     align-items     : flex-start;
-    background      : var(  --ui-color4      );
+    background      : var(  --color-4      );
 
     border          : 0px;
     border-radius   : 5px;
-    box-shadow      : var(  --ui-shadow-2     );
+    box-shadow      : var(  --shadow-2     );
 
     display         : flex;
     flex-flow       : row;
@@ -104,7 +104,7 @@ URL : https://github.com/xoopscube/xcl/
     .admin-menu > div,
     .altsys_mymenu > div {
 
-    background      : var(  --ui-color4      );
+    background      : var(  --color-4      );
     border-radius   : 5px;
     padding         : 1rem;
 

@@ -19,16 +19,16 @@
 
 
     #dialog-online {
-        box-shadow : var(--ui-shadow-7);
+        box-shadow : var(--shadow-7);
 
     }
 
     .ui-dialog  {
-        box-shadow : var(--ui-shadow-7);
+        box-shadow : var(--shadow-7);
     }
 
     .ui-widget {
-        font-family     :var( --ui-font-family );
+        font-family     :var( --font-family );
         font-size       : 1em;
     }
 
@@ -104,21 +104,21 @@
     /* Block Switch Off - color indicator */
     .ui-update-change {
 
-        background      : var(  --ui-color5  );
+        background      : var(  --color-5  );
 
         transition      : all 1s;
 
     }
     .ui-block-type.ui-update-change {
 
-        background      : var(  --ui-color-red  );
+        background      : var(  --color-red  );
 
     }
     .ui-update-change svg,
     .ui-update-change > svg path.block-icon,
     .ui-update-change > svg text.block-name {
 
-        color           : var(  --ui-color-red  );
+        color           : var(  --color-red  );
 
     }
 
@@ -132,14 +132,14 @@
     }
     .ui-update-change a {
 
-        background      : var(  --ui-color-red  );
+        background      : var(  --color-red  );
 
     }
     .ui-update-change svg,
     .ui-update-change > svg path.module-icon,
     .ui-update-change > svg text.module-name {
 
-        color           : var(  --ui-color-red  );
+        color           : var(  --color-red  );
 
     }
 
@@ -150,18 +150,18 @@
         transition      : all 1s;
     }
 
-    .fingerprint1 { color: var(  --ui-color-red   ) }
-    .fingerprint2 { color: var(  --ui-color-blue   ) }
-    .fingerprint3 { color: var(  --ui-color-green   ) }
-    .fingerprint4 { color: var(  --ui-color-orange   ) }
-    .fingerprint5 { color: var(  --ui-color-purple   ) }
-    .fingerprint6 { color: var(  --ui-color-amber   ) }
+    .fingerprint1 { color: var(  --color-red   ) }
+    .fingerprint2 { color: var(  --color-blue   ) }
+    .fingerprint3 { color: var(  --color-green   ) }
+    .fingerprint4 { color: var(  --color-orange   ) }
+    .fingerprint5 { color: var(  --color-purple   ) }
+    .fingerprint6 { color: var(  --color-amber   ) }
     .fingerprint7 { color: var(  --ui-link   ) }
 
     /* -------------------- -------------------- -------------------- -------------------- jQuery UI Widget */
 
     .ui-widget-content {
-        border          : 1px solid var(  --ui-border-color );
+        border          : 1px solid var(  --border-color );
         background      : var(  --ui-button-bg  );
         color           : var(  --ui-button-color       );
     }
@@ -181,14 +181,14 @@
     .ui-button,
     html .ui-button.ui-state-disabled:hover,
     html .ui-button.ui-state-disabled:active {
-        border          : 1px solid var(  --ui-border-color );
+        border          : 1px solid var(  --border-color );
         background      : var(  --ui-button-bg      );
         font-weight     : normal;
         color           : var(  --ui-button-color   );
         transition: all 0.3s ease 0s;;
     }
    .ui-widget.ui-widget-content {
-        border          : 1px solid var(  --ui-border-color );
+        border          : 1px solid var(  --border-color );
     }
     .ui-spinner-input{
         background      : var(  --ui-button-bg      );
@@ -201,7 +201,7 @@
     a:link.ui-button,
     a:visited.ui-button,
     .ui-button {
-        color: var(--ui-color2);
+        color: var(--color-2);
         text-decoration: none;
     }
      .ui-state-hover,
@@ -220,6 +220,6 @@
     .ui-widget-header,
     .ui-state-active {
         background      : var( --ui-button-hover-bg     );
-        border          : 1px solid var( --ui-border-color  );
+        border          : 1px solid var( --border-color  );
         color           : var(  --ui-button-hover-txt   );
     }

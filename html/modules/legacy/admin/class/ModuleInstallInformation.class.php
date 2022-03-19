@@ -6,7 +6,7 @@
  * @author     Other authors gigamaster, 2020 XCL/PHP7 , XCL 2020 PHP7
  * @author     Kilica, 2008/10/25
  * @copyright  (c) 2005-2022 The XOOPSCube Project
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    GPL 2.0
  * @brief      This file declares some structure-class and stored-system readers for the installer.
  */
 

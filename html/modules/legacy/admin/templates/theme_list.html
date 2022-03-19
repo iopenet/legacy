@@ -55,15 +55,12 @@
             </svg>
         </button> *}>
 
-        <button class="help-admin ui-btn" type='button' data-module='legacy' data-help-article='#help-todo'
-                title="Help">
+        <button class="help-admin ui-btn" type='button' data-module='legacy' data-help-article='#help-themes' title="<{$smarty.const._HELP}>">
             <span class="ui-icon ui-icon-help"></span>
         </button>
     </div>
 
 </div>
-
-
 
 
 <form action="./index.php?action=ThemeList" method="post">
@@ -95,9 +92,8 @@
             <p class="legacy_list_description"><{$theme->getShow('description') != null}></p>
             <ul>
                 <{if $theme->get('themeoptions') != null}>
-                <li><a
-                    href="<{$smarty.const.XOOPS_THEME_URL}>/<{$theme->getShow('dirname')}>/<{$theme->getShow('themeoptions')}>">Theme
-                    Options - Custom Parameters</a></li>
+                <li><a href="<{$smarty.const.XOOPS_THEME_URL}>/<{$theme->getShow('dirname')}>/<{$theme->getShow('themeoptions')}>">
+                    Theme Options - Custom Parameters</a></li>
                 <{/if}>
                 <li><{$smarty.const._AD_LEGACY_LANG_VERSION}> : <{$theme->getShow('version')}></li>
                 <li><{$smarty.const._AD_LEGACY_LANG_RENDER}> : <{$theme->getShow('render_system')}></li>
@@ -113,16 +109,14 @@
             </ul>
         </td>
         <td class="legacy_list_select">
-            <input type="checkbox" name="select[<{$theme->getShow('dirname')}>]" value="1" <{if
-            $actionForm->get('select', $theme->get('dirname'))}>checked="checked"<{/if}> >
+            <input type="checkbox" name="select[<{$theme->getShow('dirname')}>]" value="1" <{if $actionForm->get('select', $theme->get('dirname'))}>checked="checked"<{/if}>>
         </td>
         <td class="legacy_list_control">
             <{if $currentThemeName != $theme->get('dirname')}>
-            <input class="button-select" name="choose[<{$theme->getShow('dirname')}>]" type="submit"
-                   value="<{$smarty.const._SELECT}>">
+            <input class="button-select" name="choose[<{$theme->getShow('dirname')}>]" type="submit" value="<{$smarty.const._SELECT}>">
             <{else}>
             <i class="green" ara-label="<{$smarty.const._AD_LEGACY_LANG_SELECTED}>">
-                <img src="<{" icons/icon-check.svg"|theme}>" class="svg">
+                <img class="svg" src="<{"icons/icon-check.svg"|theme}>">
             </i>
             <{/if}>
         </td>
@@ -132,7 +126,7 @@
         <tfoot>
         <tr>
             <td colspan="4" class="foot">
-                <input class="button-submit" type="submit" value="<{$smarty.const._SUBMIT}>" name="submit">
+                <input class="button-submit" type="submit"  name="submit" value="<{$smarty.const._SUBMIT}>">
             </td>
         </tr>
         </tfoot>

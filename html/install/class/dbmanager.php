@@ -7,7 +7,7 @@
  * @author     Other authors gusagi, 2008/03/22
  * @author     Haruki Setoyama
  * @copyright  (c) 2000-2003 XOOPS.org
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    GPL 2.0
  */
 
 include_once XOOPS_ROOT_PATH . '/class/logger.php';

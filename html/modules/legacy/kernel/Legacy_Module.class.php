@@ -4,7 +4,7 @@
  * @package Legacy
  * @version $Id: Legacy_Module.class.php,v 1.6 2008/09/25 15:11:59 kilica Exp $
  * @copyright (c) 2005-2022 XOOPSCube Project
- * @license   https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license   GPL 2.0
  *
  */
 

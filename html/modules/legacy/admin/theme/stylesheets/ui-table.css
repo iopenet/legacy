@@ -18,14 +18,14 @@ Alternative data display
 
     background      : var(  --ui-table-background   );
 
-    border-color    : var(  --ui-border-color       );
-    border-radius   : var(  --ui-border-radius      );
-    border-style    : var(  --ui-border-radius      );
-    border-width    : var(  --ui-border-width       );
+    border-color    : var(  --border-color       );
+    border-radius   : var(  --border-radius      );
+    border-style    : var(  --border-radius      );
+    border-width    : var(  --border-width       );
 
     border-collapse : collapse;
 
-    box-shadow    	: var(  --ui-shadow-2         );
+    box-shadow    	: var(  --shadow-2         );
 
     padding       	: var(  --space-4          );
     margin        	: 0;
@@ -85,7 +85,7 @@ table td.foot,
 
 table.altsys_mytplsadmin .dbtplset_active {
 
-    background      : var(  --ui-color-green        );
+    background      : var(  --color-green        );
 
 }
 
@@ -97,43 +97,43 @@ table.altsys_mytplsadmin .dbtplset_active sup {
 
 table.altsys_mytplsadmin .fingerprint1 {
 
-    background      : var(  --ui-color-green        );
+    background      : var(  --color-green        );
 
 }
 
 table.altsys_mytplsadmin .fingerprint2 {
 
-    background      : var(  --ui-color-green        );
+    background      : var(  --color-green        );
 
 }
 
 table.altsys_mytplsadmin .fingerprint3 {
 
-    background      : var(  --ui-color-amber        );
+    background      : var(  --color-amber        );
 
 }
 
 table.altsys_mytplsadmin .fingerprint4 {
 
-    background      : var(  --ui-color-blue         );
+    background      : var(  --color-blue         );
 
 }
 
 table.altsys_mytplsadmin .fingerprint5 {
 
-    background      : var(  --ui-color-orange       );
+    background      : var(  --color-orange       );
 
 }
 
 table.altsys_mytplsadmin .fingerprint6 {
 
-    background      : var(  --ui-color-indigo       );
+    background      : var(  --color-indigo       );
 
 }
 
 table.altsys_mytplsadmin .fingerprint7 {
 
-    background      : var(  --ui-color-indigo       );
+    background      : var(  --color-indigo       );
 }
 
 
@@ -159,12 +159,12 @@ table.outer tbody tr:hover,
 
 /* 	div.selected {
 
-    background      : var(--ui-color-green);
+    background      : var(--color-green);
 
 } */
 
 div.disabled {
 
-    background      : var(  --ui-color-red          );
+    background      : var(  --color-red          );
 
 }

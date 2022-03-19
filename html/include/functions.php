@@ -8,7 +8,7 @@
  * @author     Other authors Mumincacao, 2008/10/03
  * @author     Community
  * @copyright  (c) 2000-2003 XOOPS.org
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    GPL 2.0
  * @brief      Functions for Compatibility with Xoops2
  */
 

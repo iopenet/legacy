@@ -9,7 +9,7 @@
  * @author     Other authors Kazumi Ono (aka onokazu)
  * @author     gandon, 2001
  * @copyright  (c) 2000-2003 XOOPS.org
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    GPL 2.0
  */
 
 class sqlutility

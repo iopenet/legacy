@@ -4,7 +4,7 @@
  * @package Legacy
  * @version $Id: Legacy_RoleManager.class.php,v 1.3 2008/09/25 15:11:56 kilica Exp $
  * @copyright Copyright 2005-2022 XOOPS Cube Project  <https://github.com/xoopscube/xcl>
- * @license   https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license   GPL 2.0
  *
  */
 

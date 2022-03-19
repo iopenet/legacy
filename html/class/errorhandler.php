@@ -8,7 +8,7 @@
  * @author     Other authors nobunobu, 2007/06/24
  * @author     Michael van Dam
  * @copyright  (c) 2000-2003 XOOPS.org
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    GPL 2.0
  */
 
 

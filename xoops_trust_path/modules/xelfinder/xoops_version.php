@@ -95,16 +95,10 @@ $modversion['config'] = [
 		'valuetype'   => 'string',
 		'default'     => $mydirname . ':xelfinder_db:uploads/xelfinder:' . constant( $constpref . '_SHARE_FOLDER' ) . '
 ' . $mydirname . ':xelfinder:uploads/elfinder:elFinder:gid=1
-myalbum:myalbum:uploads/photos:MyAlbum
-gnavi:gnavi:uploads/gnavi:GNAVI
-mailbbs:mailbbs:modules/mailbbs/imgs:MailBBS
 #xelfinder:xelfinder:/:html:gid=1|chmod=1
 #xelfinder:xelfinder:[trust]/:xoops_trust_path:gid=1|chmod=1
 #xelfinder:xelfinder:[trust]/cache:TrustCache:gid=1
-#xelfinder:xelfinder:preload:Preload:gid=1
-#xelfinder:ftp:preload:Preload:gid=1
-#xelfinder:dropbox:/:Dropbox:gid=1
-#xelfinder:flyCopy:/:Copy.com:gid=1|ext_consumerKey=[Consumer Key]|ext_consumerSecret=[Consumer Secret]|ext_accessToken=[Access Token]|ext_tokenSecret=[Token Secret]'
+#xelfinder:xelfinder:preload:Preload:gid=1'
 	],
 	[
 		'name'        => 'disabled_cmds_by_gids',

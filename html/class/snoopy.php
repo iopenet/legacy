@@ -7,7 +7,7 @@
  * @author     Other authors gigamaster, 2020 XCL/PHP7
  * @author     Monte Ohrt <monte@ohrt.com>
  * @copyright  (c) 1999-2014
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @license    GPL 2.0
  */
 
 

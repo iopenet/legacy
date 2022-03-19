@@ -139,7 +139,7 @@
         border              : none;
         border-radius       : 7px;
         box-shadow          : var(	--ui-button-box-shadow );
-        color               : var(  --ui-color1  );
+        color               : var(  --color-1  );
         display             : inline-block;
         font-size           : 0.74rem;
         font-family         : sans-serif;
@@ -179,7 +179,7 @@
     .btn-ico {
         background          : var(--ui-button-bg);
         border-radius       : .3rem;
-        box-shadow          : var( --ui-shadow-1 );
+        box-shadow          : var( --shadow-1 );
         border              : none;
         cursor              : pointer;
         display             : inline-block;
@@ -214,7 +214,7 @@
     .btn-icon-text {
         background          : var(--ui-button-bg);
         border-radius       : .3rem;
-        box-shadow          : var(  --ui-shadow-1   );
+        box-shadow          : var(  --shadow-1   );
         border              : none;
         color               : var(  --ui-button-color  );
         cursor              : pointer;
@@ -257,7 +257,7 @@
 }
     /* @Todo uninstall */
     a.ui-btn.ui-btn-small[title="Uninstall"]{
-        background: var(  --ui-color-red);
+        background: var(  --color-red);
     }
 
 /* -------------------- -------------------- -------------------- -------------------- UI-BTN + jQueryUI */
@@ -293,7 +293,7 @@
     }
     .ui-btn:active,
     [class*="ui-btn-"]:active {
-        box-shadow          : var(  --ui-shadow-3     );
+        box-shadow          : var(  --shadow-3     );
     }
     .ui-btn.ui-btn-small,
     [class*="ui-btn-"].ui-btn-small {
@@ -324,43 +324,43 @@
 /* -------------------- -------------------- -------------------- BTN Alert */
 
     .ui-btn-alert {
-        background          : var(  --ui-color8      );
-        border              : 1px solid var(  --ui-color-orange );
-        color               : var(  --ui-color-orange   );
+        background          : var(  --color-8      );
+        border              : 1px solid var(  --color-orange );
+        color               : var(  --color-orange   );
     }
     .ui-btn-alert:active,
     .ui-btn-alert:hover,
     .ui-btn-alert:focus {
-        background          : var(  --ui-color-orange   );
-        color               : var(  --ui-color-white    );
+        background          : var(  --color-orange   );
+        color               : var(  --color-white    );
     }
 
 /* -------------------- -------------------- -------------------- BTN Danger */
 
     .ui-btn-danger {
-        background          : var(  --ui-color8  );
-        border              : 1px solid var(  --ui-color-red  );
-        color               : var(  --ui-color-red  );
+        background          : var(  --color-8  );
+        border              : 1px solid var(  --color-red  );
+        color               : var(  --color-red  );
     }
     .ui-btn-danger:active,
     .ui-btn-danger:hover,
     .ui-btn-danger:focus {
-        background          : var(  --ui-color-red  );
-        color               : var(  --ui-color-white);
+        background          : var(  --color-red  );
+        color               : var(  --color-white);
     }
 
 /* -------------------- -------------------- -------------------- BTN Success */
 
     .ui-btn-success {
-        background          : var(  --ui-color8      );
-        border              : 1px solid var(  --ui-color-green );
-        color               : var(  --ui-color-green    );
+        background          : var(  --color-8      );
+        border              : 1px solid var(  --color-green );
+        color               : var(  --color-green    );
     }
     .ui-btn-success:active,
     .ui-btn-success:hover,
     .ui-btn-success:focus {
-        background          : var(  --ui-color-green    );
-        color               : var(  --ui-color-white    );
+        background          : var(  --color-green    );
+        color               : var(  --color-white    );
     }
 
 /* -------------------- -------------------- -------------------- -------------------- BUTTON FX */
@@ -397,7 +397,7 @@
         background      : none;
         border          : var(  --ui-button-border  );
         border          : transparent;
-        color           : var(  --ui-color-white    );
+        color           : var(  --color-white    );
         font-size       : var(  --size-2       );
         height          : 40px;
         line-height     : 40px;
@@ -449,44 +449,44 @@
 /*-------------------- -------------------- -------------------- BUTTON COLOR */
 
     .btn-amber {
-        background      : var(  --ui-color-amber	);
-        color           : var(  --ui-color-white	);
+        background      : var(  --color-amber	);
+        color           : var(  --color-white	);
     }
     .btn-black {
-        background      : var(  --ui-color-black	);
-        color           : var(  --ui-color-white	);
+        background      : var(  --color-black	);
+        color           : var(  --color-white	);
     }
     .btn-blue {
-        background      : var(  --ui-color-blue		);
-        color           : var(  --ui-color-white	);
+        background      : var(  --color-blue		);
+        color           : var(  --color-white	);
     }
     .btn-green {
-        background      : var(  --ui-color-green	);
-        color           : var(  --ui-color-white	);
+        background      : var(  --color-green	);
+        color           : var(  --color-white	);
     }
     .btn-indigo {
-        background      : var(  --ui-color-indigo	);
-        color           : var(  --ui-color-white    );
+        background      : var(  --color-indigo	);
+        color           : var(  --color-white    );
     }
     .btn-orange {
-        background      : var(  --ui-color-orange   );
-        color           : var(  --ui-color-white    );
+        background      : var(  --color-orange   );
+        color           : var(  --color-white    );
     }
     .btn-purple {
-        background      : var(  --ui-color-purple   );
-        color           : var(  --ui-color-white    );
+        background      : var(  --color-purple   );
+        color           : var(  --color-white    );
     }
     .btn-red {
-        background      : var(  --ui-color-red      );
-        color           : var(  --ui-color-white    );
+        background      : var(  --color-red      );
+        color           : var(  --color-white    );
     }
     .btn-white {
-        background      : var(  --ui-color-white    );
-        color           : var(  --ui-color-black	);
+        background      : var(  --color-white    );
+        color           : var(  --color-black	);
     }
     /* button icon with color black */
     button[class^="btn-ico"].btn-white > i {
-        background-color: var(  --ui-color-black    );
+        background-color: var(  --color-black    );
     }
 
 
