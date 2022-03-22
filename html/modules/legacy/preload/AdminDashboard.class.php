@@ -355,6 +355,57 @@ class Legacy_AdminDashboard extends XCube_ActionFilter
             if (function_exists('imagecreatetruecolor')) {
                 $phpsetting_message[] = _AD_LEGACY_PHPSETTING_GD. ' Image create Truecolor';
             }
+            if( extension_loaded('imagick') || class_exists("Imagick") ){
+                /*do Imagick*/
+                $imagick_version = Imagick::getVersion();
+                $imagick_version_number = $imagick_version['versionNumber'];
+                $imagick_version_string = $imagick_version['versionString'];
+                $phpsetting_message[] = 'Imagick: Image create Truecolor <span style="color:green">' ._YES. '</span>';
+                $phpsetting_message[] = 'Imagick version number'.$imagick_version_number;
+                $phpsetting_message[] = 'Imagick version'.$imagick_version_string;
+            }
+
+
+
+            echo '<hr>';
+
+            echo '<h2>Test for versions and locations of ImageMagick</h2>';
+            echo '<b>Path: </b> convert<br>';
+
+            function alist ($array) {  //This function prints a text array as an html list.
+                $alist = "<ul>";
+                for ($i = 0; $i < sizeof($array); $i++) {
+                    $alist .= "<li>$array[$i]";
+                }
+                $alist .= "</ul>";
+                return $alist;
+            }
+
+
+            exec("convert -version", $out, $rcode); //Try to get ImageMagick "convert" program version number.
+            echo "Version return code is $rcode <br>"; //Print the return code: 0 if OK, nonzero if error.
+            echo alist($out); //Print the output of "convert -version"
+            echo '<br>';
+            echo '<b>This should test for ImageMagick version 5.x</b><br>';
+            echo '<b>Path: </b> /usr/bin/convert<br>';
+
+            exec("/usr/bin/convert -version", $out, $rcode); //Try to get ImageMagick "convert" program version number.
+            echo "Version return code is $rcode <br>"; //Print the return code: 0 if OK, nonzero if error.
+            echo alist($out); //Print the output of "convert -version"
+
+            echo '<br>';
+            echo '<b>This should test for ImageMagick version 6.x</b><br>';
+            echo '<b>Path: </b> /usr/local/bin/convert<br>';
+
+            exec("/usr/local/bin/convert -version", $out, $rcode); //Try to get ImageMagick "convert" program version number.
+            echo "Version return code is $rcode <br>"; //Print the return code: 0 if OK, nonzero if error.
+            echo alist($out); //Print the output of "convert -version";
+
+
+            echo "<pre>";
+            system("type -a convert");
+            echo "</pre>";
+
 
             xoops_result($phpsetting_message, _AD_LEGACY_PHPSETTING, 'tips');
         }

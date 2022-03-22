@@ -294,14 +294,14 @@
     --card-full-bg              : var( --color-7 );
     --card-image                : none;
     --card-radius               : var( --border-radius );
-    --card-shadow               : none;
+    --card-shadow               : var( --shadow-1);
     --card-space                : var( --space-4 ) var( --space-5 );
     --card-subtitle             : var( --font-14 );
     --card-title                : var( --font-24 );
-    --card-transition         : all var(--transition-time) var(--transition-cube);
+    --card-transition           : all var(--transition-time) var(--transition-cube);
     /* state action */
     --card-hover                : var( --color-9);
-    --card-shadow-on            : none;
+    --card-shadow-on            : var( --shadow-4);
 
     /* -------------------- -------------------- DROPDOWN */
 
@@ -407,13 +407,31 @@
 
     /* -------------------- -------------------- NOTIFICATION */
 
-    --notif-bg                  : var( --color-3 );
-    --notif-color               : var( --color-7 );
 
-    --padding                   : 0;
+    --notify-bg             : var( --color-3 );
 
-    --shadow                    : 5px 10px 15px #1a1e25, -5px -10px 20px #2c323d;
-    /* Box-Shadow */
+
+    --notify-border-color   : var( --color-4 );
+    --notify-border-radius  : var( --border-radius );
+    --notify-border-style   : solid ;
+    --notify-border-width   : 7px ;
+    --notify-color          : var(  --color-8  );
+    --notify-shadow         : var(	--shadow-1 );
+
+
+    --notify-margin         : var(--space-6) auto;
+    --notify-padding        : 1em 1em 1em 3em;
+    --notify-width-max      : 98%;
+
+    --notify-bg-on          : var( --color-3 );
+    --notify-color-on       : var( --color-7 );
+    --notify-shadow-on      : var(	--shadow-3 );
+
+    /*	-------------------- -------------------- Nope */
+    --padding   : 0;
+    --shadow    : 5px 10px 15px #1a1e25, -5px -10px 20px #2c323d;
+
+    /* -------------------- -------------------- SHADOW */
     --shadow-1   : 0 1px 0 rgba(0,0,0,0.10), 0 1px 0 rgba(0,0,0,0.10);
     --shadow-2   : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     --shadow-3   : 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);

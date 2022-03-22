@@ -15,93 +15,65 @@
    e.g.: color : fill='%23face74'
 */
 
-.msg-callout,
+.confirm, .tips, .error, .confirm, .success, .msg-callout,
+.confirmInfo, .confirmError, .confirmMsg, .confirmOk, .errorMsg, .resultMsg {
 
-.confirmInfo,
-.confirmError,
-.confirmMsg,
-.confirmOk,
-.errorMsg,
-.resultMsg {
-    background-image    : var(--color-5);
+    background-color    : var(--notify-bg);
     background-position : 1em 1em;
-    background-repeat   : no-repeat;
-    background-size     : 24px 24px;
-    border              : var(--border);
-    border-radius       : var(--border-radius);
-    color               : var(--color-5);
+    background-repeat : no-repeat;
+    /*background-size     : 24px 24px;*/
     display             : block;
     list-style          : none;
-    margin              : var(--space-6);
-    padding             : 1em 1em 1em 3em; /*1.5em 4em;*/
-    max-width           : 98%;
+    border-left     : var(--notify-border-width) var(--notify-border-style) var(--notify-border-color);
+    border-radius   : var(  --notify-border-radius );
+    box-shadow      : var(  --notify-shadow    );
+    color           : var(  --notify-color    );
+    padding         : var(  --notify-padding       );
+    margin          : var(  --notify-margin        );
+    max-width       : var(  --notify-width-max     );
+
 }
 
+.confirm,
 .resultMsg,
 .confirmInfo {
-	color :var(--blue-3);
-	border: 1px solid var(--blue-2);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath d='M11 15h2v2h-2v-2m0-8h2v6h-2V7m1-5C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18a8 8 0 0 1-8-8a8 8 0 0 1 8-8a8 8 0 0 1 8 8a8 8 0 0 1-8 8z' fill='%23face74'/%3E%3C/svg%3E");
+    border-left       : 7px solid var(--blue-1);
+    background-image  :  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' style='vertical-align: -0.125em;' viewBox='0 0 24 24'%3E %3Cpath d='M11.5 3a9.5 9.5 0 1 1 0 19a9.5 9.5 0 0 1 0-19zm0 1a8.5 8.5 0 1 0 0 17a8.5 8.5 0 0 0 0-17zM11 8v2h1V8h-1zm0 4v5h1v-5h-1z' fill='%23face74'/%3E %3C/svg%3E");
 }
+
 .tips {
-    border-left     : 7px solid var(  --ui-color-blue     );
-    background: var(  --ui-notification-bg    ) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' style='vertical-align: -0.125em;' viewBox='0 0 24 24'%3E %3Cpath d='M11.5 3a9.5 9.5 0 1 1 0 19a9.5 9.5 0 0 1 0-19zm0 1a8.5 8.5 0 1 0 0 17a8.5 8.5 0 0 0 0-17zM11 8v2h1V8h-1zm0 4v5h1v-5h-1z' fill='%23face74'/%3E %3C/svg%3E") 1em 1em no-repeat;
+    border-left       : 7px solid var(  --blue-1    );
+    background-image  : url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' style='vertical-align: -0.125em;' viewBox='0 0 24 24'%3E %3Cpath d='M11.5 3a9.5 9.5 0 1 1 0 19a9.5 9.5 0 0 1 0-19zm0 1a8.5 8.5 0 1 0 0 17a8.5 8.5 0 0 0 0-17zM11 8v2h1V8h-1zm0 4v5h1v-5h-1z' fill='%23face74'/%3E %3C/svg%3E");
 }
 
-
+.error,
 .errorMsg,
 .confirmError {
-	color: #ff6633;
-	border: 1px solid #ff6633;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath d='M12 2L1 21h22M12 6l7.53 13H4.47M11 10v4h2v-4m-2 6v2h2v-2' fill='%23face74'/%3E%3C/svg%3E");
-}
-.error {
-    border-left     : 7px solid var(  --ui-color-red      );
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' style='vertical-align: -0.125em;' viewBox='0 0 24 24'%3E %3Cpath d='M1 21L11.5 2.813L22 21H1zm19.268-1L11.5 4.813L2.732 20h17.536zM11 14v-4h1v4h-1zm0 2h1v2h-1v-2z' fill='%23face74'/%3E %3C/svg%3E");
-    background-position:  1em center;
-    background-repeat: no-repeat;
-    /* animation: warning 1s infinite alternate; */
+    border-left       : 7px solid var(  --red-1      );
+    background-image  : url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' style='vertical-align: -0.125em;' viewBox='0 0 24 24'%3E %3Cpath d='M1 21L11.5 2.813L22 21H1zm19.268-1L11.5 4.813L2.732 20h17.536zM11 14v-4h1v4h-1zm0 2h1v2h-1v-2z' fill='%23face74'/%3E %3C/svg%3E");
 }
 
-
+.success,
 .confirmMsg,
 .confirmOk {
-	color: var(--green); /*#00cc00;*/
-	border: 1px solid var(--green);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath d='M9 20.42l-6.21-6.21l2.83-2.83L9 14.77l9.88-9.89l2.83 2.83L9 20.42z' fill='%23face74'/%3E%3C/svg%3E");
-}
-.confirm {
-    border-left     : 7px solid var(  --ui-color-amber     );
-    background: var(  --ui-notification-bg    ) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' style='vertical-align: -0.125em;' viewBox='0 0 24 24'%3E %3Cpath d='M11.5 3a9.5 9.5 0 1 1 0 19a9.5 9.5 0 0 1 0-19zm0 1a8.5 8.5 0 1 0 0 17a8.5 8.5 0 0 0 0-17zM11 8v2h1V8h-1zm0 4v5h1v-5h-1z' fill='%23face74'/%3E %3C/svg%3E") 1em 1em no-repeat;
+    border-left       : 7px solid var(  --green     );
+    background-image  : url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' style='vertical-align: -0.125em;' viewBox='0 0 24 24'%3E %3Cpath d='M9 19l-5.657-5.657l2.121-2.121L9 14.757l8.485-8.485l2.122 2.121L9 19zm-3.536-6.364l-.707.707L9 17.586l9.192-9.193l-.707-.707L9 16.172l-3.536-3.536z' fill='%23face74'/%3E %3C/svg%3E");
 }
 
-.success {
-    border-left     : 7px solid var(  --ui-color-green     );
-    background: var(  --ui-notification-bg    ) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' style='vertical-align: -0.125em;' viewBox='0 0 24 24'%3E %3Cpath d='M9 19l-5.657-5.657l2.121-2.121L9 14.757l8.485-8.485l2.122 2.121L9 19zm-3.536-6.364l-.707.707L9 17.586l9.192-9.193l-.707-.707L9 16.172l-3.536-3.536z' fill='%23face74'/%3E %3C/svg%3E") 1em 1em no-repeat;
-}
+.message-warning {
 
+    background      : var(  --notify-bg    );
+    border          : 1px solid var(  --amber );
+    border-radius   : var(  --notify-border-radius );
+    color           : var(  --color-4    );
+    padding         : var(  --space-2       );
+    animation       : badge-warning 1s infinite alternate;
 
-.msg-info {
-	display: block;
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath d='M12 2c-.5 0-1 .19-1.41.59l-8 8c-.79.78-.79 2.04 0 2.82l8 8c.78.79 2.04.79 2.82 0l8-8c.79-.78.79-2.04 0-2.82l-8-8C13 2.19 12.5 2 12 2m-1 5h2v6h-2V7m0 8h2v2h-2v-2z' fill='%23face74'/%3E%3C/svg%3E");
-}
-.msg-warning {
-	background: linear-gradient(145deg, hsla(348, 83%, 47%, 0.67), hsl(348, 83%, 47%));
-	box-shadow: inset 0 5px 10px 0 hsl(215, 15%, 21%), 1px 2px 3px hsl(215, 17%, 10%);
-	border:3px dotted hsl(348, 83%, 47%);
-	border-radius: 7px;
-	/*box-shadow: 1px 1px 10px 5px #111;*/
-	color: #fff;
-	list-style-type : none;
-	margin: 1em 0.25em;
-	padding: 1em;
-	text-align: center;
 }
 
 
+/* ---------- ---------- X-Update */
 
-
-/* X-Update */
 .notification {
     color           : var(  --white     );
     display         : flex;

@@ -1,18 +1,66 @@
 /*
- * *
- *  * Short description for class
- *  *
- *  * Long description for class (if any)...
- *  *
- *  * @package    XCL230
- *  * @author     Original Author <author@example.com>
- *  * @author     Other Authors <another@example.com>
- *  * @copyright  2005-2020 The XOOPSCube Project
- *  * @license    Legacy : https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
- *  * @license    Cube : https://github.com/xoopscube/xcl/blob/master/BSD_license.txt
- *  * @version    Release: @package_230@
- *  * @link       https://github.com/xoopscube/xcl
- *  * *
- *
+ * Theme XCL DEFAULT
+ * @version   2.3.1
+ * @author    Nuno Luciano (aka gigamaster, https://github.com/gigamaster )
+ * @copyright 2005-2022 The XOOPSCube Project
+*  @license   https://github.com/xoopscube/xcl/blob/master/BSD_license.txt
+ * @brief    Card component
  */
+
+/* -------------------- -------------------- CARD */
+.card-box {
+
+}
+.card {
+    background          : var(--card-bg);
+    border              : var(--card-border);
+    border-radius       : var(--card-radius);
+    padding             : 0;
+    transition          : all 0.2s ease;
+    gap: 10px;
+    scroll-snap-align: start;
+    align-items: stretch;
+    /*box-sizing: border-box;*/
+    flex-basis: max(max(max(max((100% - 32px) / 5,
+min((100% - 24px) / 4, (1532px - 100%) * 9999)),
+min((100% - 16px) / 3, (1224px - 100%) * 9999)),
+min((100% - 8px) / 2, (916px - 100%) * 9999)),
+min(100%, (608px - 100%) * 9999));
+}
+
+.card:hover {
+    box-shadow          : var(--card-shadow);
+
+}
+.card-title{
+    font-size           : var(--card-title);
+    margin-top          : .5rem;
+    padding             : var(--card-space);
+}
+
+.card-subtitle {
+    font-size           : var(--card-subtitle);
+    padding             : var(--card-space);
+}
+.card-media {
+    background          : var(--card-bg);
+    margin              : 0;
+    padding             : 0;
+}
+.card-media img {
+    height              : 140px;
+    margin              : 0;
+    object-fit          : cover;
+    padding             : 0;
+    width               : 100%;
+}
+.card-content {
+    background          : var(--bg-linear);
+    font-size           : var(--card-content);
+    padding             : var(--card-space);
+}
+.card-footer {
+    font-size           : var(--card-footer);
+    padding             : var(--card-space);
+}
 
