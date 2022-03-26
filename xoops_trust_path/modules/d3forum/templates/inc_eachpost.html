@@ -68,7 +68,7 @@
                 <{elseif $post.poster_avatar.width > 1}>
                 <img src="<{$xoops_upload_url}>/<{$post.poster_avatar.path}>" width="<{$post.poster_avatar.width}>" height="<{$post.poster_avatar.height}>" alt="<{$post.poster_uname}>" self="radius-circle">
                 <{else}>
-                <img src="<{$xoops_url}>/modules/user/images/no_avatar.gif" width="48" height="48" alt="<{$post.poster_uname}>" self="radius-circle">
+                <img src="<{$xoops_url}>/uploads/no_avatar.gif" width="48" height="48" alt="<{$post.poster_uname}>" self="radius-circle">
                 <{/if}>
                 <{if $post.poster_uid != 0}>
             </a>
@@ -202,7 +202,7 @@
 
                 <{if $post.can_reply}>
                 <a class="ui-button" href="<{$mod_url}>/index.php?page=reply&amp;post_id=<{$post.id}>" title="<{$smarty.const._MD_D3FORUM_POSTREPLY}>">
-                    <img class="svg reply" src="<{$xoops_url}>/images/icons/reply.svg"></a>
+                    <img class="svg reply" src="<{$xoops_url}>/images/icons/reply.svg"> <{$smarty.const._MD_D3FORUM_POSTREPLY}></a>
                 <{/if}>
 
             </div>

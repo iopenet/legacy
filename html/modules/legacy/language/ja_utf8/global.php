@@ -1,14 +1,14 @@
 <?php
 
-define('_TOKEN_ERROR', '照合用のワンタイム・チケットが見つかりませんでした。ほとんどの場合は操作手順の関係でワンタイム・チケットが消費されただけですが、CSRF攻撃を受けた可能性もあります（この操作は本当にあなたが望んだ操作ですか？）　操作内容をしっかり確認し、もう一度操作を行ってください。');
-define('_SYSTEM_MODULE_ERROR', '以下のモジュールが導入されていません');
-define('_INSTALL', 'インストール');
-define('_UNINSTALL', '削除');
-define('_SYS_MODULE_UNINSTALLED', '必須(未導入)');
-define('_SYS_MODULE_DISABLED', '必須(無効)');
-define('_SYS_RECOMMENDED_MODULES', '導入推奨');
-define('_SYS_OPTION_MODULES', '選択導入可能');
-define('_UNINSTALL_CONFIRM', '必須モジュールのアンインストールを行いますか？');
+const _TOKEN_ERROR = '照合用のワンタイム・チケットが見つかりませんでした。ほとんどの場合は操作手順の関係でワンタイム・チケットが消費されただけですが、CSRF攻撃を受けた可能性もあります（この操作は本当にあなたが望んだ操作ですか？）　操作内容をしっかり確認し、もう一度操作を行ってください。';
+const _SYSTEM_MODULE_ERROR = '以下のモジュールが導入されていません';
+const _INSTALL = 'インストール';
+const _UNINSTALL = '削除';
+const _SYS_MODULE_UNINSTALLED = '必須(未導入)';
+const _SYS_MODULE_DISABLED = '必須(無効)';
+const _SYS_RECOMMENDED_MODULES = '導入推奨';
+const _SYS_OPTION_MODULES = '選択導入可能';
+const _UNINSTALL_CONFIRM = '必須モジュールのアンインストールを行いますか？';
 
 //%%%%%%	File Name mainfile.php 	%%%%%
 define('_PLEASEWAIT', 'しばらくお待ちください');

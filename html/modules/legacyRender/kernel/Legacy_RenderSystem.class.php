@@ -490,9 +490,9 @@ class Legacy_RenderSystem extends XCube_RenderSystem
                 return 0;
         }
     }
+
     //
-    // These deprecated functions should not be here!
-    //
+    // TODO : These deprecated functions should not be here !
     //
 
     /**

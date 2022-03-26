@@ -58,7 +58,7 @@ class Legacy_ActionSearchArgs
      */
     public function hasRecord()
     {
-        // @gigamaster
+        // TODO @gigamaster is_iterable / is_countable
         // PHP >= 7.1
         if (is_iterable($this->mRecords)) {
             return count($this->mRecords) > 0;

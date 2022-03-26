@@ -23,7 +23,18 @@
 .activity {
     font-size: var(--font-14);
 }
-.avatar { margin: 0 .5em; vertical-align: bottom;}
+.avatar {
+    border-radius: 15%;
+    margin: 0 .5em;
+    vertical-align: bottom;
+}
+.avatar-24 {
+    border-radius: 15%;
+    margin: 0 .5em;
+    max-width: 24px;
+    vertical-align: bottom;
+}
+
 
 .map-box {
     width: 90%;

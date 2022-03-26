@@ -143,7 +143,7 @@ class Legacy_AbstractModule
     /**
      * @public
      * @brief Binds array of xoops module config to the property.
-     * @param Map $config Array - std::map<string, mixed>
+     * @param $config Array - std::map<string, mixed>
      * @return void
      */
     public function setModuleConfig($config)
@@ -154,10 +154,10 @@ class Legacy_AbstractModule
     /**
      * @public
      * @brief Gets a value form xoops module config with $key.
-     * @param string $key
+     * @param string|null $key
      * @return mixed If $key is specified null, returns map array (std::map<string, mixed>)
      */
-    public function getModuleConfig($key = null)
+    public function getModuleConfig(string $key = null)
     {
         if (null == $key) {
             return $this->mModuleConfig;
@@ -272,7 +272,8 @@ class Legacy_AbstractModule
             return false;
         }
 
-        return $this->mXoopsModule->get('isactive') ? true : false;
+        //return $this->mXoopsModule->get('isactive') ? true : false;
+        return (bool)$this->mXoopsModule->get('isactive');
     }
 
     /**
@@ -586,7 +587,9 @@ class Legacy_ModuleAdapter extends Legacy_AbstractModule
                     if (file_exists(XOOPS_ROOT_PATH . '/uploads/' . $result['image'])) {
                         $item['image'] = XOOPS_URL . '/uploads/' . $result['image'];
                     } else {
-                        $item['image'] = XOOPS_URL . '/modules/' . $this->mXoopsModule->get('dirname') . '/' . $result['image'];
+                        // TODO @gigamaster change module dirname to images/icons
+                        // $item['image'] = XOOPS_URL . '/modules/' . $this->mXoopsModule->get('dirname') . '/' . $result['image'];
+                        $item['image'] = XOOPS_URL . '/images/icons/' . $result['image'];
                     }
                 } else {
                     $item['image'] = XOOPS_URL . '/images/icons/file.svg';

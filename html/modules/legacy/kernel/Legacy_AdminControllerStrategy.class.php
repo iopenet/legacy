@@ -170,6 +170,7 @@ class Legacy_AdminControllerStrategy extends Legacy_AbstractControllerStrategy
         return false;
     }
 
+    // TODO @gigamaster TRUST PATH catalog
     public function setupModuleLanguage()
     {
         $root =& XCube_Root::getSingleton();
