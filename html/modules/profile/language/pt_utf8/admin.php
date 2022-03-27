@@ -1,5 +1,5 @@
 <?php
-// ******************************************************************** //
+// Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
 // ** XOOPS Cube Legacy - Profile Module - Portuguese
 // ** Por Mikhail Miguel <mikhail.miguel@gmail.com> - http://xoops.net.br/
 // ** $Id$

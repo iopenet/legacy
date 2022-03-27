@@ -1,199 +1,199 @@
 <?php
-
-define("_TOKEN_ERROR", "Attention ! A fin d'éviter l'exécution d'une requête mal formé, veuillez recommencer pour confirmer!");
-define("_SYSTEM_MODULE_ERROR", "Les modules suivants ne sont pas installés.");
-define("_INSTALL", "Installer");
-define("_UNINSTALL", "Désinstaller");
-define("_SYS_MODULE_UNINSTALLED", "Requit (Non Installé)");
-define("_SYS_MODULE_DISABLED", "Requit (Désactivé)");
-define("_SYS_RECOMMENDED_MODULES", "Module Recommendé");
-define("_SYS_OPTION_MODULES", "Module Optionnel");
-define("_UNINSTALL_CONFIRM", "Voulez-vous désinstaller le module System?");
+// Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
+const _TOKEN_ERROR = "Attention ! A fin d'éviter l'exécution d'une requête mal formé, veuillez recommencer pour confirmer!";
+const _SYSTEM_MODULE_ERROR = "Les modules suivants ne sont pas installés.";
+const _INSTALL = "Installer";
+const _UNINSTALL = "Désinstaller";
+const _SYS_MODULE_UNINSTALLED = "Requit (Non Installé)";
+const _SYS_MODULE_DISABLED = "Requit (Désactivé)";
+const _SYS_RECOMMENDED_MODULES = "Module Recommendé";
+const _SYS_OPTION_MODULES = "Module Optionnel";
+const _UNINSTALL_CONFIRM = "Voulez-vous désinstaller le module System?";
 
 //%%%%%% File Name mainfile.php %%%%%
-define("_PLEASEWAIT", "Veuillez patienter");
-define("_FETCHING", "Chargement...");
-define("_TAKINGBACK", "Retour à là page précédente...");
-define("_LOGOUT", "Déconnexion");
-define("_SUBJECT", "Sujet");
-define("_MESSAGEICON", "Icône de message");
-define("_COMMENTS", "Commentaires");
-define("_POSTANON", "Poster en anonyme");
-define("_DISABLESMILEY", "Désactiver les émoticônes");
-define("_DISABLEHTML", "Désactiver le html");
-define("_PREVIEW", "Prévisualiser");
+const _PLEASEWAIT = "Veuillez patienter";
+const _FETCHING = "Chargement...";
+const _TAKINGBACK = "Retour à là page précédente...";
+const _LOGOUT = "Déconnexion";
+const _SUBJECT = "Sujet";
+const _MESSAGEICON = "Icône de message";
+const _COMMENTS = "Commentaires";
+const _POSTANON = "Poster en anonyme";
+const _DISABLESMILEY = "Désactiver les émoticônes";
+const _DISABLEHTML = "Désactiver le html";
+const _PREVIEW = "Prévisualiser";
 
-define("_GO", "Ok !");
-define("_NESTED", "Emboîté");
-define("_NOCOMMENTS", "Sans commentaires");
-define("_FLAT", "A plat");
-define("_THREADED", "Par conversation");
-define("_OLDESTFIRST", "Les anciens en premier");
-define("_NEWESTFIRST", "Les récents en premier");
-define("_MORE", "plus...");
-define("_MULTIPAGE", "Pour avoir votre article sur des pages multiples, insérer le mot <span style='color:red'>[pagebreak]</span> (avec les crochets) dans l'article.");
-define("_IFNOTRELOAD", "Si la page ne se recharge pas automatiquement, merci de cliquer <a href=%s>ici</a>");
-define("_WARNINSTALL2", "ATTENTION: Le repértoire %s existe sur votre serveur. Veuillez supprimer ce repértoire pour des raisons de sécurité.");
-define("_WARNINWRITEABLE", "ATTENTION : Veillez Changer les permissions du fichier %s pour des raisons de sécurité - sous Unix (444), sous Win32 (lecture seule)");
-define('_WARNPHPENV', 'ATTENTION : paramètres php.ini "%s" est réglé "%s". %s');
-define('_WARNSECURITY', '(Ceci peut causer des problèmes de sécurité)');
+const _GO = "Ok !";
+const _NESTED = "Emboîté";
+const _NOCOMMENTS = "Sans commentaires";
+const _FLAT = "A plat";
+const _THREADED = "Par conversation";
+const _OLDESTFIRST = "Les anciens en premier";
+const _NEWESTFIRST = "Les récents en premier";
+const _MORE = "plus...";
+const _MULTIPAGE = "Pour avoir votre article sur des pages multiples, insérer le mot <span style='color:red'>[pagebreak]</span> (avec les crochets) dans l'article.";
+const _IFNOTRELOAD = "Si la page ne se recharge pas automatiquement, merci de cliquer <a href=%s>ici</a>";
+const _WARNINSTALL2 = "ATTENTION: Le repértoire %s existe sur votre serveur. Veuillez supprimer ce repértoire pour des raisons de sécurité.";
+const _WARNINWRITEABLE = "ATTENTION : Veillez Changer les permissions du fichier %s pour des raisons de sécurité - sous Unix (444), sous Win32 (lecture seule)";
+const _WARNPHPENV = "ATTENTION : paramètres php.ini \"%s\" est réglé \"%s\". %s";
+const _WARNSECURITY = "(Ceci peut causer des problèmes de sécurité)";
 
 //%%%%%% File Name themeuserpost.php %%%%%
-define("_PROFILE", "Profil");
-define("_POSTEDBY", "Posté par");
-define("_VISITWEBSITE", "Visiter le site Web");
-define("_SENDPMTO", "Envoyer un message privé à %s");
-define("_SENDEMAILTO", "Envoyer un E-mail à %s");
-define("_ADD", "Ajouter");
-define("_REPLY", "Répondre");
-define("_DATE", "Date");
+const _PROFILE = "Profil";
+const _POSTEDBY = "Posté par";
+const _VISITWEBSITE = "Visiter le site Web";
+const _SENDPMTO = "Envoyer un message privé à %s";
+const _SENDEMAILTO = "Envoyer un E-mail à %s";
+const _ADD = "Ajouter";
+const _REPLY = "Répondre";
+const _DATE = "Date";
 
 //%%%%%% File Name admin_functions.php %%%%%
-define("_MAIN", "Principal");
-define("_MANUAL", "Manuel");
-define("_INFO", "Info");
-define("_CPHOME", "Panneau de contrôle");
-define("_YOURHOME", "Page d'accueil");
+const _MAIN = "Principal";
+const _MANUAL = "Manuel";
+const _INFO = "Info";
+const _CPHOME = "Panneau de contrôle";
+const _YOURHOME = "Page d'accueil";
 
 //%%%%%% File Name misc.php (who's-online popup) %%%%%
-define("_WHOSONLINE", "Qui est en ligne");
-define('_GUESTS', 'Invité(s)');
-define('_MEMBERS', 'Membre(s)');
-define("_ONLINEPHRASE", "<b>%s</b> utilisateur(s) en ligne");
-define("_ONLINEPHRASEX", "dont <b>%s</b> sur <b>%s</b>");
-define("_CLOSE", "Fermer"); // Close window
+const _WHOSONLINE = "Qui est en ligne";
+const _GUESTS = 'Invité(s)';
+const _MEMBERS = 'Membre(s)';
+const _ONLINEPHRASE = "<b>%s</b> utilisateur(s) en ligne";
+const _ONLINEPHRASEX = "dont <b>%s</b> sur <b>%s</b>";
+const _CLOSE = "Fermer"; // Close window
 
 //%%%%%% File Name module.textsanitizer.php %%%%%
-define("_QUOTEC", "Citation :");
+const _QUOTEC = "Citation :";
 
 //%%%%%% File Name admin.php %%%%%
-define("_NOPERM", "Désolé, vous n'avez pas les droits d'accès à cette zone.");
+const _NOPERM = "Désolé, vous n'avez pas les droits d'accès à cette zone.";
 
 //%%%%% Common Phrases %%%%%
-define("_NO", "Non");
-define("_YES", "Oui");
-define("_EDIT", "Editer");
-define("_DELETE", "Effacer");
-define("_VIEW", "Visualiser");
-define("_SUBMIT", "Valider");
-define("_MODULENOEXIST", "Le module sélectionné n'existe pas !");
-define("_ALIGN", "Alignement");
-define("_LEFT", "Gauche");
-define("_CENTER", "Centre");
-define("_RIGHT", "Droite");
-define("_FORM_ENTER", "Merci d'entrer %s");
+const _NO = "Non";
+const _YES = "Oui";
+const _EDIT = "Editer";
+const _DELETE = "Effacer";
+const _VIEW = "Visualiser";
+const _SUBMIT = "Valider";
+const _MODULENOEXIST = "Le module sélectionné n'existe pas !";
+const _ALIGN = "Alignement";
+const _LEFT = "Gauche";
+const _CENTER = "Centre";
+const _RIGHT = "Droite";
+const _FORM_ENTER = "Merci d'entrer %s";
 // %s represents file name
-define("_MUSTWABLE", "Le fichier %s doit être accessible en écriture sur le serveur !");
+const _MUSTWABLE = "Le fichier %s doit être accessible en écriture sur le serveur !";
 // Module info
-define('_PREFERENCES', 'Préférences');
-define("_VERSION", "Version");
-define("_DESCRIPTION", "Description");
-define("_ERRORS", "Erreurs");
-define("_NONE", "Aucun");
-define('_ON', 'le');
-define('_READS', 'lectures');
-define('_WELCOMETO', 'Bienvenue sur %s');
-define('_SEARCH', 'Chercher');
-define('_ALL', 'Tous');
-define('_TITLE', 'Titre');
-define('_OPTIONS', 'Options');
-define('_QUOTE', 'Citation');
-define('_LIST', 'Liste');
-define('_LOGIN', 'Connexion');
-define('_USERNAME', 'Pseudo : ');
-define('_PASSWORD', 'Mot de passe : ');
-define("_SELECT", "Sélectionner");
-define("_IMAGE", "Image");
-define("_SEND", "Envoyer");
-define("_CANCEL", "Annuler");
-define("_ASCENDING", "Ordre ascendant");
-define("_DESCENDING", "Ordre déscendant");
-define('_BACK', 'Retour');
-define('_NOTITLE', 'Aucun titre');
-define('_RETURN_TOP', 'Retour haut de la page');
+const _PREFERENCES = 'Préférences';
+const _VERSION = "Version";
+const _DESCRIPTION = "Description";
+const _ERRORS = "Erreurs";
+const _NONE = "Aucun";
+const _ON = 'le';
+const _READS = 'lectures';
+const _WELCOMETO = 'Bienvenue sur %s';
+const _SEARCH = 'Chercher';
+const _ALL = 'Tous';
+const _TITLE = 'Titre';
+const _OPTIONS = 'Options';
+const _QUOTE = 'Citation';
+const _LIST = 'Liste';
+const _LOGIN = 'Connexion';
+const _USERNAME = 'Pseudo : ';
+const _PASSWORD = 'Mot de passe : ';
+const _SELECT = "Sélectionner";
+const _IMAGE = "Image";
+const _SEND = "Envoyer";
+const _CANCEL = "Annuler";
+const _ASCENDING = "Ordre ascendant";
+const _DESCENDING = "Ordre déscendant";
+const _BACK = 'Retour';
+const _NOTITLE = 'Aucun titre';
+const _RETURN_TOP = 'Retour haut de la page';
 /* Image manager */
-define('_IMGMANAGER', "Gestionnaire d'images");
-define('_NUMIMAGES', '%s images');
-define('_ADDIMAGE', 'Ajouter un fichier image');
-define('_IMAGENAME', 'Nom :');
-define('_IMGMAXSIZE', 'Taille maxi autorisée (ko) :');
-define('_IMGMAXWIDTH', 'Largeur maxi autorisée (pixels) :');
-define('_IMGMAXHEIGHT', 'Hauteur maxi autorisée (pixels) :');
-define('_IMAGECAT', 'Catégorie :');
-define('_IMAGEFILE', 'Fichier image ');
-define('_IMGWEIGHT', "Ordre d'affichage dans le gestionnaire d'images :");
-define('_IMGDISPLAY', 'Afficher cette image ?');
-define('_IMAGEMIME', 'Type MIME :');
-define('_FAILFETCHIMG', "Impossible de télécherger le fichier %s");
-define('_FAILSAVEIMG', "Impossible de stocker l'image %s dans la base de données");
-define('_NOCACHE', 'Pas de Cache');
-define('_CLONE', 'Cloner');
+const _IMGMANAGER = "Gestionnaire d'images";
+const _NUMIMAGES = '%s images';
+const _ADDIMAGE = 'Ajouter un fichier image';
+const _IMAGENAME = 'Nom :';
+const _IMGMAXSIZE = 'Taille maxi autorisée (ko) :';
+const _IMGMAXWIDTH = 'Largeur maxi autorisée (pixels) :';
+const _IMGMAXHEIGHT = 'Hauteur maxi autorisée (pixels) :';
+const _IMAGECAT = 'Catégorie :';
+const _IMAGEFILE = 'Fichier image ';
+const _IMGWEIGHT = "Ordre d'affichage dans le gestionnaire d'images :";
+const _IMGDISPLAY = 'Afficher cette image ?';
+const _IMAGEMIME = 'Type MIME :';
+const _FAILFETCHIMG = "Impossible de télécherger le fichier %s";
+const _FAILSAVEIMG = "Impossible de stocker l'image %s dans la base de données";
+const _NOCACHE = 'Pas de Cache';
+const _CLONE = 'Cloner';
 
 //%%%%% File Name class/xoopsform/formmatchoption.php %%%%%
-define("_STARTSWITH", "Commençant par");
-define("_ENDSWITH", "Finissant par");
-define("_MATCHES", "Correspondant à");
-define("_CONTAINS", "Contenant");
+const _STARTSWITH = "Commençant par";
+const _ENDSWITH = "Finissant par";
+const _MATCHES = "Correspondant à";
+const _CONTAINS = "Contenant";
 
 //%%%%%% File Name commentform.php %%%%%
-define("_REGISTER", "Enregistrement");
+const _REGISTER = "Enregistrement";
 
 //%%%%%% File Name xoopscodes.php %%%%%
-define("_SIZE", "TAILLE"); // font size
-define("_FONT", "POLICE"); // font family
-define("_COLOR", "COULEUR"); // font color
-define("_EXAMPLE", "EXEMPLE");
-define("_ENTERURL", "Entrez l'URL du lien que vous voulez ajouter :");
-define("_ENTERWEBTITLE", "Entrez le titre du site web :");
-define("_ENTERIMGURL", "Entrez l'URL de l'image que vous voulez ajouter.");
-define("_ENTERIMGPOS", "Maintenant, entrez l'alignement de l'image.");
-define("_IMGPOSRORL", "'R' ou 'r' pour droite, 'L' ou 'l' pour gauche, ou laisser vide.");
-define("_ERRORIMGPOS", "ERREUR ! Entrez l'alignement de l'image.");
-define("_ENTEREMAIL", "Entrez l'adresse e-mail que vous voulez ajouter.");
-define("_ENTERCODE", "Entrez les codes que vous voulez ajouter.");
-define("_ENTERQUOTE", "Entrez le texte que vous voulez citer.");
-define("_ENTERTEXTBOX", "Merci de saisir le texte dans la boîte.");
-define("_ALLOWEDCHAR", "Longueur maximum de caractères autorisés : ");
-define("_CURRCHAR", "Longueur de caractères actuelle : ");
-define("_PLZCOMPLETE", "Merci de compléter le sujet et le champ message.");
-define("_MESSAGETOOLONG", "Votre message est trop long.");
+const _SIZE = "TAILLE"; // font size
+const _FONT = "POLICE"; // font family
+const _COLOR = "COULEUR"; // font color
+const _EXAMPLE = "EXEMPLE";
+const _ENTERURL = "Entrez l'URL du lien que vous voulez ajouter :";
+const _ENTERWEBTITLE = "Entrez le titre du site web :";
+const _ENTERIMGURL = "Entrez l'URL de l'image que vous voulez ajouter.";
+const _ENTERIMGPOS = "Maintenant, entrez l'alignement de l'image.";
+const _IMGPOSRORL = "'R' ou 'r' pour droite, 'L' ou 'l' pour gauche, ou laisser vide.";
+const _ERRORIMGPOS = "ERREUR ! Entrez l'alignement de l'image.";
+const _ENTEREMAIL = "Entrez l'adresse e-mail que vous voulez ajouter.";
+const _ENTERCODE = "Entrez les codes que vous voulez ajouter.";
+const _ENTERQUOTE = "Entrez le texte que vous voulez citer.";
+const _ENTERTEXTBOX = "Merci de saisir le texte dans la boîte.";
+const _ALLOWEDCHAR = "Longueur maximum de caractères autorisés : ";
+const _CURRCHAR = "Longueur de caractères actuelle : ";
+const _PLZCOMPLETE = "Merci de compléter le sujet et le champ message.";
+const _MESSAGETOOLONG = "Votre message est trop long.";
 
 //%%%%% TIME FORMAT SETTINGS %%%%%
-define('_SECOND', '1 seconde');
-define('_SECONDS', '%s secondes');
-define('_MINUTE', '1 minute');
-define('_MINUTES', '%s minutes');
-define('_HOUR', '1 heure');
-define('_HOURS', '%s heures');
-define('_DAY', '1 jour');
-define('_DAYS', '%s jours');
-define('_WEEK', '1 semaine');
-define('_MONTH', '1 mois');
+const _SECOND = '1 seconde';
+const _SECONDS = '%s secondes';
+const _MINUTE = '1 minute';
+const _MINUTES = '%s minutes';
+const _HOUR = '1 heure';
+const _HOURS = '%s heures';
+const _DAY = '1 jour';
+const _DAYS = '%s jours';
+const _WEEK = '1 semaine';
+const _MONTH = '1 mois';
 
-define('_HELP', "Aide");
+const _HELP = "Aide";
 // Added interface Enum
 
 //%%%%%		   %%%%%
-define('_CATEGORY', 'Category');
-define('_TAG', 'Tag');
-define('_STATUS', 'Status');
-define('_STATUS_DELETED', 'Deleted');
-define('_STATUS_REJECTED', 'Rejected');
-define('_STATUS_POSTED', 'Posted');
-define('_STATUS_PUBLISHED', 'Published');
+const _CATEGORY = 'Category';
+const _TAG = 'Tag';
+const _STATUS = 'Status';
+const _STATUS_DELETED = 'Deleted';
+const _STATUS_REJECTED = 'Rejected';
+const _STATUS_POSTED = 'Posted';
+const _STATUS_PUBLISHED = 'Published';
 
 //%%%%% Group %%%%%
-define('_GROUP', 'Group');
-define('_MEMBER', 'Member');
-define('_GROUP_RANK_GUEST', 'Guest');
-define('_GROUP_RANK_ASSOCIATE', 'Associate');
-define('_GROUP_RANK_REGULAR', 'Regular');
-define('_GROUP_RANK_STAFF', 'Staff');
-define('_GROUP_RANK_OWNER', 'Owner');
+const _GROUP = 'Group';
+const _MEMBER = 'Member';
+const _GROUP_RANK_GUEST = 'Guest';
+const _GROUP_RANK_ASSOCIATE = 'Associate';
+const _GROUP_RANK_REGULAR = 'Regular';
+const _GROUP_RANK_STAFF = 'Staff';
+const _GROUP_RANK_OWNER = 'Owner';
 
 //%%%%% System %%%%%
-define('_DEBUG_MODE', 'Debug');
-define('_DEBUG_MODE_PHP', 'PHP');
-define('_DEBUG_MODE_SQL', 'SQL');
-define('_DEBUG_MODE_SMARTY', 'Smarty');
-define('_DEBUG_MODE_DESC', 'Disable debug mode in production. Admin > Settings > Debug mode [Off].');
+const _DEBUG_MODE = 'Debug';
+const _DEBUG_MODE_PHP = 'PHP';
+const _DEBUG_MODE_SQL = 'SQL';
+const _DEBUG_MODE_SMARTY = 'Smarty';
+const _DEBUG_MODE_DESC = 'Disable debug mode in production. Admin > Settings > Debug mode [Off].';

@@ -1,7 +1,7 @@
 <?php
+// Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
 
-define('_MD_A_MYMENU_MYLANGADMIN','Langage');
-
-define('_MD_A_MYMENU_MYTPLSADMIN','Templates');
-define('_MD_A_MYMENU_MYBLOCKSADMIN','Blocks/Permissions');
-define('_MD_A_MYMENU_MYPREFERENCES','Préferences');
+const _MD_A_MYMENU_MYLANGADMIN = 'Langage';
+const _MD_A_MYMENU_MYTPLSADMIN = 'Templates';
+const _MD_A_MYMENU_MYBLOCKSADMIN = 'Blocks/Permissions';
+const _MD_A_MYMENU_MYPREFERENCES = 'Préferences';

@@ -13,9 +13,6 @@ define( $constpref.'_LOADED' , 1 ) ;
 
 define( $constpref.'_DESC' , 'Webベースのファイルマネージャ elFinder をイメージマネージャとして利用するモジュール');
 
-
-
-
 // admin menu
 define( $constpref.'_ADMENU_INDEX_CHECK' ,   '設定の確認' ) ;
 define( $constpref.'_ADMENU_GOTO_MODULE' ,   'モジュール画面' ) ;

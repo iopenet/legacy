@@ -1,14 +1,15 @@
 <?php
-// gigamaster, 2020 XCL/PHP7
+// Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
+
 //%%%%%% File Name admin.php %%%%%
-define("_AD_NORIGHT", "Vous n'avez pas les droits pour accéder à cette zone");
-define("_AD_ACTION", "Action");
-define("_AD_EDIT", "Editer");
-define("_AD_DELETE", "Effacer");
-define("_AD_LASTTENUSERS", "Les 10 derniers membres enregistrés");
-define("_AD_NICKNAME", "Pseudo");
-define("_AD_EMAIL", "E-mail");
-define("_AD_AVATAR", "Avatar");
-define("_AD_REGISTERED", "Enregistré le ");
-define('_AD_PRESSGEN', "C'est est votre première connexion dans la section administration. Pressez le bouton ci-dessous pour initier.");
-define('_AD_LOGINADMIN', "Connexion...");
+const _AD_NORIGHT = "Vous n'avez pas les droits pour accéder à cette zone";
+const _AD_ACTION = "Action";
+const _AD_EDIT = "Editer";
+const _AD_DELETE = "Effacer";
+const _AD_LASTTENUSERS = "Les 10 derniers membres enregistrés";
+const _AD_NICKNAME = "Pseudo";
+const _AD_EMAIL = "E-mail";
+const _AD_AVATAR = "Avatar";
+const _AD_REGISTERED = "Enregistré le ";
+const _AD_PRESSGEN = "C'est est votre première connexion dans la section administration. Pressez le bouton ci-dessous pour initier.";
+const _AD_LOGINADMIN = "Connexion...";

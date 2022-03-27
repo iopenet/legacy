@@ -20,7 +20,7 @@ if (!defined('_CM_TITLE')) {
     define('_CM_BOTTOM', '下へ');
     define('_CM_ONLINE', 'オンライン');
     define('_CM_POSTED', '投稿日時'); // Posted date
-define('_CM_UPDATED', '更新日時');
+    define('_CM_UPDATED', '更新日時');
     define('_CM_THREAD', 'スレッド');
     define('_CM_POSTER', '投稿者');
     define('_CM_JOINED', '登録日');

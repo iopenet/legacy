@@ -1,4 +1,5 @@
 <?php
+// Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
 
 define('_MD_PROFILE_LANG_FIELD_TIP1', 'String - allows a series of characters to be stored.');
 define('_MD_PROFILE_LANG_FIELD_TIP2', 'Text - textarea with editor.');

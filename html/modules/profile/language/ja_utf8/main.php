@@ -1,4 +1,6 @@
 <?php
+// Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
+// 2012-5-2: Update by Yoshi.Sakai
 
 define('_MD_PROFILE_ERROR_REQUIRED', '{0}は必ず入力して下さい');
 define('_MD_PROFILE_ERROR_MINLENGTH', '{0}は半角{1}文字以上にして下さい');

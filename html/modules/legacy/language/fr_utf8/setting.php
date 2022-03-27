@@ -53,7 +53,7 @@ if (!defined('_LANGCODE')) {
 }
 // change 0 to 1 if this language is a multi-bytes language
 if (!defined('XOOPS_USE_MULTIBYTES')) {
-    define('XOOPS_USE_MULTIBYTES', '1');
+    define('XOOPS_USE_MULTIBYTES', '0');
 }
 
 

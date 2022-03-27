@@ -1,4 +1,5 @@
 <?php
+// Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
 
 define('_MI_PROFILE_DESC_PROFILE', 'Profile editor module');
 define('_MI_PROFILE_KEYWORD_DEFINITIONS_CREATE', 'Personalize User Account registration form by generating custom fields.');

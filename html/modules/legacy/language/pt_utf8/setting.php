@@ -1,20 +1,9 @@
 <?php
-// Translation Info
-// $Id$
-// License http://creativecommons.org/licenses/by/2.5/br/
-// ############################################################### //
 // ## XOOPS Cube Legacy - Versão em Português
-// ############################################################### //
 // ## Por............: Mikhail Miguel
 // ## Website........: http://xoops.net.br
 // ## E-mail.........: mikhail.miguel@gmail.com
-// ## AOL............: mikhailmiguel
-// ## MSN............: mikhail.miguel@hotmail.com
-// ## Orkut..........: 15440532260129226492
-// ## Skype..........: mikhailmiguel
-// ## Yahoo!.........: mikhailmiguel@yahoo.com
-// ############################################################### //
-// *************************************************************** //
+// License http://creativecommons.org/licenses/by/2.5/br/
 /*
 
 //%%%%% FORMATAÇÃO %%%%%

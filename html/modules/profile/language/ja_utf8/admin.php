@@ -1,7 +1,6 @@
 <?php
-/**
- * 2012-5-2: Update by Yoshi.Sakai
- */
+// Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
+
 define('_AD_PROFILE_LANG_DEFINITIONS_EDIT', 'プロフィール定義の編集');
 define('_AD_PROFILE_LANG_DEFINITIONS_DELETE', 'プロフィール定義の削除');
 define('_AD_PROFILE_LANG_DEFINITIONS_VIEW', 'プロフィール定義の表示');

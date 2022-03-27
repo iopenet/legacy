@@ -3,9 +3,6 @@ if (!defined('XOOPS_ROOT_PATH')) {
     exit();
 }
 
-
-
-
     if (function_exists('mysqli_set_charset')) {
         mysqli_set_charset($GLOBALS['xoopsDB']->conn, 'utf8mb4');
     } else {

@@ -1,4 +1,5 @@
 <?php
+// Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
 
-define('_MD_SITEMAP_HOME', 'HOME');
+const _MD_SITEMAP_HOME = 'HOME';
 

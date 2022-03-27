@@ -1,7 +1,7 @@
 <?php
-/**
- * 2012-5-2: Update by Yoshi.Sakai
- */
+// Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
+// 2012-5-2: Update by Yoshi.Sakai
+
 define('_MI_PROFILE_LANG_PROFILE', 'プロフィール');
 define('_MI_PROFILE_LANG_DEFINITIONS_LIST', 'プロフィール定義リスト');
 define('_MI_PROFILE_KEYWORD_DEFINITIONS_LIST', 'プロフィール定義リスト');

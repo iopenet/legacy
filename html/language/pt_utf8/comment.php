@@ -1,5 +1,4 @@
 <?php
-// Translation Info
 // ############################################################### //
 // ## XOOPS Cube Legacy 2.2 - Tradução para o Português do Brasil
 // ## $Id$
@@ -29,7 +28,7 @@ if (!defined("_CM_TITLE")) {
     define("_CM_BOTTOM", "Último");
     define("_CM_ONLINE", "Presente.");
     define("_CM_POSTED", "Publicado"); // Posted date
-define("_CM_UPDATED", "Atualizado");
+    define("_CM_UPDATED", "Atualizado");
     define("_CM_THREAD", "Ramificado");
     define("_CM_POSTER", "Por");
     define("_CM_JOINED", "Associado desde");

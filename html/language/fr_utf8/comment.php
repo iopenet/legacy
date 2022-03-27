@@ -1,5 +1,6 @@
 <?php
-// gigamaster, 2020 XCL/PHP7
+// Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
+
 if (!defined('_CM_TITLE')) {
     define('_CM_TITLE', 'Titre');
     define('_CM_MESSAGE', 'Message');
