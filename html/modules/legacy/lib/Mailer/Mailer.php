@@ -13,7 +13,7 @@ if (!defined('XOOPS_ROOT_PATH')) {
 }
 
 /**
- * This is an exmine class for mail.
+ * This is a class for mail.
  */
 class Legacy_Mailer extends PHPMailer
 {

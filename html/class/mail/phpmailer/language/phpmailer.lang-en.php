@@ -1,23 +1,28 @@
 <?php
+
 /**
- * PHPMailer language file.
- * English Version
+ * Ukrainian PHPMailer language file: refer to English translation for definitive list
+ * @package PHPMailer
+ * @author Yuriy Rudyy <yrudyy@prs.net.ua>
+ * @fixed by Boris Yurchenko <boris@yurchenko.pp.ua>
  */
 
-$PHPMAILER_LANG = [];
-
-$PHPMAILER_LANG['provide_address']      = 'You must provide at least one recipient email address.';
-$PHPMAILER_LANG['mailer_not_supported'] = ' mailer is not supported.';
-$PHPMAILER_LANG['execute']              = 'Could not execute: ';
-$PHPMAILER_LANG['instantiate']          = 'Could not instantiate mail function.';
-$PHPMAILER_LANG['authenticate']         = 'SMTP Error: Could not authenticate.';
-$PHPMAILER_LANG['from_failed']          = 'The following From address failed: ';
-$PHPMAILER_LANG['recipients_failed']    = 'SMTP Error: The following recipients failed: ';
-$PHPMAILER_LANG['data_not_accepted']    = 'SMTP Error: Data not accepted.';
-$PHPMAILER_LANG['connect_host']         = 'SMTP Error: Could not connect to SMTP host.';
-$PHPMAILER_LANG['file_access']          = 'Could not access file: ';
-$PHPMAILER_LANG['file_open']            = 'File Error: Could not open file: ';
-$PHPMAILER_LANG['encoding']             = 'Unknown encoding: ';
-$PHPMAILER_LANG['signing']              = 'Signing Error: ';
-$PHPMAILER_LANG['smtp_error']           = 'SMTP server error: ';
-?>
+$PHPMAILER_LANG['authenticate']         = 'Помилка SMTP: помилка авторизації.';
+$PHPMAILER_LANG['connect_host']         = 'Помилка SMTP: не вдається під\'єднатися до SMTP-серверу.';
+$PHPMAILER_LANG['data_not_accepted']    = 'Помилка SMTP: дані не прийнято.';
+$PHPMAILER_LANG['encoding']             = 'Невідоме кодування: ';
+$PHPMAILER_LANG['execute']              = 'Неможливо виконати команду: ';
+$PHPMAILER_LANG['file_access']          = 'Немає доступу до файлу: ';
+$PHPMAILER_LANG['file_open']            = 'Помилка файлової системи: не вдається відкрити файл: ';
+$PHPMAILER_LANG['from_failed']          = 'Невірна адреса відправника: ';
+$PHPMAILER_LANG['instantiate']          = 'Неможливо запустити функцію mail().';
+$PHPMAILER_LANG['provide_address']      = 'Будь ласка, введіть хоча б одну email-адресу отримувача.';
+$PHPMAILER_LANG['mailer_not_supported'] = ' - поштовий сервер не підтримується.';
+$PHPMAILER_LANG['recipients_failed']    = 'Помилка SMTP: не вдалося відправлення для таких отримувачів: ';
+$PHPMAILER_LANG['empty_message']        = 'Пусте повідомлення';
+$PHPMAILER_LANG['invalid_address']      = 'Не відправлено через неправильний формат email-адреси: ';
+$PHPMAILER_LANG['signing']              = 'Помилка підпису: ';
+$PHPMAILER_LANG['smtp_connect_failed']  = 'Помилка з\'єднання з SMTP-сервером';
+$PHPMAILER_LANG['smtp_error']           = 'Помилка SMTP-сервера: ';
+$PHPMAILER_LANG['variable_set']         = 'Неможливо встановити або скинути змінну: ';
+$PHPMAILER_LANG['extension_missing']    = 'Розширення відсутнє: ';

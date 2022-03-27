@@ -18,7 +18,10 @@ if (!defined('XOOPS_ROOT_PATH')) {
 /**
  * load the base class
  */
-require_once(XOOPS_ROOT_PATH . '/class/mail/phpmailer/class.phpmailer.php');
+require XOOPS_ROOT_PATH .'/class/mail/phpmailer/src/PHPMailer.php';
+require XOOPS_ROOT_PATH .'/class/mail/phpmailer/src/SMTP.php';
+require XOOPS_ROOT_PATH .'/class/mail/phpmailer/src/Exception.php';
+//require_once(XOOPS_ROOT_PATH . '/class/mail/phpmailer/class.phpmailer.php');
 
 /**
  * Mailer Class.

@@ -8,6 +8,12 @@ if (!defined('LEGACY_MAIL_LANG')) {
     define('LEGACY_MAIL_ENCO', '7bit');
 }
 
+//Import PHPMailer classes into the global namespace
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+
 class My_Mailer extends PHPMailer
 {
     public $mConvertLocal = null;
