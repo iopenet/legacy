@@ -400,7 +400,7 @@ textarea::-webkit-resizer {
     --dropdown-shadow           : 0px 2px 4px 1px rgba(0, 0, 0, 0.75);
     --dropdown-space            : var(--space-2);
     --dropdown-transition       : all var(--transition-time) var(--transition-cube);
-    --dropdown-width            : 180px;
+    --dropdown-width            : 200px;
 
 
     /* -------------------- -------------------- -------------------- FILTER [ DATA ] */
@@ -529,6 +529,38 @@ textarea::-webkit-resizer {
     --ui-notif-padding          : var(--space-6) var(--space-8);
     --ui-notif-max-width        : 98%;
 
+    /* -------------------- -------------------- TAB */
+
+    --tabs-bg                   : var(--color-1);
+    --tabs-border               : var(--border);
+    --tabs-radius               : var(--border-radius);
+    --tabs-space                : none; /* var(--space-4); */
+
+    --tabs-nav-bg               : var(--color-6);
+    --tabs-nav-border           : var(--border);
+    --tabs-nav-radius           : var(--border-radius);
+    --tabs-nav-margin           : var(--space-4) var(--space-4) 0;
+    --tabs-nav-space            : var(--space-4) var(--space-4) 0;
+    --tabs-nav-shadow           : 0 5px 5px hsla(210, 10%, 12%, 0.9);
+
+    /* TODO */
+    --ui-tabs-loading           : var(--red-1);
+    --tab-bg                    : var(--color-4);
+    --tab-color                 : var(--link);
+    --tab-border                : var(--border);
+    --tab-radius                : var(--border-radius) var(--border-radius) 0 0;
+    --tab-space                 : var(--space-2) var(--space-4);
+    --tab-shadow                : 0 5px 5px hsla(210, 10%, 12%, 0.9);
+    /* state action */
+    --tab-bg-on                 : var(--color-3);
+    --tab-color-on              : var(--link-hover);
+    --tab-border-on             : 1px solid var(--color-3);
+
+    /* tab panel */
+    --tab-panel-bg              : none;
+    --tab-panel-border          : none;
+    --tab-panel-color           : var(--body-color);
+    --tab-panel-space           : var(--space-6); /* .5em 1em; */
 
 /*	-------------------- -------------------- -------------------- SCREEN-MODE */
 

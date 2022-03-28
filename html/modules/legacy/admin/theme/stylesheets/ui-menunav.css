@@ -111,8 +111,8 @@ URL : https://github.com/xoopscube/xcl/
     }
 /* -------------------- dropdown MENU */
 
-div.dropdown {
-    /*position            : relative;*/
+/*div.dropdown {
+    !*position            : relative;*!
     display             : inline-block;
 }
 div.dropdown a.dropdown-toggle {
@@ -146,7 +146,7 @@ div.dropdown-content {
     min-width           : var(--dropdown-width);
     padding             : var(--dropdown-space);
     position            : absolute;
-    right               : 1px; /* Fix device Viewport */
+    right               : 1px; !* Fix device Viewport *!
     text-align          : left;
     top                 : 100%;
     transition          : var(--dropdown-transition);
@@ -161,7 +161,7 @@ div.dropdown div.dropdown-content ul li {
     padding             : 0;
     width               : 100%;
 }
-/* Dropdown links */
+!* Dropdown links *!
 div.dropdown div.dropdown-content a {
     border-radius       : var(--dropdown-radius);
     color               : var(--link);
@@ -170,7 +170,7 @@ div.dropdown div.dropdown-content a {
     padding             : var(--dropdown-space);
     text-decoration     : none;
 }
-/* Change color of dropdown links on hover */
+!* Change color of dropdown links on hover *!
 div.dropdown div.dropdown-content a:hover {
     background          : var(--dropdown-bg-on);
     color               : var(--link-hover);
@@ -178,4 +178,131 @@ div.dropdown div.dropdown-content a:hover {
 
 div.dropdown div.dropdown-content a > svg {
     margin-right        : var(--dropdown-space);
+}*/
+/* -------------------- dropdown MENU */
+
+div.dropdown {
+    position            : relative;
+    display             : inline-block;
+}
+
+/* Selects any dropdown inside a header nac */
+:where(header, nav, footer) div.dropdown {
+    position            : inherit;
+}
+
+div.dropdown a.dropdown-toggle {
+    background          : var(--d-toggle-bg);
+    border              : var(--d-toggle-border);
+    border-radius       : var(--d-toggle-radius);
+    color               : var(--link);
+    cursor              : pointer;
+    display             : block;
+    font                : var(--d-toggle-font);
+    margin              : 0;
+    padding             : var(--d-toggle-space);
+    transition          : var(--d-toggle-transition);
+    /*width               : max-content;*/
+}
+div.dropdown a.dropdown-toggle:hover {
+    background          : var(--d-toggle-bg-on);
+    box-shadow          : var(--d-toggle-shadow);
+    color               : var(--link-hover);
+}
+div.dropdown.isopen div.dropdown-content {
+    display             : block;
+    z-index             : var(--z-above);
+}
+div.dropdown-content {
+    background          : var(--dropdown-bg);
+    border-radius       : var(--dropdown-radius);
+    box-shadow          : var(--dropdown-shadow);
+    display             : none;
+
+    min-width           : var(--dropdown-width);
+
+    padding             : var(--dropdown-space);
+    position            : absolute;
+    right               : 1px; /* Fix device Viewport */
+    text-align          : left;
+    top                 : 100%;
+    transition          : var(--dropdown-transition);
+    width: auto;
+}
+:where(div.dropdown.isopen) div.drop-left {
+    left              : 1px; /* Fix device Viewport */
+}
+:where(div.dropdown.isopen) div.drop-right {
+    right             : 1px; /* Fix device Viewport */
+}
+:where(div.dropdown.isopen) div.drop-top {
+    top               : -100%; /* Fix device Viewport */
+}
+
+:where(div.dropdown-content)  h6 {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: var( --space-2 ) 0;
+}
+
+:where(div.dropdown-content) ul {
+    margin              : 0;
+    padding             : 0;
+    list-style          : none;
+}
+:where(div.dropdown-content) ul li {
+    background          : transparent;
+    padding             : 0;
+    width               : 100%;
+}
+/* Dropdown links */
+:where(div.dropdown-content) ul li a {
+    border-radius       : var(--dropdown-radius);
+    color               : var(--link);
+    display             : block;
+    font                : var(--dropdown-font) !important;
+    padding             : var(--dropdown-space);
+    text-decoration     : none;
+}
+/* Change color of dropdown links on hover */
+:where(div.dropdown-content) ul li a:hover {
+    background          : var(--dropdown-bg-on);
+    color               : var(--link-hover);
+}
+
+:where(div.dropdown-content) ul li a > svg {
+    margin-right        : var(--dropdown-space);
+}
+
+/* Badge default */
+:where(div.dropdown-content) .btn {
+    background          : var(  --ui-button-bg  );
+    border              : none;
+    border-radius       : 7px;
+    box-shadow          : var(	--ui-button-box-shadow );
+    color               : var(  --color-1  );
+    display             : inline-block;
+    font-size           : 0.74rem;
+    font-family         : sans-serif;
+    font-style          : normal;
+    font-weight         : 300;
+    letter-spacing      : 0.1rem;
+    line-height         : 1em;
+    margin              : var(  --ui-button-margin  );
+    padding             : var(  --space-4 ) var(  --space-5 );
+    position            : relative;
+    text-align          : center;
+    /*text-transform      : uppercase;*/
+    transition          : all ease-in-out 0.2s;
+    vertical-align      : baseline;
+    white-space         : nowrap;
+}
+/* Badge with icon */
+:where(div.dropdown-content) .btn > i[class^="i-"]{
+    mask-size           : 1.5em 1.5em;
+    -webkit-mask-size   : 1.5em 1.5em;
+}
+:where(div.dropdown-content) .btn:hover {
+    background          : var(  --ui-button-hover-bg  );
 }
