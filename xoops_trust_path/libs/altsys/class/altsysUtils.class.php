@@ -56,7 +56,7 @@ class altsysUtils
      */
     public static function isInstalledXclHtmleditor(): bool
     {
-        if (defined('LEGACY_BASE_VERSION') && version_compare(LEGACY_BASE_VERSION, '2.2.0.0', '>=')) {
+        if (defined('LEGACY_BASE_VERSION') && version_compare(LEGACY_BASE_VERSION, '2.2', '>=')) {
             $cNames = self::getDelegateCallbackClassNames('Site.TextareaEditor.HTML.Show');
             if ($cNames) {
                 $last = array_pop($cNames);
@@ -73,18 +73,19 @@ class altsysUtils
      * @param int $flags
      * @param null $encoding
      * @param bool $double_encode
-     * @return mixed|string
+     * @return array|string|string[]
      */
     public static function htmlSpecialChars($str, int $flags = ENT_COMPAT, $encoding = null, bool $double_encode = true)
     {
-        static $php523 = null;
-        if (null === $php523) {
-            $php523 = PHP_VERSION_ID >= 50203;
-        }
-        if (null === $encoding) {
+
+        $ver = (float)phpversion();
+
+        if ($encoding === null) {
             $encoding = defined('_CHARSET') ? _CHARSET : '';
         }
-        if ($php523) {
+        if ($ver > 7.0) {
+            // PHP_VERSION_ID >= 70000;
+            // do something for php7.1 and above.
             return htmlspecialchars($str, $flags, $encoding, $double_encode);
         }
 

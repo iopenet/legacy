@@ -9,7 +9,7 @@
 <th><{$smarty.const._MD_PROFILE_LANG_OPTIONS}></th>
 
 	<{foreach item=field from=$fields}>
-    <tr class="<{cycle values='odd,even'}>">
+    <tr>
       <td><{$field->getShow('label')}></td>
       <td><{$object->showField($field->get('field_name'))}></td>
     </tr>

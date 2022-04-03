@@ -61,10 +61,10 @@ class XoopsModule extends XoopsObject
     /**
      * Load module info
      *
-     * @param	string $dirname	Directory Name
-     * @param bool      $verbose
+     * @param string $dirname	Directory Name
+     * @param bool $verbose
      **/
-    public function loadInfoAsVar($dirname, $verbose = true)
+    public function loadInfoAsVar(string $dirname, bool $verbose = true)
     {
         if (!isset($this->modinfo)) {
             $this->loadInfo($dirname, $verbose);
@@ -72,9 +72,11 @@ class XoopsModule extends XoopsObject
         $this->setVar('name', $this->modinfo['name'], true);
         $this->setVar('version', Legacy_Utils::convertVersionFromModinfoToInt($this->modinfo['version'])); // TODO semver
         $this->setVar('dirname', $this->modinfo['dirname'], true);
-        $trustDirname = isset($this->modinfo['trust_dirname']) ? $this->modinfo['trust_dirname'] : null;
+        // $trustDirname = isset($this->modinfo['trust_dirname']) ? $this->modinfo['trust_dirname'] : null;
+        $trustDirname = $this->modinfo['trust_dirname'] ?? null;
         $this->setVar('trust_dirname', $trustDirname, true);
-        $role = isset($this->modinfo['role']) ? $this->modinfo['role'] : null;
+        //$role = isset($this->modinfo['role']) ? $this->modinfo['role'] : null;
+        $role = $this->modinfo['role'] ?? null;
         $this->setVar('role', $role, true);
         $hasmain = (isset($this->modinfo['hasMain']) && 1 == $this->modinfo['hasMain']) ? 1 : 0;
         $hasadmin = (isset($this->modinfo['hasAdmin']) && 1 == $this->modinfo['hasAdmin']) ? 1 : 0;

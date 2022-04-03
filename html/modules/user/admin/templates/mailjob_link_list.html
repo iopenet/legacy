@@ -58,7 +58,7 @@
         </thead>
         <tbody>
         <{foreach item=obj from=$objects}>
-        <tr class="<{cycle values='odd,even'}>">
+        <tr>
             <td class="user_list_control">
                 <{xoops_input type=checkbox name=uid key=$obj->get('uid')}>
             </td>

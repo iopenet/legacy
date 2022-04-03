@@ -168,7 +168,7 @@
 
     <tbody>
     <{foreach item=obj from=$children}>
-    <tr class="<{cycle values='odd,even'}>">
+    <tr>
         <td class="legacy_list_id"><{$obj->getShow('com_id')}></td>
         <td class="legacy_list_name">
             <{if $obj->mModule}>

@@ -184,7 +184,7 @@ class Legacy_Controller extends XCube_Controller
         $this->_setupFilterChain();
         $this->_processFilter();
 
-        if (!defined('OH_MY_GOD_HELP_ME')) {
+        if (!defined('XC_FORCE_DEBUG_PHP')) {
             error_reporting(0);
         }
 
@@ -740,7 +740,7 @@ class Legacy_Controller extends XCube_Controller
     }
 
     /**
-     * Set debbuger object to member property.
+     * Set debugger object to member property.
      * @return void
      */
     public function _setupDebugger()
@@ -748,7 +748,7 @@ class Legacy_Controller extends XCube_Controller
         error_reporting(0);
 
         $debug_mode = $this->mRoot->mContext->mXoopsConfig['debug_mode'];
-        if (defined('OH_MY_GOD_HELP_ME')) {
+        if (defined('XC_FORCE_DEBUG_PHP')) {
             $debug_mode = XOOPS_DEBUG_PHP;
         }
 

@@ -30,17 +30,14 @@ $myba->checkPermission();
 $myba->init( $xoopsModule );
 
 
-//
 // transaction stage
-//
 
 if ( ! empty( $_POST ) ) {
 	$myba->processPost();
 }
 
-//
-// form stage
-//
+
+// RENDER View
 
 // header
 xoops_cp_header();

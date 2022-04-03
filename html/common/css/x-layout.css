@@ -56,6 +56,16 @@
     --shadow-hover  : 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     /* Box-Shadow Transition */
     --box-transition : all 0.3s cubic-bezier(.25,.8,.25,1);
+    /* -------------------- -------------------- Z-INDEX */
+    --z-modal       : 5000;
+    --z-notify      : 4000;
+    --z-overlay     : 3000;
+    --z-tooltip     : 2000;
+    --z-sticky      : 1000;
+    --z-above       : 100; /* dropdown menu */
+    --z-default     : 1;
+    --z-below       : -1;
+
 }
 /*	-------------------- -------------------- Block Admin Action link with icon */
 .admin:hover {--edit-opacity:1}
@@ -303,7 +313,6 @@ Stats Jan 2020 – Jan 2021
     MOBILE FIRST
     ORDER BY SCREEN USING MIN-WIDTH
 */
-
 
 /* [ lg- ] Large Screen Device > 1024px */
 @media screen and (max-width:64em) {

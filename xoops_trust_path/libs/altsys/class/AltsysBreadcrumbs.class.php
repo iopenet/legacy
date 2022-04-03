@@ -15,7 +15,7 @@ class AltsysBreadcrumbs
     public $paths = [];
 
     /**
-     * AltsysBreadcrumbs constructor.
+     * Altsys Breadcrumbs constructor.
      */
     public function __construct()
     {

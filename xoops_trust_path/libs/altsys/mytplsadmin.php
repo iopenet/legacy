@@ -205,9 +205,8 @@ if ( is_array( @$_POST['del_do'] ) ) {
 }
 
 
-//************//
-// GET stage  //
-//************//
+
+// GET stage
 
 // javascript
 $_MYTPLSADMIN_ERR_INVALIDTPLSET = htmlspecialchars( _MYTPLSADMIN_ERR_INVALIDTPLSET, ENT_QUOTES | ENT_HTML5 );
@@ -266,23 +265,20 @@ foreach ( $tplsets as $tplset ) {
 $sql = 'SELECT tpl_file,tpl_desc,tpl_type,COUNT(tpl_id) FROM ' . $db->prefix( 'tplfile' ) . " WHERE tpl_module='$target_dirname4sql' GROUP BY tpl_file ORDER BY tpl_type, tpl_file";
 $frs = $db->query( $sql );
 
+
 // Render
 xoops_cp_header();
-
 
 // css display
 require_once XOOPS_TRUST_PATH . '/libs/altsys/class/D3Tpl.class.php';
 $tpl = new D3Tpl();
 
-
 /* echo '<style scoped="scoped">';
 $tpl->display('db:altsys_inc_mytplsadmin.css') ;
 echo '</style>'; */
 
-
 // javascript
 echo $javascript;
-
 
 // MyMenu
 altsys_include_mymenu();
@@ -294,9 +290,8 @@ if ( $breadcrumbsObj->hasPaths() ) {
 	$breadcrumbsObj->appendPath( '', $target_mname );
 }
 
-
 // Heading Title
-echo "<h3 class='admintitle'>" . _MYTPLSADMIN_H3_MODULE . " : $target_mname</h3>\n";
+echo "<h2 class='admintitle'>" . _MYTPLSADMIN_H3_MODULE . " : $target_mname</h2>\n";
 
 // Form
 echo "<form name='MainForm' action='?mode=admin&amp;lib=altsys&amp;page=mytplsadmin&amp;dirname=" . htmlspecialchars( $target_dirname, ENT_QUOTES ) . "' method='post'>" . $xoopsGTicket->getTicketHtml( __LINE__ ) ;
@@ -385,7 +380,7 @@ while ( list( $tpl_file, $tpl_desc, $type, $count ) = $db->fetchRow( $frs ) ) {
 		$numrows = $db->getRowsNum( $drs );
 		$tpl     = $db->fetchArray( $drs );
 		if ( empty( $tpl['tpl_id'] ) ) {
-			echo '<td>($numrows)</td>';
+			echo "<td>($numrows)</td>";
 		} else {
 			$fingerprint = tplsadmin_get_fingerprint( explode( "\n", $tpl['tpl_source'] ) );
 			if ( isset( $fingerprints[ $fingerprint ] ) ) {
@@ -449,4 +444,3 @@ echo '</table></form>';
 // end of table & form
 
 xoops_cp_footer();
-

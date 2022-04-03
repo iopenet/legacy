@@ -117,9 +117,7 @@ https://www.peak.ne.jp/xoops/
 }
 
 
-//
 // TOTAL STAGE
-//
 
 $tplsvarsinfo_mod_tpl = [];
 $tplsvarsinfo_total   = [];
@@ -160,13 +158,15 @@ if ( $handler = opendir( XOOPS_COMPILE_PATH . '/' ) ) {
 	die( 'XOOPS_COMPILE_PATH cannot be opened' );
 }
 
+
+// Redirect message if empty templates variables
 if ( empty( $tplsvarsinfo_total ) ) {
-	die( _TPLSADMIN_ERR_NOTPLSVARSINFO );
+    redirect_header( '?mode=admin&lib=altsys&page=compilehookadmin', 3, _TPLSADMIN_ERR_NOTPLSVARSINFO );
+    exit;
 }
 
-//
-// FOR DREAM WEAVER
-//
+
+// FOR DREAMWEAVER
 
 $snippet_format = '<?xml version="1.0" encoding="utf-8"?>
 <snippet name = "%1$s" description = "%2$s" preview="code" type="block">
@@ -204,8 +204,11 @@ if ( ! empty( $do_download ) ) {
 	foreach ( $tplsvarsinfo_total as $key => $val ) {
 		$name = mb_substr( $key, 1 );
 
-		$description = htmlspecialchars( xoops_utf8_encode( xoops_substr( $val, 0, 191 ) ), ENT_QUOTES );
-
+        // TODO @gigamaster only variables can be passed by reference
+		//$description = htmlspecialchars( xoops_utf8_encode( xoops_substr( $val, 0, 191 ) ), ENT_QUOTES );
+        $textval = xoops_substr($val, 0, 191);
+        $description = htmlspecialchars( xoops_utf8_encode($textval), ENT_QUOTES );
+        
 		$snippet_body = sprintf( $snippet_format, $name, $description );
 
 		$file_name = strtr( $key, '.', '_' ) . '.csn';

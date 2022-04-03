@@ -41,9 +41,8 @@ while ( ob_get_level() > 0 ) {
 	}
 }
 
-//
-// EXTRACT STAGE
-//
+
+// EXTRACT VIEW
 
 $orig_filename4check = mb_strtolower( $_FILES['tplset_archive']['name'] );
 if ( '.zip' == mb_strtolower( mb_substr( $orig_filename4check, - 4 ) ) ) {
@@ -84,9 +83,8 @@ if ( empty( $do_upload ) ) {
 	die( _TPLSADMIN_ERR_EXTENSION );
 }
 
-//
-// IMPORT STAGE
-//
+
+// IMPORT VIEW
 
 $tplset = @$_POST['tplset'];
 if ( ! preg_match( '/^[0-9A-Za-z_-]{1,16}$/', $tplset ) ) {

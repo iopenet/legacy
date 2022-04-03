@@ -84,13 +84,13 @@ if ( ! empty( $_POST['clearcache'] ) || ! empty( $_POST['cleartplsvars'] ) ) {
 	if ( $handler = opendir( XOOPS_COMPILE_PATH . '/' ) ) {
 		while ( false !== ( $file = readdir( $handler ) ) ) {
 			if ( ! empty( $_POST['clearcache'] ) ) {
-				// judging template cache '*.php'
+				// check template cache '*.php'
 
 				if ( '.php' !== mb_substr( $file, - 4 ) ) {
 					continue;
 				}
 			} else {
-				// judging tplsvars cache 'tplsvars_*'
+				// check tplsvars cache 'tplsvars_*'
 
 				if ( 'tplsvars_' !== mb_substr( $file, 0, 9 ) ) {
 					continue;
@@ -201,10 +201,6 @@ foreach ( $compile_hooks as $command => $compile_hook ) {
 }
 
 
-//
-// EXAMINE STAGE
-//
-
 // count template vars & compiled caches
 $compiledcache_num = 0;
 $tplsvars_num      = 0;
@@ -218,6 +214,7 @@ if ( $handler = opendir( XOOPS_COMPILE_PATH . '/' ) ) {
 	}
 }
 
+
 // get tplsets
 $sql            = 'SELECT tplset_name,COUNT(DISTINCT tpl_file) FROM ' . $xoopsDB->prefix( 'tplset' ) . ' LEFT JOIN ' . $xoopsDB->prefix( 'tplfile' ) . " ON tplset_name=tpl_tplset GROUP BY tpl_tplset ORDER BY tpl_tplset='default' DESC,tpl_tplset";
 $srs            = $xoopsDB->query( $sql );
@@ -229,9 +226,7 @@ while ( list( $tplset, $tpl_count ) = $xoopsDB->fetchRow( $srs ) ) {
 }
 
 
-//
 // FORM RENDER
-//
 
 xoops_cp_header();
 
@@ -244,7 +239,7 @@ $breadcrumbsObj->appendPath( XOOPS_URL . '/modules/altsys/admin/index.php?mode=a
 
 // Heading Title
 echo "
-<h3 class='admintitle'>" . _MI_ALTSYS_MENU_COMPILEHOOKADMIN . "</h3>
+<h2 class='admintitle'>" . _MI_ALTSYS_MENU_COMPILEHOOKADMIN . "</h2>
 
 	<style>
 		dl	{ margin: 10px; }
@@ -299,7 +294,4 @@ foreach ( $compile_hooks as $command => $compile_hook ) {
 		</div>
     </form>";
 
-
 xoops_cp_footer();
-
-

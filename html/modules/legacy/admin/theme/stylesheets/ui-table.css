@@ -48,14 +48,37 @@ Alternative data display
     background      : var(--ui-table-tfoot);
     text-align      : center;
 }
+:where(td.legacyRender_list_control) a {
+    background: var( --ui-button-bg );
+    border: none;
+    border-radius: var( --border-radius );
+    box-shadow: var( --ui-button-box-shadow );
+    color: var( --color-1 );
+    display: inline-block;
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    line-height: 1em;
+    margin: 0 .25rem; /*var( --ui-button-margin );*/
+    /*padding: var( --space-4 ) var( --space-6 );*/
+    padding: var( --space-3 ) var( --space-4 ); /*.125rem .5rem; */
+    position: relative;
+    text-align: center;
+    /* text-transform: uppercase; */
+    transition: all ease-in-out 0.2s;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
 
-tr,
-th,
-td {
-
+tr, th, td {
     padding         : var( --ui-table-padding );
     font-weight     : 300;
-
+    border: 1px solid var(--color-6);
+}
+tr {
+    /*border-bottom: 1px solid var(--color-6);*/
 }
 td.head{
     vertical-align: top;

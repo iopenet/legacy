@@ -86,7 +86,7 @@ $target_trustdirname = $mytrustdirname;
 
 // get base directory
 if ( empty( $target_trustdirname ) ) {
-	// conventinal module
+	// conventional module
 	$base_dir = XOOPS_ROOT_PATH . '/modules/' . $target_dirname . '/language';
 } else {
 	// D3 module

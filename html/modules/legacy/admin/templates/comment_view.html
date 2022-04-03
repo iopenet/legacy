@@ -122,7 +122,7 @@
         <th><{$smarty.const._AD_LEGACY_LANG_COM_STATUS}></th>
     </tr>
     <{foreach item=obj from=$children}>
-    <tr class="<{cycle values='odd,even'}>">
+    <tr>
         <td class="legacy_list_id"><{$obj->getShow('com_id')}></td>
         <td class="legacy_list_name"><{$obj->mModule->getShow('name')}></td>
         <td class="legacy_list_title"><{$obj->getShow('com_title')}></td>

@@ -2,7 +2,17 @@
 <div layout="column">
 
     <{* Preferences *}>
-    <h6>Preferences</h6>
+    <h6>Preferences    <div class="dropdown" id="test">
+        <a href="#" class="dropdown-toggle btnav" aria-label="Edit">
+            <img class="svg" src="<{$xoops_url}>/images/icons/store.svg" width="20px" height="20px" self="centered radius-circle mt-4 ml-2" alt="">
+        </a>
+        <div class="dropdown-content drop-top">
+            <ul>
+                <li>test1</li>
+                <li>test2</li>
+            </ul>
+        </div>
+    </div></h6>
 
     <div layout="rows">
         <a class="set-link" href="./modules/legacy/admin/index.php?action=PreferenceEdit&confcat_id=1">

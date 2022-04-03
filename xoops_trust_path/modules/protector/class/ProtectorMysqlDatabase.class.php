@@ -34,7 +34,7 @@ class ProtectorMySQLDatabase extends ProtectorMySQLDatabase_base {
 	];
 
 	public function __construct() {
-		$protector               =& Protector::getInstance();
+		$protector               = Protector::getInstance();
 		$this->doubtful_requests = $protector->getDblayertrapDoubtfuls();
 		$this->doubtful_needles  = array_merge( $this->doubtful_needles, $this->doubtful_requests );
 	}

@@ -191,7 +191,7 @@
         </thead>
         <tbody>
         <{foreach item=obj from=$objects}>
-        <tr class="<{cycle values='odd,even'}>">
+        <tr>
             <td class="user_list_id"><{$obj->getShow('rank_id')}></td>
             <td class="user_list_title"><input type="text" size="12" name="title[<{$obj->getShow('rank_id')}>]" value="<{$obj->getShow('rank_title')}>"></td>
             <td class="user_list_number"><input type="text" size="6" maxlength="8" name="min[<{$obj->getShow('rank_id')}>]" value="<{$obj->getShow('rank_min')}>" class=user_list_number /></td>

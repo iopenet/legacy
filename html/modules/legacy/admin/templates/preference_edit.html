@@ -42,7 +42,6 @@
     <{xoops_input type=hidden name=$actionForm->mKeyName value=$actionForm->mKeyValue}>
 
     <table class="outer">
-
         <thead>
         <tr>
             <th colspan="2">
@@ -53,14 +52,12 @@
             </th>
         </tr>
         </thead>
-
         <tbody>
         <{foreach item=config from=$objectArr}>
         <{assign var=conf_name value=$config->getVar('conf_name')}>
         <{assign var=rconf_name value=$config->get('conf_name')}>
         <{assign var=conf_formtype value=$config->get('conf_formtype')}>
         <tr>
-
             <td class="head">
                 <div class="legacy_list_title"><{$config->getTitle()}>
                     <{if $mcrypt_enabled && $config->get('conf_valuetype') == 'encrypt'}>
@@ -71,7 +68,6 @@
                     <{/if}>
                 </div>
             </td>
-
             <td class="<{cycle values="odd,even"}>">
             <{if $conf_formtype == 'textarea'}>
             <{xoops_textarea name=$conf_name rows=5 cols=50 value=$actionForm->get($rconf_name)}>
@@ -83,7 +79,6 @@
                 <{/foreach}>
             </select>
 
-
             <{elseif $conf_formtype == 'select'}>
             <select name='<{$conf_name}>' id='legacy_xoopsform_<{$conf_name}>'>
                 <{foreach item=option from=$config->getOptionItems()}>
@@ -91,7 +86,6 @@
                 <{$option->getOptionLabel()|xoops_escape}></option>
                 <{/foreach}>
             </select>
-
 
             <{elseif $conf_formtype == 'radio'}>
             <{counter start=0 skip=1 assign=count}>
@@ -102,7 +96,6 @@
             <label for='legacy_xoopsform_<{$conf_name}>_<{$count}>'><{$option->getOptionLabel()|xoops_escape}></label>
             <br>
             <{/foreach}>
-
 
             <{elseif $conf_formtype == 'select_multi'}>
             <select name='<{$conf_name}>[]' id='legacy_xoopsform_<{$conf_name}>' size='5' multiple="multiple">
@@ -116,7 +109,6 @@
                 </option>
                 <{/foreach}>
             </select>
-
 
             <{elseif $conf_formtype == 'checkbox'}>
             <{counter start=0 skip=1 assign=count}>
@@ -134,14 +126,10 @@
             <br>
             <{/foreach}>
 
-
             <{elseif $conf_formtype == 'yesno'}>
             <{*TODO ID conflict*}>
-            <label><{xoops_input type=radio name=$rconf_name value=1
-                default=$actionForm->get($rconf_name)}><{$smarty.const._YES}></label>
-            <label><{xoops_input type=radio name=$rconf_name value=0
-                default=$actionForm->get($rconf_name)}><{$smarty.const._NO}></label>
-
+            <label><{xoops_input type=radio name=$rconf_name value=1 default=$actionForm->get($rconf_name)}><{$smarty.const._YES}></label>
+            <label><{xoops_input type=radio name=$rconf_name value=0 default=$actionForm->get($rconf_name)}><{$smarty.const._NO}></label>
 
             <{elseif $conf_formtype == 'theme'}>
             <select name='<{$conf_name}>' id='legacy_xoopsform_<{$conf_name}>'>
@@ -149,13 +137,11 @@
                 default=$actionForm->get($rconf_name)}>
             </select>
 
-
             <{elseif $conf_formtype == 'theme_multi'}>
             <select name='<{$conf_name}>[]' id='legacy_xoopsform_<{$conf_name}>' size='5' multiple="multiple">
                 <{xoops_optionsArray id=$conf_name value=dirname label=dirname from=$themeArr
                 default=$actionForm->get($rconf_name)}>
             </select>
-
 
             <{elseif $conf_formtype == 'tplset'}>
             <select name='<{$conf_name}>' id='legacy_xoopsform_<{$conf_name}>'>
@@ -163,12 +149,10 @@
                 default=$actionForm->get($rconf_name)}>
             </select>
 
-
             <{elseif $conf_formtype == 'timezone'}>
             <select name='<{$conf_name}>' id='legacy_xoopsform_<{$conf_name}>'>
                 <{xoops_optionsArray id=$conf_name value=offset label=zone_name from=$timezoneArr default=$actionForm->get($rconf_name)}>
             </select>
-
 
             <{elseif $conf_formtype == 'language'}>
             <select name='<{$conf_name}>' id='legacy_xoopsform_<{$conf_name}>'>
@@ -180,7 +164,6 @@
                 <{/foreach}>
             </select>
 
-
             <{elseif $conf_formtype == 'startpage'}>
             <select name='<{$conf_name}>' id='legacy_xoopsform_<{$conf_name}>'>
                 <option value="--"><{$smarty.const._AD_LEGACY_LANG_NONE}></option>
@@ -188,12 +171,10 @@
                 default=$actionForm->get($rconf_name)}>
             </select>
 
-
             <{elseif $conf_formtype == 'group'}>
             <select name='<{$conf_name}>' id='legacy_xoopsform_<{$conf_name}>'>
                 <{xoops_optionsArray id=$conf_name value=groupid label=name from=$groupArr default=$actionForm->get($rconf_name)}>
             </select>
-
 
             <{elseif $conf_formtype == 'group_multi'}>
             <select name='<{$conf_name}>[]' id='legacy_xoopsform_<{$conf_name}>' size='3' multiple="multiple">
@@ -207,7 +188,6 @@
                 </option>
                 <{/foreach}>
             </select>
-
 
             <{elseif $conf_formtype == 'group_checkbox'}>
             <{counter start=0 skip=1 assign=count}>
@@ -226,7 +206,6 @@
             <br>
             <{/foreach}>
 
-
             <{elseif $conf_formtype == 'user'}>
             <select name='<{$conf_name}>' id='legacy_xoopsform_<{$conf_name}>'>
                 <{foreach key=value item=label from=$userArr}>
@@ -235,7 +214,6 @@
                 </option>
                 <{/foreach}>
             </select>
-
 
             <{elseif $conf_formtype == 'user_multi'}>
             <select name='<{$conf_name}>[]' id='legacy_xoopsform_<{$conf_name}>' size='3' multiple="multiple">
@@ -249,7 +227,6 @@
                 </option>
                 <{/foreach}>
             </select>
-
 
             <{elseif $conf_formtype == 'module_cache'}>
             <{foreach item=module from=$moduleArr}>
@@ -316,7 +293,6 @@
         </tr>
         <{/foreach}>
         </tbody>
-
         <tfoot>
         <tr>
             <td colspan="2" class="foot">

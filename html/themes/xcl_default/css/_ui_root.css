@@ -610,16 +610,7 @@
     --ui-widget-content-font    : var(--font-family);
     --ui-widget-content-link    : var(--link);
 
-    /* -------------------- -------------------- Z-INDEX */
 
-    --z-modal                   : 5000;
-    --z-notification            : 4000;
-    --z-overlay                 : 3000;
-    --z-tooltip                 : 2000;
-    --z-sticky                  : 1000;
-    --z-above                   : 100; /* dropdown menu */
-    --z-default                 : 1;
-    --z-below                   : -1;
 }
 html[data-theme="gold-dragon"] {
     --color-1 : hsl(45, 0%, 4%);

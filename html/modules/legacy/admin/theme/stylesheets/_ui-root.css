@@ -140,7 +140,7 @@
     --ui-link           : var( --color-2 );
     --ui-link-active    : var( --color-blue );
     --ui-link-hover     : var( --color-blue );
-    --ui-link-visited   : var( --color-2 );
+    --ui-link-visited   : var( --color-3 );
 
     /* -------------------- -------------------- Light Mode Misc */
 
@@ -160,7 +160,7 @@
     --ui-card-full-bg       : var( --color-7 );
     --ui-card-small-bg      : var( --color-7 );
 
-    --input-bg   : var( --color-5 );
+    --input-bg              : var( --color-5 );
 
     --ui-footer-bg          : var( --color-2 );
     --ui-footer-border      : solid var( --color-1);
@@ -220,7 +220,7 @@ textarea::-webkit-resizer {
 
 /* -------------------- -------------------- -------------------- LAYOUT Grid template */
 
-    --ui-aside-bg           : none;
+    --ui-aside-bg           : var( --color-8 );
 
     --ui-footer-bg          : var( --color-9 );
     --ui-footer-border      : solid var( --color-8 );
@@ -378,6 +378,19 @@ textarea::-webkit-resizer {
     --ui-color-block-php        : var( --color-7 );
     --ui-color-block-smilies    : var( --color-7 );
 
+
+    --ui-dialog-bg : var( --color-5 ) !important;
+    /*--ui-widget-content-bg : var( --color-5 ) !important;*/
+    --ui-widget-content-bg : transparent !important;
+    /*--ui-widget-header-bg : var( --color-4 );*/
+    /*        --ui-widget-header-border: var( --border );*/
+    /*        --ui-widget-header-color: var( --color-3 );*/
+/*ui-widget-header {*/
+/*    background: var(--ui-widget-header-bg );*/
+/*    border: var(--ui-widget-header-border);*/
+/*    color: var(--ui-widget-header-color);*/
+/*    font: var(--ui-widget-header-font);*/
+/*}*/
     /* -------------------- -------------------- -------------------- DROPDOWN */
 
     --d-toggle-bg               : none; /*var(--color2); */
@@ -392,12 +405,12 @@ textarea::-webkit-resizer {
 
     --d-toggle-bg-on            : var(--color-3); /* link [div][a] */
 
-    --dropdown-bg               : var(--color-6);
+    --dropdown-bg               : var(--color-5);
     --dropdown-bg-on            : var(--color-5);
     --dropdown-border           : var(--border);
     --dropdown-font             : 100 14px/2 sans-serif;
     --dropdown-radius           : var( --border-radius );
-    --dropdown-shadow           : 0px 2px 4px 1px rgba(0, 0, 0, 0.75);
+    --dropdown-shadow           : var(--shadow-5); /* 0px 2px 4px 1px rgba(0, 0, 0, 0.75); */
     --dropdown-space            : var(--space-2);
     --dropdown-transition       : all var(--transition-time) var(--transition-cube);
     --dropdown-width            : 200px;
@@ -486,12 +499,12 @@ textarea::-webkit-resizer {
 
 /*	-------------------- -------------------- -------------------- NAV SIDE */
 
-    --ui-nav-side-background    : var( --color-8 );
+    --ui-nav-side-background    : transparent;
 
-    --ui-nav-side-box-shadow    : var( --shadow-3 );
+    --ui-nav-side-box-shadow    : none;
 
     --ui-nav-side-color         : var( --color-1 );
-    --ui-nav-side-padding       : var( --space-6 ) 0 0;
+    --ui-nav-side-padding       : 60px 0;
     --ui-nav-side-margin        : 0;
 
     --ui-nav-side-width         : 227px;
@@ -531,17 +544,18 @@ textarea::-webkit-resizer {
 
     /* -------------------- -------------------- TAB */
 
-    --tabs-bg                   : var(--color-1);
-    --tabs-border               : var(--border);
+    --tabs-bg                   : var(--color-6);
+    --tabs-border               : none;
     --tabs-radius               : var(--border-radius);
     --tabs-space                : none; /* var(--space-4); */
 
     --tabs-nav-bg               : var(--color-6);
-    --tabs-nav-border           : var(--border);
+    --tabs-nav-border           : none;
     --tabs-nav-radius           : var(--border-radius);
     --tabs-nav-margin           : var(--space-4) var(--space-4) 0;
-    --tabs-nav-space            : var(--space-4) var(--space-4) 0;
-    --tabs-nav-shadow           : 0 5px 5px hsla(210, 10%, 12%, 0.9);
+    --tabs-nav-space            : var(--space-5) var(--space-5) 0;
+    /*--tabs-nav-shadow           : 0 5px 5px hsla(210, 10%, 12%, 0.9);*/
+    --tabs-nav-shadow           : none;
 
     /* TODO */
     --ui-tabs-loading           : var(--red-1);
@@ -549,35 +563,19 @@ textarea::-webkit-resizer {
     --tab-color                 : var(--link);
     --tab-border                : var(--border);
     --tab-radius                : var(--border-radius) var(--border-radius) 0 0;
-    --tab-space                 : var(--space-2) var(--space-4);
-    --tab-shadow                : 0 5px 5px hsla(210, 10%, 12%, 0.9);
+    --tab-space                 : var(--space-4) var(--space-4);
+    /*--tab-shadow                : 0 5px 5px hsla(210, 10%, 12%, 0.9);*/
+    --tab-shadow                : none;
     /* state action */
-    --tab-bg-on                 : var(--color-3);
+    --tab-bg-on                 : var(--color-4);
     --tab-color-on              : var(--link-hover);
     --tab-border-on             : 1px solid var(--color-3);
 
     /* tab panel */
-    --tab-panel-bg              : none;
+    --tab-panel-bg              : var(--color-7);
     --tab-panel-border          : none;
     --tab-panel-color           : var(--body-color);
     --tab-panel-space           : var(--space-6); /* .5em 1em; */
-
-/*	-------------------- -------------------- -------------------- SCREEN-MODE */
-
-/*    --ui-screen-mode-background : #ff21104d ;
-
-    --ui-screen-mode-border-color   : var(  --color-4      );
-    --ui-screen-mode-border-radius  : var(  --border-radius  );
-    --ui-screen-mode-border-style   : var(  --border-style   );
-    --ui-screen-mode-border-width   : var(  --border-width   );
-
-    --ui-screen-mode-box-shadow     : var(  --shadow-1     );
-
-    --ui-screen-mode-padding        : var(  --space-6;     );
-    --ui-screen-mode-margin         : var(  --space-6;     );
-
-    --ui-screen-mode-info-color     : #fc3232;
-    --ui-screen-mode-info-child     : #face74;*/
 
 
 /*	-------------------- -------------------- -------------------- SHADOW */
@@ -656,8 +654,8 @@ textarea::-webkit-resizer {
     --ui-table-tbody        : transparent;
     --ui-table-tfoot        : transparent;
 
-    --ui-table-even         : var(  --color-6  );
-    --ui-table-odd          : var(  --color-7  );
+    --ui-table-even         : var(  --color-8  );
+    --ui-table-odd          : var(  --color-8  );
 
     --ui-table-hover        : var(  --color-5  );
     --ui-table-hover-text   : var(  --color-2  );

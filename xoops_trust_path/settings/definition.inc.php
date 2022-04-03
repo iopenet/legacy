@@ -33,6 +33,8 @@ const XOOPS_MODULE_PATH = XOOPS_ROOT_PATH . "/modules";
 const XOOPS_UPLOAD_PATH = XOOPS_ROOT_PATH . "/uploads";
 const XOOPS_THEME_PATH = XOOPS_ROOT_PATH . "/themes";
 const XOOPS_LIBRARY_PATH = XOOPS_TRUST_PATH . "/libs";
+const PEAR_PATH = XOOPS_TRUST_PATH . "/PEAR";
+const VENDOR_PATH = XOOPS_TRUST_PATH . "/vendor";
 
 // URL
 const XOOPS_MODULE_URL = XOOPS_URL . "/modules";

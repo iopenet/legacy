@@ -51,7 +51,7 @@ if ( ! function_exists( 'altsys_oninstall_base' ) ) {
 			$prefix_mod    = $db->prefix() . '_' . $mydirname;
 			if ( file_exists( $sql_file_path ) ) {
 				//$ret[] = 'SQL file found at <b>' . htmlspecialchars($sql_file_path) . '</b>.<br> Creating tables...';
-				$ret[] = 'SQL file found at <b>' . htmlspecialchars( $sql_file_path, ENT_QUOTES | ENT_HTML5 ) . '</b>.<br /> Creating tables...';
+				$ret[] = 'SQL file found at <b>' . htmlspecialchars( $sql_file_path, ENT_QUOTES | ENT_HTML5 ) . '</b>.<br> Creating tables...';
 
 				if ( is_file( XOOPS_ROOT_PATH . '/class/database/oldsqlutility.php' ) ) {
 					include_once XOOPS_ROOT_PATH . '/class/database/oldsqlutility.php';
@@ -80,7 +80,7 @@ if ( ! function_exists( 'altsys_oninstall_base' ) ) {
 						$ret[]            = 'Table <b>' . htmlspecialchars( $prefix_mod . '_' . $prefixed_query[4] ) . '</b> created.<br>';
 						$created_tables[] = $prefixed_query[4];
 					} else {
-						$ret[] = 'Data inserted to table <b>' . htmlspecialchars( $prefix_mod . '_' . $prefixed_query[4] ) . '</b>.</br />';
+						$ret[] = 'Data inserted to table <b>' . htmlspecialchars( $prefix_mod . '_' . $prefixed_query[4] ) . '</b>.</br>';
 					}
 				}
 			}

@@ -27,7 +27,7 @@
         </thead>
         <tbody>
         <{foreach item=mid from=$mids}>
-        <tr class="<{cycle values='odd,even'}>">
+        <tr>
             <td class="legacy_list_id"><{$mid}></td>
             <td class="legacy_list_name">
                 <{if $actionForm->get('name',$mid) == $moduleObjects[$mid]->get('name')}>

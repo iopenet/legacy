@@ -28,7 +28,7 @@ Search string field :
   </tr>
 
   <{foreach item=obj from=$objects}>
-    <tr class="<{cycle values='odd,even'}>">
+    <tr>
       <td><{$obj->getShow('uid')}></td>
       <td><{$obj->getShow('uid')|xoops_user:"user_name"}></td>
 

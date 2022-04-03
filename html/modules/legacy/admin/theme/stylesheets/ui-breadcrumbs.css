@@ -1,18 +1,17 @@
+
     .ui-breadcrumbs,
-    .adminnavi,
-    .pagenavi {
-
+    .adminnavi {
     background      : var(  --ui-breadcrumbs-bg     );
-
     border-color    : var(  --ui-breadcrumbs-border-color   );
     border-radius   : var(  --ui-breadcrumbs-border-radius  );
     border-style    : var(  --ui-breadcrumbs-border-radius  );
     border-width    : var(  --ui-breadcrumbs-border-width   );
-
     box-shadow      : var(  --ui-breadcrumbs-box-shadow     );
-
     padding         : var(  --ui-breadcrumbs-padding        );
     margin          : var(  --ui-breadcrumbs-margin         );
+    }
+
+    .pagenavi {
 
     }
 

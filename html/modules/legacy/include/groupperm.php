@@ -16,7 +16,7 @@ $modid = isset($_POST['modid']) ? (int)$_POST['modid'] : 0;
 $root =& XCube_Root::getSingleton();
 $root->mLanguageManager->loadModuleAdminMessageCatalog('legacy');
 
-// we dont want system module permissions to be changed here
+// we don't want system module permissions to be changed here
 if ($modid <= 1 || !is_object($xoopsUser) || !$xoopsUser->isAdmin($modid)) {
     redirect_header(XOOPS_URL.'/index.php', 1, _NOPERM);
     exit();

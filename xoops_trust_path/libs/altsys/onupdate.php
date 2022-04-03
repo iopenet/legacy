@@ -15,7 +15,7 @@ eval( ' function xoops_module_update_' . $mydirname . '( $module ) { return alts
 
 if ( ! function_exists( 'altsys_onupdate_base' ) ) {
 	function altsys_onupdate_base( $module, $mydirname ) {
-		// transations on module update
+		// transactions on module update
 
 		global $msgs; // TODO :-D
 

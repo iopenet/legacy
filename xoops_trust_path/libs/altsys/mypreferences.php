@@ -88,7 +88,7 @@ if ( 'showmod' == $op ) {
 			case 'textarea':
 				( method_exists( 'MyTextSanitizer', 'sGetInstance' ) and $myts =& MyTextSanitizer::sGetInstance() ) || $myts =& MyTextSanitizer::getInstance();
 				if ( 'array' == $config[ $i ]->getVar( 'conf_valuetype' ) ) {
-					// this is exceptional.. only when value type is array need a smarter way for this
+					// this is exceptional. only when value type is array need a smarter way for this
 					$ele = ( '' != $config[ $i ]->getVar( 'conf_value' ) ) ? new XoopsFormTextArea( $title, $config[ $i ]->getVar( 'conf_name' ), $myts->htmlspecialchars( implode( '|', $config[ $i ]->getConfValueForOutput() ) ), 5, 50 ) : new XoopsFormTextArea( $title, $config[ $i ]->getVar( 'conf_name' ), '', 5, 50 );
 				} else {
 					$ele = new XoopsFormTextArea( $title, $config[ $i ]->getVar( 'conf_name' ), $myts->htmlspecialchars( $config[ $i ]->getConfValueForOutput() ), 5, 50 );

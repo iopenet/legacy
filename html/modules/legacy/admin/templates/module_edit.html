@@ -5,7 +5,7 @@
 </div>
 
 
-<h2 class="admintitle"><{$smarty.const._AD_LEGACY_LANG_MOD_EDIT}></h2>
+<h2 class="admintitle"><{$smarty.const._AD_LEGACY_LANG_MOD_EDIT}> : <{$object->getShow('dirname')}></h2>
 
 <div class="ui-dev-mode"><{$smarty.template}></div>
 
@@ -24,43 +24,45 @@
     <{xoops_input type=hidden name=mid value=$actionForm->get('mid')}>
 
 <table class="outer">
-    <thead>
-        <tr>
-            <th colspan="2"><{$smarty.const._AD_LEGACY_LANG_MOD_EDIT}></th>
-        </tr>
-    </thead>
+<!--    <thead>-->
+<!--        <tr>-->
+<!--            <th colspan="2"><{$smarty.const._AD_LEGACY_LANG_MOD_EDIT}> : <{$object->getShow('dirname')}></th>-->
+<!--        </tr>-->
+<!--    </thead>-->
     <tbody>
     <tr>
-        <td class="head"><{$smarty.const._AD_LEGACY_LANG_MOD_MID}></td>
-        <td class="<{cycle values='odd,even'}>">
-            <{if $object->get('mid')}>
-            <{$object->getShow('mid')}>
-            <{else}>
-            --
-            <{/if}>
-        </td>
-        </tr>
-    <tr>
         <td class="head"><{$smarty.const._AD_LEGACY_LANG_NAME}></td>
-        <td class="<{cycle values="odd,even"}>">
-        <{xoops_input type=text name=name value=$actionForm->get('name') size=50 maxlength=191}>
-        </td>
+        <td><{xoops_input type=text name=name value=$actionForm->get('name') size=50 maxlength=191}></td>
     </tr>
     <tr>
         <td class="head"><{$smarty.const._AD_LEGACY_LANG_MOD_DIR_NAME}></td>
-        <td class="<{cycle values='odd,even'}>"><{$object->getShow('dirname')}></td>
+        <td><{$object->getShow('dirname')}></td>
+    </tr>
+    <tr>
+        <td class="head"><{$smarty.const._AD_LEGACY_LANG_MOD_DESC}></td>
+        <td><{$object->modinfo.description}></td>
     </tr>
     <tr>
         <td class="head"><{$smarty.const._AD_LEGACY_LANG_VERSION}></td>
-        <td class="<{cycle values='odd,even'}>"><{math equation="v/100" v=$object->get('version') format="%.2f"}>
+        <td><{math equation="v/100" v=$object->get('version') format="%.2f"}>
             <{if $object->get('version')/100 != $object->modinfo.version}>
             &raquo; <b class="message-warning"><{math equation=$object->modinfo.version format="%.2f"}></b>
             <{/if}>
         </td>
     </tr>
     <tr>
+        <td class="head"><{$smarty.const._AD_LEGACY_LANG_MOD_MID}></td>
+        <td>
+            <{if $object->get('mid')}>
+            <{$object->getShow('mid')}>
+            <{else}>
+            --
+            <{/if}>
+        </td>
+    </tr>
+    <tr>
         <td class="head"><{$smarty.const._AD_LEGACY_LANG_LASTUPDATE}></td>
-        <td class="<{cycle values='odd,even'}>">
+        <td>
             <{if $object->get('last_update')}>
             <{$object->get('last_update')|xoops_formattimestamp:l}>
             <{else}>
@@ -101,10 +103,6 @@
         <{$smarty.const._NOCACHE}><{xoops_input type=hidden name=module_cache value=0}>
         <{/if}>
         </td>
-    </tr>
-    <tr>
-        <td class="head"><{$smarty.const._AD_LEGACY_LANG_MOD_DESC}></td>
-        <td class="<{cycle values='odd,even'}>"><{$object->modinfo.description}></td>
     </tr>
     </tbody>
     <tfoot>

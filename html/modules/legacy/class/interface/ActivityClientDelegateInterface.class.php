@@ -24,7 +24,7 @@ interface Legacy_iActivityClientDelegate
     /**
      * getClientList	Legacy_ActivityClient.GetClientList
      *
-     * @param mixed[]	&$list
+     * @param array mixed[]	&$list
      *  @list[]['dirname']	client module's dirname
      *  @list[]['dataname']	client module's dataname(tablename)
      *  @list[]['access_controller']	access controller's module dirname

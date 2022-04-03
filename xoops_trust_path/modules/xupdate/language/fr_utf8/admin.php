@@ -7,8 +7,16 @@ const _AD_XUPDATE_LANG_FTP_PASS_RESULT = 'Résultats de la vérification de la c
 const _AD_XUPDATE_LANG_EXECUTION_TIME = 'Temps d\'exécution maximal du PHP';
 const _AD_XUPDATE_LANG_EXECUTION_TIME_NOTICE = 'Le temps d’exécution maximal du PHP est top court, les items les plus lourds ne pourront peut-être pas être mis à jour automatiquement.';
 
-const _AD_XUPDATE_LANG_MODULES = 'Liste des Modules';
-const _AD_XUPDATE_LANG_THEME_FINDER = 'Theme Finder';
+const _AD_XUPDATE_LANG_STORES = 'X-Update Stores';
+const _AD_XUPDATE_LANG_STORES_TIP = 'Store Tip';
+const _AD_XUPDATE_LANG_MODULES = 'Modules Stores';
+const _AD_XUPDATE_LANG_MODULES_TIP = 'Module Tip';
+const _AD_XUPDATE_LANG_THEMES = 'Themes Stores';
+const _AD_XUPDATE_LANG_THEMES_TIP = 'Themes Tip';
+const _AD_XUPDATE_LANG_PRELOADS = 'Preloads Stores';
+const _AD_XUPDATE_LANG_PRELOADS_TIP = 'Preloads Tip';
+const _AD_XUPDATE_LANG_THEME_FINDER = 'Theme Finder Install';
+const _AD_XUPDATE_LANG_THEME_FINDER_TIP = 'ThemeFinder Tip';
 
 const _AD_XUPDATE_LANG_TYPE = 'Type';
 const _AD_XUPDATE_LANG_LICENSE = 'Licence';
@@ -22,7 +30,7 @@ const _AD_XUPDATE_LANG_NO_UPDATE = 'Les fichiers ou dossiers exclus (recherche d
 const _AD_XUPDATE_LANG_DELETE_DIR = 'Supprimer tout dossier inutile.';
 const _AD_XUPDATE_LANG_DELETE_FILE = 'Supprimer les fichiers qui ne sont plus nécessaires';
 const _AD_XUPDATE_RECENTCHANGES = 'Changements';
-const _AD_XUPDATE_LANG_PRELOAD_NAME = 'Nom du Preload';
+const _AD_XUPDATE_LANG_NAME = 'Nom du Preload';
 const _AD_XUPDATE_DESCRIPTION = 'Description';
 const _AD_XUPDATE_LANG_PERM = 'Permission';
 const _AD_XUPDATE_LANG_CHANGE = 'Changement';

@@ -410,31 +410,31 @@ class MyBlocksAdmin {
 			}
 		}
 
-		return "
-				<div title='Block-Left'>
-					<input type='radio' name='sides[$bid]' value='" . XOOPS_SIDEBLOCK_LEFT . "' class='blockposition' $ssel0 onclick='document.getElementById(\"extra_side_$bid\").value=" . XOOPS_SIDEBLOCK_LEFT . ";'>
-				</div>
-				<div>-</div>
-				<div title='Center-Block-Left'>
-					<input type='radio' name='sides[$bid]' value='" . XOOPS_CENTERBLOCK_LEFT . "' class='blockposition' $ssel2 onclick='document.getElementById(\"extra_side_$bid\").value=" . XOOPS_CENTERBLOCK_LEFT . ";'>
-				</div>
-				<div title='Center-Block-Center'>
-					<input type='radio' name='sides[$bid]' value='" . XOOPS_CENTERBLOCK_CENTER . "' class='blockposition' $ssel3 onclick='document.getElementById(\"extra_side_$bid\").value=" . XOOPS_CENTERBLOCK_CENTER . ";'>
-				</div>
-				<div title='Center-Block-Right'>
-					<input type='radio' name='sides[$bid]' value='" . XOOPS_CENTERBLOCK_RIGHT . "' class='blockposition' $ssel4 onclick='document.getElementById(\"extra_side_$bid\").value=" . XOOPS_CENTERBLOCK_RIGHT . ";'>
-				</div>
-				<div>-</div>
-				<div title='Block-Right'>
-					<input type='radio' name='sides[$bid]' value='" . XOOPS_SIDEBLOCK_RIGHT . "' class='blockposition' $ssel1 onclick='document.getElementById(\"extra_side_$bid\").value=" . XOOPS_SIDEBLOCK_RIGHT . ";'>
-				</div>
+    // Block-Side Render View
+    return "
+    <div title='Block-Left'>
+        <input type='radio' name='sides[$bid]' value='" . XOOPS_SIDEBLOCK_LEFT . "' class='blockposition' $ssel0 onclick='document.getElementById(\"extra_side_$bid\").value=" . XOOPS_SIDEBLOCK_LEFT . ";'>
+    </div>
+    <div>-</div>
+    <div title='Center-Block-Left'>
+        <input type='radio' name='sides[$bid]' value='" . XOOPS_CENTERBLOCK_LEFT . "' class='blockposition' $ssel2 onclick='document.getElementById(\"extra_side_$bid\").value=" . XOOPS_CENTERBLOCK_LEFT . ";'>
+    </div>
+    <div title='Center-Block-Center'>
+        <input type='radio' name='sides[$bid]' value='" . XOOPS_CENTERBLOCK_CENTER . "' class='blockposition' $ssel3 onclick='document.getElementById(\"extra_side_$bid\").value=" . XOOPS_CENTERBLOCK_CENTER . ";'>
+    </div>
+    <div title='Center-Block-Right'>
+        <input type='radio' name='sides[$bid]' value='" . XOOPS_CENTERBLOCK_RIGHT . "' class='blockposition' $ssel4 onclick='document.getElementById(\"extra_side_$bid\").value=" . XOOPS_CENTERBLOCK_RIGHT . ";'>
+    </div>
+    <div>-</div>
+    <div title='Block-Right'>
+        <input type='radio' name='sides[$bid]' value='" . XOOPS_SIDEBLOCK_RIGHT . "' class='blockposition' $ssel1 onclick='document.getElementById(\"extra_side_$bid\").value=" . XOOPS_SIDEBLOCK_RIGHT . ";'>
+    </div>
 
-				<div style='width:45px;' title='Block-Extra'>
-					<input type='text' name='extra_sides[$bid]' value='" . $value4extra_side . "' class='block-extra-side' id='extra_side_$bid'>
-				</div>
-				<div title='" . _NONE . "'>
-					<input type='radio' name='sides[$bid]' value='-1' class='blockposition ui-input-red' $sseln onclick='document.getElementById(\"extra_side_$bid\").value=-1;'>
-				</div>
+    <input type='hidden' name='extra_sides[$bid]' value='" . $value4extra_side . "' class='block-extra-side' id='extra_side_$bid'>
+
+    <div title='" . _NONE . "'>
+        <input type='radio' name='sides[$bid]' value='-1' class='blockposition ui-input-red' $sseln onclick='document.getElementById(\"extra_side_$bid\").value=-1;'>
+    </div>
 	";
 	}
 
@@ -480,12 +480,12 @@ class MyBlocksAdmin {
 				'can_clone'  => $this->canClone( $block ),
 			];
 			$blocks4assign[] = [
-				                   'name_raw'         => $block_data['name'],
-				                   'title_raw'        => $block_data['title'],
-				                   'cell_position'    => $this->renderCell4BlockPosition( $block_data ),
-				                   'cell_module_link' => $this->renderCell4BlockModuleLink( $block_data ),
-				                   'cell_group_perm'  => $this->renderCell4BlockReadGroupPerm( $block_data ),
-			                   ] + $block_data;
+                'name_raw'         => $block_data['name'],
+                'title_raw'        => $block_data['title'],
+                'cell_position'    => $this->renderCell4BlockPosition( $block_data ),
+                'cell_module_link' => $this->renderCell4BlockModuleLink( $block_data ),
+                'cell_group_perm'  => $this->renderCell4BlockReadGroupPerm( $block_data ),
+            ] + $block_data;
 		}
 
 		// display
@@ -1026,15 +1026,15 @@ class MyBlocksAdmin {
 			];
 
 		$block4assign = [
-			                'name_raw'         => $block_data['name'],
-			                'title_raw'        => $block_data['title'],
-			                'content_raw'      => $block_data['content'],
-			                'cell_position'    => $this->renderCell4BlockPosition( $block_data ),
-			                'cell_module_link' => $this->renderCell4BlockModuleLink( $block_data ),
-			                'cell_group_perm'  => $this->renderCell4BlockReadGroupPerm( $block_data ),
-			                'cell_options'     => $this->renderCell4BlockOptions( $block_data ),
-			                'content_preview'  => $this->previewContent( $block_data ),
-		                ] + $block_data;
+                'name_raw'         => $block_data['name'],
+                'title_raw'        => $block_data['title'],
+                'content_raw'      => $block_data['content'],
+                'cell_position'    => $this->renderCell4BlockPosition( $block_data ),
+                'cell_module_link' => $this->renderCell4BlockModuleLink( $block_data ),
+                'cell_group_perm'  => $this->renderCell4BlockReadGroupPerm( $block_data ),
+                'cell_options'     => $this->renderCell4BlockOptions( $block_data ),
+                'content_preview'  => $this->previewContent( $block_data ),
+            ] + $block_data;
 
 		// display
 		require_once XOOPS_TRUST_PATH . '/libs/altsys/class/D3Tpl.class.php';
@@ -1065,17 +1065,12 @@ class MyBlocksAdmin {
 
 		if ( defined( 'XOOPS_CUBE_LEGACY' ) ) {
 			$tpl->display( 'db:altsys_main_blocks_admin_edit.html' );
-			//       } else {
-			//           $tpl->display('db:altsys_main_myblocksadmin_edit.html');
 		}
 
 		return;
 	}
 
-	//    public function checkFck()
-	//    {
-	//        return file_exists(XOOPS_ROOT_PATH . '/common/fckeditor/fckeditor.js');
-	//    }
+
 	/**
 	 * @param $block_data
 	 *
@@ -1128,8 +1123,7 @@ class MyBlocksAdmin {
 			'N' => _MD_A_MYBLOCKSADMIN_CTYPE_NOSMILE,
 			'P' => _MD_A_MYBLOCKSADMIN_CTYPE_PHP,
 		];
-		//!Fix test
-		// return isset($ctypes[$bctype]) ? $ctypes[$bctype] : _MD_A_MYBLOCKSADMIN_CTYPE_SMILE;
+
 		return $ctypes[ $bctype ] ?? _MD_A_MYBLOCKSADMIN_CTYPE_SMILE;
 	}
 
@@ -1169,9 +1163,7 @@ class MyBlocksAdmin {
 			$msg = _MD_A_MYBLOCKSADMIN_PERMUPDATED;
 		}
 
-		// redirect_header( '?mode=admin&lib=altsys&page=myblocksadmin&dirname=' . $this->target_dirname, 1, $msg );
-// !Test front page edit
-redirect_header( $_SERVER['REQUEST_URI'], 1, $msg );
+        redirect_header( $_SERVER['REQUEST_URI'], 1, $msg );
 		exit;
 	}
 

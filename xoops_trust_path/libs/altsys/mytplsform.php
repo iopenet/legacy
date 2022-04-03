@@ -28,7 +28,6 @@ if ( ! is_object( @$xoopsUser ) || ! $moduleperm_handler->checkRight( 'module_ad
 	die( 'only admin of altsys can access this area' );
 }
 
-//$xoops_system_path = XOOPS_ROOT_PATH . '/modules/system' ;
 
 // initials
 $db =& XoopsDatabaseFactory::getDatabaseConnection();
@@ -38,14 +37,12 @@ $db =& XoopsDatabaseFactory::getDatabaseConnection();
 altsys_include_language_file( 'mytplsform' );
 altsys_include_language_file( 'mytplsadmin' );
 
+
 // check $xoopsModule
 if ( ! is_object( $xoopsModule ) ) {
 	redirect_header( XOOPS_URL . '/user.php', 1, _NOPERM );
 }
 
-// check access right (needs system_admin of tplset)
-//$sysperm_handler =& xoops_gethandler('groupperm');
-//if (!$sysperm_handler->checkRight('system_admin', XOOPS_SYSTEM_TPLSET, $xoopsUser->getGroups())) redirect_header( XOOPS_URL.'/user.php' , 1 , _NOPERM ) ;
 
 // tpl_file from $_GET
 $tpl_tplset = $myts->stripSlashesGPC( @$_GET['tpl_tplset'] );
@@ -53,6 +50,7 @@ if ( ! $tpl_tplset ) {
 	$tpl_tplset = $xoopsConfig['template_set'];
 }
 $tpl_tplset4sql = addslashes( $tpl_tplset );
+
 
 if ( empty( $_GET['tpl_file'] ) || '_custom' == $_GET['tpl_file'] ) {
 	$edit_mode = 'create';
@@ -62,7 +60,7 @@ if ( empty( $_GET['tpl_file'] ) || '_custom' == $_GET['tpl_file'] ) {
 		'tpl_refid'        => 0,
 		'tpl_module'       => '_custom',
 		'tpl_tplset'       => $tpl_tplset,
-'tpl_file' => '_custom_' . substr(date('YmdHis'), 2, -2) . '.html',
+        'tpl_file' => '_custom_' . substr(date('YmdHis'), 2, -2) . '.html',
 		//'tpl_file'         => '_custom_' . mb_substr( date( 'YmdHis' ), 2, - 2 ) . '.html',
 		'tpl_desc'         => '',
 		'tpl_lastmodified' => 0,
@@ -77,7 +75,9 @@ if ( empty( $_GET['tpl_file'] ) || '_custom' == $_GET['tpl_file'] ) {
 	$breadcrumbsObj->appendPath( XOOPS_URL . '/modules/altsys/admin/index.php?mode=admin&amp;lib=altsys&amp;page=mytplsadmin&amp;dirname=_custom', _MYTPLSADMIN_CUSTOMTEMPLATE );
 	$breadcrumbsObj->appendPath( '', '_MYTPLSADMIN_CREATENEWCUSTOMTEMPLATE' );
 	$target_mname = _MYTPLSADMIN_CUSTOMTEMPLATE;
+
 } else {
+
 	// tpl_file from $_GET
 	$edit_mode    = 'modify';
 	$tpl_file     = $myts->stripSlashesGPC( @$_GET['tpl_file'] );
@@ -114,6 +114,7 @@ if ( empty( $_GET['tpl_file'] ) || '_custom' == $_GET['tpl_file'] ) {
 	$breadcrumbsObj->appendPath( '', _MD_A_MYTPLSFORM_EDIT );
 }
 
+
 // error in specifying tpl_file
 if ( empty( $tpl ) ) {
 	if ( 0 === strncmp( $tpl_file, 'file:', 5 ) ) {
@@ -123,9 +124,10 @@ if ( empty( $tpl ) ) {
 	die( 'Invalid tpl_file.' );
 }
 
-//****************//
-// TRANSACT stage //
-//****************//
+
+
+// TRANSACT stage
+
 if ( ! empty( $_POST['do_modifycont'] ) || ! empty( $_POST['do_modify'] ) ) {
 	// Ticket Check
 	if ( ! $xoopsGTicket->check( true, 'altsys_tplsform' ) ) {
@@ -151,6 +153,7 @@ if ( ! empty( $_POST['do_modifycont'] ) || ! empty( $_POST['do_modify'] ) ) {
 	exit;
 }
 
+
 if ( ! empty( $_POST['do_create'] ) ) {
 	// Ticket Check
 	if ( ! $xoopsGTicket->check( true, 'altsys_tplsform' ) ) {
@@ -175,19 +178,18 @@ if ( ! empty( $_POST['do_create'] ) ) {
 }
 
 
-//****************//
-//   FORM stage   //
-//****************//
+
+
+//   FORM RENDER
+
 xoops_cp_header();
 $mymenu_fake_uri = 'index.php?mode=admin&lib=altsys&page=mytplsadmin&dirname=' . $mydirname;
 
 // mymenu
 altsys_include_mymenu();
 
-echo "
-    <hr>
-    <h4 style='text-align:" . _GLOBAL_LEFT . ";'>" . _MD_A_MYTPLSFORM_EDIT . "</h4>"
-     . "<p><code>" . htmlspecialchars( $tpl['tpl_type'], ENT_QUOTES ) . " : " . htmlspecialchars( $tpl['tpl_file'], ENT_QUOTES ) . " (" . htmlspecialchars( $tpl['tpl_tplset'], ENT_QUOTES ) . ")</code></p>";
+echo "<h2 style='text-align:" . _GLOBAL_LEFT . ";'>" . _MD_A_MYTPLSFORM_EDIT . "</h2>"
+     . "<h4><pre>" . htmlspecialchars( $tpl['tpl_type'], ENT_QUOTES ) . " : " . htmlspecialchars( $tpl['tpl_file'], ENT_QUOTES ) . " (" . htmlspecialchars( $tpl['tpl_tplset'], ENT_QUOTES ) . ")</pre></h4>";
 
 
 // diff from file to selected DB template
@@ -201,9 +203,9 @@ if ( file_exists( $basefilepath ) ) {
 	$diff_str = htmlspecialchars( $renderer->render( $diff ), ENT_QUOTES );
 	foreach ( explode( "\n", $diff_str ) as $line ) {
 		if ( 0x2d == ord( $line ) ) {
-			$diff_from_file4disp .= "<span style='color:var(--ui-color-red);'>" . $line . "</span>\n";
+			$diff_from_file4disp .= "<span style='color:var(--color-red);'>" . $line . "</span>\n";
 		} elseif ( 0x2b == ord( $line ) ) {
-			$diff_from_file4disp .= "<span style='color:var(--ui-color-green);'>" . $line . "</span>\n";
+			$diff_from_file4disp .= "<span style='color:var(--color-green);'>" . $line . "</span>\n";
 		} else {
 			$diff_from_file4disp .= $line . "\n";
 		}
@@ -222,9 +224,9 @@ if ( 'default' != $tpl['tpl_tplset'] ) {
 	$diff_str = htmlspecialchars( $renderer->render( $diff ), ENT_QUOTES );
 	foreach ( explode( "\n", $diff_str ) as $line ) {
 		if ( 0x2d == ord( $line ) ) {
-			$diff_from_default4disp .= "<span style='color:red;'>" . $line . "</span>\n";
+			$diff_from_default4disp .= "<span style='color:var(--color-red);'>" . $line . "</span>\n";
 		} elseif ( 0x2b == ord( $line ) ) {
-			$diff_from_default4disp .= "<span style='color:blue;'>" . $line . "</span>\n";
+			$diff_from_default4disp .= "<span style='color:var(--color-blue);'>" . $line . "</span>\n";
 		} else {
 			$diff_from_default4disp .= $line . "\n";
 		}
@@ -232,26 +234,36 @@ if ( 'default' != $tpl['tpl_tplset'] ) {
 	error_reporting( $original_error_level );
 }
 
-
-echo "<div class='ui-card-full'>
-	<form name='diff_form' id='diff_form' action='' method='get'>";
+// Diff
+echo '<div class="ui-card-full">
+	<form name="diff_form" id="diff_form" action="" method="get">';
 if ( $diff_from_file4disp ) {
-	echo "<input class='switch' type='checkbox' name='display_diff2file' value='1' onClick=\"if(this.checked){document.getElementById('diff2file').style.display='block'}else{document.getElementById('diff2file').style.display='none'};\" id='display_diff2file' checked='checked'>
-    &nbsp;<label for='display_diff2file'>Diff from file</label>
-	<pre id='diff2file'><code class='language-diff diff-highlight'>$diff_from_file4disp</code></pre>";
+    echo '<input class="switch" 
+    type="checkbox" 
+    name="display_diff2file" 
+    id="display_diff2file" 
+    onclick="slideToggle(\'#diff2file\', this)" 
+    value="0">&nbsp;<label for="display_diff2default">Diff from file</label>';
+	echo "<pre id=\"diff2file\" style=\"display: none; max-height: 340px;overflow-y: auto\"><code class=\"language-diff diff-highlight\">$diff_from_file4disp</code></pre>";
 }
 if ( $diff_from_default4disp ) {
-	echo "<input class='switch' type='checkbox' name='display_diff2default' value='1' onClick=\"if(this.checked){document.getElementById('diff2default').style.display='block'}else{document.getElementById('diff2default').style.display='none'};\" id='display_diff2default'>
-    &nbsp;<label for='display_diff2default'>diff from default</label>
-	<pre id='diff2default'><code class='language-diff diff-highlight'>$diff_from_default4disp</code></pre>";
+    echo '<input class="switch" 
+    type="checkbox" 
+    name="display_diff2default" 
+    id="display_diff2default" 
+    onclick="slideToggle(\'#diff2default\', this)" 
+    value="0">&nbsp;<label for="display_diff2default">Diff from default</label>';
+	echo "<pre id=\"diff2default\" style=\"display: none; max-height: 340px;overflow-y: auto\"><code class=\"language-diff diff-highlight\">$diff_from_default4disp</code></pre>";
 }
 echo "</form>";
 
 
-echo "<a name='altsys_tplsform_top' id='altsys_tplsform_top'></a>
+// Edit
+echo "<a id='altsys_tplsform_top'></a>
 <form name='MainForm' id='altsys_tplsform' action='?mode=admin&amp;lib=altsys&amp;page=mytplsform&amp;tpl_file=" . htmlspecialchars( $tpl_file, ENT_QUOTES ) . "&amp;tpl_tplset=" . htmlspecialchars( $tpl['tpl_tplset'], ENT_QUOTES ) . "&amp;dirname=" . $target_mname . "' method='post'>
-	" . $xoopsGTicket->getTicketHtml( __LINE__, 1800, 'altsys_tplsform' ) . "
-	<textarea name='tpl_source' id='altsys_tpl_source' style='width:100%; height:25vh'>" . htmlspecialchars( $tpl['tpl_source'], ENT_QUOTES ) . "</textarea>
+	" . $xoopsGTicket->getTicketHtml( __LINE__, 1800, 'altsys_tplsform' ) . "	
+	<br>
+	<textarea name='tpl_source' class=html id='altsys_tpl_source' style='width:100%; height:25vh'>" . htmlspecialchars( $tpl['tpl_source'], ENT_QUOTES ) . "</textarea>
 	<br>
 ";
 if ( 'create' == $edit_mode ) {
@@ -265,11 +277,10 @@ if ( 'create' == $edit_mode ) {
 	echo "<br>
     <div class='foot'>
 	<input type='submit' name='do_modifycont' id='do_modifycont' value='" . _MD_A_MYTPLSFORM_BTN_MODIFYCONT . "'>
-	<input type='submit' name='do_modify' id='do_modify' value='" . _MD_A_MYTPLSFORM_BTN_MODIFYEND . "'>
     <input type='reset' name='reset' value='" . _MD_A_MYTPLSFORM_BTN_RESET . "'>
+    <input type='submit' name='do_modify' id='do_modify' value='" . _MD_A_MYTPLSFORM_BTN_MODIFYEND . "'>
     </div>
 </form></div>";
 }
 
 xoops_cp_footer();
-

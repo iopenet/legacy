@@ -39,7 +39,6 @@ class MyBlocksAdminForXCL21 extends MyBlocksAdmin {
 	public function renderCell4BlockOptions( $block_data ) {
 		// if ($this->target_dirname && '_' !== substr($this->target_dirname, 0, 1)) {
 		if ( $this->target_dirname && '_' !== $this->target_dirname[0] ) {
-            //$langman =& D3LanguageManager::getInstance();
 			$langman = D3LanguageManager::getInstance();
 			$langman->read( 'admin.php', $this->target_dirname );
 		}

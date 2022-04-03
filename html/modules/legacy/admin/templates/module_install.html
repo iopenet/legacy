@@ -40,19 +40,19 @@
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_MOD_NAME}></td>
-            <td class="<{cycle values='odd,even'}>"><{$module->getShow('name')}></td>
+            <td><{$module->getShow('name')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_MOD_DIR_NAME}></td>
-            <td class="<{cycle values='odd,even'}>"><{$module->getShow('dirname')}></td>
+            <td><{$module->getShow('dirname')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_VERSION}></td>
-            <td class="<{cycle values='odd,even'}>"><{$currentVersion}></td>
+            <td><{$currentVersion}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_MOD_MID}></td>
-            <td class="<{cycle values='odd,even'}>">
+            <td>
                 <{if $module->get('mid')}>
                 <{$module->getShow('mid')}>
                 <{else}>
@@ -62,7 +62,7 @@
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_LASTUPDATE}></td>
-            <td class="<{cycle values='odd,even'}>">
+            <td>
                 <{if $module->get('last_update')}>
                 <{$module->get('last_update')|xoops_formattimestamp:l}>
                 <{else}>
@@ -72,7 +72,7 @@
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_MOD_DESC}></td>
-            <td class="<{cycle values='odd,even'}>"><{$module->modinfo.description|xoops_escape}></td>
+            <td><{$module->modinfo.description|xoops_escape}></td>
         </tr>
         </tbody>
         <tfoot>

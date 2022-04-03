@@ -40,7 +40,7 @@
     <th><{$smarty.const._MD_PROFILE_LANG_CONTROL}></th>
   </tr>
   <{foreach item=obj from=$objects}>
-    <tr class="<{cycle values='odd,even'}>">
+    <tr';>
       <td><{$obj->getShow('field_name')}></td>
       <td><{$obj->getShow('label')}></td>
       <td><{$obj->getShow('type')}></td>

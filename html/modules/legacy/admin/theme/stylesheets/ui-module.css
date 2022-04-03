@@ -6,7 +6,7 @@
     Date : 2020-06-11
     URL : https://github.com/xoopscube/xcl/
 
-    -------------------- -------------------- -------------------- -------------------- Admin utils */
+    -------------------- -------------------- Admin utils */
     /*
     * Customize
     * BLOCK SECTION FILTER SEARCH
@@ -14,7 +14,6 @@
     * BLOCK STATE SWITCH ( ! TODO : change image and icon background color
     * Module STATE SWITCH
     * BLOCK PREVIEW
-    * jQuery UI Widget
     */
 
 
@@ -23,8 +22,10 @@
 
     }
 
-    .ui-dialog  {
-        box-shadow : var(--shadow-7);
+    .ui-dialog {
+        box-shadow: var(--shadow-7);
+        background: var(--ui-dialog-bg);
+
     }
 
     .ui-widget {
@@ -32,8 +33,20 @@
         font-size       : 1em;
     }
 
+    .scroll-y {
+        max-height: 25vh;
+        margin: var(--space-6) var(--space-1);
+        overflow-y: auto;
+    }
 
-    /*-------------------- -------------------- -------------------- -------------------- BLOCK SECTION FILTER SEARCH */
+    .scroll-h {
+        max-height: 25vh;
+        overflow-x: auto;
+        width: 100%;
+    }
+
+
+    /*-------------------- -------------------- BLOCK SECTION FILTER SEARCH */
 
 
     section.filter {
@@ -72,7 +85,7 @@
 
         }
 
-    /* -------------------- -------------------- -------------------- -------------------- BLOCK SECTION SORT */
+    /* -------------------- -------------------- BLOCK SECTION SORT */
 
     section.sort {
 
@@ -99,7 +112,7 @@
     }
 
 
-    /* -------------------- -------------------- -------------------- -------------------- BLOCK STATE SWITCH */
+    /* -------------------- -------------------- BLOCK STATE SWITCH */
 
     /* Block Switch Off - color indicator */
     .ui-update-change {
@@ -122,7 +135,7 @@
 
     }
 
-    /* -------------------- -------------------- -------------------- -------------------- Module STATE SWITCH */
+    /* -------------------- -------------------- Module STATE SWITCH */
 
     /* Update indicator */
     .ui-update-change {
@@ -143,7 +156,7 @@
 
     }
 
-    /* -------------------- -------------------- -------------------- -------------------- BLOCK PREVIEW */
+    /* -------------------- -------------------- BLOCK PREVIEW */
 
     .ui-block-admin-preview,
     .ui-block-permissions {
@@ -157,69 +170,3 @@
     .fingerprint5 { color: var(  --color-purple   ) }
     .fingerprint6 { color: var(  --color-amber   ) }
     .fingerprint7 { color: var(  --ui-link   ) }
-
-    /* -------------------- -------------------- -------------------- -------------------- jQuery UI Widget */
-
-    .ui-widget-content {
-        border          : 1px solid var(  --border-color );
-        background      : var(  --ui-button-bg  );
-        color           : var(  --ui-button-color       );
-    }
-
-    .ui-checkboxradio-radio-label.ui-checkboxradio-checked .ui-icon,
-    .ui-checkboxradio-radio-label.ui-checkboxradio-checked:hover .ui-icon {
-        background-image: none;
-        width           : 16px;
-        height          : 16px;
-        border-width    : 4px;
-        border-style    : solid;
-    }
-
-    .ui-state-default,
-    .ui-widget-content .ui-state-default,
-    .ui-widget-header .ui-state-default,
-    .ui-button,
-    html .ui-button.ui-state-disabled:hover,
-    html .ui-button.ui-state-disabled:active {
-        border          : 1px solid var(  --border-color );
-        background      : var(  --ui-button-bg      );
-        font-weight     : normal;
-        color           : var(  --ui-button-color   );
-        transition: all 0.3s ease 0s;;
-    }
-   .ui-widget.ui-widget-content {
-        border          : 1px solid var(  --border-color );
-    }
-    .ui-spinner-input{
-        background      : var(  --ui-button-bg      );
-        color           : var(  --ui-button-color   );
-    }
-    .ui-state-default a,
-    .ui-state-default a:link,
-    .ui-state-default a:visited,
-    a.ui-button,
-    a:link.ui-button,
-    a:visited.ui-button,
-    .ui-button {
-        color: var(--color-2);
-        text-decoration: none;
-    }
-     .ui-state-hover,
-     .ui-widget-content .ui-state-hover,
-     .ui-widget-header .ui-state-hover,
-     .ui-state-focus,
-     .ui-widget-content .ui-state-focus,
-     .ui-widget-header .ui-state-focus,
-     .ui-button:hover, .ui-button:focus {
-        background      : var( --ui-button-hover-bg     );
-        border          : 1px solid rgba(27, 27, 27, 0.5);
-        color           : var(  --ui-button-hover-txt   );
-        outline         : none;
-    }
-
-    .ui-widget-header,
-    .ui-state-active {
-        background      : var( --ui-button-hover-bg     );
-        border          : 1px solid var( --border-color  );
-        color           : var(  --ui-button-hover-txt   );
-    }

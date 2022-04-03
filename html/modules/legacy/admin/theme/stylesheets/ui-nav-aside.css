@@ -44,50 +44,39 @@
     .nav-aside {
 
         background      : var(  --ui-aside-bg   );
-
-        color           : var(  --color-1         );
-
+        bottom          : 0;/* fix overflow-y scroll*/
+        color           : var(  --color-1  );
         grid-area       : nav-aside;
-
-        height          : 100%;
+        height          : 100vh;
         left            : 0;
         overflow-x      : hidden;
         overflow-y      : auto;
         position        : fixed;
-        margin-top     : 50px;
+        margin-top      : 50px;
         transform       : translateX(-235px);
         transition      : all 0.6s ease-in-out;
         width           : 235px;
         z-index         : 710;
-
     }
 
     .nav-aside-active {
-
         transform       : translateX(0);
-
     }
 
     /* -------------------- -------------------- -------------------- NAV-SIDE-MENU */
 
     .nav-side-menu {
-
         background      : var(  --ui-nav-side-background    );
-        background-image: var(  --ui-nav-side-image         );
-
-        box-shadow      : var(  --ui-nav-side-box-shadow    );
-
-        padding         : var(  --ui-nav-side-padding       );
-        margin          : var(  --ui-nav-side-margin        );
-
-        width           : var(  --ui-nav-side-width         );
-
-
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
-
+        box-shadow      : var(  --ui-nav-side-box-shadow    );
+        /*height          : 100vh;*/
+        /*height          : 100%;*/
+        display: inline-table;
         list-style-type : none;
-
+        padding         : var(  --ui-nav-side-padding       );
+        margin          : var(  --ui-nav-side-margin        );
+        width           : var(  --ui-nav-side-width         );
     }
 
 

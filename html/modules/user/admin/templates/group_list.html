@@ -61,7 +61,7 @@
 </thead>
 <tbody>
   <{foreach item=group from=$objects}>
-    <tr class="<{cycle values='odd,even'}>">
+    <tr>
       <td class="user_list_image"><i title="<{$smarty.const._AD_USER_LANG_GROUP}>"><img src="<{"icons/icon-user-group.svg"|theme}>" class="svg"></i></td>
       <td class="user_list_id"><{$group->getShow('groupid')}></td>
       <td class="user_list_title"><{$group->getShow('name')}></td>

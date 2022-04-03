@@ -1,9 +1,10 @@
-<section id="help-module">
+<article id="help-module">
 
 
     <nav id="help-menu">
         <ul>
             <li><a href="#help-overview" class="ui-btn">Renderer</a>
+            <li><a href="#help-browser" class="ui-btn">Browser</a>
             <li><a href="#help-htaccess" class="ui-btn">htaccess</a>
             <li><a href="#help-theme" class="ui-btn">Themes</a>
             <li><a href="#help-template" class="ui-btn">Template</a>
@@ -14,10 +15,10 @@
     </nav>
 
 
-    <hr>
+<hr>
 
 
-    <article id="help-overview">
+    <section id="help-overview">
         <h3>Outline</h3>
         <p>The XOOPSCube render engine (renderer) ensures compatibility with legacy themes of XOOPS2 and XOOPS2-JP.</p>
         <p>It has neither override nor the fall-back mechanism. Smarty Template Engine is used for rendering and cache management.</p>
@@ -29,13 +30,30 @@
             This is best described in a situation where the application programmer and the template designer play
             different roles, or in most cases are not the same person.</p>
         <p><a href="https://www.smarty.net/docsv2/en/what.is.smarty.tpl" target="_blank" class="ui-btn">Smarty v2 - Documentation</a></p>
-    </article>
+    </section>
+
+
+<hr>
+
+
+    <section id="help-browser">
+        <h3>Browser</h3>
+        <p>The XOOPSCube render engine (renderer) ensures compatibility with most, if not all, Navigator UserAgent.</p>
+        <p>However, due to browsers customizations available to users, themes and aextensions can interfere with the rendered layout.</p>
+        <p>In case of render issues, it is suggested to open a new browser windows without extensions (usually privacy mode).</p>
+
+        <h3>Browser Blocked features</h3>
+        <p>Recent versions og navigators allow to users to customize permissions domain based.
+            <br>
+            javascript, webcam, mic, etc...<br>
+            Usually these options don't interfere with the rendered layout, but it is required to activate cookies and javascript.</p>
+        <p><a href="https://www.smarty.net/docsv2/en/what.is.smarty.tpl" target="_blank" class="ui-btn">Smarty v2 - Documentation</a></p>
+    </section>
 
 
     <hr>
 
-
-    <article id="help-banner">
+    <section id="help-banner">
     <h3>Banner Management</h3>
     <p>Allows you to manage banners in your web platform. You can place a banner of any type, in any location of the page, on any pages.
         You may show a banner to visitors a certain number of impressions.<br>
@@ -77,23 +95,23 @@
             <li>HTML code
             <li>Extra info
         </ul>
-    </article>
+    </section>
 
 
     <hr>
 
 
-    <article id="help-htaccess">
+    <section id="help-htaccess">
         <h3>htaccess</h3>
         <p>Learn more about htaccess :</p>
         <p><a href="https://www.askapache.com/htaccess/" target="_blank" class="ui-btn">THE Ultimate Htaccess</a></p>
-    </article>
+    </section>
 
 
     <hr>
 
 
-    <article id="help-theme">
+    <section id="help-theme">
         <h3>Additional Themes</h3>
         <p>Themes can be installed from Xupdate Store or from theme-developers' websites etc.
 
@@ -112,13 +130,13 @@
         <h3>Uninstall a Theme</h3>
         <p>The render system manages themes without using the database.
         <p>So, to delete a theme, simply delete its directory from the "theme" directory.
-    </article>
+    </section>
 
 
     <hr>
 
 
-    <article id="help-template">
+    <section id="help-template">
         <h3>Template Management</h3>
         <p>The list of Template Sets is displayed in Template Management.
         <p>XCL comes with a default Template Set.
@@ -141,13 +159,13 @@
             <li>The list of template files is displayed, and each file can be edited by clicking the edit icon ( a pencil )
                 in the rightmost column.</li>
         </ul>
-    </article>
+    </section>
 
 
     <hr>
 
 
-    <article id="help-structure">
+    <section id="help-structure">
         <h3>Theme folder structure</h3>
         <p>
             A theme is a collection of files (html, css, javascript) with <strong>Smarty Render Variables</strong> and <strong>Constants</strong> that are assigned from PHP
@@ -209,13 +227,13 @@ ui-default-jquery
 `-- theme_assign.php
 </code></pre>
         <!--<script>Prism.highlightAll();</script>-->
-    </article>
+    </section>
 
 
     <hr>
 
 
-    <article id="theme-layout">
+    <section id="theme-layout">
 
         <h3>Layout</h3>
         <p>XCL-UI is defined with two custom HTML attributes.</p>
@@ -296,13 +314,13 @@ ui-default-jquery
 
         <p>use rows and columns for flexbox wrap, otherwise it will break the container!</p>
 
-    </article>
+    </section>
 
 
     <hr>
 
 
-    <article id="theme-buttons">
+    <section id="theme-buttons">
 
         <h3>Buttons jQuery UI Widget</h3>
 
@@ -360,14 +378,14 @@ ui-default-jquery
             </button>
         </div>
 
-    </article>
+    </section>
 
 
 
     <hr>
 
 
-    <article id="theme-dialog">
+    <section id="theme-dialog">
 
         <h3>Dialog Widget</h3>
 
@@ -507,7 +525,7 @@ $( function() {
         </div><!-- /toggle code dialog-sample -->
         <!-- /dialog -->
 
-    </article>
+    </section>
 
 
     <hr>
@@ -544,7 +562,7 @@ $( function() {
 
 
 
-    <article id="help-todo">
+    <section id="help-todo">
         <h3>TODO</h3>
         <ul>
             <li>Components related to "Theme selection".</li>
@@ -552,9 +570,9 @@ $( function() {
             <li>Preview Theme and designer's license.</li>
             <li>Extend Theme options.</li>
         </ul>
-    </article>
+    </section>
 
 
     <script>Prism.highlightAll();</script>
 
-</section>
+</article>

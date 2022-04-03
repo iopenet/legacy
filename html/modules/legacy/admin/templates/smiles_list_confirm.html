@@ -35,7 +35,7 @@
         </tr>
 
         <{foreach item=sid from=$sids}>
-        <tr class="<{cycle values='odd,even'}>">
+        <tr>
             <td class="legacy_list_id"><{$sid}></td>
             <td class="legacy_list_name">
                 <{if $actionForm->get('code',$sid) == $smilesObjects[$sid]->get('code')}>
