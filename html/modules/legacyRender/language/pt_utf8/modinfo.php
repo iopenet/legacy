@@ -12,14 +12,14 @@
 // Esta tradução encontra-se licenciada sob a licença Creative Commons Attribution 2.5 Brazil.
 // Para ler uma cópia da licença, visite: http://creativecommons.org/licenses/by/2.5/br/
 // ********************************************************************************* //
-const _MI_LEGACYRENDER_ADMENU_BANNER_MANAGE = "Faixas publicitárias";
+const _MI_LEGACYRENDER_ADMENU_BANNER_MANAGE = "Campanha publicitária";
 const _MI_LEGACYRENDER_ADMENU_HTACCESS_VIEW = ".htaccess";
 const _MI_LEGACYRENDER_ADMENU_TEMPLATE_MANAGE = "Conjuntos de modelos";
 const _MI_LEGACYRENDER_ADMENU_THEME_SETTING = "Temas";
 const _MI_LEGACYRENDER_ADMENU_TPLFILE_MANAGE = "Arquivos de modelos";
-const _MI_LEGACYRENDER_CONF_BANNERS = "Habilitar as faixas publicitárias?";
-const _MI_LEGACYRENDER_NAME = "Renderizador legado";
-const _MI_LEGACYRENDER_NAME_DESC = "SISTEMA RENDERIZADOR LEGADO: este módulo provê a compatibilidade dos antigos formatos de tema e modelos smarty utilizados até as versões 2.0.9 e JP 2.0.x do XOOPS. Traduzido por Mikhail Miguel.";
+const _MI_LEGACYRENDER_CONF_BANNERS = "Habilitar as Campanhas publicitárias?";
+const _MI_LEGACYRENDER_NAME = "Gerador de modelos";
+const _MI_LEGACYRENDER_NAME_DESC = "Sistema Gerador de modelos: este módulo provê a compatibilidade dos antigos formatos de tema e modelos smarty utilizados até as versões 2.0.9 e JP 2.0.x do XOOPS. Traduzido por Mikhail Miguel.";
 const _MI_LR_CSS_FILE = "Endereço URL do arquivo CSS do <i>jQuery UI</i>";
 const _MI_LR_CSS_FILE_DESC = "Set jQuery UI CSS file url after ".XOOPS_URL."";
 const _MI_LR_FEED_URL = "Endereço do Feed RSS";

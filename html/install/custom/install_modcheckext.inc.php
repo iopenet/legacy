@@ -9,34 +9,49 @@
  * @license    GPL 2.0
  */
 
-$writeok = [ 'uploads/', 'mainfile.php' ];
-$error   = false;
-foreach ( $writeok as $wok ) {
-	if ( ! is_dir( '../' . $wok ) ) {
-		if ( file_exists( '../' . $wok ) ) {
-			@chmod( '../' . $wok, 0666 );
-			if ( ! is_writable( '../' . $wok ) ) {
-				$wizard->addArray( 'checks', _NGIMG . sprintf( _INSTALL_L83, $wok ) );
-				$error = true;
-			} else {
-				$wizard->addArray( 'checks', _OKIMG . sprintf( _INSTALL_L84, $wok ) );
-			}
-		}
-	} else {
-		@chmod( '../' . $wok, 0777 );
-		if ( ! is_writable( '../' . $wok ) ) {
-			$wizard->addArray( 'checks', _NGIMG . sprintf( _INSTALL_L85, $wok ) );
-			$error = true;
-		} else {
-			$wizard->addArray( 'checks', _OKIMG . sprintf( _INSTALL_L86, $wok ) );
-		}
-	}
+$writeok = ['mainfile.php', 'uploads/'];
+$error = false;
+
+clearstatcache();
+
+foreach ($writeok as $wok) {
+    $permissions = fileperms('../' . $wok);
+
+    if (is_dir('../' . $wok)) {
+        // Force chmod
+        @chmod('../' . $wok, 0777);
+        $fperm = substr(sprintf('%o', $permissions), -4); //output 0777
+
+        if (file_exists('../' . $wok) && is_writable('../' . $wok)) {
+            $wizard->addArray('checks', _OKIMG . '<code>'.$wok.'</code>'. sprintf( _INSTALL_L86,'<p class="data"><code>' .$fperm.'</code>'. $wok .'</p>') );
+        } else {
+            $wizard->addArray('checks', _NGIMG . '<code>'.$wok.'</code>'. sprintf( _INSTALL_L85, '<p class="data"><code style="color:#ff6633">' .$fperm.'</code>'. $wok .'</p>'));
+            $wizard->setBack( [ 'start', _INSTALL_L103 ] );
+            $error = true;
+        }
+    }
+
+    if (!is_dir('../' . $wok)) {
+        // Force chmod
+        @chmod('../' . $wok, 0666);
+        $fperm = substr(sprintf('%o', $permissions), -4); //output 0666
+
+        if (file_exists('../' . $wok) && is_writable('../' . $wok)) {
+            $wizard->addArray('checks', _OKIMG . '<code>'.$wok.'</code>' . sprintf( _INSTALL_L84,'<p class="data"><code>' .$fperm.'</code>'.  $wok .'</p>') );
+        } elseif (!is_writable('../' . $wok)) {
+            $wizard->addArray('checks', _NGIMG . '<code>'.$wok.'</code>'. sprintf( _INSTALL_L83,'<p class="data"><code style="color:#ff6633">' .$fperm.'</code>'.  $wok .'</p>') );
+            $wizard->setBack( [ 'start', _INSTALL_L103 ] );
+            $error = true;
+        }
+    }
+
 }
 
-if ( ! $error ) {
-	$wizard->assign( 'message', _INSTALL_L87 );
+if (!$error) {
+    $wizard->assign('message', '<div class="confirmOk">' . _INSTALL_L87 . '</div>');
 } else {
-	$wizard->assign( 'message', _INSTALL_L46 );
-	$wizard->setReload( true );
+    $wizard->assign('message', '<div class="confirmError">' . _INSTALL_L46 . '</div>');
+    $wizard->setReload(true);
 }
-$wizard->render( 'install_modcheck.tpl.php' );
+
+$wizard->render('install_modcheck.tpl.php');

@@ -7,7 +7,7 @@ define("_MD_A_MYBLOCKSADMIN_BCACHETIME", "Tempo do Cache");
 define("_MD_A_MYBLOCKSADMIN_BLOCKADMIN", "Gerir os blocos");
 define("_MD_A_MYBLOCKSADMIN_BTN_CLONE", "Clonar");
 define("_MD_A_MYBLOCKSADMIN_BTN_EDIT", "Atualizar");
-define("_MD_A_MYBLOCKSADMIN_BTN_NEW", "Criar");
+define("_MD_A_MYBLOCKSADMIN_BTN_NEW", "Adicionar");
 define("_MD_A_MYBLOCKSADMIN_CAPT_USABLETAGS", "Utilizar tags");
 define("_MD_A_MYBLOCKSADMIN_CBCENTER", "Centro");
 define("_MD_A_MYBLOCKSADMIN_CBLEFT", "Centro-esquero");
@@ -27,7 +27,7 @@ define("_MD_A_MYBLOCKSADMIN_FMT_REMOVEBLOCK", "%s será removido. Você concorda
 define("_MD_A_MYBLOCKSADMIN_FMT_TAGRULE", "%s será substituído por %s.");
 define("_MD_A_MYBLOCKSADMIN_LINK_FORCECLONE", "Forçar clonagem");
 define("_MD_A_MYBLOCKSADMIN_NAME", "Nome");
-define("_MD_A_MYBLOCKSADMIN_NEWFORM", "Criar um novo bloco");
+define("_MD_A_MYBLOCKSADMIN_NEWFORM", "Adicionar novo bloco");
 define("_MD_A_MYBLOCKSADMIN_NOTICE4COMMONFCK", "Se você deseja utilizar um editor visual (WYSIWYG), instale-o em /common/fckeditor");
 define("_MD_A_MYBLOCKSADMIN_OPTIONS", "Blocos");
 define("_MD_A_MYBLOCKSADMIN_PERM_MADMIN", "Administrar");

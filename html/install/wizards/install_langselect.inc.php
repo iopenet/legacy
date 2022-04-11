@@ -13,9 +13,11 @@ if ( ! defined( '_INSTALL_L128' ) ) {
 }
 
 $langarr = getDirList( './language/' );
-$php54   = ( version_compare( PHP_VERSION, '5.5.0' ) >= 0 );
+
+$php7   = ( version_compare(PHP_VERSION, '7.0.0') >= 0 );
+
 foreach ( $langarr as $lang ) {
-	if ( $php54 && 'english' !== $lang && '_utf8' !== substr( $lang, - 5 ) ) {
+	if ( $php7 && 'english' !== $lang && '_utf8' !== substr( $lang, - 5 ) ) {
 		continue;
 	}
 	$wizard->addArray( 'languages', $lang );
@@ -25,4 +27,5 @@ foreach ( $langarr as $lang ) {
 		$wizard->addArray( 'selected', '' );
 	}
 }
+
 $wizard->render( 'install_langselect.tpl.php' );

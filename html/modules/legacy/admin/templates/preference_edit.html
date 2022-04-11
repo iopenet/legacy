@@ -59,16 +59,16 @@
         <{assign var=conf_formtype value=$config->get('conf_formtype')}>
         <tr>
             <td class="head">
-                <div class="legacy_list_title"><{$config->getTitle()}>
+                <div class="list_title"><{$config->getTitle()}>
                     <{if $mcrypt_enabled && $config->get('conf_valuetype') == 'encrypt'}>
                     <img src="<{"icons/textfield_key.png"|theme}>" alt="Encrypted">
                     <{/if}>
                     <{if $config->get('conf_desc') != null}>
-                    <p class="legacy_list_description"><{$config->getDesc()}></p>
+                    <p class="list_description"><{$config->getDesc()}></p>
                     <{/if}>
                 </div>
             </td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{if $conf_formtype == 'textarea'}>
             <{xoops_textarea name=$conf_name rows=5 cols=50 value=$actionForm->get($rconf_name)}>
 

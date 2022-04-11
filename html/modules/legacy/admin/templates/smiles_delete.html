@@ -21,26 +21,26 @@
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_ID}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('id')}></td>
+            <td><{$object->getShow('id')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._MD_LEGACY_LANG_CODE}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('code')}></td>
+            <td><{$object->getShow('code')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_SMILE_URL}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <img src="<{$smarty.const.XOOPS_UPLOAD_URL}>/<{$object->getShow('smile_url')}>" alt="<{$object->getShow('emotion')}>" title="<{$object->getShow('emotion')}>">
             ( <{$object->getShow('smile_url')}> )
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._MD_LEGACY_LANG_EMOTION}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('emotion')}></td>
+            <td><{$object->getShow('emotion')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_DISPLAY}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{if $object->get('display') == 1}>
             <{$smarty.const._YES}>
             <{else}>

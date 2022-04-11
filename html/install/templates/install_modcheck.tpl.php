@@ -1,10 +1,9 @@
 <?php
 
-foreach ( $this->v( 'checks' ) as $check ) {
-
-	echo $check . '<br>';
+if (is_array($this->v('checks'))) {
+	foreach ($this->v('checks') as $check) {
+		echo '<p>'. $check .'</p>';
+	}
 }
 
-?>
-
-<div class="confirmInfo"><?php $this->e( 'message' ) ?></div>
+$this->e( 'message' );

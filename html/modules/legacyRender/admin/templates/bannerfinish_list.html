@@ -118,13 +118,13 @@ Add link to : https://xyz.local/xcl/html/modules/legacy/admin/index.php?action=P
     <tbody>
     <{foreach item=obj from=$objects}>
     <tr';>
-        <td class="legacyRender_list_id"><{$obj->getShow('bid')}></td>
-        <td class="legacyRender_list_title"><{$obj->mClient->getShow('name')}></td>
-        <td class="legacyRender_list_number"><{$obj->getShow('impressions')}></td>
-        <td class="legacyRender_list_number"><{$obj->getShow('clicks')}></td>
-        <td class="legacyRender_list_date"><{$obj->get('datestart')|xoops_formattimestamp}></td>
-        <td class="legacyRender_list_date"><{$obj->get('dateend')|xoops_formattimestamp}></td>
-        <td class="legacyRender_list_control">
+        <td class="list_id"><{$obj->getShow('bid')}></td>
+        <td class="list_title"><{$obj->mClient->getShow('name')}></td>
+        <td class="list_number"><{$obj->getShow('impressions')}></td>
+        <td class="list_number"><{$obj->getShow('clicks')}></td>
+        <td class="list_date"><{$obj->get('datestart')|xoops_formattimestamp}></td>
+        <td class="list_date"><{$obj->get('dateend')|xoops_formattimestamp}></td>
+        <td class="list_control">
 
             <a href="./index.php?action=BannerEdit&amp;bid=<{$obj->getShow('bid')}>" title="<{$smarty.const._EDIT}>">
                 <img class="svg" src="<{"icons/icon-edit.svg"|theme}>" alt="<{$smarty.const._EDIT}>">

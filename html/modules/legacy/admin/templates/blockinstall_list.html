@@ -23,75 +23,84 @@
 </div>
 
 
+<{* ////— CONTROL-ACTION —\\\\ *}>
 <div layout="row center-justify" class="control-action">
 
-    <a class="ui-btn ui-btn-small" href="index.php?action=CustomBlockEdit"><{$smarty.const._AD_LEGACY_LANG_ADD_CUSTOM_BLOCK}></a>
+    <{include file="./components/block-search-install.html"}>
 
     <div class="control-view">
-
-        <{* <button id="list" class="ui-btn" data-id="1" type="button" title="View List">
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                <path d="M9 5v4h12V5M9 19h12v-4H9m0-1h12v-4H9M4 9h4V5H4m0 14h4v-4H4m0-1h4v-4H4v4z" fill="currentColor"/></svg>
-        </button>
-
-        <button id="grid" class="ui-btn" data-id="2" type="button" title="View Grid">
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                <path d="M16 5v6h5V5m-11 6h5V5h-5m6 13h5v-6h-5m-6 6h5v-6h-5m-6 6h5v-6H4m0-1h5V5H4v6z" fill="currentColor"/></svg>
-        </button>
-
-        <button id="filter" class="ui-btn" type="button" data-id="3" onclick="slideToggle('.module-filter', this)"  title="View Filter">
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                <path d="M7 11h10v2H7zM4 7h16v2H4zm6 8h4v2h-4z" fill="currentColor"/></svg>
-        </button> *}>
-
+        <a class="ui-btn ui-btn-small" href="index.php?action=CustomBlockEdit"><{$smarty.const._AD_LEGACY_LANG_ADD_CUSTOM_BLOCK}></a>
         <button class="help-admin ui-btn" type='button' data-module='legacy' data-help-article='#help-blocks' title="<{$smarty.const._HELP}>">
             <span class="ui-icon ui-icon-help"></span>
         </button>
     </div>
-
 </div>
-
-
-
-
-
-<{include file="./components/block-search-install.html"}>
+<{* -----/ CONTROL-ACTION *}>
 
 
 <table class="outer">
-
     <thead>
     <tr>
-        <th><{$smarty.const._AD_LEGACY_LANG_BID}>
-            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.NEWBLOCKS_SORT_KEY_BID}>">
-                <img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>"></a>
-            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.NEWBLOCKS_SORT_KEY_BID}>">
-                <img src="<{"icons/down.png"|theme}>"
-                alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>"></a></th>
-        <th><{$smarty.const._AD_LEGACY_LANG_BLOCK_MOD}>
-            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.NEWBLOCKS_SORT_KEY_MID}>">
-                <img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>"></a>
-            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.NEWBLOCKS_SORT_KEY_MID}>">
-                <img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>"></a></th>
-        <th><{$smarty.const._AD_LEGACY_LANG_TITLE}>
-            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.NEWBLOCKS_SORT_KEY_TITLE}>">
-                <img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>"></a>
-            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.NEWBLOCKS_SORT_KEY_TITLE}>">
-                <img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>"></a></th>
-        <th><{$smarty.const._AD_LEGACY_LANG_TEMPLATE}>
-            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.NEWBLOCKS_SORT_KEY_TEMPLATE}>">
-                <img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>"></a>
-            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.NEWBLOCKS_SORT_KEY_TEMPLATE}>">
-                <img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>"></a></th>
-        <th><{$smarty.const._AD_LEGACY_LANG_CONTROL}></th>
+        <th>
+        <{* ////— DROPDOWN SORT —\\\\ *}>
+        <div class="dropdown" id="filter-sort">
+
+            <a href="#" class="dropdown-toggle ui-btn" aria-label="sort filter">
+                <img class="svg" src="<{$xoops_url}>/images/icons/list-tree.svg" width="24px" height="24px" alt="options">
+            </a>
+
+            <div class="dropdown-content drop-left" style="min-width: 280px; padding:.5em">
+                <div layout="row center-justify inline">
+                    <h6><{$smarty.const._AD_LEGACY_LANG_BID}></h6>
+                    <div>
+                        <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.NEWBLOCKS_SORT_KEY_BID}>"
+                           class="btn" title="<{$smarty.const._ASCENDING}>">&uarr;</a>
+                        <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.NEWBLOCKS_SORT_KEY_BID}>"
+                           class="btn" title="<{$smarty.const._DESCENDING}>">&darr;</a>
+                    </div>
+                </div>
+                <div layout="row center-justify inline">
+                    <h6><{$smarty.const._AD_LEGACY_LANG_BLOCK_MOD}></h6>
+                    <div>
+                        <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.NEWBLOCKS_SORT_KEY_MID}>"
+                           class="btn" title="<{$smarty.const._ASCENDING}>">&uarr;</a>
+                        <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.NEWBLOCKS_SORT_KEY_MID}>"
+                           class="btn" title="<{$smarty.const._DESCENDING}>">&darr;
+                        </a>
+                    </div>
+                </div>
+                <div layout="row center-justify">
+                    <h6><{$smarty.const._AD_LEGACY_LANG_TITLE}></h6>
+                    <div>
+                        <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.NEWBLOCKS_SORT_KEY_TITLE}>"
+                           class="btn" title="<{$smarty.const._ASCENDING}>">&uarr;</a>
+                        <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.NEWBLOCKS_SORT_KEY_TITLE}>"
+                           class="btn" title="<{$smarty.const._DESCENDING}>">&darr;</a>
+                    </div>
+                </div>
+                <div layout="row center-justify">
+                    <h6><{$smarty.const._AD_LEGACY_LANG_TEMPLATE}></h6>
+                    <div>
+                        <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.NEWBLOCKS_SORT_KEY_TEMPLATE}>"
+                           class="btn" title="<{$smarty.const._ASCENDING}>">&uarr;</a>
+                        <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.NEWBLOCKS_SORT_KEY_TEMPLATE}>"
+                           class="btn" title="<{$smarty.const._DESCENDING}>">&darr;</a>
+                    </div>
+                </div>
+            </div><{* ----- /Dropdown-content *}>
+        </div><{* ----- /Dropdown *}>
+        </th>
+        <th><{$smarty.const._AD_LEGACY_LANG_BLOCK_MOD}></th>
+        <th><{$smarty.const._AD_LEGACY_LANG_TITLE}></th>
+        <th><{$smarty.const._AD_LEGACY_LANG_TEMPLATE}></th>
+        <th class="list_control"><{$smarty.const._AD_LEGACY_LANG_CONTROL}></th>
     </tr>
     </thead>
-
     <tbody>
     <{foreach item=obj from=$objects}>
     <tr>
-        <td class="legacy_list_id"><{$obj->getShow('bid')}></td>
-        <td class="legacy_list_name">
+        <td class="list_id"><{$obj->getShow('bid')}></td>
+        <td class="list_name">
             <{if $obj->mModule}>
             <span class="legacy_blocktype_module"><{$obj->mModule->getShow('name')}></span>
             <{else}>
@@ -104,13 +113,13 @@
           </span>
             <{/if}>
         </td>
-        <td class="legacy_list_title"><{$obj->getShow('title')}></td>
-        <td class="legacy_list_text">
+        <td class="list_title"><{$obj->getShow('title')}></td>
+        <td class="list_text">
             <{if $obj->getShow('template')}>
             <a href="<{$xoops_url}>/modules/legacyRender/admin/index.php?action=TplfileList&amp;tpl_file=<{$obj->getShow('template')}>"><{$obj->getShow('template')|xoops_escape}></a>
             <{/if}>
         </td>
-        <td class="legacy_list_control">
+        <td class="list_control">
             <{if $obj->get('block_type') == 'C'}>
             <a href="./index.php?action=CustomBlockEdit&amp;bid=<{$obj->getShow('bid')}>"
                title="<{$smarty.const._AD_LEGACY_LANG_INSTALL}>">
@@ -130,7 +139,6 @@
     </tr>
     <{/foreach}>
     </tbody>
-
 </table>
 
 <{include file="./components/pagenavi.html"}>

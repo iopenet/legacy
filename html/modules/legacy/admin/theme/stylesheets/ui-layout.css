@@ -47,7 +47,7 @@
 
         position        : var(  --ui-header-position    );
         width           : 100%;
-        z-index         : 800;
+        z-index         : 200;
 
     }
 

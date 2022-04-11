@@ -33,10 +33,11 @@ const _NEWESTFIRST = "Les récents en premier";
 const _MORE = "plus...";
 const _MULTIPAGE = "Pour avoir votre article sur des pages multiples, insérer le mot <span style='color:red'>[pagebreak]</span> (avec les crochets) dans l'article.";
 const _IFNOTRELOAD = "Si la page ne se recharge pas automatiquement, merci de cliquer <a href=%s>ici</a>";
-const _WARNINSTALL2 = "ATTENTION: Le repértoire %s existe sur votre serveur. Veuillez supprimer ce repértoire pour des raisons de sécurité.";
+const _WARNINSTALL2 = "ATTENTION: Le repértoire %s existe sur votre serveur.<br>Ajoutez um mot-de-passe au fichier 'install/passwd.php' ou supprimez ce repértoire pour des raisons de sécurité.";
 const _WARNINWRITEABLE = "ATTENTION : Veillez Changer les permissions du fichier %s pour des raisons de sécurité - sous Unix (444), sous Win32 (lecture seule)";
 const _WARNPHPENV = "ATTENTION : paramètres php.ini \"%s\" est réglé \"%s\". %s";
 const _WARNSECURITY = "(Ceci peut causer des problèmes de sécurité)";
+const _WARN_INSTALL_TIP = 'Activate the preload — For development purposes only!<br> Use the preload to keep mainfile and install directory.<br>Remember to chomd and delete install to prevent any security problem.';
 
 //%%%%%% File Name themeuserpost.php %%%%%
 const _PROFILE = "Profil";

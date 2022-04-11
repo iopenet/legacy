@@ -10,6 +10,8 @@
 
 include_once '../mainfile.php';
 
+echo '<h2>wizard/install_updateConfig_go.inc</h2>';
+
 $language = check_language( $language );
 if ( file_exists( './language/' . $language . '/install2.php' ) ) {
 	include_once './language/' . $language . '/install2.php';
@@ -51,11 +53,6 @@ $xoopsConfig['avatar_allow_upload']   = 0;
 $xoopsConfig['avatar_width']          = 128;
 $xoopsConfig['avatar_height']         = 128;
 $xoopsConfig['avatar_maxsize']        = 25000;
-
-// override deafault with 1.3.x settings if any
-/*if ( file_exists( '../modules/system/cache/config.php' ) ) {
-	include_once( '../modules/system/cache/config.php' );
-}*/
 
 $dbm->insert( 'config', " VALUES (1, 0, 1, 'sitename', '_MD_AM_SITENAME', '" . addslashes( $xoopsConfig['sitename'] ) . "', '_MD_AM_SITENAMEDSC', 'textbox', 'text', 0)" );
 $dbm->insert( 'config', " VALUES (2, 0, 1, 'slogan', '_MD_AM_SLOGAN', '" . addslashes( $xoopsConfig['slogan'] ) . "', '_MD_AM_SLOGANDSC', 'textbox', 'text', 2)" );
@@ -126,4 +123,5 @@ $result = $dbm->queryFromFile( './sql/' . ( ( XOOPS_DB_TYPE === 'mysqli' ) ? 'my
 $content = $dbm->report();
 //$content .= $cm->report();
 $b_next = [ 'updateModules', _INSTALL_L14 ];
+
 include './install_tpl.php';

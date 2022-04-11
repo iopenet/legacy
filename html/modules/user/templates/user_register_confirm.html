@@ -18,13 +18,13 @@
         <table width="100%" class="outer">
             <tr>
                 <td class="head"><{$smarty.const._MD_USER_LANG_NICKNAME}></td>
-                <td class="<{cycle values="odd,even"}>">
+                <td>
                 <input type="text" value="<{$registForm->get('uname')|xoops_escape}>" style="cursor:not-allowed;" readonly>
                 </td>
             </tr>
             <tr>
                 <td class="head"><{$smarty.const._MD_USER_LANG_EMAIL}></td>
-                <td class="<{cycle values="odd,even"}>">
+                <td>
                 <input type="email" value="<{$registForm->get('email')|xoops_escape}>" style="cursor:not-allowed;" readonly>
                 </td>
             </tr>

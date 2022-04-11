@@ -1,5 +1,9 @@
 <?php
 // Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
+// ## XOOPS Cube Legacy - Versão em Português
+// ## Por............: Mikhail Miguel
+// ## E-mail.........: mikhail.miguel@gmail.com
+// License http://creativecommons.org/licenses/by/2.5/br/
 
 const _AD_USER_DATA_DOWNLOAD_DO = "Descarregar em CSV";
 const _AD_USER_DATA_NUM = "%d visitantes cadastrados.";
@@ -48,7 +52,7 @@ const _AD_USER_LANG_AVATAR_WEIGHT = "Posição";
 const _AD_USER_LANG_BODY = "Corpo";
 const _AD_USER_LANG_COMPLETED = "Terminado";
 const _AD_USER_LANG_CONTROL = "Controle";
-const _AD_USER_LANG_CREATE_NEW = "Criar";
+const _AD_USER_LANG_CREATE_NEW = "Adicionar";
 const _AD_USER_LANG_CREATE_UNIXTIME = "Data de criação";
 const _AD_USER_LANG_DELETE_RANK = "Remover graduação";
 const _AD_USER_LANG_DISPLAY_USER_LEVEL = "Mostrar graduação";
@@ -68,7 +72,7 @@ const _AD_USER_LANG_GROUP_EDIT = "Editar grupos";
 const _AD_USER_LANG_GROUP_GID = "N° do grupo";
 const _AD_USER_LANG_GROUP_LIST = "Grupos";
 const _AD_USER_LANG_GROUP_NAME = "Nome";
-const _AD_USER_LANG_GROUP_NEW = "Criar um novo grupo";
+const _AD_USER_LANG_GROUP_NEW = "Adicionar novo grupo";
 const _AD_USER_LANG_GROUP_NOASSIN_MEMBERS = "Associados que não fazem parte deste grupo";
 const _AD_USER_LANG_GROUP_PERMISSION = "Permissões";
 const _AD_USER_LANG_GROUP_PROPERTY = "Propriedades";
@@ -110,10 +114,10 @@ const _AD_USER_LANG_RANK_IMAGE = "Imagem";
 const _AD_USER_LANG_RANK_LIST = "Gestor de graduações";
 const _AD_USER_LANG_RANK_MAX = "Máximo de postagens";
 const _AD_USER_LANG_RANK_MIN = "Mínimo de postagens";
-const _AD_USER_LANG_RANK_NEW = "Criar uma nova graduação";
-const _AD_USER_LANG_RANK_SPECIAL = "Graduação especial";
+const _AD_USER_LANG_RANK_NEW = "Adicionar novo ranque";
+const _AD_USER_LANG_RANK_SPECIAL = "Ranque especial";
 const _AD_USER_LANG_RANK_TITLE = "Título";
-const _AD_USER_LANG_RANK_TOTAL = "Número de graduações";
+const _AD_USER_LANG_RANK_TOTAL = "Total de ranques";
 const _AD_USER_LANG_RANK_UPDATECONF = "Confirme a atualização da graduação";
 const _AD_USER_LANG_RECOUNT = "Recontar";
 const _AD_USER_LANG_REGDATE = "Dia do cadastro";
@@ -163,16 +167,3 @@ const _AD_USER_TIPS_USER_ADMIN = "Access to your XOOPS Cube web <i>site</i> is c
 const _AD_USER_TIPS_USER_EDIT = "Se você deseja mudar de senha, complete os campos <q>Senha</q> e <q>Confirmar senha</q> do formulário.";
 const _AD_USER_TIPS_USER_NEW = "É necessário completar os campos <q>Codinome</q>, <q>Endereço de correio-eletrônico</q>, <q>Senha</q> e <q>Confirmar senha</q>.";
 const _AD_USER_TIPS_USER_SEARCH = "Você pode pesquisar e classificar os dados dos associados cadastrados para encontrar informações relevantes aos seus objetivos.<br /> A precisão do resultado final das pesquisas será diretamente relacionada ao número de campos que você criar.";
-// ############################################################### //
-// ## XOOPS Cube Legacy - Versão em Português
-// ## Por............: Mikhail Miguel
-// ## Website........: http://xoops.net.br
-// ## E-mail.........: mikhail.miguel@gmail.com
-// ## AOL............: mikhailmiguel
-// ## MSN............: mikhail.miguel@hotmail.com
-// ## Orkut..........: 15440532260129226492
-// ## Skype..........: mikhailmiguel
-// ## Yahoo!.........: mikhail.miguel@yahoo.com.br
-// ############################################################### //
-// *************************************************************** //
-;

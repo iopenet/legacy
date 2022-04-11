@@ -5,11 +5,13 @@
         <ul>
             <li><a href="#help-overview" class="ui-btn">Renderer</a>
             <li><a href="#help-browser" class="ui-btn">Browser</a>
+            <li><a href="#help-banner" class="ui-btn">Banner</a>
             <li><a href="#help-htaccess" class="ui-btn">htaccess</a>
             <li><a href="#help-theme" class="ui-btn">Themes</a>
+            <li><a href="#help-tplset" class="ui-btn">Template Sets</a>
             <li><a href="#help-template" class="ui-btn">Template</a>
-            <li><a href="#help-structure" class="ui-btn">Structure</a>
             <li><a href="#help-design" class="ui-btn">Design</a>
+            <li><a href="#help-structure" class="ui-btn">Structure</a>
             <li><a href="#help-todo" class="ui-btn">To Do</a>
         </ul>
     </nav>
@@ -51,7 +53,8 @@
     </section>
 
 
-    <hr>
+<hr>
+
 
     <section id="help-banner">
     <h3>Banner Management</h3>
@@ -98,7 +101,7 @@
     </section>
 
 
-    <hr>
+<hr>
 
 
     <section id="help-htaccess">
@@ -108,7 +111,7 @@
     </section>
 
 
-    <hr>
+<hr>
 
 
     <section id="help-theme">
@@ -130,10 +133,40 @@
         <h3>Uninstall a Theme</h3>
         <p>The render system manages themes without using the database.
         <p>So, to delete a theme, simply delete its directory from the "theme" directory.
+
     </section>
 
 
-    <hr>
+<hr>
+
+
+    <section id="help-tplset">
+        <h3>Template Management</h3>
+        <p>The list of Template Sets is displayed in Template Management.
+        <p>XCL comes with a default Template Set.
+        <p>When modules are installed, their templates become part of this default Template set.
+
+        <div class="tips">
+            The default Template Set cannot be deleted nor modified !
+        </div>
+
+        <p>To customize the templates in your site, first 'Clone' the default template set.
+        <p>The 'Clone' button is on the right, in the Control column.
+        <p>Once you have a new Template Set, you should first make it the Active set<br>
+            by clicking the "Select" button in the Control column.
+        <p>Then template files can be edited in the Template File Management article.
+        <p>If you have a template set in tar.gz format, you can also upload this to your site through the admin interface.
+        <p>Simply click on the "Upload a Template Set" link in Template Management.
+
+        <h3>Template File Management</h3>
+        <ul>
+            <li>The list of template files is displayed, and each file can be edited by clicking the edit icon ( a pencil )
+                in the rightmost column.</li>
+        </ul>
+    </section>
+
+
+<hr>
 
 
     <section id="help-template">
@@ -162,7 +195,16 @@
     </section>
 
 
-    <hr>
+<hr>
+
+
+    <section id="design">
+        <h3>Design</h3>
+        <p>Todo : Translate documentation !</p>
+    </section>
+
+
+<hr>
 
 
     <section id="help-structure">
@@ -230,7 +272,7 @@ ui-default-jquery
     </section>
 
 
-    <hr>
+<hr>
 
 
     <section id="theme-layout">
@@ -271,13 +313,13 @@ ui-default-jquery
         </div>
 
 
-        <fieldset layout="row" self="size-x1">
-            <legend>row</legend>
-            <div layout="row center-stretch">
-                <div self="size-1of2" title="div self=size-1of2"><code>self="size-1of2"</code></div>
-                <div self="size-1of2" title="div self=size-1of2"><code>self="size-1of2"</code></div>
-            </div>
-        </fieldset>
+    <fieldset layout="row" self="size-x1">
+        <legend>row</legend>
+        <div layout="row center-stretch">
+            <div self="size-1of2" title="div self=size-1of2"><code>self="size-1of2"</code></div>
+            <div self="size-1of2" title="div self=size-1of2"><code>self="size-1of2"</code></div>
+        </div>
+    </fieldset>
 
         <!-- toggle code -->
         <p><input class='switch' type='checkbox' name='layout-row' onclick="slideToggle('.layout-row', this)" value='0'>
@@ -317,7 +359,7 @@ ui-default-jquery
     </section>
 
 
-    <hr>
+<hr>
 
 
     <section id="theme-buttons">
@@ -381,8 +423,7 @@ ui-default-jquery
     </section>
 
 
-
-    <hr>
+<hr>
 
 
     <section id="theme-dialog">
@@ -528,7 +569,7 @@ $( function() {
     </section>
 
 
-    <hr>
+<hr>
 
 
     <h3>Editable content</h3>
@@ -558,8 +599,7 @@ $( function() {
     </script>
 
 
-    <hr>
-
+<hr>
 
 
     <section id="help-todo">
@@ -571,7 +611,6 @@ $( function() {
             <li>Extend Theme options.</li>
         </ul>
     </section>
-
 
     <script>Prism.highlightAll();</script>
 

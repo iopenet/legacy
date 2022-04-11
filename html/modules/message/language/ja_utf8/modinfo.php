@@ -1,7 +1,7 @@
 <?php
 // Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
 
-const _MI_MESSAGE_NAME = 'プライベートメッセージ';
+const _MI_MESSAGE_NAME = 'メッセージ';
 
 const _MI_MESSAGE_SUB_NEW = '新規作成';
 const _MI_MESSAGE_SUB_SEND = '送信箱';

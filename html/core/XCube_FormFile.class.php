@@ -17,7 +17,7 @@
 
 
 //define("XCUBE_FORMFILE_PREVMASK", "0022");
-define( 'XCUBE_FORMFILE_CHMOD', 0644 );
+const XCUBE_FORMFILE_CHMOD = 0644;
 
 
 class XCube_FormFile {
@@ -194,7 +194,7 @@ class XCube_FormFile {
 
 	/**
 	 * @brief Generate random string.
-	 *
+	 * https://www.php.net/manual/en/function.mt-rand.php
 	 * @param string $salt Salt for generating token.
 	 *
 	 * @return string

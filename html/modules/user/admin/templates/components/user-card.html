@@ -10,7 +10,7 @@
 
 		<div class="ui-card-block-settings">
 
-			<{if $user->get('uid') != 1 }>
+			<{if $user->get('uid') != 1}>
 			<input type="checkbox" name="delete[<{$user->getShow('uid')}>]" value="1" title="<{$smarty.const._DELETE}>">
 			<{else}>
 			<input type="checkbox" disabled>
@@ -21,7 +21,7 @@
 	</div><{* /ui-card-header *}>
 
 	<div class="ui-card-block-image">
-		<{if $user->get('user_avatar') != "blank.gif" }>
+		<{if $user->get('user_avatar') != "blank.gif"}>
         <img src="<{$smarty.const.XOOPS_UPLOAD_URL}>/<{$user->getShow('user_avatar')}>" class="ui-avatar-card" alt="<{$user->getShow('uname')}>" title="<{$user->getShow('uname')}>">
       <{else}>
         <img src="<{$smarty.const.XOOPS_URL}>/modules/user/images/no_avatar.gif" class="ui-avatar-card" alt="<{$user->getShow('uname')}> - Avatar" title="<{$user->getShow('uname')}> - Avatar">
@@ -32,7 +32,7 @@
 
 
     <div class="ui-card-block-item pad-left">
-			<a href="<{$smarty.const.XOOPS_URL}>/userinfo.php?uid=<{$user->getShow('uid')}>" class="user_list_title">
+			<a href="<{$smarty.const.XOOPS_URL}>/userinfo.php?uid=<{$user->getShow('uid')}>" class="list_title">
 				<{$user->getShow('uname')}>
 			</a> - <{$user->getShow('name')}>
 		</div>
@@ -50,20 +50,20 @@
 		</div>
 
 		<div class="ui-card-block-item">
-			<span class="user_list_number" aria-label="<{$smarty.const._MD_USER_LANG_POSTS}>" title="<{$smarty.const._MD_USER_LANG_POSTS}>">
+			<span class="list_number" aria-label="<{$smarty.const._MD_USER_LANG_POSTS}>" title="<{$smarty.const._MD_USER_LANG_POSTS}>">
 				<svg role="img" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24px" height="24px" viewBox="0 0 24 24" class="svg-ui-icon">
 					<path d="M12 23a1 1 0 0 1-1-1v-3H7a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4.1l-3.7 3.71c-.2.18-.44.29-.7.29H12m-9-8H1V3a2 2 0 0 1 2-2h16v2H3v12z" fill="currentColor"></path>
 				</svg>
-				<{if $user->get('uid') != 1 }>
-				<input type="text" size="4" maxlength="6" name="posts[<{$user->getShow('uid')}>]" value="<{$user->getShow('posts')}>" class=user_list_number />
+				<{if $user->get('uid') != 1}>
+				<input type="text" size="4" maxlength="6" name="posts[<{$user->getShow('uid')}>]" value="<{$user->getShow('posts')}>" class=list_number />
 				<{else}>
 				<{$user->getShow('posts')}>
 				<{/if}>
 			</span>
 
-			<span class="user_list_order">
-				<{$smarty.const._MD_USER_LANG_LEVEL}>	<{if $user->get('uid') != 1 }>
-				<input type="text" size="2" maxlength="4" name="level[<{$user->getShow('uid')}>]" value="<{$user->getShow('level')}>" class=user_list_number />
+			<span class="list_order">
+				<{$smarty.const._MD_USER_LANG_LEVEL}>	<{if $user->get('uid') != 1}>
+				<input type="text" size="2" maxlength="4" name="level[<{$user->getShow('uid')}>]" value="<{$user->getShow('level')}>" class=list_number />
 				<{else}>
 				<span class="ui-badge ui-badge-default"><{$user->getShow('level')}></span>
 				<{/if}>

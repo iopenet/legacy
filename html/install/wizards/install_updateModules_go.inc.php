@@ -16,6 +16,8 @@ error_reporting( E_ERROR );
 
 ob_start();
 
+echo '<h2>wizard/install_updateModules_go.inc</h2>';
+
 $module_handler =& xoops_gethandler( 'module' );
 $modules        =& $module_handler->getObjects( null, true );
 foreach ( array_keys( $modules ) as $mid ) {
@@ -44,10 +46,6 @@ foreach ( array_keys( $modules ) as $mid ) {
 						$tplfile->setVar( 'tpl_type', 'css' );
 					} else {
 						$tplfile->setVar( 'tpl_type', 'module' );
-						//if ($xoopsConfig['default_theme'] == 'default') {
-						//  include_once XOOPS_ROOT_PATH.'/class/template.php';
-						//  xoops_template_touch($tplfile->getVar('tpl_id'));
-						//}
 					}
 					$tplfile->setVar( 'tpl_source', $tpldata, true );
 					$tplfile->setVar( 'tpl_module', $dirname );
@@ -114,13 +112,6 @@ foreach ( array_keys( $modules ) as $mid ) {
 										$msgs[] = '&nbsp;&nbsp;<span style="color:#ff0000;">ERROR: Could not insert template <b>' . $blocks[ $i ]['template'] . '</b> to the database.</span>';
 									} else {
 										$msgs[] = '&nbsp;&nbsp;Template <b>' . $blocks[ $i ]['template'] . '</b> inserted to the database.';
-										//if ($xoopsConfig['default_theme'] == 'default') {
-										//  if (!xoops_template_touch($tplfile[0]->getVar('tpl_id'))) {
-										//      $msgs[] = '&nbsp;&nbsp;<span style="color:#ff0000;">ERROR: Could not recompile template <b>'.$blocks[$i]['template'].'</b>.</span>';
-										//  } else {
-										//      $msgs[] = '&nbsp;&nbsp;Template <b>'.$blocks[$i]['template'].'</b> recompiled.';
-										//  }
-										//}
 									}
 								}
 							}

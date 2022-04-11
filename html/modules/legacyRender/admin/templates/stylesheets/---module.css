@@ -22,50 +22,50 @@
 }
 
 /* List Table */
-.legacyRender_list_id {
+.list_id {
 	text-align:center;
 }
-.legacyRender_list_control {
+.list_control {
 	text-align:center;
 }
-.legacyRender_list_title {
+.list_title {
 	text-align:left;
 	padding-left:5px;
 	font-weight:bold;
 }
-.legacyRender_list_name {
+.list_name {
 	text-align:left;
 	padding-left:5px;
 }
-.legacyRender_list_text {
+.list_text {
 	text-align:left;
 	padding-left:5px;
 }
-.legacyRender_list_text a:hover {
+.list_text a:hover {
 	text-decoration:underline;
 	color:#333366;
 }
 
-.legacyRender_list_email {
+.list_email {
 	text-align:center;
 }
-.legacyRender_list_description {
+.list_description {
 	text-align:left;
 	font-weight:normal;
 }
-.legacyRender_list_date {
+.list_date {
 	text-align:center;
 }
-.legacyRender_list_select {
+.list_select {
 	text-align:center;
 }
-.legacyRender_list_type {
+.list_type {
 	text-align:center;
 }
-.legacyRender_list_number {
+.list_number {
 	text-align:right;
 	padding-right:5px;
 }
-.legacyRender_list_image {
+.list_image {
 	text-align:center;
 }

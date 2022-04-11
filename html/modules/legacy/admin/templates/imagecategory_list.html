@@ -152,17 +152,17 @@
             <{else}>
         <tr>
             <{/if}>
-            <td class="legacy_list_id"><{$obj->getShow('imgcat_id')}></td>
-            <td class="legacy_list_title">
+            <td class="list_id"><{$obj->getShow('imgcat_id')}></td>
+            <td class="list_title">
                 <input type="text" size="12" name="name[<{$obj->getShow('imgcat_id')}>]" value="<{$obj->getShow('imgcat_name')}>">
             </td>
-            <td class="legacy_list_number">
-                <input type="text" size="6" maxlength="10" name="maxsize[<{$obj->getShow('imgcat_id')}>]" value="<{$obj->getShow('imgcat_maxsize')}>" class=legacy_list_number></td>
-            <td class="legacy_list_number">
-                <input type="text" size="4" maxlength="6" name="maxwidth[<{$obj->getShow('imgcat_id')}>]" value="<{$obj->getShow('imgcat_maxwidth')}>" class=legacy_list_number></td>
-            <td class="legacy_list_number">
-                <input type="text" size="4" maxlength="6" name="maxheight[<{$obj->getShow('imgcat_id')}>]" value="<{$obj->getShow('imgcat_maxheight')}>" class=legacy_list_number></td>
-            <td class="legacy_list_select">
+            <td class="list_number">
+                <input type="text" size="6" maxlength="10" name="maxsize[<{$obj->getShow('imgcat_id')}>]" value="<{$obj->getShow('imgcat_maxsize')}>" class="list_number"></td>
+            <td class="list_number">
+                <input type="text" size="4" maxlength="6" name="maxwidth[<{$obj->getShow('imgcat_id')}>]" value="<{$obj->getShow('imgcat_maxwidth')}>" class="list_number"></td>
+            <td class="list_number">
+                <input type="text" size="4" maxlength="6" name="maxheight[<{$obj->getShow('imgcat_id')}>]" value="<{$obj->getShow('imgcat_maxheight')}>" class="list_number"></td>
+            <td class="list_select">
                 <input type="checkbox" name="display[<{$obj->getShow('imgcat_id')}>]" value="1" <{if $obj->getShow('imgcat_display')}>checked="checked"<{/if}>>
             </td>
             <td class="legacy_list_order">

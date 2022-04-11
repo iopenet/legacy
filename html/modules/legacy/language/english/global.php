@@ -34,10 +34,11 @@ const _NEWESTFIRST = 'Newest First';
 const _MORE = 'more...';
 const _MULTIPAGE = 'To have your article span multiple pages, insert the word <span style="color:red">[pagebreak]</span> (with brackets) in the article.';
 const _IFNOTRELOAD = "If the page does not automatically reload, please [ <a href='%s'>click here</a> ]";
-const _WARNINSTALL2 = 'WARNING: Directory %s exists on your server. Please remove this directory for security reasons.';
-const _WARNINWRITEABLE = 'WARNING: File %s is writeable by the server. Please change the permission of this file for security reasons. in Unix (444), in Win32 (read-only)';
+const _WARNINSTALL2 = "WARNING: Directory {0} exists on your server.<br/> Add a password to the file install/passwd.php or remove this directory for security reasons.";
+const _WARNINWRITEABLE = "WARNING: File {0} is writeable by the server.<br/> Change permissions of this file for security reasons. Unix (0444), Windows (read-only)";
 const _WARNPHPENV = 'WARNING: php.ini parameter "%s" is set to "%s". %s';
 const _WARNSECURITY = '(It may cause a security problem)';
+const _WARN_INSTALL_TIP = 'Activate the Preload — For development purposes only!<br>The preload allows to keep mainfile unchanged and install directory.<br>Remember to chomd and delete install to prevent any security problem.';
 
 //%%%%%%	File Name themeuserpost.php 	%%%%%
 const _PROFILE = 'Profile';

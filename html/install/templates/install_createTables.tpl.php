@@ -6,6 +6,4 @@ foreach ( $this->v( 'reports' ) as $report ) {
 
 }
 
-?>
-
-<div class="confirmOk"><?php $this->e( 'message' ) ?></div>
+$this->e( 'message' );

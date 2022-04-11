@@ -14,14 +14,17 @@ include_once './class/dbmanager.php';
 $dbm = new db_manager();
 
 $tables = [];
-
+// @todo @gigamaster replace deprecated
 $result = $dbm->queryFromFile( './sql/' . ( ( XOOPS_DB_TYPE === 'mysqli' ) ? 'mysql' : XOOPS_DB_TYPE ) . '.structure.sql' );
 
 $wizard->assign( 'reports', $dbm->report() );
+
 if ( ! $result ) {
-	$wizard->assign( 'message', _INSTALL_L114 );
+	$wizard->assign( 'message', '<div class="confirmError">'. _INSTALL_L114 .'</div>' );
 	$wizard->setBack( [ 'start', _INSTALL_L103 ] );
 } else {
-	$wizard->assign( 'message', _INSTALL_L115 );
+    // Database tables created
+	$wizard->assign( 'message', '<div class="confirmInfo">'. _INSTALL_L115 .'</div>' );
 }
+
 $wizard->render( 'install_createTables.tpl.php' );

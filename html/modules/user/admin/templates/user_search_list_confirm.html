@@ -46,10 +46,10 @@
         <{foreach item=uid from=$uids}>
         <{if $uid != 1}>
         <tr class="even">
-            <td class="user_list_id"><{$uid}></td>
-            <td class="user_list_title"><{$userObjects[$uid]->getShow('uname')}></td>
-            <td class="user_list_name"><{$userObjects[$uid]->get('name')}></td>
-            <td class="user_list_number">
+            <td class="list_id"><{$uid}></td>
+            <td class="list_title"><{$userObjects[$uid]->getShow('uname')}></td>
+            <td class="list_name"><{$userObjects[$uid]->get('name')}></td>
+            <td class="list_number">
                 <{if $actionForm->get('posts',$uid) == $userObjects[$uid]->get('posts')}>
                 <{$actionForm->get('posts',$uid)|xoops_escape}>
                 <{else}>
@@ -57,7 +57,7 @@
                 <{/if}>
                 <input type="hidden" name="posts[<{$uid}>]" value="<{$actionForm->get('posts',$uid)|xoops_escape:edit}>">
             </td>
-            <td class="user_list_order">
+            <td class="list_order">
                 <{if $actionForm->get('level',$uid) == $userObjects[$uid]->get('level')}>
                 <{$actionForm->get('level',$uid)|xoops_escape}>
                 <{else}>
@@ -65,7 +65,7 @@
                 <{/if}>
                 <input type="hidden" name="level[<{$uid}>]" value="<{$actionForm->get('level',$uid)|xoops_escape:edit}>">
             </td>
-            <td class="user_list_select">
+            <td class="list_select">
                 <b class="user_module_error">
                     <{if $actionForm->get('delete',$uid) == 1}>
                     <{$smarty.const._YES}>

@@ -26,7 +26,7 @@ class Legacy_SystemModuleInstall extends XCube_ActionFilter
     }
 
     /**
-     * Checks whether the site is closed now, and whether all of must modules
+     * Checks whether the site is closed now, and whether all of required modules
      * have been installed. This function is called through delegates.
      * @param $principal
      * @param $controller

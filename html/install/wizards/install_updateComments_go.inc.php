@@ -14,10 +14,13 @@ include '../mainfile.php';
 include '../class/xoopscomments.php';
 include '../include/comment_constants.php';
 
+echo '<h2>wizard/install_updateComments_go.inc</h2>';
+
 $module_handler    =& xoops_gethandler( 'module' );
 $old_commentd_mods = [ 'news' => 'comments', 'xoopspoll' => 'xoopspollcomments' ];
 $title             = _INSTALL_L147;
 $content           = '';
+
 foreach ( $old_commentd_mods as $module => $com_table ) {
 	$moduleobj =& $module_handler->getByDirname( $module );
 	if ( is_object( $moduleobj ) ) {
@@ -30,7 +33,8 @@ foreach ( $old_commentd_mods as $module => $com_table ) {
 		$last_comment =& $comment_handler->getObjects( $criteria );
 		$offset       = ( is_array( $last_comment ) && count( $last_comment ) > 0 ) ? $last_comment[0]->getVar( 'com_id' ) : 0;
 		$xc           = new XoopsComments( $xoopsDB->prefix( $com_table ) );
-		$top_comments =& $xc->getAllComments( [ 'pid=0' ] );
+		// @todo ref $top_comments =& $xc->getAllComments( [ 'pid=0' ] );
+        $top_comments = $xc->getAllComments( [ 'pid=0' ] );
 
 		foreach ( $top_comments as $tc ) {
 			$sql = sprintf( "INSERT INTO %s (com_id, com_pid, com_modid, com_icon, com_title, com_text, com_created, com_modified, com_uid, com_ip, com_sig, com_itemid, com_rootid, com_status, dohtml, dosmiley, doxcode, doimage, dobr) VALUES (%u, %u, %u, '%s', '%s', '%s', %u, %u, %u, '%s', %u, %u, %u, %u, %u, %u, %u, %u, %u)", $xoopsDB->prefix( 'xoopscomments' ), $tc->getVar( 'comment_id' ) + $offset, 0, $moduleobj->getVar( 'mid' ), '', addslashes( $tc->getVar( 'subject', 'n' ) ), addslashes( $tc->getVar( 'comment', 'n' ) ), $tc->getVar( 'date' ), $tc->getVar( 'date' ), $tc->getVar( 'user_id' ), $tc->getVar( 'ip' ), 0, $tc->getVar( 'item_id' ), $tc->getVar( 'comment_id' ) + $offset, XOOPS_COMMENT_ACTIVE, 0, 1, 1, 1, 1 );

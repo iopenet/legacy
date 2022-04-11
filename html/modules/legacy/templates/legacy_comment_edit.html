@@ -27,7 +27,7 @@
         <tbody>
         <tr>
             <td class="head"><{$smarty.const._MD_LEGACY_LANG_COMMENT_RULE}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{if $xoopsModuleConfig.com_rule == XOOPS_COMMENT_APPROVEALL}>
                 <{$smarty.const._CM_COMAPPROVEALL}>
             <{elseif $xoopsModuleConfig.com_rule == XOOPS_COMMENT_APPROVEUSER}>
@@ -39,13 +39,13 @@
         </tr>
         <tr>
             <td class="head"><{$smarty.const._MD_LEGACY_LANG_COM_TITLE}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{xoops_input type=text name=com_title value=$actionForm->get('com_title') size=50 maxlength=191}>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._MD_LEGACY_LANG_COM_ICON}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{foreach item=icon from=$subjectIcons}>
             <label><{xoops_input type=radio name=com_icon value=$icon->get('filename') default=$actionForm->get('filename')}>
                 <img src="<{$xoops_url}>/images/subject/<{$icon->getShow('filename')}>">
@@ -55,13 +55,13 @@
         </tr>
         <tr>
             <td class="head"><{$smarty.const._MD_LEGACY_LANG_COM_TEXT}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{xoops_dhtmltarea type=text rows=15 cols=60 name=com_text value=$actionForm->get('com_text')}>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._MD_LEGACY_LANG_OPTION}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{if $xoops_isadmin}>
             <label><{xoops_input type=checkbox name=dohtml value=1 default=$actionForm->get('dohtml')}> <{$smarty.const._MD_LEGACY_LANG_DOHTML}></label>
             <br>

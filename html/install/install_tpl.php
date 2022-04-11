@@ -6,7 +6,7 @@
     Version : 1.0.0
     Author : Nuno Luciano aka Gigamaster
     Date : 2020-04-29
-    URL : https://github.com/xoopscube/xcl/
+    URL : https://github.com/xoopscube/
 =========================== -->
 <head>
 
@@ -51,17 +51,13 @@
 
     <div class="container row">
 
-        <header class="column">
+        <header>
             <nav>
-
                 <h2>
                     <span class="logo">
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.5em"
-                             height="1.5em" style="color: rgb(250, 206, 116); transform: rotate(360deg);"
-                             preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                        <path
-                                d="M21.406 6.086l-9-4a1.001 1.001 0 0 0-.813 0l-9 4c-.02.009-.034.024-.054.035c-.028.014-.058.023-.084.04c-.022.015-.039.034-.06.05a.87.87 0 0 0-.19.194c-.02.028-.041.053-.059.081a1.119 1.119 0 0 0-.076.165c-.009.027-.023.052-.031.079A1.013 1.013 0 0 0 2 7v10c0 .396.232.753.594.914l9 4c.13.058.268.086.406.086a.997.997 0 0 0 .402-.096l.004.01l9-4A.999.999 0 0 0 22 17V7a.999.999 0 0 0-.594-.914zM12 4.095L18.538 7L12 9.905l-1.308-.581L5.463 7L12 4.095zM4 16.351V8.539l7 3.111v7.811l-7-3.11zm9 3.11V11.65l7-3.111v7.812l-7 3.11z"
-                                fill="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.5em" height="1.5em" viewBox="0 0 24 24">
+                        <path d="M21.406 6.086l-9-4a1.001 1.001 0 0 0-.813 0l-9 4c-.02.009-.034.024-.054.035c-.028.014-.058.023-.084.04c-.022.015-.039.034-.06.05a.87.87 0 0 0-.19.194c-.02.028-.041.053-.059.081a1.119 1.119 0 0 0-.076.165c-.009.027-.023.052-.031.079A1.013 1.013 0 0 0 2 7v10c0 .396.232.753.594.914l9 4c.13.058.268.086.406.086a.997.997 0 0 0 .402-.096l.004.01l9-4A.999.999 0 0 0 22 17V7a.999.999 0 0 0-.594-.914zM12 4.095L18.538 7L12 9.905l-1.308-.581L5.463 7L12 4.095zM4 16.351V8.539l7 3.111v7.811l-7-3.11zm9 3.11V11.65l7-3.111v7.812l-7 3.11z"
+                              fill="currentColor">
                         </path></svg>
                     </span>
                     XCL Installer Wizard
@@ -86,22 +82,18 @@
         </header>
 
 
-        <main class="column2x">
-
-			<?php if ( ! empty( $title ) ) { ?>
-
-                <h3><?php echo $title; ?></h3>
-
-			<?php } ?>
-
-            <div class="maincontents"><?php echo $content; ?></div>
+        <main>
+			<?php if ( ! empty( $title ) ) {
+                echo "<h2> $title </h2>";
+			} ?>
+            <div class="wizard-content">
+                <?php echo $content; ?>
+            </div>
 
             <footer>
-
-				<?php echo b_back( $b_back ); ?>&nbsp;&nbsp;&nbsp;
-				<?php echo b_reload( $b_reload ); ?>&nbsp;&nbsp;&nbsp;
+				<?php echo b_back( $b_back ); ?>&nbsp;&nbsp;
+				<?php echo b_reload( $b_reload ); ?>&nbsp;&nbsp;
 				<?php echo b_next( $b_next ); ?>
-
             </footer>
         </main>
 
@@ -110,5 +102,57 @@
 </form>
 
 
+<style>
+    .notification {
+        color           : hsl(219, 27%, 65%);
+        display         : flex;
+        flex-basis      : 100%;
+        flex-direction  : row-reverse;
+        align-items     : center;
+        justify-content : center;
+        float           : none!important;
+    }
+    .runtime {
+        background: hsl(218, 15%, 25%);
+        border:1px dotted hsl(220, 15%, 16%);
+        border-radius: 5px;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.20);
+        color: #D3D7DEFF;
+        display: none;
+        margin:1rem auto;
+        padding: .25rem .5rem;
+        text-align: center;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        width: 270px;
+        min-width: 240px;
+        z-index: 1000;
+    }
+
+</style>
+<div class="notification runtime">Loading...</div>
+<script>
+    // Notify
+    $( 'a[class^="wizard-"],button[class^="wizard-"]' ).on( "click", function() {
+        $('div.runtime').fadeIn( 500 ).delay( 5000 ).fadeOut( 500 );
+    });
+    // Click toggle all-check
+    $('#all-check').click(function(event) {
+        if(this.checked) {
+            // Iterate each checkbox
+            $(':checkbox').each(function() {
+                this.checked = true;
+            });
+        } else {
+            $(':checkbox').each(function() {
+                this.checked = false;
+            });
+        }
+    });
+</script>
 </body>
 </html>

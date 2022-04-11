@@ -29,20 +29,20 @@
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACYRENDER_LANG_TPLSET_NAME}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <b><{$object->getShow('tplset_name')}></b> &raquo; &raquo;
             <{xoops_input type=text name=tplset_name value=$actionForm->get('tplset_name') size=30 maxlength=50}>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACYRENDER_LANG_TPLSET_DESC}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{xoops_input type=text name=tplset_desc value=$object->get('tplset_desc') size=50 maxlength=255}>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACYRENDER_LANG_TPLSET_CREDITS}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{xoops_textarea name=tplset_credits rows=5 cols=50 value=$actionForm->get('tplset_credits')}>
             </td>
         </tr>

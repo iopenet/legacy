@@ -43,8 +43,8 @@
         <tbody>
         <{foreach item=imid from=$imids}>
         <tr class="even">
-            <td class="legacy_list_id"><{$imid}></td>
-            <td class="legacy_list_title">
+            <td class="list_id"><{$imid}></td>
+            <td class="list_title">
                 <{if $actionForm->get('nicename',$imid) == $imageObjects[$imid]->get('image_nicename')}>
                 <{$actionForm->get('nicename',$imid)|xoops_escape}>
                 <{else}>
@@ -52,8 +52,8 @@
                 <{/if}>
                 <input type="hidden" name="nicename[<{$imid}>]" value="<{$actionForm->get('nicename',$imid)|xoops_escape:edit}>">
             </td>
-            <td class="legacy_list_type"><{$imageObjects[$imid]->getShow('image_mimetype')}></td>
-            <td class="legacy_list_select">
+            <td class="list_type"><{$imageObjects[$imid]->getShow('image_mimetype')}></td>
+            <td class="list_select">
                 <{if $actionForm->get('display',$imid)|intval == $imageObjects[$imid]->get('image_display')}>
                 <{if $imageObjects[$imid]->get('image_display') == 1}>
                 <{$smarty.const._YES}>
@@ -81,7 +81,7 @@
                     <input type="hidden" name="display[<{$imid}>]" value="0">
                     <{/if}>
             </td>
-            <td class="legacy_list_number">
+            <td class="list_number">
                 <{if $actionForm->get('weight',$imid) == $imageObjects[$imid]->get('image_weight')}>
                 <{$actionForm->get('weight',$imid)|xoops_escape}>
                 <{else}>
@@ -89,7 +89,7 @@
                 <{/if}>
                 <input type="hidden" name="weight[<{$imid}>]" value="<{$actionForm->get('weight',$imid)|xoops_escape:edit}>">
             </td>
-            <td class="legacy_list_select">
+            <td class="list_select">
             <{if $actionForm->get('delete',$imid) == 1}>
             <b class="message-warning">
                 <{$smarty.const._YES}>

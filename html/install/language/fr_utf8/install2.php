@@ -1,15 +1,16 @@
 <?php
+// Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
 
-define( "_INSTALL_WEBMASTER", "Webmestres" );
-define( "_INSTALL_WEBMASTERD", "Webmestres du site" );
-define( "_INSTALL_REGUSERS", "Utilisateurs" );
-define( "_INSTALL_REGUSERSD", "Groupe d'utilisateurs enregistrés" );
-define( "_INSTALL_ANONUSERS", "Anonymes" );
-define( "_INSTALL_ANONUSERSD", "Groupe de visiteurs anonymes" );
+const _INSTALL_WEBMASTER = "Webmestres" ;
+const _INSTALL_WEBMASTERD = "Webmestres du site" ;
+const _INSTALL_REGUSERS = "Utilisateurs" ;
+const _INSTALL_REGUSERSD = "Groupe d'utilisateurs enregistrés" ;
+const _INSTALL_ANONUSERS = "Anonymes" ;
+const _INSTALL_ANONUSERSD = "Groupe de visiteurs anonymes" ;
 
-define( "_INSTALL_ANON", "Anonyme" );
+const _INSTALL_ANON = "Anonyme" ;
 
-define( "_INSTALL_DISCLMR", "
+const _INSTALL_DISCLMR = "
 Les administrateurs et modérateurs de ce site s'efforceront de supprimer ou
 éditer tous les messages à caractère répréhensible aussi rapidement que possible.
 Toutefois, il leur est impossible de passer en revue tous les messages.
@@ -35,4 +36,4 @@ uniquement à améliorer le confort d'utilisation.
 L'adresse e-mail est uniquement utilisée afin de confirmer les détails de votre enregistrement
 ainsi que votre mot de passe (et aussi pour vous envoyer un nouveau mot de passe dans la cas
 où vous l'oublieriez).
-En vous enregistrant, vous vous portez garant du fait d'être en accord avec le règlement ci-dessus." );
+En vous enregistrant, vous vous portez garant du fait d'être en accord avec le règlement ci-dessus." ;

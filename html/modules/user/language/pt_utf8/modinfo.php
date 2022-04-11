@@ -1,5 +1,9 @@
 <?php
 // // Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
+// ## XOOPS Cube Legacy - Versão em Português
+// ## Por............: Mikhail Miguel
+// ## E-mail.........: mikhail.miguel@gmail.com
+// License http://creativecommons.org/licenses/by/2.5/br/
 
 const _MI_USER_ADMENU_AVATAR_MANAGE = "Avatares";
 const _MI_USER_ADMENU_GROUP_LIST = "Grupos e permissões";
@@ -61,18 +65,18 @@ const _MI_USER_CONF_USERCOOKIE = "Nome para os <em>cookies</em> dos associados."
 const _MI_USER_CONF_USERCOOKIE_DESC = "Este <em>cookie</em> apenas contém o codinome e é guardado no computador do associado por um ano (se o utilizador desejar). Com isto, o codinome será inserido automaticamente no formulário de entrada.";
 const _MI_USER_KEYWORD_AVATAR_MANAGE = "avatar personalizado sistema lista editar alterar remover";
 const _MI_USER_KEYWORD_CREATE_AVATAR = "Enviar avatar";
-const _MI_USER_KEYWORD_CREATE_GROUP = "Criar grupo";
-const _MI_USER_KEYWORD_CREATE_RANK = "Criar graduação";
-const _MI_USER_KEYWORD_CREATE_USER = "Criar cadastro";
-const _MI_USER_KEYWORD_GROUP_LIST = "listar editar modificar remover utilizador permissão acrescentar remover associado";
+const _MI_USER_KEYWORD_CREATE_GROUP = "Adicionar grupo";
+const _MI_USER_KEYWORD_CREATE_RANK = "Adicionar graduação";
+const _MI_USER_KEYWORD_CREATE_USER = "Adicionar utilisador";
+const _MI_USER_KEYWORD_GROUP_LIST = "listar adicionar criar editar modificar remover utilizador membro conta ranque permissão acrescentar remover associado";
 const _MI_USER_KEYWORD_MAILJOB_LINK_LIST = "Mailjob lista de links";
 const _MI_USER_KEYWORD_MAILJOB_MANAGE = "Gestor de mala-direta";
 const _MI_USER_KEYWORD_USER_LIST = "Listar associados";
 const _MI_USER_KEYWORD_USER_SEARCH = "Localizar associado";
 const _MI_USER_LANG_MAILJOB_LINK_LIST = "Lista de links Mailjob ";
 const _MI_USER_MENU_CREATE_AVATAR = "Acrescentar avatar";
-const _MI_USER_MENU_CREATE_GROUP = "Criar grupo";
-const _MI_USER_MENU_CREATE_RANK = "Criar graduação";
-const _MI_USER_MENU_CREATE_USER = "Criar cadastro";
-const _MI_USER_NAME = "Cadastros";
-const _MI_USER_NAME_DESC = "Módulo de gerenciamento de associados.";
+const _MI_USER_MENU_CREATE_GROUP = "Novo grupo";
+const _MI_USER_MENU_CREATE_RANK = "Nova graduação";
+const _MI_USER_MENU_CREATE_USER = "Novo utilisaor";
+const _MI_USER_NAME = "Utilisadores";
+const _MI_USER_NAME_DESC = "Módulo de gerenciamento de utilisadores.";

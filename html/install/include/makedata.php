@@ -49,9 +49,9 @@ function make_data( &$dbm, &$cm, $adminname, $adminpass, $adminmail, $language, 
 	$dbm->insert( 'config', " VALUES (3, 0, 1, 'language', '_MD_AM_LANGUAGE', '" . addslashes( $language ) . "', '_MD_AM_LANGUAGEDSC', 'language', 'other', 4)" );
 	$dbm->insert( 'config', " VALUES (4, 0, 1, 'startpage', '_MD_AM_STARTPAGE', '--', '_MD_AM_STARTPAGEDSC', 'startpage', 'other', 6)" );
 	//Get Server timezone Setting
-	if ( PHP_VERSION_ID >= 50100 && function_exists( 'date_default_timezone_set' ) ) {
+	//if ( PHP_VERSION_ID >= 50100 && function_exists( 'date_default_timezone_set' ) ) {
 		date_default_timezone_set( $timezone );
-	}
+	//}
 	$time_diff_val = date( 'O' );
 	$time_diff     = (float) ( $time_diff_val[0] . ( substr( $time_diff_val, 1, 2 ) + substr( $time_diff_val, 3, 2 ) / 60 ) );
 	$dbm->insert( 'config', " VALUES (5, 0, 1, 'server_TZ', '_MD_AM_SERVERTZ', '" . $time_diff . "', '_MD_AM_SERVERTZDSC', 'timezone', 'float', 8)" );

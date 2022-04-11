@@ -1,16 +1,16 @@
 <?php
+// Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
 
-define( '_INSTALL_WEBMASTER', 'サイト管理者' );
-define( '_INSTALL_WEBMASTERD', 'サイト管理者グループ' );
-define( '_INSTALL_REGUSERS', '登録ユーザ' );
-define( '_INSTALL_REGUSERSD', '登録ユーザグループ' );
-define( '_INSTALL_ANONUSERS', 'ゲスト' );
-define( '_INSTALL_ANONUSERSD', 'ゲストユーザグループ' );
+const _INSTALL_WEBMASTER = 'サイト管理者' ;
+const _INSTALL_WEBMASTERD = 'サイト管理者グループ' ;
+const _INSTALL_REGUSERS = '登録ユーザ' ;
+const _INSTALL_REGUSERSD = '登録ユーザグループ' ;
+const _INSTALL_ANONUSERS = 'ゲスト' ;
+const _INSTALL_ANONUSERSD = 'ゲストユーザグループ' ;
 
-define( '_INSTALL_ANON', 'ゲスト' );
+const _INSTALL_ANON = 'ゲスト' ;
 
-define(
-	'_INSTALL_DISCLMR',
+const _INSTALL_DISCLMR =
 	'本規約は、当サイトにより提供されるコンテンツの利用条件を定めるものです。以下の利用条件をよくお読みになり、これに同意される場合にのみご登録いただきますようお願いいたします。
 
 当サイトを利用するにあたり、以下に該当する又はその恐れのある行為を行ってはならないものとします。 
@@ -29,5 +29,4 @@ define(
 【免責】
 
 利用者が当サイト及び当サイトに関連するコンテンツ、リンク先サイトにおける一切のサービス等をご利用されたことに起因または関連して生じた一切の損害（間接的であると直接的であるとを問わない）について、当サイトは責任を負いません。 
-'
-);
+';

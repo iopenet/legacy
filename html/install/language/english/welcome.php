@@ -1,9 +1,10 @@
 <?php
-// $Id: welcome.php,v 1.4 2008/09/22 13:52:22 kilica Exp $
+// v2.3.0 2021/05/15 @gigamaster XCL-PHP7
+
 $content =
 	'<div class="ui-tab-wrap">
 	<input type="radio" id="ui-tab1" name="ui-tabGroup1" class="ui-tab" checked="">
-	<label for="ui-tab1">About</label>
+	<label for="ui-tab1">XOOPSCube</label>
 
 	<input type="radio" id="ui-tab2" name="ui-tabGroup1" class="ui-tab">
 	<label for="ui-tab2">License</label>
@@ -20,12 +21,10 @@ $content =
 
     <div class="ui-tab-content">
     <p>
-    The Cube Core is released under the terms of the <a href="https://github.com/xoopscube/legacy/blob/master/docs/bsd_licenses.txt" target="_blank" rel="external">New BSD License</a> and is free to use and modify.
-    It is free to redistribute as long as you abide by the distribution terms of the New BSD License.
+    The Cube Core is released under the terms of the <a href="https://github.com/xoopscube/legacy/blob/2.3/BSD_license.txt" target="_blank">New BSD License</a>
     </p>
     <p>
-    The XCL modules are released under the terms of the <a href="https://github.com/xoopscube/xcl/blob/master/docs/GPL_V2.txt" target="_blank" rel="external">GNU General Public License (GPL)</a> and is free to use and modify.
-    It is free to redistribute as long as you abide by the distribution terms of the GPL.
+    The XCL modules are released under the terms of the <a href="https://github.com/xoopscube/legacy/blob/2.3/gpl-2.0_license.md" target="_blank">GNU General Public License (GPL)</a>
     </p>
     </div>
 
@@ -40,15 +39,16 @@ $content =
     </div>
 </div>
     <h3>Checklist for Installation</h3>
-    <p><input type="checkbox" required=""> Set up Web Server, PHP7 and SQL Database.
-    </p><p><input type="checkbox" required=""> Database using <em>utf8mb4_general_ci</em> collation, user and password.
+    <p><input type="checkbox" required> Set up Web Server, PHP7 and SQL Database.
+    </p><p><input type="checkbox" required> Database with charset <em>utf8mb4_general_ci</em>, user and password.
     </p><p>Make the directories  and file writabale :
-    </p><p><input type="checkbox" required=""> html/uploads/
-    </p><p><input type="checkbox" required=""> xoops_trust_path/cache/
-    </p><p><input type="checkbox" required=""> xoops_trust_path/templates_c/
-    </p><p><input type="checkbox" required=""> html/mainfile.php
+    </p><p><input type="checkbox" required> <code>html/uploads/</code>
+    </p><p><input type="checkbox" required> <code>xoops_trust_path/cache/</code>
+    </p><p><input type="checkbox" required> <code>xoops_trust_path/templates_c/</code>
+    </p><p><input type="checkbox" required> <code>html/mainfile.php</code>
     </p><p>Web Browser Settings
-    </p><p><input type="checkbox" required=""> Enable Cookies and JavaScript options.
-    </p><h3>Installation</h3>
-    <p>Click next and follow further instructions given by the Installer Wizard.</p>
+    </p><p><input type="checkbox" required> Enable Cookies and JavaScript options.
+    </p><h3>Ready to Install</h3>
+    <p><input type="checkbox" class="all-check" name="all-check" id="all-check"> All checked</input></p>
+    <div class="confirmInfo">Click next and follow further instructions given by the Installer Wizard.</div>
 ';

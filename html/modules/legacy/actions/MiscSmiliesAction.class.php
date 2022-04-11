@@ -16,6 +16,7 @@ if (!defined('XOOPS_ROOT_PATH')) {
 require_once XOOPS_MODULE_PATH . '/legacy/class/AbstractListAction.class.php';
 require_once XOOPS_MODULE_PATH . '/legacy/forms/SmilesFilterForm.class.php';
 
+
 class Legacy_MiscSmiliesAction extends Legacy_AbstractListAction
 {
     /**
@@ -31,8 +32,9 @@ class Legacy_MiscSmiliesAction extends Legacy_AbstractListAction
 
     public function &_getFilterForm()
     {
-        $filter =new Legacy_SmilesFilterForm($this->_getPageNavi(), $this->_getHandler());
-        return $filter;
+//        $filter =new Legacy_SmilesFilterForm($this->_getPageNavi(), $this->_getHandler());
+//        return $filter;
+        return new Legacy_SmilesFilterForm($this->_getPageNavi(), $this->_getHandler());
     }
 
     public function _getBaseUrl()

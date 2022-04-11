@@ -1,39 +1,57 @@
 <?php
-// $Id$
-// $HeadURL: https://xoopscube.svn.sourceforge.net/svnroot/xoopscube/Package_Legacy/trunk/extras/extra_languages/pt_utf8/install/language/pt_utf8/welcome.php $
-// License http://creativecommons.org/licenses/by/2.5/br/
-// ############################################################### //
+// v2.3.0 2021/05/15 @gigamaster XCL-PHP7
+
 // ## XOOPS Cube Legacy - Versão em Português
-// ############################################################### //
 // ## Por............: Mikhail Miguel
 // ## Website........: http://xoops.net.br
 // ## E-mail.........: mikhail.miguel@gmail.com
-// ## AOL............: mikhailmiguel
-// ## MSN............: mikhailmiguel@msn.com
-// ## Orkut..........: 15440532260129226492
-// ## Skype..........: mikhailmiguel
-// ## Yahoo!.........: mikhail.miguel@yahoo.com.br
-// *************************************************************** //
-$content = "<div style='text-align: left;'>
-<u><b>O que é?</b></u>
-XOOPS Cube é um sistema de publicação gratuito para a criação de portais dinâmicos. É de código livre, e concebido usando programação <a  href='http://www.php.net/' rel='homepage nofollow' title='PHP'>PHP</a> orientada a objetos (OO).
-O XOOPS Cube é ideal para a criação <i>sites</i> de notícias, intranets, ou mesmo weblogs, de pequena a grande escala. O XOOPS Cube é distribuido sob os termos da <a href='http://pt.wikipedia.org/wiki/Licença_BSD' rel='external nofollow' target='_tab'>Nova Licença BSD</a>, o que provê a liberdade de ser utilizado e modificado desde que sejam cumpridos os termos de distribuição dessa <a href='https://github.com/xoopscube/legacy/blob/master/docs/bsd_licenses.txt' target='_tab'>licença</a>.
+// ## License http://creativecommons.org/licenses/by/2.5/br/
 
-<u><b>Requisitos:</b></u>
-<ul>
-<li>Servidor WEB (<a href='http://www.lighttpd.net/' rel='external nofollow' target='_tab'>Lighttpd</a>, <a href='http://www.apache.org/' rel='external nofollow' target='_tab'>Apache</a>, <a  href='http://www.microsoft.com/iis' rel='homepage nofollow' title='internet Information Services'>IIS</a>, <a  href='http://en.wikipedia.org/wiki/Roxen_(web_server)' rel='wikipedia nofollow' title='Roxen (web server)'>Roxen</a>, etc).</li>
-<li><a href='http://br.php.net/downloads.php' rel='external nofollow' target='_tab'>PHP</a> <a href='http://www.gophp5.org/' rel='external nofollow' target='_tab'>5.0</a> ou superior.</li>
-<li>Banco de dados <a href='http://www.mysql.com/' rel='external nofollow' target='_tab'>MySQL</a> v4.4</li>
-</ul>
-<u><b>Antes de instalar:</b></u>
-<ul>
-<li>Prepare o servidores web e mysql.</li>
-<li>Tenha em mãos as seguintes informações sobre o seu banco de dados: endereço do servidor mysql (<i>hostname</i>), nome do banco de dados a ser utilizado (<i>database name</i>), nome do utilizador do banco de dados (<i>mysql username</i>), e senha do banco de dados (<i>password</i>).</li>
-<li>Conceda permissões de escrita ao arquivo <q>mainfile.php</q>; aos subdiretórios <q>cache</q> e <q>templates_c</q> localizados no diretório protegido XOOPS_TRUST_PATH, e ao subdiretório <q>uploads</q>, localizado no diretório da instalação.</li>
-<li>Habilite os recursos de <q>JavaScript</q> e <q>Cookies</q> de seu navegador web.</li>
-<li>Tenha em mente que muitos aplicativos de segurança da internet, <q>firewall</q> ou antivírus podem impedir que o instalador do XOOPS Cube funcione da forma correta, caso não estejam devidamente configurados.</li>
-</ul>
-<u><b>Instalação:</b></u>
-Siga as indicações deste guia e clique em <q>Prosseguir</q> para continuar.</div>";
-//
-;
+$content =
+    '<div class="ui-tab-wrap">
+	<input type="radio" id="ui-tab1" name="ui-tabGroup1" class="ui-tab" checked="">
+	<label for="ui-tab1">XOOPSCube</label>
+
+	<input type="radio" id="ui-tab2" name="ui-tabGroup1" class="ui-tab">
+	<label for="ui-tab2">Licença</label>
+
+	<input type="radio" id="ui-tab3" name="ui-tabGroup1" class="ui-tab">
+    <label for="ui-tab3">Requisitos</label>
+
+    <div class="ui-tab-content">
+    <p><b>XCL</b> é uma <b>Plataforma de Aplicações Web</b> com uma arquitectura modular, uma ferramenta ideal para o desenvolvimento de websites comunitários dinâmicos 
+    de pequena a grande escala, portais intranet, corporativos, weblogs e muito mais.
+    </p>
+    </div>
+
+    <div class="ui-tab-content">
+    <p>
+    Cube Core é distribuido sob os termos da <a href="https://github.com/xoopscube/legacy/blob/2.3/BSD_license.txt" target="_blank">Nova Licença BSD</a>
+    </p>
+    <p>
+    XCL modules são distribuidos sob os termos de <a href="https://github.com/xoopscube/legacy/blob/2.3/gpl-2.0_license.md" target="_blank">GNU General Public License (GPL)</a>
+    </p>
+    </div>
+
+    <div class="ui-tab-content">
+    <p>
+    <a href="https://www.apache.org/" target="_blank" rel="external">Apache</a>, <a href="https://www.nginx.com/" target="_blank" rel="external">Nginx</a> or outro servidor WEB.<br>
+    <a href="https://www.php.net/" target="_blank" rel="external">PHP7</a> ou superior<br>
+    <a href="https://www.mysql.com/" target="_blank" rel="external">MySQL</a> or <a href="https://mariadb.org/" target="_blank" rel="external">MariaDB</a> Database 5.6.x ou superior
+    </p>
+    </div>
+</div>
+    <h3>Lista de verificação para instalação</h3>
+    <p><input type="checkbox" required> Servidor Web, PHP7 e Base de dados SQL.
+    </p><p><input type="checkbox" required> Base de dados, conjunto de carácteres codificadoscom <em>utf8mb4_general_ci</em>, utilizador e senha.
+    </p><p>Conceda permissões de escrita ao ficheiro e directórios :
+    </p><p><input type="checkbox" required> <code>html/uploads/</code>
+    </p><p><input type="checkbox" required> <code>xoops_trust_path/cache/</code>
+    </p><p><input type="checkbox" required> <code>xoops_trust_path/templates_c/</code>
+    </p><p><input type="checkbox" required> <code>html/mainfile.php</code>
+    </p><p>Configuração do Navegador Web
+    </p><p><input type="checkbox" required> Activar Cookies e opções JavaScript.
+    </p><h3>Pronto a instalar</h3>
+    <p><input type="checkbox" class="all-check" name="all-check" id="all-check"> Tudo verificado</input></p>
+    <div class="confirmInfo">Clique em seguinte e siga as instruções do assistente de instalação.</div>
+';

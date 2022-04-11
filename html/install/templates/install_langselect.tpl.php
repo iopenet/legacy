@@ -8,4 +8,13 @@
 	} ?>
 </select>
 
-<div class="confirmInfo"><?php echo _INSTALL_L128 ?></div>
+<noscript>
+    <style>
+        .nojs{
+            display: none; /* Do not display confirmation */
+        }
+    </style>
+    <div class="confirmError"><h2>JavaScript is disabled. Please enabled JavaScript.</h2></div>
+</noscript>
+
+<div class="confirmInfo nojs"><?php echo _INSTALL_L128 ?></div>

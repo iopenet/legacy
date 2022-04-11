@@ -2,9 +2,8 @@
 // Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
 // ## XOOPS Cube Legacy - Versão em Português
 // ## Por............: Mikhail Miguel
-// ## Website........: http://xoops.net.br
 // ## E-mail.........: mikhail.miguel@gmail.com
-// License http://creativecommons.org/licenses/by/2.5/br/
+// License https://creativecommons.org/licenses/by/2.5/br/
 
 const _MB_USER_DISPLAY = "Mostrar %s associados";
 const _MB_USER_DISPLAYA = "Mostrar os avatares dos associados";

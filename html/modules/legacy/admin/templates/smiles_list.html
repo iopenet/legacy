@@ -30,46 +30,21 @@
 <{/if}>
 
 
-<div layout="row center-justify" class="control-action">
-
+<{* ////— CONTROL-ACTION —\\\\ *}>
+<div layout="row center-justify md-column" class="control-action">
     <div>
+    <{include file="./components/smilies-search.html"}>
+    </div>
+    <div class="control-view">
         <a class="ui-btn ui-btn-small selected" href="index.php?action=SmilesEdit"><{$smarty.const._AD_LEGACY_LANG_SMILES_NEW}></a>
         <a class="ui-btn ui-btn-small selected" href="index.php?action=SmilesUpload"><{$smarty.const._AD_LEGACY_LANG_SMILES_UPLOAD}></a>
-    </div>
-
-    <div class="control-view">
-        <{* <button id="list" class="ui-btn" data-id="1" type="button" title="View List">
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
-                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                <path d="M9 5v4h12V5M9 19h12v-4H9m0-1h12v-4H9M4 9h4V5H4m0 14h4v-4H4m0-1h4v-4H4v4z" fill="currentColor"/>
-            </svg>
-        </button>
-
-        <button id="grid" class="ui-btn" data-id="2" type="button" title="View Grid">
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
-                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                <path d="M16 5v6h5V5m-11 6h5V5h-5m6 13h5v-6h-5m-6 6h5v-6h-5m-6 6h5v-6H4m0-1h5V5H4v6z"
-                      fill="currentColor"/>
-            </svg>
-        </button>
-
-        <button id="filter" class="ui-btn" type="button" data-id="3" onclick="slideToggle('.module-filter', this)"
-                title="View Filter">
-            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em"
-                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
-                <path d="M7 11h10v2H7zM4 7h16v2H4zm6 8h4v2h-4z" fill="currentColor"/>
-            </svg>
-        </button> *}>
-
         <button class="help-admin ui-btn" type='button' data-module='legacy' data-help-article='#help-smilies' title="<{$smarty.const._HELP}>">
             <span class="ui-icon ui-icon-help"></span>
         </button>
     </div>
 
 </div>
-
-
-<{include file="./components/smilies-search.html"}>
+<{* -----/ CONTROL-ACTION *}>
 
 
 <form name="smilesform" method="post" action="./index.php?action=SmilesList">
@@ -78,71 +53,91 @@
 <table class="outer">
    <thead>
     <tr>
-        <th><{$smarty.const._AD_LEGACY_LANG_ID}>
-            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.SMILES_SORT_KEY_ID}>">
-                <img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>">
-            </a>
-            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.SMILES_SORT_KEY_ID}>">
-                <img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>">
-            </a>
+        <th>
+            <{* ////— DROPDOWN SORT —\\\\ *}>
+            <div class="dropdown" id="filter-sort">
+
+                <a href="#" class="dropdown-toggle ui-btn" aria-label="sort filter">
+                    <img class="svg" src="<{$xoops_url}>/images/icons/list-tree.svg" width="24px" height="24px" alt="options">
+                </a>
+
+                <div class="dropdown-content drop-left" style="min-width: 280px; padding:.5em">
+                    <div layout="row center-justify inline">
+                        <h6><{$smarty.const._AD_LEGACY_LANG_ID}></h6>
+                        <div>
+                            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.SMILES_SORT_KEY_ID}>"
+                               class="btn" title="<{$smarty.const._ASCENDING}>">&uarr;</a>
+                            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.SMILES_SORT_KEY_ID}>"
+                               class="btn" title="<{$smarty.const._DESCENDING}>">&darr;</a>
+                        </div>
+                    </div>
+                    <div layout="row center-justify inline">
+                        <h6><{$smarty.const._MD_LEGACY_LANG_CODE}></h6>
+                        <div>
+                            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.SMILES_SORT_KEY_CODE}>"
+                               class="btn" title="<{$smarty.const._ASCENDING}>">&uarr;</a>
+                            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.SMILES_SORT_KEY_CODE}>"
+                               class="btn" title="<{$smarty.const._DESCENDING}>">&darr;
+                            </a>
+                        </div>
+                    </div>
+                    <div layout="row center-justify">
+                        <h6><{$smarty.const._MD_LEGACY_LANG_EMOTION}></h6>
+                        <div>
+                            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.SMILES_SORT_KEY_EMOTION}>"
+                               class="btn" title="<{$smarty.const._ASCENDING}>">&uarr;</a>
+                            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.SMILES_SORT_KEY_EMOTION}>"
+                               class="btn" title="<{$smarty.const._DESCENDING}>">&darr;</a>
+                        </div>
+                    </div>
+                    <div layout="row center-justify">
+                        <h6><{$smarty.const._AD_LEGACY_LANG_DISPLAY}></h6>
+                        <div>
+                            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.SMILES_SORT_KEY_DISPLAY}>"
+                               class="btn" title="<{$smarty.const._ASCENDING}>">&uarr;</a>
+                            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.SMILES_SORT_KEY_DISPLAY}>"
+                               class="btn" title="<{$smarty.const._DESCENDING}>">&darr;</a>
+                        </div>
+                    </div>
+                </div><{* ----- /Dropdown-content *}>
+            </div><{* ----- /Dropdown *}>
         </th>
-        <th><{$smarty.const._MD_LEGACY_LANG_CODE}>
-            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.SMILES_SORT_KEY_CODE}>">
-                <img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>">
-            </a>
-            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.SMILES_SORT_KEY_CODE}>">
-                <img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>">
-            </a>
-        </th>
+        <th><{$smarty.const._MD_LEGACY_LANG_CODE}></th>
         <th><{$smarty.const._AD_LEGACY_LANG_SMILE_URL}></th>
-        <th><{$smarty.const._MD_LEGACY_LANG_EMOTION}>
-            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.SMILES_SORT_KEY_EMOTION}>">
-                <img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>">
-            </a>
-            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.SMILES_SORT_KEY_EMOTION}>">
-                <img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>">
-            </a>
-        </th>
-        <th><{$smarty.const._AD_LEGACY_LANG_DISPLAY}>
-            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.SMILES_SORT_KEY_DISPLAY}>">
-                <img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>">
-            </a>
-            <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=-<{$smarty.const.SMILES_SORT_KEY_DISPLAY}>">
-                <img src="<{"icons/down.png"|theme}>" alt="<{$smarty.const._DESCENDING}>" title="<{$smarty.const._DESCENDING}>">
-            </a>
-        </th>
-        <th><{$smarty.const._DELETE}><br>
+        <th><{$smarty.const._MD_LEGACY_LANG_EMOTION}></th>
+        <th style="text-align: center"><{$smarty.const._AD_LEGACY_LANG_DISPLAY}></th>
+        <th style="text-align: center"><{$smarty.const._DELETE}><br>
             <input name="allbox" id="allbox"
                    onclick="with(document.smilesform){for(i=0;i<length;i++){if(elements[i].type=='checkbox'&&elements[i].disabled==false&&elements[i].name.indexOf('delete')>=0){elements[i].checked=this.checked;}}}"
                    type="checkbox" value="Check All">
         </th>
-        <th><{$smarty.const._AD_LEGACY_LANG_CONTROL}></th>
+        <th style="text-align: center"><{$smarty.const._AD_LEGACY_LANG_CONTROL}></th>
     </tr>
     </thead>
     <tbody>
     <{foreach item=obj from=$objects}>
         <{if $obj->get('display') == 1}>
-        <tr class="<{cycle values='odd,even'}> active">
+        <tr class="active">
             <{else}>
-        <tr class="<{cycle values='odd,even'}> inactive">
+        <tr class="inactive">
         <{/if}>
-            <td class="legacy_list_id"><{$obj->getShow('id')}></td>
-            <td class="legacy_list_name">
+            <td class="list_id"><{$obj->getShow('id')}></td>
+            <td class="list_name">
                 <input type="text" size="6" name="code[<{$obj->getShow('id')}>]" value="<{$obj->getShow('code')}>">
             </td>
-            <td class="ui-card-block-image">
+            <td class="list-image">
                 <img src="<{$smarty.const.XOOPS_UPLOAD_URL}>/<{$obj->getShow('smile_url')}>" alt="<{$obj->getShow('emotion')}>" title="<{$obj->getShow('emotion')}>">
             </td>
-            <td class="legacy_list_text">
+            <td class="list_text">
                 <input type="text" size="20" name="emotion[<{$obj->getShow('id')}>]" value="<{$obj->getShow('emotion')}>">
             </td>
-            <td class="legacy_list_select">
+            <td class="list_select">
                 <input type="checkbox" name="display[<{$obj->getShow('id')}>]" value="1" <{if $obj->getShow('display')}>checked="checked"<{/if}>>
             </td>
-            <td class="legacy_list_select">
+            <td class="list_select">
                 <input type="checkbox" name="delete[<{$obj->getShow('id')}>]" value="1">
             </td>
-            <td class="legacy_list_control">
+            <td class="list_control">
                 <a href="./index.php?action=SmilesEdit&amp;id=<{$obj->getShow('id')}>" title="<{$smarty.const._EDIT}>">
                     <img class="svg" src="<{"icons/icon-edit.svg"|theme}>">
                 </a>

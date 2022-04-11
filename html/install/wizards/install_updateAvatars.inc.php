@@ -10,4 +10,7 @@
 
 $content = '<p>' . _INSTALL_L151 . '</p>';
 $b_next  = [ 'updateAvatars_go', _INSTALL_L139 ];
+
+echo '<h2>wizard/install_updateAvatars.inc</h2>';
+
 include './install_tpl.php';

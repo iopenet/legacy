@@ -31,7 +31,7 @@
         <thead>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACYRENDER_LANG_TPLSET_UPLOAD_FILE}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{xoops_input type=file name=upload}>
             </td>
         </tr>
@@ -39,7 +39,7 @@
         <tbody>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACYRENDER_LANG_TPLSET_NAME}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{xoops_input type=text name=tplset_name size=50 maxlength=255}>
             </td>
         </tr>
@@ -47,8 +47,8 @@
         <tfoot>
         <tr>
             <td class="foot" colspan="2">
-                <input class="formButton" type="submit" value="<{$smarty.const._AD_LEGACYRENDER_LANG_UPLOAD}>">
-                <input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
+                <input class="ui-btn" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
+                <input class="ui-btn" type="submit" value="<{$smarty.const._AD_LEGACYRENDER_LANG_UPLOAD}>">
             </td>
         </tr>
         </tfoot>

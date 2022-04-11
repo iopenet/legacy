@@ -169,7 +169,7 @@ class User_UserListAction extends User_AbstractListAction
         $render->setAttribute('uids', array_keys($t_arr));
     }
 
-
+// @todo @gigamaster Check change $render to $renderer
     public function executeViewSuccess(&$controller, &$xoopsUser, &$renderer)
     {
         $controller->executeForward('./index.php?action=UserList');

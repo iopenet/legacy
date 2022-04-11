@@ -20,7 +20,7 @@ if ( ! defined( 'XOOPS_TRUST_PATH' ) || XOOPS_TRUST_PATH == '' ) {
 	exit;
 }
 
-define( 'ALTSYS_MYLANGUAGE_ROOT_PATH', XOOPS_ROOT_PATH . '/my_language' );
+const ALTSYS_MYLANGUAGE_ROOT_PATH = XOOPS_ROOT_PATH . '/my_language';
 
 
 class SetupAltsysLangMgr extends XCube_ActionFilter {

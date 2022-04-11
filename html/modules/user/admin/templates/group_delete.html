@@ -41,23 +41,23 @@
         <tbody>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_GROUP_GID}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('groupid')}></td>
+            <td><{$object->getShow('groupid')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_GROUP_NAME}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('name')}></td>
+            <td><{$object->getShow('name')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_GROUP_DESC}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('description')}></td>
+            <td><{$object->getShow('description')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_GROUP_TYPE}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('group_type')}></td>
+            <td><{$object->getShow('group_type')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_GROUP_AMMO}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getUserCount()|xoops_escape}></td>
+            <td><{$object->getUserCount()|xoops_escape}></td>
         </tr>
         </tbody>
         <tfoot>

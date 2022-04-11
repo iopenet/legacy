@@ -30,7 +30,7 @@
             <{else}>
             <img class="svg" src="<{$xoops_url}>/modules/<{$module->getShow('dirname')}>/<{$module->modinfo.image}>" alt="<{$module->getShow('name')}>" title="<{$module->getShow('name')}>">
             <{/if}>
-            <div class="legacy_list_imagetitle"><{$module->modinfo.name|xoops_escape}></div>
+            <div class="list_imagetitle"><{$module->modinfo.name|xoops_escape}></div>
         </td>
         <td class="head"><{$smarty.const._AD_LEGACY_LANG_MOD_NAME}></td>
         <td><{$module->getShow('name')}></td>
@@ -170,7 +170,7 @@
         <th><{$smarty.const._AD_LEGACY_LANG_SUBMENU_URL}></th>
     </tr>
     <{foreach from=$module->modinfo.sub item=sub}>
-    <tr class="<{cycle values="odd,even"}>">
+    <tr>
         <td><{$sub.name}></td>
         <td><{$sub.url}></td>
     </tr>

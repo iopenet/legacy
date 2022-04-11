@@ -158,10 +158,12 @@ const _USERNAME = "Codinome:";
 const _VERSION = "Versão";
 const _VIEW = "Mostrar";
 const _VISITWEBSITE = "Visitar";
-const _WARNINSTALL2 = "Atenção: a pasta %s existe em seu servidor. Para sua segurança, remova este diretório.";
-const _WARNINWRITEABLE = "Atenção: o arquivo %s tem permissão de escrita pelo servidor. Altere esta permissão por motivos de segurança: em sistemas tipo UNIX, configure como CHMOD 440; em ambiente Windows, configure como somente leitura.";
+const _WARNINSTALL2 = "Atenção: a pasta %s existe no servidor. Adicione uma senha (palavra-chave) ao ficheiro 'install/passwd.php' ou remova este diretório para proteger a instalação.";
+const _WARNINWRITEABLE = "Atenção: o arquivo %s tem permissão de escrita pelo servidor. Altere esta permissão por motivos de segurança: em sistemas tipo UNIX, configure como CHMOD 0444; em ambiente Windows, configure como somente leitura.";
 const _WARNPHPENV = "Atenção: o parâmetro %s do arquivo php.ini está configurado como %s. %s";
 const _WARNSECURITY = "Isto deixa o seu portal menos seguro. Se possível, altere as configurações de seu servidor.";
+const _WARN_INSTALL_TIP = 'Activate the Preload — For development purposes only!<br> Use the preload to keep mainfile and install directory.<br>Remember to chomd and delete install to prevent any security problem.';
+
 const _WEEK = "Uma semana";
 const _WELCOMETO = "Bem-vindo ao %s";
 const _WHOSONLINE = "Quem nos visita";

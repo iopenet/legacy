@@ -26,13 +26,13 @@
     </thead>
     <tbody>
     <tr class="odd">
-        <td class="user_list_image"><i title="<{$smarty.const._AD_USER_LANG_GROUP}>"><img src="<{"icons/icon-user-group.svg"|theme}>" class="svg"></i></td>
-        <td class="user_list_id"><{$group->getShow('groupid')}></td>
-        <td class="user_list_title"><{$group->getShow('name')}></td>
-        <td class="user_list_description"><{$group->getShow('description')}></td>
-        <td class="user_list_type"><{$group->getShow('group_type')}></td>
-        <td class="user_list_number"><{$group->getUserCount()|xoops_escape}></td>
-        <td class="user_list_control">
+        <td class="list_image"><i title="<{$smarty.const._AD_USER_LANG_GROUP}>"><img src="<{"icons/icon-user-group.svg"|theme}>" class="svg"></i></td>
+        <td class="list_id"><{$group->getShow('groupid')}></td>
+        <td class="list_title"><{$group->getShow('name')}></td>
+        <td class="list_description"><{$group->getShow('description')}></td>
+        <td class="list_type"><{$group->getShow('group_type')}></td>
+        <td class="list_number"><{$group->getUserCount()|xoops_escape}></td>
+        <td class="list_control">
             <a href="index.php?action=GroupEdit&amp;groupid=<{$group->getShow('groupid')}>" title="<{$smarty.const._EDIT}>">
                 <img src="<{"icons/icon-user-edit.svg"|theme}>" class="svg">
             </a>
@@ -77,16 +77,16 @@
     </thead>
     <tbody>
     <{foreach from=$users item=user }>
-    <tr class="<{cycle values="odd,even"}>">
-    <td class="user_list_image"><i title="<{$smarty.const._AD_USER_LANG_USER}>"><img src="<{"icons/icon-user-group.svg"|theme}>" class="svg"></i></td>
-    <td class="user_list_id"><{$user->getShow('uid')}></td>
-    <td class="user_list_title"><{$user->getShow('uname')}></td>
-    <td class="user_list_name"><{$user->getShow('name')}></td>
-    <td class="user_list_date"><{$user->getShow('user_regdate')|xoops_formattimestamp}></td>
-    <td class="user_list_date"><{$user->getShow('last_login')|xoops_formattimestamp:l}></td>
-    <td class="user_list_number"><{$user->getShow('posts')}></td>
-    <td class="user_list_order"><{$user->getShow('level')}></td>
-    <td class="user_list_control">
+    <tr>
+    <td class="list_image"><i title="<{$smarty.const._AD_USER_LANG_USER}>"><img src="<{"icons/icon-user-group.svg"|theme}>" class="svg"></i></td>
+    <td class="list_id"><{$user->getShow('uid')}></td>
+    <td class="list_title"><{$user->getShow('uname')}></td>
+    <td class="list_name"><{$user->getShow('name')}></td>
+    <td class="list_date"><{$user->getShow('user_regdate')|xoops_formattimestamp}></td>
+    <td class="list_date"><{$user->getShow('last_login')|xoops_formattimestamp:l}></td>
+    <td class="list_number"><{$user->getShow('posts')}></td>
+    <td class="list_order"><{$user->getShow('level')}></td>
+    <td class="list_control">
         <a href="./index.php?action=UserEdit&amp;uid=<{$user->getShow('uid')}>" title="<{$smarty.const._EDIT}>">
             <img src="<{"icons/icon-user-edit.svg"|theme}>" class="svg">
         </a>

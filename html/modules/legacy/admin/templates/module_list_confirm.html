@@ -28,22 +28,22 @@
         <tbody>
         <{foreach item=mid from=$mids}>
         <tr>
-            <td class="legacy_list_id"><{$mid}></td>
-            <td class="legacy_list_name">
+            <td class="list_id"><{$mid}></td>
+            <td class="list_name">
                 <{if $actionForm->get('name',$mid) == $moduleObjects[$mid]->get('name')}>
                 <{$actionForm->get('name',$mid)|xoops_escape}>
                 <{else}>
                 (<{$moduleObjects[$mid]->getShow('name')}>) &raquo; <b  class="message-warning"><{$actionForm->get('name',$mid)|xoops_escape}></b>
                 <{/if}>
             </td>
-            <td class="legacy_list_order">
+            <td class="list_order">
                 <{if $actionForm->get('weight',$mid) == $moduleObjects[$mid]->get('weight')}>
                 <{$actionForm->get('weight',$mid)|xoops_escape}>
                 <{else}>
                 (<{$moduleObjects[$mid]->getShow('weight')}>) &raquo; <b  class="message-warning"><{$actionForm->get('weight',$mid)|xoops_escape}></b>
                 <{/if}>
             </td>
-            <td class="legacy_list_select">
+            <td class="list_select">
                 <{if $actionForm->get('isactive',$mid)|intval == $moduleObjects[$mid]->get('isactive')}>
                 <{$smarty.const._AD_LEGACY_LANG_NO_CHANGE}>
                 <{else}>

@@ -1,7 +1,7 @@
 <?php
 // $Id: mytplsform.php 1040 2011-11-06 05:24:00Z mikhail $
 // License http://creativecommons.org/licenses/by/2.5/br/
-define("_MD_A_MYTPLSFORM_BTN_CREATE", "Criar");
+define("_MD_A_MYTPLSFORM_BTN_CREATE", "Adicionar");
 define("_MD_A_MYTPLSFORM_BTN_MODIFYCONT", "Modificar");
 define("_MD_A_MYTPLSFORM_BTN_MODIFYEND", "Gravar e finalizar");
 define("_MD_A_MYTPLSFORM_BTN_RESET", "Restaurar");

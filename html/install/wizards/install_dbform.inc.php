@@ -8,7 +8,10 @@
  * @license    GPL 2.0
  */
 
-include_once '../mainfile.php';
+if (file_exists( '../mainfile.php')) {
+    include_once '../mainfile.php';
+}
+
 include_once './class/settingmanager.php';
 
 $sm = new setting_manager();

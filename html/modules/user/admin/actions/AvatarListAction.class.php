@@ -184,6 +184,7 @@ class User_AvatarListAction extends User_AbstractListAction
     }
 
 
+    // @todo @gigamaster Check change $render to $renderer
     public function executeViewSuccess(&$controller, &$xoopsUser, &$renderer)
     {
         $controller->executeForward('./index.php?action=AvatarList');

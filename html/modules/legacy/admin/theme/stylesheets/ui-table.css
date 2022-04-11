@@ -17,19 +17,14 @@ Alternative data display
 :where(table, table.outer, table:not([class^="cke_"])) {
 
     background      : var(  --ui-table-background   );
-
     border-color    : var(  --border-color       );
     border-radius   : var(  --border-radius      );
     border-style    : var(  --border-radius      );
     border-width    : var(  --border-width       );
-
     border-collapse : collapse;
-
     box-shadow    	: var(  --shadow-2         );
-
     padding       	: var(  --space-4          );
     margin        	: 0;
-
     width           : 100%;
 }
 :is(table[class^="cke_"]) * {
@@ -48,7 +43,23 @@ Alternative data display
     background      : var(--ui-table-tfoot);
     text-align      : center;
 }
-:where(td.legacyRender_list_control) a {
+/* Apply button to table prefix start with lis_control */
+:where(td[class^="list_control"]) input[type="file"] {
+    display: none;
+}
+:where(td[class^="list_control"]) input[type="file"] + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+:where(td[class^="list_control"]) input[type="file"]:focus + label,
+:where(td[class^="list_control"]) input[type="file"] + label:hover {
+    background-color: red;
+}
+:where(td[class^="list_control"]) a {
     background: var( --ui-button-bg );
     border: none;
     border-radius: var( --border-radius );
@@ -96,11 +107,11 @@ td.head{
 div.foot,
 .pagenavi,
 table td.foot,
-.legacy_list_id,
-.legacy_list_order,
-.legacy_list_date,
-.legacy_list_select,
-.legacy_list_control {
+.list_id,
+.list_order,
+.list_date,
+.list_select,
+.list_control {
 
     text-align      : center;
 

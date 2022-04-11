@@ -1,4 +1,6 @@
 <?php
+// v2.3.0 2021/05/15 @gigamaster XCL-PHP7
+
 $content =
 	"<h3><u>インストールの第２ステップについて</u></h3>
 <p>XOOPSCubeのインストールの第１ステップが完了しました。

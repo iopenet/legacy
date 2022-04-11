@@ -40,13 +40,13 @@
         <tbody>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_IMAGE_UPLOAD_FILE}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{xoops_input type=file name=upload}>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_IMGCAT_ID}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <select name="imgcat_id">
                 <{if $category}>
                 <{xoops_optionsArray id=imgcat_id from=$categoryArr value=imgcat_id label=imgcat_name default=$category->getShow('imgcat_id')}>

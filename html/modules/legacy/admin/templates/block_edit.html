@@ -27,7 +27,7 @@
     <{$optionForm}>
     <{/if}>
 
-    <{* class="<{cycle values="odd,even"}>" *}>
+    <{* *}>
     <table class="outer">
         <thead>
         <tr>
@@ -60,7 +60,7 @@
         <tr>
             <td><{$smarty.const._AD_LEGACY_LANG_WEIGHT}></td>
             <td>
-                <{xoops_input type=text name=weight value=$actionForm->get('weight') size=5 class=legacy_list_number}>
+                <{xoops_input type=text name=weight value=$actionForm->get('weight') size=5 class=list_number}>
             </td>
         </tr>
         <tr>

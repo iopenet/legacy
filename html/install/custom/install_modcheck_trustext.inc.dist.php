@@ -12,9 +12,11 @@
 // checking XOOPS_ROOT_PATH and XOOPS_URL
 include_once '../mainfile.php';
 
+echo '<h2>custom/install_modcheck_trusttext.inc.dist</h2>';
 
-$writeok = [ 'cache/', 'templates_c', 'uploads/', 'uploads/xupdate/', 'modules/protector/configs/' ];
+$writeok = [ 'cache/', 'templates_c/', 'uploads/', 'uploads/xupdate/', 'modules/protector/configs/' ];
 $error   = false;
+
 foreach ( $writeok as $wok ) {
 	if ( ! is_dir( XOOPS_TRUST_PATH . '/' . $wok ) ) {
 		if ( file_exists( XOOPS_TRUST_PATH . '/' . $wok ) ) {
@@ -38,9 +40,10 @@ foreach ( $writeok as $wok ) {
 }
 
 if ( ! $error ) {
-	$wizard->assign( 'message', _INSTALL_L87 );
+	$wizard->assign( 'message', '<div class="confirmOk">'. _INSTALL_L87 .'</div>' );
+    $wizard->assign( 'message', '<div class="confirmOk">install modcheck trustext inc dist</div>' );
 } else {
-	$wizard->assign( 'message', _INSTALL_L46 );
+	$wizard->assign( 'message', '<div class="confirmError">'. _INSTALL_L46 .'</div>' );
 	$wizard->setReload( true );
 }
 $wizard->render( 'install_modcheck.tpl.php' );

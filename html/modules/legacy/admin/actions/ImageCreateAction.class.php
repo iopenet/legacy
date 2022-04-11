@@ -76,7 +76,7 @@ class Legacy_ImageCreateAction extends Legacy_AbstractEditAction
         }
 
         //
-        // If there is a old file, delete it
+        // If there is an old file, delete it
         //
         if (null !== $this->mActionForm->mOldFileName) {
             @unlink(XOOPS_UPLOAD_PATH . '/' . $this->mActionForm->mOldFileName);

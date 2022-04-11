@@ -551,7 +551,10 @@ class Legacy_Controller extends XCube_Controller
             $_SERVER['SCRIPT_FILENAME'] =& $_SERVER['PATH_TRANSLATED'];
         }
 
-        // IIS does not set REQUEST_URI. This system defines it. But...
+        /**
+         * IIS
+         * @note IIS does not set REQUEST_URI. This system defines it. But...
+         */
         if (empty($request_uri)) {
             $query_string = xoops_getenv('QUERY_STRING');
             if (!($_SERVER['REQUEST_URI'] = xoops_getenv('PHP_SELF'))) {
@@ -576,7 +579,7 @@ class Legacy_Controller extends XCube_Controller
     {
         parent::_setupUser();
 
-        // Set instance to global variable for compatiblity with XOOPS 2.0.x
+        // Set instance to global variable for compatibility with XOOPS 2.0.x
         $GLOBALS['xoopsUser'] =& $this->mRoot->mContext->mXoopsUser;
         $GLOBALS['xoopsUserIsAdmin'] = is_object($this->mRoot->mContext->mXoopsUser) ? $this->mRoot->mContext->mXoopsUser->isAdmin(1) : false;    //@todo Remove '1'
 
@@ -685,8 +688,8 @@ class Legacy_Controller extends XCube_Controller
             $className = 'Legacy_LanguageManager_' . ucfirst(strtolower($language));
 
             //
-            // If the class exists, create a instance. Else, load the file, and
-            // try creating a instance again.
+            // If the class exists, create an instance. Else, load the file, and
+            // try creating an instance again.
             //
             if (XC_CLASS_EXISTS($className)) {
                 $languageManager = new $className();
@@ -769,7 +772,7 @@ class Legacy_Controller extends XCube_Controller
         //
         // Auto pre-loading for Module.
         //
-        if (1 == $this->mRoot->getSiteConfig('Legacy', 'AutoPreload')) {
+        if ($this->mRoot->getSiteConfig('Legacy', 'AutoPreload') == 1) {
             if ($this->mActiveModules) {
                 $moduleObjects = $this->mActiveModules;
             } else {
@@ -824,7 +827,7 @@ class Legacy_Controller extends XCube_Controller
     public function executeHeader()
     {
         //
-        // TODO Now, It's done for working admin panel.
+        // TODO Now, It's done to run admin panel.
         //
         parent::executeHeader();
 
@@ -1167,7 +1170,7 @@ class Legacy_Controller extends XCube_Controller
      * @todo Change this function to delegate.
      * @remark This method encodes $url and $message directly without its template, to share the template with old function.
      */
-    public function executeRedirect($url, $time = 1, $message = null, $addRedirect = true)
+    public function executeRedirect($url, $time = 1, $message = null, bool $addRedirect = true)
     {
         global $xoopsConfig, $xoopsRequestUri;
 
@@ -1231,7 +1234,7 @@ class Legacy_Controller extends XCube_Controller
             );
             $GLOBALS['xoopsModuleUpdate'] = 1;
 
-            $xoopsTpl->display('db:system_redirect.html');
+            $xoopsTpl->display('db:system_redirect.html'); // TODO gigamaster
 
         } else {
 

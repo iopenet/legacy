@@ -35,7 +35,10 @@ $mm->setRewrite( 'XOOPS_GROUP_USERS', 2 );
 $mm->setRewrite( 'XOOPS_GROUP_ANONYMOUS', 3 );
 
 // Check if XOOPS_CHECK_PATH should be initially set or not
-$xoopsPathTrans = isset( $_SERVER['PATH_TRANSLATED'] ) ? $_SERVER['PATH_TRANSLATED'] : $_SERVER['SCRIPT_FILENAME'];
+// @todo @gigamaster
+// $xoopsPathTrans = isset( $_SERVER['PATH_TRANSLATED'] ) ? $_SERVER['PATH_TRANSLATED'] : $_SERVER['SCRIPT_FILENAME'];
+$xoopsPathTrans = $_SERVER['PATH_TRANSLATED'] ?? $_SERVER['SCRIPT_FILENAME'];
+
 if ( DIRECTORY_SEPARATOR !== '/' ) {
 	// IIS6 doubles the \ chars
 	$xoopsPathTrans = str_replace( strpos( $xoopsPathTrans, '\\\\', 2 ) ? '\\\\' : DIRECTORY_SEPARATOR, '/', $xoopsPathTrans );
@@ -49,5 +52,5 @@ if ( ! $ret ) {
 }
 
 $wizard->assign( 'reports', $mm->report() );
-$wizard->assign( 'message', _INSTALL_L62 );
+$wizard->assign( 'message', '<div class="confirmOk">'. _INSTALL_L62 .'</div>' );
 $wizard->render( 'install_dbsave.tpl.php' );

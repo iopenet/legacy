@@ -51,37 +51,37 @@
         <{if $actionForm->get('avatar_id')}>
         <tr>
             <td class="head"><{$smarty.const._MD_USER_LANG_AVATAR_ID}></td>
-            <td class="<{cycle values="odd,even"}>"><{$actionForm->get('avatar_id')}></td>
+            <td><{$actionForm->get('avatar_id')}></td>
         </tr>
         <{/if}>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_AVATAR_NAME}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{xoops_input type=text name=avatar_name value=$actionForm->get('avatar_name') size=15 maxlength=100}>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_AVATAR_FILE}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{xoops_input type=file name=avatar_file size=30}>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_AVATAR_DISPLAY}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <label><{xoops_input type=radio name=avatar_display value=1 default=$actionForm->get('avatar_display')}><{$smarty.const._YES}></label>
             <label><{xoops_input type=radio name=avatar_display value=0 default=$actionForm->get('avatar_display')}><{$smarty.const._NO}></label>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_AVATAR_WEIGHT}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{xoops_input type=text name=avatar_weight value=$actionForm->get('avatar_weight')}>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_AVATAR_TYPE}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{if $object->getShow('avatar_type') == "C"}>
             <{$smarty.const._AD_USER_LANG_AVATAR_TYPE_C}>
             <{elseif $object->getShow('avatar_type') == "S"}>
@@ -93,8 +93,8 @@
         <tfoot>
         <tr>
             <td class="foot" colspan="2">
-                <input class="btn cancel" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
-                <input class="btn submit" type="submit" value="<{$smarty.const._SUBMIT}>">
+                <input class="ui-btn cancel" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
+                <input class="ui-btn submit" type="submit" value="<{$smarty.const._SUBMIT}>">
             </td>
         </tr>
         </tfoot>

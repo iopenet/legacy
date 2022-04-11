@@ -50,18 +50,18 @@
         <{if $actionForm->get('id')}>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_ID}></td>
-            <td class="<{cycle values="odd,even"}>"><{$actionForm->get('id')}></td>
+            <td><{$actionForm->get('id')}></td>
         </tr>
         <{/if}>
         <tr>
             <td class="head"><{$smarty.const._MD_LEGACY_LANG_CODE}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{xoops_input type=text name=code value=$actionForm->get('code') size=15 maxlength=50}>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_SMILE_URL}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{if $actionForm->get('id')}>
             <img src="<{$smarty.const.XOOPS_UPLOAD_URL}>/<{$object->getShow('smile_url')}>"
                  alt="<{$object->getShow('emotion')}>" title="<{$object->getShow('emotion')}>">
@@ -72,13 +72,13 @@
         </tr>
         <tr>
             <td class="head"><{$smarty.const._MD_LEGACY_LANG_EMOTION}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{xoops_input type=text name=emotion value=$actionForm->get('emotion') size=30 maxlength=75}>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_DISPLAY}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <label>
                 <{xoops_input type=radio name=display value=1 default=$actionForm->get('display')}><{$smarty.const._YES}>
             </label>

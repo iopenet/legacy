@@ -9,14 +9,16 @@
  */
 
 unset( $xoopsOption['nocommon'] );
+
 include( '../mainfile.php' );
+echo '<h2>wizard/install_updateAvatars_go.inc</h2>';
 
 $content = '';
 $title   = _INSTALL_L156;
 
 $avatars = getImageFileList( XOOPS_ROOT_PATH . '/images/avatar/users/' );
 
-$xoopsDB->query( 'UPDATE ' . $xoopsDB->prefix( 'users' ) . " SET user_avatar='blank.png'" ); //TODO avatar image
+$xoopsDB->query( 'UPDATE ' . $xoopsDB->prefix( 'users' ) . " SET user_avatar='blank.png'" ); // @TODO avatar image
 
 $avt_handler =& xoops_gethandler( 'avatar' );
 if ( ! defined( 'XOOPS_UPLOAD_PATH' ) ) {

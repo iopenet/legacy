@@ -39,7 +39,7 @@ class textsanitizer {
 		];
 		$replacements = [
 			"\\1<a href=\"\\2://\\3\" rel=\"external\">\\2://\\3</a>",
-			"\\1<a href=\"http://www.\\2.\\3\" rel=\"external\">www.\\2.\\3</a>",
+			"\\1<a href=\"https://www.\\2.\\3\" rel=\"external\">www.\\2.\\3</a>",
 			"\\1<a href=\"mailto:\\2@\\3\">\\2@\\3</a>"
 		];
 		$ret          = preg_replace( $patterns, $replacements, $text );

@@ -39,7 +39,7 @@ if (!defined('XC_ADMINDASHBOARD_UINFO')) {
     * Waiting (pending) contents
     */
     if (!defined('XC_ADMINDASHBOARD_WAITING')) {
-        define('XC_ADMINDASHBOARD_WAITING', 0);
+        define('XC_ADMINDASHBOARD_WAITING', 1);
     }
     /*
     * !TODO - Comments

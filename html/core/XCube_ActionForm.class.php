@@ -560,7 +560,7 @@ class XCube_FieldProperty {
 		$message = $this->mMessages[ $name ]['message'];
 
 		if ( isset( $this->mMessages[ $name ]['args'] ) ) {
-			// Use an unity method.
+			// Use a unity method.
 			$message = XCube_Utils::formatString( $message, $this->mMessages[ $name ]['args'] );
 		}
 
@@ -634,7 +634,7 @@ class XCube_DependClassFactory {
 	 * @internal
 	 * @brief [static] Gets a XCube_Validator object by the rule name (dependent name).
 	 */
-	public static function &factoryClass( $dependName ) {
+	public static function &factoryClass(string $dependName ) {
 		static $_cache;
 
 		if ( ! is_array( $_cache ) ) {

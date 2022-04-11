@@ -24,27 +24,27 @@
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACYRENDER_LANG_BID}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('bid')}></td>
+            <td><{$object->getShow('bid')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACYRENDER_LANG_CID}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->mClient->getShow('name')}></td>
+            <td><{$object->mClient->getShow('name')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACYRENDER_LANG_IMPRESSIONS}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('impressions')}></td>
+            <td><{$object->getShow('impressions')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACYRENDER_LANG_CLICKS}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('clicks')}></td>
+            <td><{$object->getShow('clicks')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACYRENDER_LANG_DATESTART}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->get('datestart')|xoops_formattimestamp}></td>
+            <td><{$object->get('datestart')|xoops_formattimestamp}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACYRENDER_LANG_DATEEND}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->get('dateend')|xoops_formattimestamp}></td>
+            <td><{$object->get('dateend')|xoops_formattimestamp}></td>
         </tr>
         <tr>
             <td class="foot" colspan="2">

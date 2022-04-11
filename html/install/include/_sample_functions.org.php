@@ -158,7 +158,7 @@ function b_back( $option = null ) {
 	if ( isset( $option[0] ) && '' != $option[0] ) {
 		$content .= '<a href="javascript:void(0);" onclick=\'location.href="index.php?op=' . htmlspecialchars( $option[0] ) . '"\' class="back" style="display:inline-block;vertical-align:top;"><img src="img/back.png" alt="' . _INSTALL_L42 . '"></a>';
 	} else {
-		$content .= '<a href="javascript:history.back();" class="back" style="display:inline-block;vertical-align:top;"><img src="img/back.png" alt="' . _INSTALL_L42 . '" /></a>';
+		$content .= '<a href="javascript:history.back();" class="back" style="display:inline-block;vertical-align:top;"><img src="img/back.png" alt="' . _INSTALL_L42 . '"></a>';
 	}
 	if ( isset( $option[1] ) && '' != $option[1] ) {
 		$content .= '<span style="font-size:90%;"> &lt;&lt; ' . htmlspecialchars( $option[1] ) . '</span>';
@@ -175,7 +175,7 @@ function b_reload( $option = '' ) {
 		define( '_INSTALL_L200', 'Reload' );
 	}
 
-	return '<input type="image" src="img/reload.png" class="reload" title="Reload" value="' . _INSTALL_L200 . '" onclick="location.reload();" />';
+	return '<input type="image" src="img/reload.png" class="reload" title="Reload" value="' . _INSTALL_L200 . '" onclick="location.reload();">';
 }
 
 function b_next( $option = null ) {
@@ -186,8 +186,8 @@ function b_next( $option = null ) {
 	if ( isset( $option[1] ) && '' != $option[1] ) {
 		$content .= '<span style="font-size:90%;">' . htmlspecialchars( $option[1] ) . ' &gt;&gt; </span>';
 	}
-	$content .= '<input type="hidden" name="op" value="' . htmlspecialchars( $option[0] ) . '" />';
-	$content .= '<input type="image" src="img/next.png" class="next" title="' . _INSTALL_L47 . '" name="submit" value="' . _INSTALL_L47 . '" />';
+	$content .= '<input type="hidden" name="op" value="' . htmlspecialchars( $option[0] ) . '">';
+	$content .= '<input type="image" src="img/next.png" class="next" title="' . _INSTALL_L47 . '" name="submit" value="' . _INSTALL_L47 . '">';
 
 	return $content;
 }

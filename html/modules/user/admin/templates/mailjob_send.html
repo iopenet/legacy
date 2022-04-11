@@ -25,39 +25,39 @@
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_MAILJOB_ID}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('mailjob_id')}></td>
+            <td><{$object->getShow('mailjob_id')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_TITLE}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('title')}></td>
+            <td><{$object->getShow('title')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_BODY}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('body')}></td>
+            <td><{$object->getShow('body')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_TARGET_RETRY_NUMBER}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getCurrentRetry()|xoops_escape}></td>
+            <td><{$object->getCurrentRetry()|xoops_escape}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_FROM_NAME}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('from_name')}></td>
+            <td><{$object->getShow('from_name')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_FROM_EMAIL}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('from_email')}></td>
+            <td><{$object->getShow('from_email')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_IS_PM}></td>
-            <td class="<{cycle values="odd,even"}>"><{if $object->getShow('is_pm') == 1}><{$smarty.const._YES}><{else}><{$smarty.const._NO}><{/if}></td>
+            <td><{if $object->getShow('is_pm') == 1}><{$smarty.const._YES}><{else}><{$smarty.const._NO}><{/if}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_IS_MAIL}></td>
-            <td class="<{cycle values="odd,even"}>"><{if $object->getShow('is_mail') == 1}><{$smarty.const._YES}><{else}><{$smarty.const._NO}><{/if}></td>
+            <td><{if $object->getShow('is_mail') == 1}><{$smarty.const._YES}><{else}><{$smarty.const._NO}><{/if}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_CREATE_UNIXTIME}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->get('create_unixtime')|xoops_formattimestamp:l}></td>
+            <td><{$object->get('create_unixtime')|xoops_formattimestamp:l}></td>
         </tr>
         <tr>
             <td class="foot" colspan="2">

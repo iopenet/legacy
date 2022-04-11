@@ -7,7 +7,7 @@
  * @author     Other authors gigamaster, 2020 XCL/PHP7
  * @author     Other authors Minahito, 2008/09/21
  * @author     Jochen Buennagel
- * @copyright  (c) 2000-2003 Xoops.org
+ * @copyright  (c) 2000-2003 Authors
  * @license    GPL 2.0
  */
 
@@ -18,21 +18,18 @@ if (!defined('XOOPS_ROOT_PATH')) {
 /**
  * load the base class
  */
+require XOOPS_ROOT_PATH .'/class/mail/phpmailer/src/Exception.php';
 require XOOPS_ROOT_PATH .'/class/mail/phpmailer/src/PHPMailer.php';
 require XOOPS_ROOT_PATH .'/class/mail/phpmailer/src/SMTP.php';
-require XOOPS_ROOT_PATH .'/class/mail/phpmailer/src/Exception.php';
-//require_once(XOOPS_ROOT_PATH . '/class/mail/phpmailer/class.phpmailer.php');
+
+use PHPMailer\PHPMailer\PHPMailer;
 
 /**
- * Mailer Class.
+ * Mailer Class
  *
- * At the moment, this does nothing but send email through PHP's "mail()" function,
- * but it has the abiltiy to do much more.
- *
- * If you have problems sending mail with "mail()", you can edit the member variables
- * to suit your setting. Later this will be possible through the admin panel.
- *
- * @todo    Make a page in the admin panel for setting mailer preferences.
+ * If you have problems sending mail with "mail()", you can edit the member variables to suit your setting.
+ * Login to administration and edit the settings through the admin panel.
+ * Administration »» Dashboard »» Settings »» Preferences »» Mail Setup
  */
 class xoopsmultimailer extends PHPMailer
 {

@@ -50,32 +50,32 @@
         <tbody>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_RANK_TITLE}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{xoops_input type=text name=rank_title value=$actionForm->get('rank_title')}>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_RANK_MIN}></td>
-            <td class="<{cycle values="odd,even"}>">
-            <{xoops_input type=text name=rank_min value=$actionForm->get('rank_min') class=user_list_number}>
+            <td>
+            <{xoops_input type=text name=rank_min value=$actionForm->get('rank_min') class=list_number}>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_RANK_MAX}></td>
-            <td class="<{cycle values="odd,even"}>">
-            <{xoops_input type=text name=rank_max value=$actionForm->get('rank_max') class=user_list_number}>
+            <td>
+            <{xoops_input type=text name=rank_max value=$actionForm->get('rank_max') class=list_number}>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_RANK_SPECIAL}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <label><{xoops_input type=radio name=rank_special value=1 default=$actionForm->get('rank_special')}><{$smarty.const._YES}></label>
             <label><{xoops_input type=radio name=rank_special value=0 default=$actionForm->get('rank_special')}><{$smarty.const._NO}></label>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_RANK_IMAGE}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <input type="file" name="rank_image" size="30">
             </td>
         </tr>

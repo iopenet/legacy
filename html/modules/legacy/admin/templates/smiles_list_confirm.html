@@ -36,22 +36,22 @@
 
         <{foreach item=sid from=$sids}>
         <tr>
-            <td class="legacy_list_id"><{$sid}></td>
-            <td class="legacy_list_name">
+            <td class="list_id"><{$sid}></td>
+            <td class="list_name">
                 <{if $actionForm->get('code',$sid) == $smilesObjects[$sid]->get('code')}>
                 <{$actionForm->get('code',$sid)|xoops_escape}>
                 <{else}>
                 (<{$smilesObjects[$sid]->getShow('code')}>) &raquo; <b class="message-warning"> <{$actionForm->get('code',$sid)|xoops_escape}> </b>
                 <{/if}>
             </td>
-            <td class="legacy_list_name">
+            <td class="list_name">
                 <{if $actionForm->get('emotion',$sid) == $smilesObjects[$sid]->get('emotion')}>
                 <{$actionForm->get('emotion',$sid)|xoops_escape}>
                 <{else}>
                 (<{$smilesObjects[$sid]->getShow('emotion')}>) &raquo; <br><b class="message-warning"> <{$actionForm->get('emotion',$sid)|xoops_escape}> </b>
                 <{/if}>
             </td>
-            <td class="legacy_list_select">
+            <td class="list_select">
                 <{if $actionForm->get('display',$sid)|intval == $smilesObjects[$sid]->get('display')}>
                 <{$smarty.const._AD_LEGACY_LANG_NO_CHANGE}>
                 <{else}>
@@ -78,7 +78,7 @@
                     <input type="hidden" name="display[<{$sid}>]" value="0">
                     <{/if}>
             </td>
-            <td class="legacy_list_select">
+            <td class="list_select">
 
                 <{if $actionForm->get('delete',$sid) == 1}>
                 <b class="message-warning">

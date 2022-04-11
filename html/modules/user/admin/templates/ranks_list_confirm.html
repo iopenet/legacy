@@ -43,8 +43,8 @@
         <tbody>
         <{foreach item=rid from=$rids}>
         <tr class="even">
-            <td class="user_list_id"><{$rid}></td>
-            <td class="user_list_title">
+            <td class="list_id"><{$rid}></td>
+            <td class="list_title">
                 <{if $actionForm->get('title',$rid) == $ranksObjects[$rid]->get('rank_title')}>
                 <{$actionForm->get('title',$rid)|xoops_escape}>
                 <{else}>
@@ -52,7 +52,7 @@
                 <{/if}>
                 <input type="hidden" name="title[<{$rid}>]" value="<{$actionForm->get('title',$rid)|xoops_escape:edit}>">
             </td>
-            <td class="user_list_number">
+            <td class="list_number">
                 <{if $actionForm->get('min',$rid) == $ranksObjects[$rid]->get('rank_min')}>
                 <{$actionForm->get('min',$rid)|xoops_escape}>
                 <{else}>
@@ -60,7 +60,7 @@
                 <{/if}>
                 <input type="hidden" name="min[<{$rid}>]" value="<{$actionForm->get('min',$rid)|xoops_escape:edit}>">
             </td>
-            <td class="user_list_number">
+            <td class="list_number">
                 <{if $actionForm->get('max',$rid) == $ranksObjects[$rid]->get('rank_max')}>
                 <{$actionForm->get('max',$rid)|xoops_escape}>
                 <{else}>
@@ -68,14 +68,14 @@
                 <{/if}>
                 <input type="hidden" name="max[<{$rid}>]" value="<{$actionForm->get('max',$rid)|xoops_escape:edit}>">
             </td>
-            <td class="user_list_order">
+            <td class="list_order">
                 <{if $ranksObjects[$rid]->getShow('rank_special') == 1}>
                 <{$smarty.const._YES}>
                 <{else}>
                 <{$smarty.const._NO}>
                 <{/if}>
             </td>
-            <td class="user_list_select">
+            <td class="list_select">
                 <b class="user_module_error">
                     <{if $actionForm->get('delete',$rid) == 1}>
                     <{$smarty.const._YES}>

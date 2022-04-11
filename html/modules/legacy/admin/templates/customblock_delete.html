@@ -27,45 +27,45 @@
         <tbody>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_BID}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('bid')}></td>
+            <td><{$object->getShow('bid')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_BLOCK_MOD}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('mid')}></td>
+            <td><{$object->getShow('mid')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_FUNC_NUM}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('func_num')}></td>
+            <td><{$object->getShow('func_num')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_OPTIONS}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('options')}></td>
+            <td><{$object->getShow('options')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_MOD_NAME}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('name')}></td>
+            <td><{$object->getShow('name')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_TITLE}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('title')}></td>
+            <td><{$object->getShow('title')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_CONTENT}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('content')}></td>
+            <td><{$object->getShow('content')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_SIDE}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{if $object->mColumn}><{$object->mColumn->getShow('name')}><{/if}>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_WEIGHT}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('weight')}></td>
+            <td><{$object->getShow('weight')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_VISIBLE}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{if $object->getShow('visible') == 1}>
             <{$smarty.const._YES}>
             <{else}>
@@ -75,15 +75,15 @@
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_BLOCK_TYPE}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('block_type')}></td>
+            <td><{$object->getShow('block_type')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_C_TYPE}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('c_type')}></td>
+            <td><{$object->getShow('c_type')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_ISACTIVE}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{if $object->getShow('isactive') == 1}>
             <{$smarty.const._YES}>
             <{else}>
@@ -93,33 +93,33 @@
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_DIRNAME}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('dirname')}></td>
+            <td><{$object->getShow('dirname')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_FUNC_FILE}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('func_file')}></td>
+            <td><{$object->getShow('func_file')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_SHOW_FUNC}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('show_func')}></td>
+            <td><{$object->getShow('show_func')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_EDIT_FUNC}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('edit_func')}></td>
+            <td><{$object->getShow('edit_func')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_TEMPLATE}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('template')}></td>
+            <td><{$object->getShow('template')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_BCACHETIME}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{if $object->mCachetime}><{$object->mCachetime->getShow('label')}><{/if}>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_LAST_MODIFIED}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->get('last_modified')|xoops_formattimestamp:l}></td>
+            <td><{$object->get('last_modified')|xoops_formattimestamp:l}></td>
         </tr>
         </tbody>
         <tfoot>

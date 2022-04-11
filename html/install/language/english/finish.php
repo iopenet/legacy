@@ -1,14 +1,14 @@
 <?php
-// $Id: finish.php,v 1.3 2007/06/24 12:39:39 tom_g3x Exp $
+// v2.3.0 2021/05/15 @gigamaster XCL-PHP7
 $content =
-	'<div class="confirmInfo">XCL installer last step allows you to install automatically all the core modules.<br>
+	'<div class="confirmInfo">Install automatically the required modules.<br>
 Your new XCL web application platform will be up and running!</div>
-<h3>XCL Documentation</h3>
-<h4>Manual</h4>
-<p>XCL core provides an advanced search functionality and for more detailed information refer to the respective documentation from each module Help menu.</p>
+<h3>Documentation</h3>
+<h4>Help</h4>
+<p>XCL core features an advanced search functionality and a built-in Help for each module.</p>
 <h4>Support</h4>
-<p>The Xupdate Manager features an user-friendly interface to update and install free modules and themes for the platform.
-Single file extensions (preloads) can also easily be installed via the backend. Extensions can be through the addition of new functionality or through modification of existing functionality.
-The principle provides for enhancements without impairing existing system functions.</p>
-<p>Visit please <a href="https://github.com/xoopscube/xcl/" rel="external">XOOPSCube Project</a> for documentation, modules, extensions (preloads) and themes.</p>
+<p>The Xupdate Manager features a user-friendly dashboard to install and update add-ons.
+Extend your application through the addition of new functionality or through modification of existing functionality.
+In principle, this provides improvements in performance and enhancements without impairing the core system.</p>
+<p>Visit please <a href="https://github.com/xoopscube/" rel="external">XOOPSCube Project</a> for documentation, modules, extensions (preloads) and themes.</p>
 ';

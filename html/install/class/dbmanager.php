@@ -6,7 +6,7 @@
  * @author     Other authors gigamaster, 2020 XCL/PHP7
  * @author     Other authors gusagi, 2008/03/22
  * @author     Haruki Setoyama
- * @copyright  (c) 2000-2003 XOOPS.org
+ * @copyright  (c) 2000-2003 Authors
  * @license    GPL 2.0
  */
 
@@ -41,19 +41,19 @@ class db_manager {
 	}
 
 	public function isConnectable() {
-		return false !== $this->connectDB( false );
+        return $this->connectDB(false) != false;
 	}
 
 	public function dbExists() {
-		return false !== $this->connectDB();
+        return $this->connectDB() != false;
 	}
 
 	public function createDB() {
-		$this->connectDB( false );
+        $this->connectDB(false);
 
-		$result = $this->db->query( 'CREATE DATABASE ' . XOOPS_DB_NAME );
+        $result = $this->db->query("CREATE DATABASE ".XOOPS_DB_NAME);
 
-		return false !== $result;
+        return $result != false;
 	}
 
 	public function queryFromFile( $sql_file_path ) {

@@ -133,7 +133,7 @@
         <{else}>
         <tr>
     <{/if}>
-    <td class="legacy_list_id"><{$obj->getShow('image_id')}></td>
+    <td class="list_id"><{$obj->getShow('image_id')}></td>
     <td class="ui-card-block-image">
     <{if $obj->mImageCategory != null}>
     <{if $obj->mImageCategory->get('imgcat_storetype') == 'file'}>
@@ -142,18 +142,18 @@
         <img src="<{$smarty.const.XOOPS_URL}>/image.php?id=<{$obj->getShow('image_id')}>" alt="<{$obj->getShow('image_nicename')}>" title="<{$obj->getShow('image_nicename')}>" style="max-width: 70%;">
         <{/if}>
     <{/if}>
-    <div class="legacy_list_imagetitle"><input type="text" size="12" name="nicename[<{$obj->getShow('image_id')}>]" value="<{$obj->getShow('image_nicename')}>"></div>
+    <div class="list_imagetitle"><input type="text" size="12" name="nicename[<{$obj->getShow('image_id')}>]" value="<{$obj->getShow('image_nicename')}>"></div>
     </td>
-        <td class="legacy_list_type"><{$obj->getShow('image_mimetype')}></td>
-        <td class="legacy_list_date"><{$obj->getShow('image_created')|xoops_formattimestamp:l}></td>
-        <td class="legacy_list_select">
+        <td class="list_type"><{$obj->getShow('image_mimetype')}></td>
+        <td class="list_date"><{$obj->getShow('image_created')|xoops_formattimestamp:l}></td>
+        <td class="list_select">
             <input type="checkbox" name="display[<{$obj->getShow('image_id')}>]" value="1" <{if $obj->getShow('image_display')}>checked="checked"<{/if}>>
         </td>
-        <td class="legacy_list_number"><input type="text" size="4" maxlength="6" name="weight[<{$obj->getShow('image_id')}>]" value="<{$obj->getShow('image_weight')}>" class=legacy_list_number /></td>
-        <td class="legacy_list_select">
+        <td class="list_number"><input type="text" size="4" maxlength="6" name="weight[<{$obj->getShow('image_id')}>]" value="<{$obj->getShow('image_weight')}>" class=list_number /></td>
+        <td class="list_select">
             <input type="checkbox" name="delete[<{$obj->getShow('image_id')}>]" value="1">
         </td>
-        <td class="legacy_list_control">
+        <td class="list_control">
             <a href="./index.php?action=ImageEdit&amp;image_id=<{$obj->getShow('image_id')}>" title="<{$smarty.const._EDIT}>">
                 <img src="<{"icons/icon-image-edit.svg"|theme}>" class="svg" alt="<{$smarty.const._EDIT}>">
             </a>

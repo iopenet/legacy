@@ -7,39 +7,34 @@ Date : 2020-06-11
 URL : https://github.com/xoopscube/xcl/
 
 
-    -------------------- -------------------- -------------------- -------------------- NAV IMPORT */
+    -------------------- -------------------- NAV IMPORT */
 
-    @import "./ui-nav-aside.css";        /*      Nav-side            */
-    @import "./ui-nav-header.css";      /*      Nav-header          */
+    @import "./ui-nav-aside.css";  /*      Nav-side    */
+    @import "./ui-nav-header.css";/*      Nav-header  */
 
-    /* -------------------- -------------------- -------------------- NAV ADMIN */
+    /* -------------------- -------------------- NAV ADMIN */
 
-    .admintitle {
+.admintitle {
     border-bottom   : 3px solid var(--border);
     margin-bottom   : 1em;
-    }
+}
 
-    .adminavi,
-    .adminavi-sub,
-    .admin-menu {
-
+.adminavi,
+.adminavi-sub,
+.admin-menu {
     background      : var(  --color-6   );
-
     /* border-radius   : var(  --border-radius      ); */
-    border-bottom-left-radius: var(  --border-radius      );;
-    border-bottom-right-radius: var(  --border-radius      );;
-
+    /*border-bottom-left-radius: var(  --border-radius      );;*/
+    /*border-bottom-right-radius: var(  --border-radius      );;*/
     /* box-shadow   : 0 4px 8px rgba(159, 162, 177, 0.8); */
     display         : flex;
     flex-wrap       : wrap;
     margin          : 1em auto 2em;
     max-width       : 100%;
     overflow        : hidden;
-
     }
 
     .adminavi-sub {
-
     /* box-shadow   : var(  --shadow-3     ); */
     font-size       : var(  --size-2       );
     margin          : 0 auto 2em;
@@ -47,43 +42,33 @@ URL : https://github.com/xoopscube/xcl/
     list-style-type : none;
     }
 
-
-
     a.adminavi-item {
-
     border-bottom   : 2px solid transparent;
     color           : var(  --ui-link      );
     padding         : 10px;
     text-decoration : none;
     transition      : .3s;
-
     }
 
     a.adminavi-item:not(.selected) {
-
     background      : transparent;
     }
 
     a.adminavi-item:not(.selected):hover {
     color           : var(  --ui-link-hover     );
     border-bottom   : 2px solid var(  --ui-link-hover       );
-
     }
 
 
     a.adminavi-item.selected,
     a.adminavi-item.selected:active {
-
     color           : var(  --ui-link-hover     );
     border-bottom   : 2px solid var(  --ui-link-hover       );
     outline-width   : 0;
     }
 
 
-
-
-
-    /* fix this > remove altsys css */
+    /* @todo fix this > remove altsys css */
 
     /* .admin-menu, */
     .altsys_mymenu {
@@ -230,22 +215,20 @@ div.dropdown-content {
     width: auto;
 }
 :where(div.dropdown.isopen) div.drop-left {
-    left              : 1px; /* Fix device Viewport */
+    left                : 1px; /* Fix device Viewport */
 }
 :where(div.dropdown.isopen) div.drop-right {
-    right             : 1px; /* Fix device Viewport */
+    right               : 1px; /* Fix device Viewport */
 }
 :where(div.dropdown.isopen) div.drop-top {
-    top               : -100%; /* Fix device Viewport */
+    top                 : -100%; /* Fix device Viewport */
 }
-
 :where(div.dropdown-content)  h6 {
-    font-size: 12px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin: var( --space-2 ) 0;
+    font-size           : 12px;
+    letter-spacing      : 1px;
+    text-transform      : uppercase;
+    margin              : var( --space-2 ) 0;
 }
-
 :where(div.dropdown-content) ul {
     margin              : 0;
     padding             : 0;
@@ -258,30 +241,29 @@ div.dropdown-content {
 }
 /* Dropdown links */
 :where(div.dropdown-content) ul li a {
-    border-radius       : var(--dropdown-radius);
-    color               : var(--link);
+    border-radius       : var( --dropdown-radius );
+    color               : var( --link );
     display             : block;
-    font                : var(--dropdown-font) !important;
-    padding             : var(--dropdown-space);
+    font                : var( --dropdown-font ) !important;
+    padding             : var( --dropdown-space );
     text-decoration     : none;
 }
 /* Change color of dropdown links on hover */
 :where(div.dropdown-content) ul li a:hover {
-    background          : var(--dropdown-bg-on);
-    color               : var(--link-hover);
+    background          : var( --dropdown-bg-on );
+    color               : var( --link-hover );
 }
-
 :where(div.dropdown-content) ul li a > svg {
     margin-right        : var(--dropdown-space);
 }
 
 /* Badge default */
 :where(div.dropdown-content) .btn {
-    background          : var(  --ui-button-bg  );
+    background          : var( --ui-button-bg );
     border              : none;
     border-radius       : 7px;
-    box-shadow          : var(	--ui-button-box-shadow );
-    color               : var(  --color-1  );
+    box-shadow          : var( --ui-button-box-shadow );
+    color               : var( --color-1 );
     display             : inline-block;
     font-size           : 0.74rem;
     font-family         : sans-serif;
@@ -289,8 +271,8 @@ div.dropdown-content {
     font-weight         : 300;
     letter-spacing      : 0.1rem;
     line-height         : 1em;
-    margin              : var(  --ui-button-margin  );
-    padding             : var(  --space-4 ) var(  --space-5 );
+    margin              : var( --ui-button-margin );
+    padding             : var( --space-4 ) var( --space-5 );
     position            : relative;
     text-align          : center;
     /*text-transform      : uppercase;*/

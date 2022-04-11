@@ -9,13 +9,19 @@
  */
 
 unset( $xoopsOption['nocommon'] );
+
 include( '../mainfile.php' );
+
+echo '<h2>wizard/install_UpdateSmilies_go.inc</h2>';
+
 $result  = $xoopsDB->query( 'SELECT * FROM ' . $xoopsDB->prefix( 'smiles' ) );
 $content = '';
 $title   = _INSTALL_L155;
+
 if ( ! defined( 'XOOPS_UPLOAD_PATH' ) ) {
 	define( 'XOOPS_UPLOAD_PATH', '../uploads' );
 }
+
 while ( $smiley = $xoopsDB->fetchArray( $result ) ) {
 	if ( file_exists( '../images/smilies/' . $smiley['smile_url'] ) && ( false !== $fp = fopen( '../images/smilies/' . $smiley['smile_url'], 'rb' ) ) ) {
 		$binary = fread( $fp, filesize( '../images/smilies/' . $smiley['smile_url'] ) );
@@ -37,7 +43,9 @@ while ( $smiley = $xoopsDB->fetchArray( $result ) ) {
 		$content .= _OKIMG . sprintf( _INSTALL_L152, $smiley['smile_url'] ) . '<br>';
 	}
 }
+
 $result = $xoopsDB->query( 'SELECT * FROM ' . $xoopsDB->prefix( 'ranks' ) );
+
 while ( $rank = $xoopsDB->fetchArray( $result ) ) {
 	if ( file_exists( '../images/ranks/' . $rank['rank_image'] ) && false !== $fp = fopen( '../images/ranks/' . $rank['rank_image'], 'rb' ) ) {
 		$binary = fread( $fp, filesize( '../images/ranks/' . $rank['rank_image'] ) );

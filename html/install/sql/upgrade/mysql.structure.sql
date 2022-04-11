@@ -83,11 +83,11 @@ ALTER TABLE priv_msgs
     CHANGE msg_text msg_text       text                  NOT NULL,
     CHANGE read_msg read_msg       tinyint(1) unsigned   NOT NULL;
 
-ALTER TABLE ranks
-    CHANGE rank_id rank_id           smallint(5) unsigned  NOT NULL auto_increment,
-    CHANGE rank_min rank_min         mediumint(8) unsigned NOT NULL,
-    CHANGE rank_max rank_max         mediumint(8) unsigned NOT NULL,
-    CHANGE rank_special rank_special tinyint(1) unsigned   NOT NULL;
+ALTER TABLE `ranks`
+    CHANGE `rank_id` `rank_id`           smallint(5) unsigned  NOT NULL auto_increment,
+    CHANGE `rank_min` `rank_min`         mediumint(8) unsigned NOT NULL,
+    CHANGE `rank_max` `rank_max`         mediumint(8) unsigned NOT NULL,
+    CHANGE `rank_special` `rank_special` tinyint(1) unsigned   NOT NULL;
 
 DROP TABLE session;
 

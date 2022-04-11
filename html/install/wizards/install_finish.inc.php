@@ -8,6 +8,8 @@
  * @license    GPL 2.0
  */
 
+echo '<h2>install_finish</h2>';
+
 include './language/' . $language . '/finish.php'; //This will set message to $content;
 
 $wizard->assign( 'finish', $content );

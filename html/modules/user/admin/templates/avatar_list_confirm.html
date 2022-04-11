@@ -46,8 +46,8 @@
         <tbody>
         <{foreach item=aid from=$aids}>
         <tr class="even">
-            <td class="user_list_id"><{$aid}></td>
-            <td class="user_list_title">
+            <td class="list_id"><{$aid}></td>
+            <td class="list_title">
                 <{if $actionForm->get('name',$aid) == $avatarObjects[$aid]->get('avatar_name')}>
                 <{$actionForm->get('name',$aid)|xoops_escape}>
                 <{else}>
@@ -55,8 +55,8 @@
                 <{/if}>
                 <input type="hidden" name="name[<{$aid}>]" value="<{$actionForm->get('name',$aid)|xoops_escape:edit}>">
             </td>
-            <td class="user_list_type"><{$avatarObjects[$aid]->getShow('avatar_mimetype')}></td>
-            <td class="user_list_select">
+            <td class="list_type"><{$avatarObjects[$aid]->getShow('avatar_mimetype')}></td>
+            <td class="list_select">
                 <{if $actionForm->get('display',$aid)|intval == $avatarObjects[$aid]->get('avatar_display')}>
                 <{if $avatarObjects[$aid]->get('avatar_display') == 1 }>
                 <{$smarty.const._YES}>
@@ -83,7 +83,7 @@
                 <input type="hidden" name="display[<{$aid}>]" value="0">
                 <{/if}>
             </td>
-            <td class="user_list_number">
+            <td class="list_number">
                 <{if $actionForm->get('weight',$aid) == $avatarObjects[$aid]->get('avatar_weight')}>
                 <{$actionForm->get('weight',$aid)|xoops_escape}>
                 <{else}>
@@ -91,14 +91,14 @@
                 <{/if}>
                 <input type="hidden" name="weight[<{$aid}>]" value="<{$actionForm->get('weight',$aid)|xoops_escape:edit}>">
             </td>
-            <td class="user_list_type">
+            <td class="list_type">
                 <{if $avatarObjects[$aid]->getShow('avatar_type') == "C"}>
                 <{$smarty.const._AD_USER_LANG_AVATAR_TYPE_C}>
                 <{elseif $avatarObjects[$aid]->getShow('avatar_type') == "S"}>
                 <{$smarty.const._AD_USER_LANG_AVATAR_TYPE_S}>
                 <{/if}>
             </td>
-            <td class="user_list_select">
+            <td class="list_select">
                 <b class="user_module_error">
                     <{if $actionForm->get('delete',$aid) == 1}>
                     <{$smarty.const._YES}>

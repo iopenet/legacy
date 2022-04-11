@@ -33,30 +33,30 @@
         <tbody>
         <tr>
             <td class="head"><{$smarty.const._MD_USER_LANG_AVATAR_ID}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('avatar_id')}></td>
+            <td><{$object->getShow('avatar_id')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_AVATAR_FILE}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <img src="<{$smarty.const.XOOPS_UPLOAD_URL}>/<{$object->getShow('avatar_file')}>" alt="<{$object->getShow('avatar_name')}>" title="<{$object->getShow('avatar_name')}>">
             <br><{$object->getShow('avatar_file')}>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_AVATAR_NAME}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('avatar_name')}></td>
+            <td><{$object->getShow('avatar_name')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_AVATAR_MIMETYPE}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('avatar_mimetype')}></td>
+            <td><{$object->getShow('avatar_mimetype')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_AVATAR_CREATED}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->get('avatar_created')|xoops_formattimestamp:l}></td>
+            <td><{$object->get('avatar_created')|xoops_formattimestamp:l}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_AVATAR_DISPLAY}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{if $object->get('avatar_display') == 1 }>
             <{$smarty.const._YES}>
             <{elseif $object->get('avatar_display') == 0 }>
@@ -66,11 +66,11 @@
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_AVATAR_WEIGHT}></td>
-            <td class="<{cycle values="odd,even"}>"><{$object->getShow('avatar_weight')}></td>
+            <td><{$object->getShow('avatar_weight')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_USER_LANG_AVATAR_TYPE}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{if $object->getShow('avatar_type') == "C"}>
             <{$smarty.const._AD_USER_LANG_AVATAR_TYPE_C}>
             <{elseif $object->getShow('avatar_type') == "S"}>
@@ -82,8 +82,8 @@
         <tfoot>
         <tr>
             <td class="foot" colspan="2">
-                <input class="btn cancel" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
-                <input class="btn delete" type="submit" value="<{$smarty.const._DELETE}>">
+                <input class="ui-btn cancel" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
+                <input class="ui-btn delete" type="submit" value="<{$smarty.const._DELETE}>">
             </td>
         </tr>
         </tfoot>

@@ -1,5 +1,9 @@
 <?php
 // // Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
+// ## XOOPS Cube Legacy - Versão em Português
+// ## Por............: Mikhail Miguel
+// ## E-mail.........: mikhail.miguel@gmail.com
+// License http://creativecommons.org/licenses/by/2.5/br/
 
 const _MD_USER_ERROR_AVATAR_EXTENSION = "Lamento, o envio de arquivos com essa extensão ainda não foi habilitado.";
 const _MD_USER_ERROR_AVATAR_MAXFILESIZE = "O arquivo enviado excede o limite de tamanho permitido para avatares.";
@@ -56,7 +60,7 @@ const _MD_USER_LANG_NOREGISTER = "Lamento, mas o cadastro de novos associados es
 const _MD_USER_LANG_NOTIFY = "Notificações";
 const _MD_USER_LANG_NOTIFY_METHOD = "Método de notificação: ao monitorar uma seção do portal, como você deseja receber as notificações de atualização?";
 const _MD_USER_LANG_NOTIFY_MODE = "Método de notificação padrão";
-const _MD_USER_LANG_NOTREGISTERED = "Criar uma conta?";
+const _MD_USER_LANG_NOTREGISTERED = "Adicionar uma conta?";
 const _MD_USER_LANG_PASS = "Senha";
 const _MD_USER_LANG_PASSWORD = "Senha";
 const _MD_USER_LANG_PM = "Recado";
@@ -116,17 +120,3 @@ const _MD_USER_MESSAGE_USER_DELETE_SUCCESS = "O seu perfil foi definitivamente r
 const _MD_USER_MESSAGE_YOURREGISTERED = "Agora você está cadastrado. Uma mensagem com a sua chave de ativação foi enviada ao <i>e-mail</i> que você nos forneceu. Por favor, siga as instruções contidas no <i>e-mail</i> para habilitar a sua conta.";
 const _MD_USER_MESSAGE_YOURREGISTERED2 = "Agora você está cadastrado. Por favor, espere pela aprovação dos administradores.";
 const _MD_USER_MESSAGE_REPASSWORD = "Re-registre sua senha para obter mais aprimoramentos de segurança.";
-// ############################################################### //
-// ## XOOPS Cube Legacy - Versão em Português
-// ############################################################### //
-// ## Por............: Mikhail Miguel
-// ## Website........: http://xoops.net.br
-// ## E-mail.........: mikhail.miguel@gmail.com
-// ## AOL............: mikhailmiguel
-// ## MSN............: mikhail.miguel@hotmail.com
-// ## Orkut..........: 15440532260129226492
-// ## Skype..........: mikhailmiguel
-// ## Yahoo!.........: mikhail.miguel@yahoo.com.br
-// ############################################################### //
-// *************************************************************** //
-;

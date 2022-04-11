@@ -6,21 +6,15 @@
     Date : 2020-06-11
     URL : https://github.com/xoopscube/xcl/
 
-    -------------------- -------------------- -------------------- -------------------- NAV MOBILE */
+    -------------------- -------------------- NAV MOBILE */
 
     .nav-mobile {
-
-        background      : var(  --color-5      );
-
-        border-color    : var(  --border-color   );
-        border-radius   : 0 var(--border-radius  ) 0 0;
-        border-style    : var(  --border-style   );
-        border-width    : var(  --border-width   );
-        box-shadow      : var(  --shadow-3     );
-
-        /* border-top-right-radius  : 5px;
-        border-bottom-right-radius: 5px; */
-
+        background      : var( --color-5 );
+        border-color    : var( --border-color );
+        border-radius   : 0 var( --border-radius ) 0 0;
+        border-style    : var( --border-style );
+        border-width    : var( --border-width );
+        box-shadow      : var( --shadow-3 );
         height          : 30px;
         left            : 0px; /*required for transition */
         padding         : 3px;
@@ -28,21 +22,16 @@
         width           : 30px;
         transition      : all 0.6s ease-in-out;
         top             : 127px;
-        z-index         : 700;
-
+        z-index         : var(--z-sticky);
     }
-
     .nav-mobile-close {
-
         left            : 237px;
         top             : 127px;
-
     }
 
-    /* -------------------- -------------------- -------------------- -------------------- SIDE NAV */
+    /* -------------------- -------------------- NAV ASIDE */
 
     .nav-aside {
-
         background      : var(  --ui-aside-bg   );
         bottom          : 0;/* fix overflow-y scroll*/
         color           : var(  --color-1  );
@@ -53,54 +42,44 @@
         overflow-y      : auto;
         position        : fixed;
         margin-top      : 50px;
-        transform       : translateX(-235px);
+        transform       : translateX(-247px);
         transition      : all 0.6s ease-in-out;
-        width           : 235px;
-        z-index         : 710;
+        width           : 247px;
+        z-index         : var(--z-above);
     }
-
     .nav-aside-active {
         transform       : translateX(0);
     }
 
-    /* -------------------- -------------------- -------------------- NAV-SIDE-MENU */
+    /* -------------------- -------------------- NAV-SIDE-MENU */
 
     .nav-side-menu {
-        background      : var(  --ui-nav-side-background    );
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        box-shadow      : var(  --ui-nav-side-box-shadow    );
+        background      : var( --ui-nav-side-background );
+        /*border-top-right-radius: 5px;*/
+        /*border-bottom-right-radius: 5px;*/
+        box-shadow      : var( --ui-nav-side-box-shadow );
         /*height          : 100vh;*/
         /*height          : 100%;*/
-        display: inline-table;
+        display         : inline-table;
         list-style-type : none;
-        padding         : var(  --ui-nav-side-padding       );
-        margin          : var(  --ui-nav-side-margin        );
-        width           : var(  --ui-nav-side-width         );
+        padding         : var( --ui-nav-side-padding );
+        margin          : var( --ui-nav-side-margin );
+        width           : var( --ui-nav-side-width );
     }
 
 
     /* -------------------- -------------------- NAV-SIDE - Module Block */
 
-    /* > nav-block | .nav-block-open:after
-            nav-module-icon | nav-module-name
-                > module-admin
-                    nav-module-link
-    */
-
     .nav-block {
-
         border-left     : 3px solid transparent;
         color           : var(  --ui-link   );
         padding         : 10px 10px;
         position        : relative;
         text-transform	: capitalize;
-
     }
 
     /* Animation Open */
     .nav-block:after {
-
         border-width    : 1px 0 0 1px;
         border-style    : solid;
         border-color    : var(  --ui-link-hover   );
@@ -113,25 +92,18 @@
         transform       : rotate(135deg) translate(0, -50%);
         transform-origin: top;
         width           : var(  --ui-nav-set-width    );
-
     }
 
     .nav-block:hover {
-
-        background      : var(  --ui-nav-block-background   );
-
-        border-left     : var(  --ui-nav-block-border-color )
-                          var(  --ui-nav-block-border-style	)
-                          var(  --ui-nav-block-border-width	);
-
-        color           : var(  --ui-link-hover       );
-
+        background      : var( --ui-nav-block-background );
+        border-left     : var( --ui-nav-block-border-color )
+                          var( --ui-nav-block-border-style )
+                          var( --ui-nav-block-border-width );
+        color           : var( --ui-link-hover );
     }
 
     .nav-side-menu li:last-child .nav-block:hover {
-
-        border-bottom-right-radius: var(    --border-radius  );
-
+        border-bottom-right-radius: var( --border-radius );
     }
 
     /* .nav-block:first-child:hover{
@@ -139,102 +111,77 @@
         } */
 
     .nav-module-icon {
-
         align-items     : center;
         display         : flex;
         justify-content : center;
-
     }
 
     /* -------------------- -------------------- NAV-SIDE - Module Name */
 
     .nav-module-name {
-
         margin          : 0 10px;
         border-left     : 3px solid transparent;
     }
 
-
     .nav-block-open {
-
-        background      : var(  --ui-nav-block-background   );
+        background      : var( --ui-nav-block-background );
         border-left     : 3px solid transparent;
-        color           : var(  --ui-link-hover   );
-
+        color           : var( --ui-link-hover );
     }
 
     .nav-block:hover {
-
-        border-color    : var(  --ui-nav-block-border-color );
-
+        border-color    : var( --ui-nav-block-border-color );
     }
 
     .nav-block-open:after {
-
         transform       : rotate(-135deg) translate(0, -50%); /* Animation */
-
     }
 
     .nav-side-menu .nav-block-close {
-
         max-height      : 0;
         visibility      : hidden;
-
     }
-
 
     /* -------------------- -------------------- NAV-Module-Admin */
 
     .nav-module-admin {
-
-        background      : var(  --ui-nav-block-background   );
-
+        background      : var( --ui-nav-block-background );
         list-style-type : none;
         margin          : 0;
         overflow        : hidden;
         padding         : 0;
         transition      : all 0.4s ease-in-out;
         visibility      : visible;
-
     }
 
     .nav-module-link {
-
         align-items     : center;
-        border-left     : var(  --ui-nav-block-border-color )
-                          var(  --ui-nav-block-border-style )
-                          var(  --ui-nav-block-border-width );
+        border-left     : var( --ui-nav-block-border-color )
+                          var( --ui-nav-block-border-style )
+                          var( --ui-nav-block-border-width );
         display         : flex;
         line-height     : 2.5rem;
-
     }
 
     .nav-module-link a,
     .nav-module-link a:hover {
-
-        color           : var(  --ui-nav-block-color-link   );
+        color           : var( --ui-nav-block-color-link );
         padding         : 0 0 0 1.5rem;
         width           : 100%;
-
     }
 
     .nav-module-link:hover {
-
-        background      : var(  --ui-nav-hover      );
-        color           : var(  --ui-nav-link-color );
-
+        background      : var( --ui-nav-hover );
+        color           : var( --ui-nav-link-color );
     }
-
 
     /* -------------------- -------------------- NAV-Module-Options Icons */
 
     .nav-module-options > a,
     .nav-module-options > a:hover {
-
         align-items     : center;
         display         : flex;
         justify-content : center;
         padding         : var(  --space-4  ) 0;
         width           : 100%;
-
     }

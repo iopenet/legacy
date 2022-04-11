@@ -15,8 +15,9 @@ if (!defined('XOOPS_ROOT_PATH')) {
 
 require_once XOOPS_MODULE_PATH . '/legacy/forms/SearchResultsForm.class.php';
 
-define('LEGACY_SEARCH_RESULT_MAXHIT', 5);
-define('LEGACY_SEARCH_SHOWALL_MAXHIT', 20);
+const LEGACY_SEARCH_RESULT_MAXHIT = 5;
+const LEGACY_SEARCH_SHOWALL_MAXHIT = 20;
+
 
 class Legacy_SearchResultsAction extends Legacy_Action
 {
@@ -95,7 +96,8 @@ class Legacy_SearchResultsAction extends Legacy_Action
                     $module['results'] = $this->_doSearch($client, $xoopsUser, $params);
 
                     if (count($module['results']) > 0) {
-                        $module['has_more'] = (count($module['results']) >= $this->_getMaxHit()) ? true : false;
+                        // @todo @gigamaster $module['has_more'] = (count($module['results']) >= $this->_getMaxHit()) ? true : false;
+                        $module['has_more'] = count($module['results']) >= $this->_getMaxHit();
                         $this->mSearchResults[] = $module;
                     }
                 }

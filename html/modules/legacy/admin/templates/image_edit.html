@@ -63,13 +63,13 @@
         <{/if}>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_IMAGE_NAME}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{xoops_input type=file name=image_name}>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._MD_LEGACY_LANG_IMAGE_NICENAME}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{xoops_input type=text name=image_nicename value=$actionForm->get('image_nicename') size=30 maxlength=191}>
             </td>
         </tr>
@@ -81,13 +81,13 @@
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_IMAGE_WEIGHT}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <{xoops_input type=text name=image_weight value=$actionForm->get('image_weight') size=5}>
             </td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACY_LANG_IMGCAT_ID}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <select name="imgcat_id">
                 <{xoops_optionsArray id=imgcat_id from=$categoryArr value=imgcat_id label=imgcat_name default=$actionForm->get('imgcat_id')}>
             </select>

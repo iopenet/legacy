@@ -12,7 +12,10 @@ require_once XOOPS_MODULE_PATH . '/user/class/AbstractListAction.class.php';
 require_once XOOPS_MODULE_PATH . '/user/admin/forms/UserSearchFilterForm.class.php';
 require_once XOOPS_MODULE_PATH . '/user/admin/forms/UserSearchListForm.class.php';
 
-//!Fix WARNING: Declaration of User_UserSearchListAction::prepare(&$controller, &$xoopsUser) should be compatible with User_Action::prepare(&$controller, &$xoopsUser, $moduleConfig)
+// @todo @gigamaster !Fix WARNING:
+// Declaration of User_UserSearchListAction::prepare(&$controller, &$xoopsUser)
+// should be compatible with
+// User_Action::prepare(&$controller, &$xoopsUser, $moduleConfig)
 class User_UserSearchListAction extends User_AbstractListAction
 {
     public $mUserObjects = [];
@@ -20,7 +23,7 @@ class User_UserSearchListAction extends User_AbstractListAction
     public $mpageArr = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 0];
     public $mExtraURL = '';
 
-    public function prepare(&$controller, &$xoopsUser, &$moduleConfig)
+    public function prepare(&$controller, &$xoopsUser, $moduleConfig)
     {
         $this->mActionForm =new User_UserSearchListForm();
         $this->mActionForm->prepare();
@@ -174,7 +177,7 @@ class User_UserSearchListAction extends User_AbstractListAction
         $render->setAttribute('pageNavi', $this->mFilter->mNavi);
     }
 
-
+// @todo @gigamaster Check change $render to $renderer
     public function executeViewSuccess(&$controller, &$xoopsUser, &$renderer)
     {
         $controller->executeForward('./index.php?action=UserSearchList'.$this->getExtraURL());

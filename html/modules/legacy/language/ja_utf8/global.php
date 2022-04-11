@@ -34,10 +34,11 @@ const _NEWESTFIRST = '新しいものから';
 const _MORE = 'もっと...';
 const _MULTIPAGE = '[pagebreak]タグを本文内に記入することでページ区切りを挿入することができます。';
 const _IFNOTRELOAD = 'ページが自動的に更新されない場合は<a href="%s">ここ</a>をクリックしてください';
-const _WARNINSTALL2 = '注意：ファイル%sがサーバ上に存在します。インストール完了後は必ず削除してください。';
+const _WARNINSTALL2 = "注）ディレクトリ %s はサーバー上に存在します。<br>'install/passwd.php' ファイルを開き、パスワードを追加するか、必ず削除してください。";
 const _WARNINWRITEABLE = '注意：ファイル%sへの書き込みが可能となっています。このファイルのパーミッション設定を変更してください。';
 const _WARNPHPENV = '注意：PHPの設定環境の中で、"%s" が "%s"になっています。%s';
 const _WARNSECURITY = '（サイトの脆弱につながる危険性があります。）';
+const _WARN_INSTALL_TIP = 'Activate the Preload — For development purposes only!<br> Use the preload to keep mainfile and install directory.<br>Remember to chomd and delete install to prevent any security problem.';
 
 //%%%%%%	File Name themeuserpost.php 	%%%%%
 const _POSTEDBY = '投稿者：'; // Posted date

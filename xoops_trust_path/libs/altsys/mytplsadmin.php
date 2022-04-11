@@ -297,26 +297,25 @@ echo "<h2 class='admintitle'>" . _MYTPLSADMIN_H3_MODULE . " : $target_mname</h2>
 echo "<form name='MainForm' action='?mode=admin&amp;lib=altsys&amp;page=mytplsadmin&amp;dirname=" . htmlspecialchars( $target_dirname, ENT_QUOTES ) . "' method='post'>" . $xoopsGTicket->getTicketHtml( __LINE__ ) ;
 
 echo '<div layout="row center-justify" class="control-action">
-        <p>' . _MYTPLSADMIN_CREATE_NEW_TPLSET . ' : ' . _MYTPLSADMIN_CAPTION_BASE . ':
+        <div>' . _MYTPLSADMIN_CREATE_NEW_TPLSET . ' : ' . _MYTPLSADMIN_CAPTION_BASE . ':
 			<select name="clone_tplset_from">'. $tplset_options .'
 			<option value="_blank_">' . _MYTPLSADMIN_OPT_BLANKSET . '</option>
 			</select> ' . _MYTPLSADMIN_CAPTION_SETNAME . ' :
 			<input type="text" name="clone_tplset_to" size="8" maxlength="16">
 			<input type="submit" name="clone_tplset_do" value="' . _MYTPLSADMIN_BTN_NEWTPLSET . '">
-        </p>
-    <div class="control-view">
-        <a class="ui-btn ui-btn-small" href="' .XOOPS_URL . '/modules/legacyRender/admin/index.php?action=TplsetList">Render</a>
+		</div>
+		<div class="control-view">';
+	// link to create a new custom template
+    if ( $target_dirname == '_custom' ) {
+        echo '<a class="ui-btn" href="index.php?mode=admin&lib=altsys&page=mytplsform&tpl_tplset=default">' . _MYTPLSADMIN_CREATENEWCUSTOMTEMPLATE . '</a>';
+    }
+echo '<a class="ui-btn ui-btn-small" href="' .XOOPS_URL . '/modules/legacyRender/admin/index.php?action=TplsetList">Render</a>
         <button class="help-admin ui-btn" type="button" data-id="4" data-module="altsys" data-help-article="#help-templates" title="Help">
             <span class="ui-icon ui-icon-help"></span>
         </button>
     </div>
     </div>';
 
-
-// link to create a new custom template
-if ( $target_dirname == '_custom' ) {
-	echo "<a href='index.php?mode=admin&lib=altsys&page=mytplsform&tpl_tplset=default'>" . _MYTPLSADMIN_CREATENEWCUSTOMTEMPLATE . "</a>\n";
-}
 
 // beginning of table
 echo "
@@ -344,11 +343,12 @@ $fingerprint_classes = [
 
 // template ROWS
 while ( list( $tpl_file, $tpl_desc, $type, $count ) = $db->fetchRow( $frs ) ) {
-	$evenodd      = @$evenodd == 'even' ? 'odd' : 'even';
+//	$evenodd      = @$evenodd == 'even' ? 'odd' : 'even';
 	$fingerprints = [];
 
 	// information about the template
-	echo "<tr class='$evenodd'>
+//	echo "<tr class='$evenodd'>
+	echo "<tr>
                 <td>
                     <dl>
                         <dt>" . htmlspecialchars( $tpl_file, ENT_QUOTES ) . "</dt>
@@ -376,7 +376,14 @@ while ( list( $tpl_file, $tpl_desc, $type, $count ) = $db->fetchRow( $frs ) ) {
 		$tplset4disp = htmlspecialchars( $tplset, ENT_QUOTES );
 
 		// query for templates in db
-		$drs     = $db->query( 'SELECT * FROM ' . $db->prefix( 'tplfile' ) . ' f NATURAL LEFT JOIN ' . $db->prefix( 'tplsource' ) . " s WHERE tpl_file='" . addslashes( $tpl_file ) . "' AND tpl_tplset='" . addslashes( $tplset ) . "'" );
+		$drs = $db->query( 'SELECT * FROM ' . $db->prefix( 'tplfile' )
+            . ' f NATURAL LEFT JOIN '
+            . $db->prefix( 'tplsource' )
+            . " s WHERE tpl_file='"
+            . addslashes( $tpl_file )
+            . "' AND tpl_tplset='"
+            . addslashes( $tplset ) . "'"
+        );
 		$numrows = $db->getRowsNum( $drs );
 		$tpl     = $db->fetchArray( $drs );
 		if ( empty( $tpl['tpl_id'] ) ) {
@@ -404,31 +411,34 @@ while ( list( $tpl_file, $tpl_desc, $type, $count ) = $db->fetchRow( $frs ) ) {
 // command submit ROW
 echo "<tfoot>
         <tr class='foot'>
-		<td>
-			" . _MYTPLSADMIN_CREATE_NEW_TPLSET . ": <br>
-			" . _MYTPLSADMIN_CAPTION_BASE . ":
-			<select name='clone_tplset_from'>
+		<td>"
+    . _MYTPLSADMIN_CREATE_NEW_TPLSET . ": <br>"
+    . _MYTPLSADMIN_CAPTION_BASE
+    . ": <select name='clone_tplset_from'>
 				$tplset_options
 				<option value='_blank_'>" . _MYTPLSADMIN_OPT_BLANKSET . "</option>
-			</select>
-			<br>
-			" . _MYTPLSADMIN_CAPTION_SETNAME . ": <input type='text' name='clone_tplset_to' size='8' maxlength='16' /> <input type='submit' name='clone_tplset_do' value='" . _MYTPLSADMIN_BTN_NEWTPLSET . "' />
+        </select>
+        <br>"
+    . _MYTPLSADMIN_CAPTION_SETNAME
+    . ": <input type='text' name='clone_tplset_to' size='8' maxlength='16'> <input type='submit' name='clone_tplset_do' value='" . _MYTPLSADMIN_BTN_NEWTPLSET . "'>
 		</td>
 		<td class='head'></td>
-		<td class='head'>
-			" . _MYTPLSADMIN_CAPTION_COPYTO . ":
-			<select name='copyf2db_to'>
-				$tplset_options
-			</select>
-			<br>
-			<input name='copyf2db_do' type='submit' value='" . _MYTPLSADMIN_BTN_COPY . "' onclick='return altsys_mytpladmin_check_copy_submit(\"" . _MYTPLSADMIN_CNF_COPY_SELECTED_TEMPLATES . "\", \"base\", true);' />
-		</td>\n";
+		<td class='head'>"
+    . _MYTPLSADMIN_CAPTION_COPYTO . ":
+        <select name='copyf2db_to'>
+            $tplset_options
+        </select>
+        <br>
+        <input name='copyf2db_do' type='submit' value='" . _MYTPLSADMIN_BTN_COPY . "' onclick='return altsys_mytpladmin_check_copy_submit(\"" . _MYTPLSADMIN_CNF_COPY_SELECTED_TEMPLATES . "\", \"base\", true);'>
+    </td>\n";
 
 foreach ( $tplsets as $tplset ) {
 	$tplset4disp = htmlspecialchars( $tplset, ENT_QUOTES );
-	echo "\t\t<td class='head'>
-			" . ( 'default' == $tplset && '_custom' != $target_dirname ? '' : "<input name='del_do[{$tplset4disp}]' type='submit' value='" . _DELETE . "' onclick='return altsys_mytpladmin_check_copy_submit(\"" . _MYTPLSADMIN_CNF_DELETE_SELECTED_TEMPLATES . "\", \"{$tplset4disp}_\", false);' /><br><br>" ) . '
-			'
+	echo "\t<td class='head'>"
+        . ( 'default' == $tplset && '_custom' != $target_dirname ? '' : "<input name='del_do[{$tplset4disp}]' type='submit' value='"
+            . _DELETE . "' onclick='return altsys_mytpladmin_check_copy_submit(\""
+            . _MYTPLSADMIN_CNF_DELETE_SELECTED_TEMPLATES
+            . "\", \"{$tplset4disp}_\", false);'><br><br>" ) . ''
 	     . _MYTPLSADMIN_CAPTION_COPYTO . ":
 			<select name='copy_to[{$tplset4disp}]'>
 				" . str_replace( '<option value=\'' . $tplset4disp . '\'>' . $tplset4disp . '</option>', '', $tplset_options ) . "

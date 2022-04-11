@@ -16,6 +16,7 @@ if (!defined('XOOPS_ROOT_PATH')) {
 require_once XOOPS_MODULE_PATH . '/legacy/actions/SearchResultsAction.class.php';
 require_once XOOPS_MODULE_PATH . '/legacy/forms/SearchShowallForm.class.php';
 
+
 class Legacy_SearchShowallAction extends Legacy_SearchResultsAction
 {
     public function _setupActionForm()

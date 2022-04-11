@@ -54,7 +54,7 @@ const _MD_LEGACY_LANG_UID = 'uid';
 const _MD_LEGACY_LANG_YMAIL = 'Your Email';
 const _MD_LEGACY_LANG_YNAME = 'Your Name';
 const _MD_LEGACY_MESSAGE_INSTALL_COMPLETE_CONFIRM = 'Install Complete!';
-const _MD_LEGACY_MESSAGE_INSTALL_COMPLETE_WARNING = 'Remove {0} directory to block anonymous attackers trying to use the installer.';
+const _MD_LEGACY_MESSAGE_INSTALL_COMPLETE_WARNING = 'Delete the "Installation Wizard" directory to block anonymous attackers trying to use the installer.<br><span class="badge"> {0}</span>';
 const _MD_LEGACY_MESSAGE_LOGGEDOUT = 'You are now logged out.';
 const _MD_LEGACY_MESSAGE_LOGIN_SUCCESS = 'Login successful';
 const _MD_LEGACY_MESSAGE_THANKYOUFORVISIT = 'Thank you for your visit!';

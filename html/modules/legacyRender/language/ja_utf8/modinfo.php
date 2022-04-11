@@ -3,10 +3,10 @@
 const _MI_LEGACYRENDER_ADMENU_BANNER_MANAGE = 'バナー管理';
 const _MI_LEGACYRENDER_ADMENU_TEMPLATE_MANAGE = 'テンプレート管理';
 const _MI_LEGACYRENDER_ADMENU_THEME_SETTING = 'テーマの設定';
-const _MI_LEGACYRENDER_ADMENU_TPLFILE_MANAGE = 'テンプレートファイル管理';
+const _MI_LEGACYRENDER_ADMENU_TPLFILE_MANAGE = 'テンプレート管理';
 const _MI_LEGACYRENDER_CONF_BANNERS = 'バナー広告を有効にする';
-const _MI_LEGACYRENDER_NAME = '互換レンダーシステム';
-const _MI_LEGACYRENDER_NAME_DESC = 'XOOPS 2.0.9/XOOPS JP 2.0.x のテーマエンジンと互換性のあるレンダーシステムです。XOOPS2テーマを使用可能です。';
+const _MI_LEGACYRENDER_NAME = 'レンダリングシステム';
+const _MI_LEGACYRENDER_NAME_DESC = 'XOOPS JP 2.0.x のテーマエンジンと互換性のあるレンダーシステムです。XOOPS2テーマを使用可能です。';
 const _MI_LR_FOOTER = 'フッタ';
 const _MI_LR_FOOTER_DESC = 'リンクを記入する場合は必ずフルパス（https://〜）で入力してください。フルパスで入力しなかった場合、モジュール内ページでうまく表示されないことがあります。';
 const _MI_LR_META_AUTHOR = 'METAタグ(作成者)';

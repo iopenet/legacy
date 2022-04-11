@@ -252,7 +252,7 @@ while (false !== ($row_table = $db->fetchArray($srs))) {
 }
 
 
-// beggining of Output
+// beginning of Output
 xoops_cp_header();
 include __DIR__ . '/mymenu.php';
 
@@ -279,9 +279,9 @@ while ( $row_table = $db->fetchArray( $srs ) ) {
 
 
 // table
-echo "<div class='ui-card-main'>
-<h2>" . _AM_H3_PREFIXMAN . "</h2>
+echo "<h2>" . _AM_H3_PREFIXMAN . "</h2>
 <table class='outer'>
+<thead>
 	<tr>
 		<th>PREFIX</th>
 		<th>TABLES</th>
@@ -289,7 +289,7 @@ echo "<div class='ui-card-main'>
 		<th>COPY</th>
 		<th>ACTIONS</th>
 	</tr>
-";
+</thead>";
 
 foreach ( $prefixes as $prefix ) {
 
@@ -346,16 +346,14 @@ foreach ( $prefixes as $prefix ) {
 	if ( function_exists( 'gzencode' ) ) {
 		echo "<input type='submit' name='download_tgz' value='tar.gz' onclick='this.form.target=\"_blank\"'>";
 	}
-	echo "	</form>
+	echo "</form>
 		</td>
 	</tr>\n";
 }
 
-echo '
-</table>
-<p>' . sprintf( _AM_TXT_HOWTOCHANGEDB, XOOPS_ROOT_PATH, XOOPS_DB_PREFIX ) . '</p>
-</div>
-';
+echo '</table>
+<div class="tips"><p>' . sprintf( _AM_TXT_HOWTOCHANGEDB, XOOPS_ROOT_PATH, XOOPS_DB_PREFIX ) . '</p>
+</div>';
 
 // Display Log if exists
 if ( ! empty( $_SESSION['protector_logger'] ) ) {

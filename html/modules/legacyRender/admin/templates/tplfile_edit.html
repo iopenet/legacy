@@ -43,23 +43,23 @@ function expandEditor( id, width, height )
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACYRENDER_LANG_TPL_TPLSET}></td>
-            <td class="<{cycle values="odd,even"}>"><b><{$object->getShow('tpl_tplset')}></b></td>
+            <td><b><{$object->getShow('tpl_tplset')}></b></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACYRENDER_LANG_TPL_MODULE}></td>
-            <td class="<{cycle values="odd,even"}>"><b><{$object->getShow('tpl_module')}></b></td>
+            <td><b><{$object->getShow('tpl_module')}></b></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACYRENDER_LANG_TPL_FILE}></td>
-            <td class="<{cycle values="odd,even"}>"><b><{$object->getShow('tpl_file')}></b></td>
+            <td><b><{$object->getShow('tpl_file')}></b></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACYRENDER_LANG_TPL_DESC}></td>
-            <td class="<{cycle values="odd,even"}>"><{xoops_input type=text name=tpl_desc size=80 value=$actionForm->get('tpl_desc')}></td>
+            <td><{xoops_input type=text name=tpl_desc size=80 value=$actionForm->get('tpl_desc')}></td>
         </tr>
         <tr>
             <td class="head"><{$smarty.const._AD_LEGACYRENDER_LANG_TPL_SOURCE}></td>
-            <td class="<{cycle values="odd,even"}>">
+            <td>
             <div class="legacyRender_TemplateManager_sizenavi">
                 <{$smarty.const._AD_LEGACYRENDER_LANG_MORE_SMALL}>
                 &raquo;&raquo;
@@ -80,8 +80,8 @@ function expandEditor( id, width, height )
     </tr>
         <tr>
             <td class="foot" colspan="2">
-                <input class="formButton" type="submit" value="<{$smarty.const._EDIT}>">
-                <input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
+                <input class="ui-btn" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
+                <input class="ui-btn" type="submit" value="<{$smarty.const._EDIT}>">
             </td>
         </tr>
     </table>

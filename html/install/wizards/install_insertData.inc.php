@@ -13,12 +13,14 @@ $adminpass = $myts->stripSlashesGPC( $_POST['adminpass'] );
 $adminmail = $myts->stripSlashesGPC( trim( $_POST['adminmail'] ) );
 $timezone  = $myts->stripSlashesGPC( $_POST['timezone'] );
 
+
 if ( ! preg_match( "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+([\.][a-z0-9-]+)+$/i", $adminmail ) ) {
 	$wizard->setContent( '<p>' . _INSTALL_L73 . '</p>' );
 	$wizard->setBack( [ '', _INSTALL_L112 ] );
 	$wizard->error();
 	exit();
 }
+
 if ( ! isset( $adminname, $adminpass ) || ! isset( $adminmail ) || '' === $adminmail || '' === $adminname || '' === $adminpass || $adminpass !== $adminpass2 ) {
 	$wizard->setContent( '<p>' . _INSTALL_L41 . '</p>' );
 	$wizard->setBack( [ '', _INSTALL_L112 ] );
@@ -67,8 +69,10 @@ $mm = new mainfile_manager( '../mainfile.php' );
 foreach ( $group as $key => $val ) {
 	$mm->setRewrite( $key, (int) $val );
 }
+
 $result = $mm->doRewrite();
 $wizard->assign( 'mm_reports', $mm->report() );
 
 setcookie( 'xcl_wap_session', '', time() - 3600, ini_get( 'session.cookie_path' ), ini_get( 'session.cookie_domain' ), ini_get( 'session.cookie_secure' ), ini_get( 'session.cookie_httponly' ) );
+
 $wizard->render( 'install_insertData.tpl.php' );

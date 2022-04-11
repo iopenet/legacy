@@ -1,4 +1,6 @@
 <?php
+// v2.3.0 2021/05/15 @gigamaster XCL-PHP7
+
 $content =
     '<div class="confirmInfo">O último passo do instalador de XCL permite instalar automaticamente os módulos principais<br>
 de maneira que a sua nova plataforma web estará pronta a funcionar!</div>

@@ -1,7 +1,7 @@
 	<{foreach item=def from=$defArr}>
 	<tr>
     <td class="head"><{$def->get('label')}></td>
-    <td class="<{cycle values="odd,even"}>">
+    <td>
     	<{if $def->get('type')=="string"}>
       <{xoops_input type=text name=$def->getShow('field_name') value=$profileForm->get($def->getShow('field_name'))  size=40 maxlength=255}>
       <{elseif $def->get('type')=="int" || $def->get('type')=="float"}>

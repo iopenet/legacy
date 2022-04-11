@@ -2,15 +2,15 @@
 
 foreach ( $this->v( 'checks' ) as $check ) {
 
-	echo $check . '<br>';
+    echo $check . '<br>';
 
 }
 
 if ( is_array( $this->v( 'msgs' ) ) ) {
 
-	foreach ( $this->v( 'msgs' ) as $msg ) {
+    foreach ( $this->v( 'msgs' ) as $msg ) {
 
-		echo '<div class="confirmInfo">' . $msg . '</div>';
+        echo $msg ;
 
-	}
+    }
 }

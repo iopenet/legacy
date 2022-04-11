@@ -17,5 +17,5 @@ CREATE TABLE `{prefix}_{dirname}_mailjob_link`
     `uid`        mediumint(8) NOT NULL default '0',
     `retry`      tinyint(3)   NOT NULL default '0',
     `message`    varchar(191)          default NULL,
-    PRIMARY KEY (`mailjob_id, uid`)
+    PRIMARY KEY (`mailjob_id`, `uid`)
 ) ENGINE=InnoDB;
