@@ -2,8 +2,133 @@
 
 All notable changes to this project will be documented in this file.
 
-- Format based on [Keep A Change Log](https://keepachangelog.com/en/1.0.0/).
-- This project adheres to [Semantic Versioning](https://semver.org/).
+## The XOOPSCube Project 
+
+#### Git Repository  
+
+[Branch Legacy 2.3 Commits ](https://github.com/xoopscube/legacy/commits/2.3)
+
+
+## [2.3] 2022-04-10  
+
+  
+⚡ 🔨 🎨 Merge XCL UI + Wizard 
+
+✔️ Web Installation Wizard - UI Options :  
+- Chmod Mainfile.php  
+- Delete directory /install  
+- Activate Preload - For Development purposes only !   
+
+✔️ CSS install Wizard  
+✔️ CSS User Notification  
+✔️ Change language to constants  
+✔️ Check list for installation - ☑️Check All  
+✔️ Extended array of Trust Path directories  
+✔️ Fix Notifications : Confirm, Error, Success  
+✔️ Fix check file permissions  
+✔️ Fix check directory permissions  
+✔️ Make files and folders  
+✔️ Display permissions [ 0777 ]  
+✔️ User Management SQL key   
+
+**Bugfix and User Interface**  
+
+✔️ Add avatar to Dashboard  
+✔️ Add extra fields to Dashboard  
+- User Search  
+- User View
+- User Edit  
+
+✔️ Changed MultiMailer  
+✔️ Changed mail namespace use \PHPMailer 
+✔️ Changed language define to const   
+✔️ Changed MailJob Dashboard    
+✔️ Changed Banners management  
+✔️ Dashboard Breadcrumbs  
+✔️ Dashboard Dropdown Sort/Filter   
+✔️ Dashboard Data Tables consistency   
+✔️ Dashboard Data Table prefix 'list_'  
+✔️ Dashboard Control-Action dialog Help    
+  
+⚠️ NOTE  
+🆖 PDO blank page ( guess Wizard could not find the driver)  
+🆖 PostgreSQL ( same issue here )  
+
+
+## [2.3] 2022-04-01  
+
+
+⚡ 🔨 🎨 Merge XCL PHP7 UI   
+
+✔️ Add Dropdown Filer/Sort  
+✔️ Add Renderer admin banner  
+✔️ Add Renderer admin banner expired (edit) 
+✔️ Add Settings / Define / PEAR_PATH  
+✔️ Add Settings / Define / VENDOR_PATH  
+✔️ Add Settings / Definintion / PEAR_PATH  
+✔️ Add Settings / Definintion / VENDOR_PATH  
+✔️ Add x-Layout z-index  
+✔️ Admin select option checked  
+✔️ Admin :focus-visible ( Keyboard Accessibility )  
+✔️ Admin select :focus-visible ( Keyboard Accessibility )  
+✔️ Admin checkbox :focus-visible ( Keyboard Accessibility )  
+✔️ Admin dashboard ( Keyboard Accessibility )  
+✔️ Admin nav-header ( Keyboard Accessibility )  
+✔️ Admin preference list  
+✔️ Admin SVG icons  
+✔️ Admin Tables CSS   
+✔️ App Preloads :  
+- Preload assignUid  
+- Preload D3ForumCommonCSS  
+- Preload debugOnlyAdmin  
+- Preload EmailLogin  
+- Preload Multilanguage  
+- Preload MultiMenu  
+- Preload SetupAltsysMgr  
+   
+✔️ Fixed AltSys $numrows  
+✔️ Fixed AltSys extra_sides  
+✔️ Fixed AltSys switch view code/diff  
+✔️ Fixed AltSys template code/diff overflow-y  
+✔️ Fixed AltSys Redirect message (if empty templates vars)    
+✔️ Fixed Bootstrap -> pico templates update  
+✔️ Fixed class declaration compatible  
+✔️ Fixed custom properties (dashboard aside)  
+✔️ Fixed deprecated each with foreach    
+✔️ Fixed locale const : EN, FR, JA, PT  
+✔️ Fixed Protector Mysql Database   
+✔️ Fixed statement with ternary operator  
+✔️ Fixed TextDiff  
+✔️ Fixed user-menu to side-panel 
+✔️ X-Update Theme Screenshot  
+✔️ X-Update Store list (tabs) overflow-y  
+✔️ X-Update Input readonly  
+✔️ X-Update language Name/Title  
+✔️ X-Update language Tips  
+✔️ OS Browser Checker  
+
+✔️ Clean-up files/folders  
+🚧 Admin Side Panel Webmasters Tools  
+🚧 Smarty Module isActive -> display [ icon/link ]  
+🚧 Smarty Debugger Dialog  
+🚧 LocalStorage Settings  
+🚧 LocalStorage Webmaster ToDo list  
+🚧 Module's Help Docs  
+🚧 Help Semantic Layout ( nav, article, section )  
+🚧 Help Word Censoring Options ( json )  
+🚧 Search Options ( json, multilanguage )  
+🚧 Input Email - regex  
+🚧 add tips create template set backup  
+🚧 UI - Buttons  
+🚧 UI - Define common ration eg. 144+2=288, 447x2=894  
+🚧 UI - Rename /common/bootstrap 4/5  
+
+
+---
+## [rc] 2022-01-21
+
+⚡ 🔨 🎨 Merge XCL PHP7 
+
 
 ---
 ## [rc] 2022-01-21
