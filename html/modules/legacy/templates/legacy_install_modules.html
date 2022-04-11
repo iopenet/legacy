@@ -6,62 +6,63 @@
 <title><{$xoops_sitename}></title>
 
 <!-- !TODO : Fix this to default package stylesheet ! -->
-<!-- <link rel="stylesheet" href="<{$xoops_url}>/modules/legacy/admin/theme/style.css" media="all"> -->
+<!-- <link rel="stylesheet" href="<{$xoops_url}>/modules/legacy/admin/theme/style.css" media="all">-->
 <style>
 
 html,
 body {
-	background: #232831;
-	color: #C0CCDA;
-	font-family: 'Avenir', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
-	font-size: 14px;
-	font-weight: 300;
-	line-height: 1.5rem;
-	/* padding					: var(  --space-no					); */
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
+	background 		: #232831;
+	color 			: #C0CCDA;
+	font-family 	: 'Avenir', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+	font-size 		: 14px;
+	font-weight 	: 300;
+	line-height 	: 1.5rem;
+	/*text-rendering: optimizeLegibility;*/
+	/*-webkit-font-smoothing: antialiased;*/
 }
 body {
-	margin : 2em auto;
-    transition			: background 500ms ease-in-out, color 200ms ease;
+	margin  	: 2em auto;
+    transition 	: background 500ms ease-in-out, color 200ms ease;
 }
 
 a {
-	color: #face74;
-	font-weight: bold;
-	text-decoration: none;
+	color 			: #face74;
+	font-weight 	: bold;
+	text-decoration : none;
 }
 
 a:hover,
 svg:hover {
-	color: #fff;
-	font-weight: bold;
-	text-decoration: none;
+	color 			: #fff;
+	font-weight 	: bold;
+	text-decoration : none;
 }
 .wrapper-require {
 	align-content   : center;
 	display         : flex;
 	flex-direction	: column;
-    justify-content	: center;height: 100%;
-    min-height      : 100vh;
+    justify-content	: center;
+	height: 100%;
+    /*min-height      : 100vh;*/
     background      : linear-gradient(130deg, hsl(216, 17%, 17%), hsl(220, 16%, 15%));
 	border          : 1px solid hsla(210, 15%, 20%, 1);
 	border-radius   : 20px;
 	box-shadow      : 20px 20px 30px #1a1e25, -20px -20px 30px hsl(219, 16%, 21%);
-    margin          :0 auto;
-    padding         :1em 5em;
+    margin          : 2.5em auto;
+	/*margin          : 1.5em auto 2.5em;*/
+    padding         : 1em 5em;
     width           : fit-content;
 }
 .wrapper-require > * {
-	margin					: 1em auto;
+	/*margin 			: 1em auto;*/
 }
 table {
-	width: 100%;
-	border-spacing: 1px;
-  border-collapse: separate;
+	width 			: 100%;
+	border-spacing 	: 1px;
+	border-collapse : separate;
 }
 td {
-	padding: 1em 2em;
+	padding 		: .751em 1.25em;
 }
 h2,
 input[type='submit'],
@@ -72,7 +73,7 @@ vertical-align		: middle; /* Align icon and text */
 width				: 1.5em; /* Size icon to text */
 }
 
-/* -------------------- -------------------- -------------------- -------------------- FORM CHECKBOX & RADIO  */
+/* -------------------- -------------------- FORM CHECKBOX & RADIO  */
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
 input[type='checkbox'],
@@ -217,13 +218,14 @@ input[type='submit']:hover {
     color: #fff;
 }
 
-.error,
+.alert,
 .req {
     color: #ff6633;
 	border: 1px solid #ff6633;
-	background: url(img/icon-alert.svg) no-repeat 1em 1.5em;
-    background-size: 30px 30px;
-    padding : .74em 1.27em
+	border-radius: 7px;
+	margin: 2em 1em;
+    padding : .74em 1.27em;
+	text-align: center;
 }
 </style>
 </head>
@@ -231,14 +233,13 @@ input[type='submit']:hover {
 
 <div class="wrapper-require">
 
-<h2>Module <{$smarty.const._SYS_MODULE_UNINSTALLED}></h2>
+<h2>Core Modules <{$smarty.const._SYS_MODULE_UNINSTALLED}></h2>
 
-<div class="error"><{$smarty.const._SYSTEM_MODULE_ERROR}></div>
+<div class="alert"><{$smarty.const._SYSTEM_MODULE_ERROR}></div>
 
 	<form action="<{$xoops_url}>/index.php" method="post">
 
 	<table>
-
 		<thead>
 			<tr>
 				<th>&nbsp;</th>
@@ -253,7 +254,7 @@ input[type='submit']:hover {
 				<td>
 					<input type="checkbox" name="uninstalled_modules_dummy[]" value="<{$module}>" checked="checked" disabled>
 					<input type="hidden" name="uninstalled_modules[]" value="<{$module}>"></td>
-				<td><b><{$module}></b></td>
+				<td><b style="color:var(--color-red)">📦 <{$module}></b></td>
 				<td colspan="2"><{$smarty.const._SYS_MODULE_UNINSTALLED}></td>
 			</tr>
 		<{/foreach}>
@@ -262,7 +263,7 @@ input[type='submit']:hover {
 				<td>
 					<input type="checkbox" name="disabled_modules_dummy[]" value="<{$module}>" checked="checked" disabled>
 					<input type="hidden" name="disabled_modules[]" value="<{$module}>"/></td>
-				<td><b><{$module}></b></td>
+				<td><b>📦 <{$module}></b></td>
 				<td><{$smarty.const._SYS_MODULE_DISABLED}></td>
 				<td class="req">
 					<a href="<{$xoops_url}>/index.php?cube_module_uninstall=<{$module}>">
@@ -277,7 +278,7 @@ input[type='submit']:hover {
 		<{foreach item=module from=$option}>
 			<tr>
 				<td><input type="checkbox" name="option_modules[]" value="<{$module.dirname}>" <{$module.checked}>></td>
-				<td><{$module.dirname}></td>
+				<td>📦 <{$module.dirname}></td>
 				<td colspan="2"><{$module.desc}></td>
 			</tr>
 		<{/foreach}>
@@ -286,8 +287,8 @@ input[type='submit']:hover {
 		<tfoot>
 			<tr>
 				<td colspan="4">
-         <input type="hidden" name="cube_module_install" value="1"/>
-         <p><input type="submit" value="<{$smarty.const._INSTALL}>"></p>
+				 <input type="hidden" name="cube_module_install" value="1">
+				 <p><input type="submit" value="<{$smarty.const._INSTALL}>"></p>
 				</td>
 			</tr>
 		</tfoot>

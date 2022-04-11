@@ -213,8 +213,8 @@ class setting_manager {
 		$ret .= $this->editform_sub( _INSTALL_LANG_XOOPS_SALT, _INSTALL_LANG_XOOPS_SALT_DESC, 'salt', $this->sanitizer->htmlSpecialChars( $this->salt ) );
 
 		$ret .= '<h4>' . _INSTALL_L54 . '</h4>
-                <p><span style="font-size:85%;">' . _INSTALL_L69 . '</span>
-                <input type="radio" name="db_pconnect" value="1"' . ( 1 === $this->db_pconnect ? ' checked="checked"' : '' ) . '>' . _INSTALL_L23 . '
+                <p><span style="font-size:85%;">' . _INSTALL_L69 . '</span></p>
+                <p><input type="radio" name="db_pconnect" value="1"' . ( 1 === $this->db_pconnect ? ' checked="checked"' : '' ) . '>' . _INSTALL_L23 . '
                 <input type="radio" name="db_pconnect" value="0"' . ( 1 !== $this->db_pconnect ? ' checked="checked"' : '' ) . '>' . _INSTALL_L24 . '
                 </p>';
 

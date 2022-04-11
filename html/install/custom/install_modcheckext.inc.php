@@ -23,9 +23,9 @@ foreach ($writeok as $wok) {
         $fperm = substr(sprintf('%o', $permissions), -4); //output 0777
 
         if (file_exists('../' . $wok) && is_writable('../' . $wok)) {
-            $wizard->addArray('checks', _OKIMG . '<code>'.$wok.'</code>'. sprintf( _INSTALL_L86,'<p class="data"><code>' .$fperm.'</code>'. $wok .'</p>') );
+            $wizard->addArray('checks', _OKIMG . '<code>' .$fperm.'</code><code>'.$wok.'</code> '. sprintf( _INSTALL_L86,'<p class="data">'. $wok .'</p>') );
         } else {
-            $wizard->addArray('checks', _NGIMG . '<code>'.$wok.'</code>'. sprintf( _INSTALL_L85, '<p class="data"><code style="color:#ff6633">' .$fperm.'</code>'. $wok .'</p>'));
+            $wizard->addArray('checks', _NGIMG . '<code style="color:#ff6633">' .$fperm.'</code><code>'.$wok.'</code> '. sprintf( _INSTALL_L85, '<p class="data">'. $wok .'</p>'));
             $wizard->setBack( [ 'start', _INSTALL_L103 ] );
             $error = true;
         }
@@ -37,9 +37,9 @@ foreach ($writeok as $wok) {
         $fperm = substr(sprintf('%o', $permissions), -4); //output 0666
 
         if (file_exists('../' . $wok) && is_writable('../' . $wok)) {
-            $wizard->addArray('checks', _OKIMG . '<code>'.$wok.'</code>' . sprintf( _INSTALL_L84,'<p class="data"><code>' .$fperm.'</code>'.  $wok .'</p>') );
+            $wizard->addArray('checks', _OKIMG . '<code>' .$fperm.'</code><code>'.$wok.'</code> ' . sprintf( _INSTALL_L84,'<p class="data">'.  $wok .'</p>') );
         } elseif (!is_writable('../' . $wok)) {
-            $wizard->addArray('checks', _NGIMG . '<code>'.$wok.'</code>'. sprintf( _INSTALL_L83,'<p class="data"><code style="color:#ff6633">' .$fperm.'</code>'.  $wok .'</p>') );
+            $wizard->addArray('checks', _NGIMG . '<code style="color:#ff6633">' .$fperm.'</code><code> '.$wok.'</code>'. sprintf( _INSTALL_L83,'<p class="data">'.  $wok .'</p>') );
             $wizard->setBack( [ 'start', _INSTALL_L103 ] );
             $error = true;
         }

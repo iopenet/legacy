@@ -360,6 +360,9 @@ google.load("jqueryui", "'. $this->_mUi .'");
     {
         $handler =& xoops_gethandler('config');
         $configArr =& $handler->getConfigsByDirname('legacyRender');
-        return $configArr[$key];
+
+        // @todo @gigamaster PHP74 Null coalesce operator - No need to explicitly initialize the variable.
+        // return $configArr[$key];
+        return $configArr[$key] ?? '';
     }
 }

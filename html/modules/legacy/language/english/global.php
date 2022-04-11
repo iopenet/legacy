@@ -2,7 +2,7 @@
 // $Id: global.php, Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
 
 const _TOKEN_ERROR = 'Alert ! This prevent you from instantiating a malformed request or post. Please, submit again to confirm!';
-const _SYSTEM_MODULE_ERROR = 'Following modules are required.';
+const _SYSTEM_MODULE_ERROR = 'The following modules are required.';
 const _INSTALL = 'Install';
 const _UNINSTALL = 'Uninstall';
 const _SYS_MODULE_UNINSTALLED = 'Required (Not Installed)';

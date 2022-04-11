@@ -154,7 +154,7 @@
     }
 
 
-    /* -------------------- -------------------- -------------------- -------------------- Right side toggle */
+    /* -------------------- -------------------- Right side toggle */
 
     @keyframes rotate {
     from {
@@ -166,10 +166,10 @@
     }
     @keyframes rotateY {
         from {
-                transform: rotateY(0);
+            transform: rotateY(0);
         }
         to {
-                transform: rotateY(359.99deg);
+            transform: rotateY(359.99deg);
         }
     }
 
@@ -207,8 +207,8 @@
         /* Similar syntax to box-shadow */
     }
 
-    /* -------------------- -------------------- -------------------- -------------------- XCL CUBE
-    * Quintessential Responsive 3D CSS Cube, MIT License @zacharyjohnson https://github.com/zachstronaut/quintessential-css-cube/ */
+    /* -------------------- -------------------- XCL CUBE */
+
     .qube-perspective{-webkit-perspective:900px;-moz-perspective:900px;perspective:900px}
     .qube-preserve3d{-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;transform-style:preserve-3d}
     .qube{position:relative;margin:0;padding:0;list-style:none;width:100%;height:100%;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;transform-style:preserve-3d}
@@ -236,7 +236,7 @@
     .qube.faces>:nth-child(6),.qube>.bottom{-webkit-transform:translateY(50%) rotateX(-90deg);-moz-transform:translateY(50%) rotateX(-90deg);transform:translateY(50%) rotateX(-90deg)}
     .qube.faces>:nth-child(6):after,.qube>.bottom:after{background:rgba(0,0,0,.7)}
     .qube.textured.faces>:nth-child(6),.qube.textured>.bottom{background-position:-200% -100%}
-    /* XCL-Cube */
+    /* Quintessential Responsive 3D CSS Cube, MIT License @zacharyjohnson https://github.com/zachstronaut/quintessential-css-cube/ */
 
     .xcl-cube {
         width           : 40px;
@@ -351,7 +351,7 @@
     }
 
 
-    /* -------------------- -------------------- -------------------- -------------------- COLOR SCHEME */
+    /* -------------------- -------------------- COLOR SCHEME */
 
     ul#themecolors {display: block;}
     ul#themecolors li {display: inline-block;}

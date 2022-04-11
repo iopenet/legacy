@@ -2,7 +2,7 @@
 // Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
 
 const _TOKEN_ERROR = '照合用のワンタイム・チケットが見つかりませんでした。ほとんどの場合は操作手順の関係でワンタイム・チケットが消費されただけですが、CSRF攻撃を受けた可能性もあります（この操作は本当にあなたが望んだ操作ですか？）　操作内容をしっかり確認し、もう一度操作を行ってください。';
-const _SYSTEM_MODULE_ERROR = '以下のモジュールが導入されていません';
+const _SYSTEM_MODULE_ERROR = '以下のモジュールが必要です。';
 const _INSTALL = 'インストール';
 const _UNINSTALL = '削除';
 const _SYS_MODULE_UNINSTALLED = '必須(未導入)';

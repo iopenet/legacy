@@ -7,8 +7,7 @@ Your new XCL web application platform will be up and running!</div>
 <h4>Help</h4>
 <p>XCL core features an advanced search functionality and a built-in Help for each module.</p>
 <h4>Support</h4>
-<p>The Xupdate Manager features a user-friendly dashboard to install and update add-ons.
+<p>The Xupdate Manager features a user-friendly dashboard to install and update add-ons.<br>
 Extend your application through the addition of new functionality or through modification of existing functionality.
-In principle, this provides improvements in performance and enhancements without impairing the core system.</p>
-<p>Visit please <a href="https://github.com/xoopscube/" rel="external">XOOPSCube Project</a> for documentation, modules, extensions (preloads) and themes.</p>
+In principle, this allows for performance improvements and add-ons without impairing the core system.</p>
 ';

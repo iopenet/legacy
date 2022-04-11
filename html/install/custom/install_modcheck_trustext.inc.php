@@ -31,10 +31,10 @@ foreach ( $writeok as $wok ) {
             $wokWritable = $res !== false;
             @unlink($tempFile);
             $fperm = substr(sprintf('%o', $permissions), -4); //output 0777
-            $wizard->addArray('checks', _OKIMG . '<code>'.$wok.'</code>' . sprintf(_INSTALL_L86, '<p class="data"><code>' .$fperm.'</code>'.XOOPS_TRUST_PATH. '/'.$wok.'</p>') );
+            $wizard->addArray('checks', _OKIMG . '<code>' .$fperm.'</code><code>'.$wok.'</code> ' . sprintf(_INSTALL_L86, '<p class="data">'.XOOPS_TRUST_PATH. '/'.$wok.'</p>') );
         } else {
             $fperm = substr(sprintf('%o', $permissions), -4); //output 0777
-            $wizard->addArray('checks', _NGIMG . '<code>'.$wok.'</code>' . sprintf(_INSTALL_L85, '<p class="data"><code style="color:#ff6633">'.XOOPS_TRUST_PATH. '/'.$wok.'</p>') );
+            $wizard->addArray('checks', _NGIMG . '<code>' .$fperm.'</code><code>'.$wok.'</code> ' . sprintf(_INSTALL_L85, '<p class="data"><code style="color:#ff6633">'.XOOPS_TRUST_PATH. '/'.$wok.'</p>') );
             $error = true;
         }
     }

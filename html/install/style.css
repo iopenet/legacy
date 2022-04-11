@@ -9,10 +9,38 @@
 	-------------------- -------------------- INDEX */
 
 :root {
+
+    --trackBG: hsl(228, 10%, 10%);
+    --thumbBG: hsl(229, 20%, 21%);
+
+    --color-mode: 'dark';
+
     --background: hsl(219, 17%, 16%);
     --text-color: hsl(212, 26%, 80%);
     --color-10 : hsl(212, 26%, 80%);
+
+    /* Firefox Scrollbar */
+    scrollbar-color: var(--thumbBG) var( --trackBG ); /* thumb-color track-color */
+    scrollbar-width: thin;
 }
+    /*  Webkit Scrollbar */
+    ::-webkit-scrollbar {
+     width: 9px;
+     height: 9px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: var( --thumbBG );
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #686c7e;
+    }
+    ::-webkit-scrollbar-track {
+        background-color: var( --trackBG );
+    }
+    textarea::-webkit-resizer {
+        background-color: var( --thumbBG );
+    }
+
 html {
     box-sizing: border-box
 }
@@ -86,6 +114,7 @@ code, .badge {
 }
 
 h3 {
+    font-weight: lighter;
     margin: 1.5em 0 .85em;
 }
 

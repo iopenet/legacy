@@ -1,11 +1,11 @@
 <?php
 // Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
-const _TOKEN_ERROR = "Attention ! A fin d'éviter l'exécution d'une requête mal formé, veuillez recommencer pour confirmer!";
-const _SYSTEM_MODULE_ERROR = "Les modules suivants ne sont pas installés.";
+const _TOKEN_ERROR = "Attention ! A fin d'éviter une erreur dans la requête faite au serveur, la validation du formulaire requiert une confirmation!";
+const _SYSTEM_MODULE_ERROR = "Les modules suivants sont requis.";
 const _INSTALL = "Installer";
 const _UNINSTALL = "Désinstaller";
-const _SYS_MODULE_UNINSTALLED = "Requit (Non Installé)";
-const _SYS_MODULE_DISABLED = "Requit (Désactivé)";
+const _SYS_MODULE_UNINSTALLED = "Requis (Non Installé)";
+const _SYS_MODULE_DISABLED = "Requis (Désactivé)";
 const _SYS_RECOMMENDED_MODULES = "Module Recommendé";
 const _SYS_OPTION_MODULES = "Module Optionnel";
 const _UNINSTALL_CONFIRM = "Voulez-vous désinstaller le module System?";
@@ -37,7 +37,7 @@ const _WARNINSTALL2 = "ATTENTION: Le repértoire %s existe sur votre serveur.<br
 const _WARNINWRITEABLE = "ATTENTION : Veillez Changer les permissions du fichier %s pour des raisons de sécurité - sous Unix (444), sous Win32 (lecture seule)";
 const _WARNPHPENV = "ATTENTION : paramètres php.ini \"%s\" est réglé \"%s\". %s";
 const _WARNSECURITY = "(Ceci peut causer des problèmes de sécurité)";
-const _WARN_INSTALL_TIP = 'Activate the preload — For development purposes only!<br> Use the preload to keep mainfile and install directory.<br>Remember to chomd and delete install to prevent any security problem.';
+const _WARN_INSTALL_TIP = "Activer la précharge - A des fins de développement uniquement!<br>Utilisez le 'preload' pour conserver le fichier 'mainfile'' et le répertoire d'installation.<br>Souvenez-vous de changer les permissions de 'mainfile' (lecture) et de supprimer '/install' pour des raisons de sécurité.";
 
 //%%%%%% File Name themeuserpost.php %%%%%
 const _PROFILE = "Profil";
