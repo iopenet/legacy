@@ -8,41 +8,41 @@
  *
  */
 // Enum
-const XOOPS_SIDEBLOCK_LEFT = 0;
-const XOOPS_SIDEBLOCK_RIGHT = 1;
-const XOOPS_SIDEBLOCK_BOTH = 2;
-const XOOPS_CENTERBLOCK_LEFT = 3;
-const XOOPS_CENTERBLOCK_RIGHT = 4;
-const XOOPS_CENTERBLOCK_CENTER = 5;
-const XOOPS_CENTERBLOCK_ALL = 6;
-const XOOPS_BLOCK_INVISIBLE = 0;
-const XOOPS_BLOCK_VISIBLE = 1;
+const XOOPS_SIDEBLOCK_LEFT      = 0;
+const XOOPS_SIDEBLOCK_RIGHT     = 1;
+const XOOPS_SIDEBLOCK_BOTH      = 2;
+const XOOPS_CENTERBLOCK_LEFT    = 3;
+const XOOPS_CENTERBLOCK_RIGHT   = 4;
+const XOOPS_CENTERBLOCK_CENTER  = 5;
+const XOOPS_CENTERBLOCK_ALL     = 6;
+const XOOPS_BLOCK_INVISIBLE     = 0;
+const XOOPS_BLOCK_VISIBLE       = 1;
 
-const XOOPS_MATCH_START = 0;
-const XOOPS_MATCH_END = 1;
-const XOOPS_MATCH_EQUAL = 2;
-const XOOPS_MATCH_CONTAIN = 3;
+const XOOPS_MATCH_START         = 0;
+const XOOPS_MATCH_END           = 1;
+const XOOPS_MATCH_EQUAL         = 2;
+const XOOPS_MATCH_CONTAIN       = 3;
 
 // Smarty
-const SMARTY_DIR = XOOPS_TRUST_PATH . "/libs/smarty/";
-const XOOPS_COMPILE_PATH = XOOPS_TRUST_PATH . "/templates_c";
+const SMARTY_DIR            = XOOPS_TRUST_PATH . "/libs/smarty/";
+const XOOPS_COMPILE_PATH    = XOOPS_TRUST_PATH . "/templates_c";
 
 // Path
-const XOOPS_CACHE_PATH = XOOPS_TRUST_PATH . "/cache";
-const XOOPS_MODULE_PATH = XOOPS_ROOT_PATH . "/modules";
-const XOOPS_UPLOAD_PATH = XOOPS_ROOT_PATH . "/uploads";
-const XOOPS_THEME_PATH = XOOPS_ROOT_PATH . "/themes";
-const XOOPS_LIBRARY_PATH = XOOPS_TRUST_PATH . "/libs";
-const PEAR_PATH = XOOPS_TRUST_PATH . "/PEAR";
-const VENDOR_PATH = XOOPS_TRUST_PATH . "/vendor";
+const XOOPS_CACHE_PATH      = XOOPS_TRUST_PATH . "/cache";
+const XOOPS_MODULE_PATH     = XOOPS_ROOT_PATH . "/modules";
+const XOOPS_UPLOAD_PATH     = XOOPS_ROOT_PATH . "/uploads";
+const XOOPS_THEME_PATH      = XOOPS_ROOT_PATH . "/themes";
+const XOOPS_LIBRARY_PATH    = XOOPS_TRUST_PATH . "/libs";
+
+const PEAR_PATH             = XOOPS_TRUST_PATH . "/PEAR";
+const VENDOR_PATH           = XOOPS_TRUST_PATH . "/vendor";
 
 // URL
-const XOOPS_MODULE_URL = XOOPS_URL . "/modules";
-const XOOPS_UPLOAD_URL = XOOPS_URL . "/uploads";
-const XOOPS_THEME_URL = XOOPS_URL . "/themes";
+const XOOPS_MODULE_URL      = XOOPS_URL . "/modules";
+const XOOPS_UPLOAD_URL      = XOOPS_URL . "/uploads";
+const XOOPS_THEME_URL       = XOOPS_URL . "/themes";
 
 const XOOPS_LEGACY_PROC_NAME = "legacy";
-
 
 // USER
 const XCUBE_CORE_USER_MODULE_NAME = "user";
