@@ -53,10 +53,10 @@ if (!defined('SMARTY_CORE_DIR')) {
     define('SMARTY_CORE_DIR', SMARTY_DIR . 'internals' . DIRECTORY_SEPARATOR);
 }
 
-define('SMARTY_PHP_PASSTHRU',   0);
-define('SMARTY_PHP_QUOTE',      1);
-define('SMARTY_PHP_REMOVE',     2);
-define('SMARTY_PHP_ALLOW',      3);
+const SMARTY_PHP_PASSTHRU = 0;
+const SMARTY_PHP_QUOTE = 1;
+const SMARTY_PHP_REMOVE = 2;
+const SMARTY_PHP_ALLOW = 3;
 
 /**
  * @package Smarty

@@ -6,13 +6,13 @@ All notable changes to this project will be documented in this file.
 
 #### Git Repository  
 
-[Branch Legacy 2.3 Commits ](https://github.com/xoopscube/legacy/commits/2.3)
+Refer please to [Branch Legacy 2.3 Commits ](https://github.com/xoopscube/legacy/commits/2.3)
 
 
 ## [2.3] 2022-04-10  
 
   
-⚡ 🔨 🎨 Merge XCL UI + Wizard 
+⚡ ? ? Merge XCL UI + Wizard 
 
 ✔️ Web Installation Wizard - UI Options :  
 - Chmod Mainfile.php  
@@ -40,7 +40,7 @@ All notable changes to this project will be documented in this file.
 - User Edit  
 
 ✔️ Changed MultiMailer  
-✔️ Changed mail namespace use \PHPMailer 
+✔️ Changed mail namespace use \PHPMailer  
 ✔️ Changed language define to const   
 ✔️ Changed MailJob Dashboard    
 ✔️ Changed Banners management  
@@ -51,20 +51,18 @@ All notable changes to this project will be documented in this file.
 ✔️ Dashboard Control-Action dialog Help    
   
 ⚠️ NOTE  
-🆖 PDO blank page ( guess Wizard could not find the driver)  
-🆖 PostgreSQL ( same issue here )  
+? PDO blank page ( guess Wizard could not find the driver)  
+? PostgreSQL ( same issue here )  
 
 
 ## [2.3] 2022-04-01  
 
 
-⚡ 🔨 🎨 Merge XCL PHP7 UI   
+⚡ ? ? Merge XCL PHP7 UI   
 
 ✔️ Add Dropdown Filer/Sort  
 ✔️ Add Renderer admin banner  
-✔️ Add Renderer admin banner expired (edit) 
-✔️ Add Settings / Define / PEAR_PATH  
-✔️ Add Settings / Define / VENDOR_PATH  
+✔️ Add Renderer admin banner expired (edit)  
 ✔️ Add Settings / Definintion / PEAR_PATH  
 ✔️ Add Settings / Definintion / VENDOR_PATH  
 ✔️ Add x-Layout z-index  
@@ -99,46 +97,45 @@ All notable changes to this project will be documented in this file.
 ✔️ Fixed Protector Mysql Database   
 ✔️ Fixed statement with ternary operator  
 ✔️ Fixed TextDiff  
-✔️ Fixed user-menu to side-panel 
+✔️ Fixed user-menu to side-panel   
 ✔️ X-Update Theme Screenshot  
 ✔️ X-Update Store list (tabs) overflow-y  
 ✔️ X-Update Input readonly  
 ✔️ X-Update language Name/Title  
 ✔️ X-Update language Tips  
 ✔️ OS Browser Checker  
-
 ✔️ Clean-up files/folders  
-🚧 Admin Side Panel Webmasters Tools  
-🚧 Smarty Module isActive -> display [ icon/link ]  
-🚧 Smarty Debugger Dialog  
-🚧 LocalStorage Settings  
-🚧 LocalStorage Webmaster ToDo list  
-🚧 Module's Help Docs  
-🚧 Help Semantic Layout ( nav, article, section )  
-🚧 Help Word Censoring Options ( json )  
-🚧 Search Options ( json, multilanguage )  
-🚧 Input Email - regex  
-🚧 add tips create template set backup  
-🚧 UI - Buttons  
-🚧 UI - Define common ration eg. 144+2=288, 447x2=894  
-🚧 UI - Rename /common/bootstrap 4/5  
+? Admin Side Panel Webmasters Tools  
+? Smarty Module isActive -> display [ icon/link ]  
+? Smarty Debugger Dialog  
+? LocalStorage Settings  
+? LocalStorage Webmaster ToDo list  
+? Module's Help Docs  
+? Help Semantic Layout ( nav, article, section )  
+? Help Word Censoring Options ( json )  
+? Search Options ( json, multilanguage )  
+? Input Email - regex  
+? add tips create template set backup  
+? UI - Buttons  
+? UI - Define common ration eg. 144+2=288, 447x2=894  
+? UI - Rename /common/bootstrap 4/5  
 
 
 ---
 ## [rc] 2022-01-21
 
-⚡ 🔨 🎨 Merge XCL PHP7 
+⚡ ? ? Merge XCL PHP7 
 
 
 ---
 ## [rc] 2022-01-21
 
-⚡ 🔨 🎨 Merge XCL PHP7 
+⚡ ? ? Merge XCL PHP7 
 
 ---
 ## [unreleased] 2021-12-10
 
-⚡ 🔨 🎨 Merge UI from packages XD and XF
+⚡ ? ? Merge UI from packages XD and XF
 
 
 ### Added
@@ -174,7 +171,7 @@ All notable changes to this project will be documented in this file.
 ---
 ## [unreleased] 2021-12-01
 
-⚡ 🔨 🎨 Merge UI from packages XD and XF
+⚡ ? ? Merge UI from packages XD and XF
 
 ### Changed
 
@@ -208,22 +205,22 @@ All notable changes to this project will be documented in this file.
 ---
 ## [unreleased] 2021-11-30
 
-⚡ 🔨 🎨 Merge UI from packages XD and XF
+⚡ ? ? Merge UI from packages XD and XF
 
 ---
 ## [unreleased] 2021-11-09
 
-📦 ⬆️ UPDATE jQuery 3.6.0
-📦 ⬆️ jQuery v3.6.0
-📦 ⬆️ jQuery UI - v1.13.0
-📦 ⬆️ PrismJS 1.25.0
-📦 ⬆️ XCL-Layout 2.3.1
-📦 ⬆️ XCL-SPA 2.3.1
+? ⬆️ UPDATE jQuery 3.6.0  
+? ⬆️ jQuery v3.6.0  
+? ⬆️ jQuery UI - v1.13.0  
+? ⬆️ PrismJS 1.25.0  
+? ⬆️ XCL-Layout 2.3.1  
+? ⬆️ XCL-SPA 2.3.1  
 
 ---
 ## [unreleased] 2021-06-14
 
-📦 ⬆️ UPDATE @gigamaster merge X-elFinder 2.59 (@nao-pon)
+? ⬆️ UPDATE @gigamaster merge X-elFinder 2.59 (@nao-pon)
 
 ---
 ## [unreleased] 2021-06-12
@@ -244,7 +241,7 @@ All notable changes to this project will be documented in this file.
 
 ### Update
 
-📦 ⬆️ UPDATE X-elFinder 2.58 @nao-pon
+? ⬆️ UPDATE X-elFinder 2.58 @nao-pon
 - [VD:abstract] Fixed #3151 support RAR5 lib
 - [cmd:fullscreen] Fixed #3177 wrong fullscreen button caption
 - [js:core] Supports cookie samesite attribute
@@ -264,12 +261,12 @@ All notable changes to this project will be documented in this file.
 ---
 ## [unreleased] 2021-06-07
 
-⚡ 🔨 🎨 [WIP] LOCALSTORAGE / Refactoring UI-X 2.3.1
+⚡ ? ? [WIP] LOCALSTORAGE / Refactoring UI-X 2.3.1
 
 ---
 ## [lint version] 2021-05-27
 
-⚡ 🔨 🎨 [WIP] LOCAL-FIRST / Refactoring UI-X 2.3.1
+⚡ ? ? [WIP] LOCAL-FIRST / Refactoring UI-X 2.3.1
 
 ---
 ## [lint version] 2021-03-27
@@ -285,7 +282,7 @@ All notable changes to this project will be documented in this file.
 - class, common, core
 - install wizard, modules, themes
 - default themes (templates)
-- language 🚧 fr utf-8 #238
+- language ? fr utf-8 #238
 - d3 modules (forum, pico, protector)
 - xelfinder
 - xupdate
@@ -605,20 +602,20 @@ Note : for Nginx, go to module preferences and checkbox to "Not use PathInfo"
 
 ### Changed
 
-- D3Forum refactor code
-- D3Forum english catalog
-- [WIP] D3Forum templates
-✅ custom layout
-✅ top  breadcrumbs
-✅ topics and posts table
-✅ post within a card
-✅ card header, body, footer
-✅ card footer with child nav (flex wrap)
-✅ pagination
-✅ external comments
-✅ inline SVG icons
-✅ modify post forms
-✅ advanced research
+- D3Forum refactor code  
+- D3Forum english catalog  
+- [WIP] D3Forum templates  
+✅ custom layout  
+✅ top  breadcrumbs  
+✅ topics and posts table  
+✅ post within a card  
+✅ card header, body, footer  
+✅ card footer with child nav (flex wrap)  
+✅ pagination  
+✅ external comments  
+✅ inline SVG icons  
+✅ modify post forms  
+✅ advanced research  
 
 ###  Fixed
 

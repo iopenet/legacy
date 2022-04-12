@@ -21,6 +21,10 @@ class UserMailjob_linkObject extends XoopsSimpleObject
     }
 }
 
+// @todo @gigamasterWARNING:
+// Declaration of & UserMailjob_linkHandler::get($mailjob_id, $uid)
+// should be compatible with & XoopsObjectGenericHandler::get($id)
+
 class UserMailjob_linkHandler extends XoopsObjectGenericHandler
 {
     public $mTable = 'user_mailjob_link';

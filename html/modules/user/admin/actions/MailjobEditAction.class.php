@@ -97,7 +97,10 @@ class User_MailjobEditAction extends User_AbstractEditAction
     {
         if (isset($params['pagenavi']) && is_object($params['pagenavi'])) {
             $navi =& $params['pagenavi'];
-            $mask = isset($params['mask']) ? $params['mask'] : null;
+            // @todo @gigamaster
+            //$mask = isset($params['mask']) ? $params['mask'] : null;
+            $mask = $params['mask'] ?? null;
+
 
             foreach ($navi->mExtra as $key => $value) {
                 if ($key != $mask) {

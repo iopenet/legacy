@@ -119,7 +119,10 @@ class XCube_Utils {
 			return $plain_text;
 		}
 
-		if ( null === $key || ! is_string( $key ) ) {
+        // @todo @gigamaster
+        // Condition is unnecessary because it is checked by '! is_string( $key )'
+        // if ( null === $key || ! is_string( $key ) ) {
+		if (! is_string( $key )) {
 			if ( ! defined( 'XOOPS_SALT' ) ) {
 				return $plain_text;
 			}
