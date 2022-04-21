@@ -10,8 +10,8 @@ if (!defined('_MEDIUMDATESTRING')) {
 if (!defined('_SHORTDATESTRING')) {
     define('_SHORTDATESTRING', 'Y/n/j');
 }
-define('_JSDATEPICKSTRING', 'yy-mm-dd');
-define('_PHPDATEPICKSTRING', 'Y-m-d');
+const _JSDATEPICKSTRING = 'yy-mm-dd';
+const _PHPDATEPICKSTRING = 'Y-m-d';
 
 /*
 The following characters are recognized in the format string:
