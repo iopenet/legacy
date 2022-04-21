@@ -19,7 +19,7 @@ class Legacy_ModuleListForm extends XCube_ActionForm
 {
     /***
      * If the request is GET, never return token name.
-     * By this logic, a action can have three page in one action.
+     * By this logic, an action can have three pages in one action.
      */
     public function getTokenName()
     {

@@ -349,6 +349,7 @@ const _AD_LEGACY_TIPS_THEME_ADMIN = "Choose the look of your <i>site</i> by clic
 const _AD_LEGACY_USERAGENT = "Identidade do navegador ('<em><a href='http://goo.gl/WfF6'>UA</a></em>')";
 const _AD_LEGACY_XCLEGACYVERSION = "Versão da plataform XOOPSCube";
 const _AD_LEGACY_XCVERSION = "Versão do XOOPS Cube";
+
 const _MD_AM_ADMINML = "E-mail do administrador";
 const _MD_AM_ADMNOTSET = "O endereço de correio eletrônico do administrador não foi definido.";
 const _MD_AM_ALLOWHTML = "Permitir o uso de códigos HTML nos comentários dos associados?";
@@ -382,7 +383,7 @@ const _MD_AM_DEBUGMODE2 = "Depurar MySQL";
 const _MD_AM_DEBUGMODE3 = "Depurar Smarty";
 const _MD_AM_DEBUGMODEDSC = "Diversos tipos de depuração de comportamento (debug). Usado quando o portal ainda está em desenvolvimento para tratar erros.";
 const _MD_AM_DEFAULTTZ = "Fuso horário padrão";
-const _MD_AM_DOBADIPS = "Bloquear acesso por IP";
+const _MD_AM_DOBADIPS = '<a id="ip_ban">⛔ Bloquear acesso por IP</a>';
 const _MD_AM_DOBADIPSDSC = "Associados com os números de IP especificados não poderão acessar ao portal.";
 const _MD_AM_DOCENSOR = "Habilitar a censura de palavras?";
 const _MD_AM_DOCENSORDSC = "As palavras serão censuradas se esta opção estiver ligada. Esta opção pode ser desligada para aumentar a velocidade do portal.";

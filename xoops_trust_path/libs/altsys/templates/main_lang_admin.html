@@ -19,7 +19,8 @@
 </div>
 
 
-<div layout="row center-justify" class="control-action">
+<{* ////— ACTION-CONTROL —\\\\ *}>
+<div layout="row center-justify" class="action-control">
 
     <form name="SelectLangFile" action="index.php" method="get">
         <input type="hidden" name="mode" value="admin">
@@ -32,11 +33,11 @@
         <select name="target_file" onchange="submit();">
             <{html_options values=$lang_files output=$lang_files selected=$target_file}>
         </select>
-        <input type="submit" value="<{$smarty.const._SUBMIT}>">
+        <input class="button submit" type="submit" value="<{$smarty.const._SUBMIT}>">
     </form>
 
     <div class="control-view">
-        <button class="help-admin ui-btn" type='button' data-id='4' data-module='altsys' data-help-article='#help-language' title="Help">
+        <button class="help-admin button" type='button' data-module='altsys' data-help-article='#help-language' title="<{$smarty.const._HELP}>">
             <span class="ui-icon ui-icon-help"></span>
         </button>
     </div>
@@ -82,8 +83,8 @@
 	<tfoot>
 		<tr>
 			<td colspan="3">
-			<input type="submit" name="do_update" value="<{$smarty.const._MYLANGADMIN_BTN_UPDATE}>">
-			<input type="reset" value="<{$smarty.const._MYLANGADMIN_BTN_RESET}>">
+				<input class="button reset" type="reset" value="<{$smarty.const._MYLANGADMIN_BTN_RESET}>">
+				<input class="button update" type="submit" name="do_update" value="<{$smarty.const._MYLANGADMIN_BTN_UPDATE}>">
 			<{$gticket_hidden}>
 			</td>
 		</tr>
@@ -93,8 +94,3 @@
 
 	</div>
 </form>
-
-
-
-
-

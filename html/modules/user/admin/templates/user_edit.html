@@ -15,9 +15,10 @@
 
 
 <{if $actionForm->get('uid')}>
-<h2 class="admintitle"><{$smarty.const._AD_USER_LANG_USER_EDIT}> »» <{$actionForm->get('uname')}></h2>
+<h2 class="admintitle"><{$smarty.const._AD_USER_LANG_USER_EDIT}> » <{$actionForm->get('uname')}></h2>
 
     <div class="tips"><{$smarty.const._AD_USER_TIPS_USER_EDIT}></div>
+
 <{else}>
 <h2 class="admintitle"><{$smarty.const._AD_USER_LANG_USER_NEW}></h2>
 
@@ -235,10 +236,10 @@
             </select>
             <{elseif $actionForm->get('level') == 1}>
             <{$smarty.const._AD_USER_LANG_LEVEL_ACTIVE}>
-            <{xoops_input type=hidden name=level value=$actionForm->get('level') }>
+            <{xoops_input type=hidden name=level value=$actionForm->get('level')}>
             <{elseif $actionForm->get('level') == 5}>
             <{$smarty.const._AD_USER_LANG_LEVEL_ROOT}>
-            <{xoops_input type=hidden name=level value=$actionForm->get('level') }>
+            <{xoops_input type=hidden name=level value=$actionForm->get('level')}>
             <{/if}>
             </td>
         </tr>
@@ -247,8 +248,8 @@
         <tfoot>
         <tr>
             <td colspan="2" class="foot">
-                <input class="button-cancel" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
-                <input class="button-submit" type="submit" value="<{$smarty.const._SUBMIT}>">
+                <input class="button cancel" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
+                <input class="button submit" type="submit" value="<{$smarty.const._SUBMIT}>">
             </td>
         </tr>
         </tfoot>

@@ -1,16 +1,19 @@
 /*
-    XOOPSCube Theme : XCL Admin Flex Grid
-    Distribution : XCL 2.3 Alpha
-    Version : 0.7.0
-    Author : Nuno Luciano aka Gigamaster
-    Date : 2020-06-11
-    URL : https://github.com/xoopscube/xcl/
+	XOOPSCube Theme : XCL Admin Flex Grid
+	Distribution : XOOPSCube XCL 2.3
+	Version : 1.0.0
+	Author : Nuno Luciano aka Gigamaster
+	Date : 2021-10-28
+	URL : https://github.com/xoopscube/
 
     -------------------- -------------------- -------------------- -------------------- Form elements  */
 
     /* TODO
     test overwrite default templates
     */
+
+    /*.badge,*/
+    .count,
     input[type="button"],
     /*input[type="color"],*/
     input[type="email"],
@@ -28,8 +31,14 @@
         border-width    : var(  --input-border-width   );
         /* box-shadow        : var(  --input-shadow		); */
         color           : var(  --input-color  );
-        padding         : var(  --space-4      );
-        margin          : var(  --space-no     );
+        padding         : var(  --space-3      );
+        margin          : var(  --space-no     ) var(  --space-1     );
+    }
+
+    .count {
+        font-size       : var(--font-14);
+        margin          : 0 var( --space-2 );
+        padding         : var( --space-2 ) var( --space-3 );
     }
 
     input[type="color"] {
@@ -68,16 +77,19 @@
         outline         : none;
     }
 
+    /* Note: Only text controls can be made read-only
+     * https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/readonly
+     */
     input[type="text"]:disabled,
-    input:read-only {
+    input:read-only:not([type=button]):not([type=submit]):not([type=reset]):not([type=checkbox]):not([type=radio])  {
         background      : inherit;
-        color           : var(--ui-link-visited);
+        color           : var(--link-visited);
         cursor          : not-allowed;
     }
-    input[type="text"]:disabled:hover,
-    input:read-only:hover {
-        border-color    : transparent;
-    }
+    /*input[type="text"]:disabled:hover,*/
+    /*input:read-only:hover {*/
+    /*    border-color    : transparent;*/
+    /*}*/
 
     *:focus-visible {
         outline         : var(  --input-border-hover );
@@ -87,7 +99,7 @@
 
 
     input[type="image"] svg path {
-        color: var( --ui-link)
+        color           : var( --link )
     }
 
     input[type="submit"],
@@ -101,17 +113,17 @@
         /*!* box-shadow   : var(  --input-shadow		); *!*/
         /*box-shadow      : 0 1px 1px 0 rgba(248, 194, 0, 0.42), 0 1px 1px -1px rgba(248, 194, 0, 0.42), 0 0 1px 0 rgba(248, 194, 0, 0.42);*/
         /*!* color        : var(  --input-color        ); *!*/
-        /*color           : var(  --ui-link         );*/
+        /*color           : var(  --link         );*/
         /*cursor          : pointer;*/
         /*padding         : var(--space-3) var(--space-7);*/
         /*transition      : 0.2s ease-in;*/
         /*!*width           : min-content;*!*/
         /*width           : fit-content;*/
-        background-color    : var(  --ui-button-bg  );
-        border              : var(  --ui-button-border      );
-        border-radius       : var(  --ui-button-radius      );
-        box-shadow          : var(  --ui-button-box-shadow  );
-        color               : var(  --ui-button-color       );
+        background-color    : var(  --button-bg  );
+        border              : var(  --button-border      );
+        border-radius       : var(  --button-radius      );
+        box-shadow          : var(  --button-shadow  );
+        color               : var(  --button-color       );
         cursor              : pointer;
         display             : inline-block;
         /* font-size        : 0.875rem;
@@ -120,9 +132,9 @@
         font-weight         : 300;
         letter-spacing      : 0.08rem;
         line-height         : 1; */
-        padding             : var(  --ui-button-padding     );
+        padding             : var(  --button-padding     );
         position            : relative;
-        margin              : var(  --ui-button-margin      );
+        margin              : var(  --button-margin      );
         text-align          : center;
         text-decoration     : none;
         touch-action        : manipulation;
@@ -203,7 +215,7 @@
     select option:focus,
     select option:active,
     select option:checked {
-        background-color: var(--color-blue) ;
+        background      : var(--color-blue) ;
         color           : var( --color-white ) ;
     }
 
@@ -250,7 +262,7 @@
     }
     /* Autofill text */
     input:-webkit-autofill{
-        -webkit-text-fill-color: var(--ui-link-active) !important;
+        -webkit-text-fill-color: var(--link-active) !important;
     }
     /* Autofill background */
     input:-webkit-autofill,
@@ -259,7 +271,7 @@
     }
 
 
-    /* 	-------------------- -------------------- -------------------- -------------------- CHECKBOX & RADIO  */
+    /* 	-------------------- -------------------- CHECKBOX & RADIO  */
 
     @supports (-webkit-appearance: none) or (-moz-appearance: none) {
 

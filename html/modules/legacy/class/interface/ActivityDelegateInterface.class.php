@@ -23,17 +23,17 @@ interface Legacy_iActivityDelegate
     /**
      * addActivity	Legacy_Activity.AddActivity
      *
-     * @param bool		&$result
-     * @param int		$uid		poster's user id
-     * @param int		$categoryId	access controller id
-     * @param string	$dirname	client module's dirname
-     * @param string	$dataname	client module's dataname(tablename)
-     * @param int		$dataId		client module's primary key
-     * @param int		$pubdate	entry's published date(unixtime)
+     * @param bool              &$result
+     * @param int $uid		    poster's user id
+     * @param int $categoryId	access controller id
+     * @param string $dirname	client module's dirname
+     * @param string $dataname	client module's dataname(tablename)
+     * @param int $dataId		client module's primary key
+     * @param int $pubdate	    entry's published date(unixtime)
      *
      * @return	void
      */
-    public static function addActivity(/*** bool ***/ &$result, /*** int ***/ $uid, /*** int ***/ $categoryId, /*** string ***/ $dirname, /*** string ***/ $dataname, /*** int ***/ $dataId, /*** int ***/ $pubdate);
+    public static function addActivity(bool &$result, int $uid, int $categoryId, string $dirname, string $dataname, int $dataId, int $pubdate);
 
     /**
      * deleteActivity	Legacy_Activity.DeleteActivity

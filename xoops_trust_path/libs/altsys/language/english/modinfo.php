@@ -1,5 +1,5 @@
 <?php
-
+// Syntax const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
 const _MI_ALTSYS_MODULENAME = 'UI Components';
 const _MI_ALTSYS_MODULEDESC = 'Management and translation editor for UI-Components : blocks, languages and templates .';
 

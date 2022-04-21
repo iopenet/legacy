@@ -25,9 +25,9 @@ require_once XOOPS_LEGACY_PATH . '/admin/forms/ModuleUpdateForm.class.php';
  * @section cupdate The custom-update-installer
  *
  * Module developers can use their own custom-update-installer in this action.
- * This function uses Legacy_ModulePhasedUpgrader to update moudles. But, this
+ * This function uses Legacy_ModulePhasedUpgrader to update modules. But, this
  * class can't smart update modules correctly & automatically, because the
- * module updat function bases on XOOPS2 JP spec. We have no rules to declare
+ * module update function bases on XOOPS2 JP spec. We have no rules to declare
  * modules strictly.
  *
  * To solve it, module developers should use the custom-update-installer,
@@ -52,7 +52,7 @@ require_once XOOPS_LEGACY_PATH . '/admin/forms/ModuleUpdateForm.class.php';
  *
  * You must declare News_Updater in XOOPS_ROOT_PATH . "/modules/news/admin/class/Updater.class.php".
  *
- * In the case where you specify the filepath, take care you describe the
+ * In the case where you specify the filepath, take care to describe the
  * filepath with absolute path.
  *
  * @subsection process Install Process
@@ -137,7 +137,7 @@ class Legacy_ModuleUpdateAction extends Legacy_Action
     }
 
     /**
-     * Creates a instance of the upgrade installer to mInstaller. And returns
+     * Creates an instance of the upgrade installer to mInstaller. And returns
      * it.
      *
      * The precondition is the existence of mXoopsModule.

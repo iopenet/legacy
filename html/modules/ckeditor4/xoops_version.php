@@ -13,31 +13,28 @@ if (!defined('XOOPS_ROOT_PATH')) {
 	exit();
 }
 
-//
-// Module manifesto.
-//
-$modversion['name'] = _MI_CKEDITOR4_LANG_CKEDITOR4;
-$modversion['version'] = 2.31;
-$modversion['description'] = 'v4.16.2 [ 11-08-2021 ] '._MI_CKEDITOR4_DESC_CKEDITOR4;
-$modversion['author'] = "Naoki Sawada (aka nao-pon). Nuno Luciano (aka gigamaster), 2020 XCL PHP7 ";
-$modversion['credits'] = "Naoki Sawada (aka nao-pon) https://xoops.hypweb.net/";
-$modversion['help'] = "help.html";
-$modversion['license'] = "GPL";
-$modversion['official'] = 0;
-$modversion['image'] = "images/module_ckeditor.svg";
-$modversion['dirname'] = "ckeditor4";
+// Manifesto.
+$modversion['dirname']      = "ckeditor4";
+$modversion['name']         = _MI_CKEDITOR4_LANG_CKEDITOR4;
+$modversion['version']      = '2.31';
+$modversion['description']  = 'v4.16.2 [ 11-08-2021 ] '._MI_CKEDITOR4_DESC_CKEDITOR4;
+$modversion['author']       = "Naoki Sawada (aka nao-pon) https://xoops.hypweb.net";
+$modversion['credits']      = "Naoki Sawada (aka nao-pon). Nuno Luciano (aka gigamaster) XCL PHP7 ";
+$modversion['license']      = "GPL";
+$modversion['image']        = "images/module_ckeditor.svg";
+$modversion['icon']         = 'images/module_icon.svg';
+$modversion['help']         = "help.html";
+$modversion['official']     = 0;
+$modversion['cube_style']   = true;
 
-$modversion['cube_style'] = true;
 $modversion['disable_legacy_2nd_installer'] = false;
 
-//
+
 // Templates
-//
 $modversion['templates'][]['file'] = 'ckeditor4_textarea.html';
 
-//
+
 // Admin panel setting
-//
 $modversion['hasAdmin'] = 1;
 $modversion['adminindex'] = "admin/index.php";
 $modversion['adminmenu'] = "admin/menu.php";

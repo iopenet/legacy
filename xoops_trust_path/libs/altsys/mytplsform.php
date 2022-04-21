@@ -6,8 +6,8 @@
  * @version    XCL 2.3.1
  * @author     Other authors gigamaster, 2020 XCL/PHP7
  * @author     Gijoe (Peak)
- * @copyright  (c) 2005-2022 Author
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @copyright  (c) 2005-2022 Authors
+ * @license    GPL v2.0
  */
 
 
@@ -20,7 +20,7 @@ include_once __DIR__ . '/include/Text_Diff_Renderer.php';
 include_once __DIR__ . '/include/Text_Diff_Renderer_unified.php';
 
 
-// only groups have 'module_admin' of 'altsys' can do that.
+// only user groups with admin permissions
 $module_handler     =& xoops_gethandler( 'module' );
 $module             =& $module_handler->getByDirname( 'altsys' );
 $moduleperm_handler =& xoops_gethandler( 'groupperm' );
@@ -32,6 +32,7 @@ if ( ! is_object( @$xoopsUser ) || ! $moduleperm_handler->checkRight( 'module_ad
 // initials
 $db =& XoopsDatabaseFactory::getDatabaseConnection();
 ( method_exists( 'MyTextSanitizer', 'sGetInstance' ) and $myts =& MyTextSanitizer::sGetInstance() ) || $myts =& MyTextSanitizer::getInstance();
+
 
 // language file
 altsys_include_language_file( 'mytplsform' );
@@ -60,14 +61,14 @@ if ( empty( $_GET['tpl_file'] ) || '_custom' == $_GET['tpl_file'] ) {
 		'tpl_refid'        => 0,
 		'tpl_module'       => '_custom',
 		'tpl_tplset'       => $tpl_tplset,
-        'tpl_file' => '_custom_' . substr(date('YmdHis'), 2, -2) . '.html',
-		//'tpl_file'         => '_custom_' . mb_substr( date( 'YmdHis' ), 2, - 2 ) . '.html',
+        'tpl_file'         => '_custom_' . substr(date('YmdHis'), 2, -2) . '.html',
 		'tpl_desc'         => '',
 		'tpl_lastmodified' => 0,
 		'tpl_lastimported' => 0,
 		'tpl_type'         => 'custom',
 		'tpl_source'       => '',
 	];
+
 
 	// breadcrumbs
 	$breadcrumbsObj = AltsysBreadcrumbs::getInstance();
@@ -125,9 +126,7 @@ if ( empty( $tpl ) ) {
 }
 
 
-
-// TRANSACT stage
-
+// TRANSACTION
 if ( ! empty( $_POST['do_modifycont'] ) || ! empty( $_POST['do_modify'] ) ) {
 	// Ticket Check
 	if ( ! $xoopsGTicket->check( true, 'altsys_tplsform' ) ) {
@@ -178,21 +177,24 @@ if ( ! empty( $_POST['do_create'] ) ) {
 }
 
 
-
-
-//   FORM RENDER
+// FORM RENDER
 
 xoops_cp_header();
 $mymenu_fake_uri = 'index.php?mode=admin&lib=altsys&page=mytplsadmin&dirname=' . $mydirname;
 
-// mymenu
+// Menu
 altsys_include_mymenu();
 
-echo "<h2 style='text-align:" . _GLOBAL_LEFT . ";'>" . _MD_A_MYTPLSFORM_EDIT . "</h2>"
-     . "<h4><pre>" . htmlspecialchars( $tpl['tpl_type'], ENT_QUOTES ) . " : " . htmlspecialchars( $tpl['tpl_file'], ENT_QUOTES ) . " (" . htmlspecialchars( $tpl['tpl_tplset'], ENT_QUOTES ) . ")</pre></h4>";
+echo '<h2 style="text-align:' . _GLOBAL_LEFT . ';">' . _MD_A_MYTPLSFORM_EDIT . '</h2>';
 
+// Template Set, Name, Type
+echo '<table class="outer">
+    <tr><td>' . _MYTPLSADMIN_TH_SET . '</td><td>' . htmlspecialchars( $tpl['tpl_tplset'], ENT_QUOTES ) . '</td></tr>
+    <tr><td>' . _MYTPLSADMIN_TH_NAME .'</td><td>' . htmlspecialchars( $tpl['tpl_file'], ENT_QUOTES ) . '</td></tr>
+    <tr><td>' . _MYTPLSADMIN_TH_TYPE . '</td><td>' . htmlspecialchars( $tpl['tpl_type'], ENT_QUOTES ) . '</td></tr>
+    </table>';
 
-// diff from file to selected DB template
+// Diff from file to selected DB template
 $basefilepath        = tplsadmin_get_basefilepath( $tpl['tpl_module'], $tpl['tpl_type'], $tpl['tpl_file'] );
 $diff_from_file4disp = '';
 if ( file_exists( $basefilepath ) ) {
@@ -213,7 +215,7 @@ if ( file_exists( $basefilepath ) ) {
 	error_reporting( $original_error_level );
 }
 
-// diff from DB-default to selected DB template
+// Diff from DB-default to selected DB template
 $diff_from_default4disp = '';
 if ( 'default' != $tpl['tpl_tplset'] ) {
 	$original_error_level = error_reporting();
@@ -234,9 +236,11 @@ if ( 'default' != $tpl['tpl_tplset'] ) {
 	error_reporting( $original_error_level );
 }
 
-// Diff
-echo '<div class="ui-card-full">
-	<form name="diff_form" id="diff_form" action="" method="get">';
+
+echo '<div class="ui-card-full">';
+
+// Diff Switch View
+echo '<form name="diff_form" id="diff_form" action="" method="get">';
 if ( $diff_from_file4disp ) {
     echo '<input class="switch" 
     type="checkbox" 
@@ -258,29 +262,31 @@ if ( $diff_from_default4disp ) {
 echo "</form>";
 
 
-// Edit
+// Edit Template
 echo "<a id='altsys_tplsform_top'></a>
-<form name='MainForm' id='altsys_tplsform' action='?mode=admin&amp;lib=altsys&amp;page=mytplsform&amp;tpl_file=" . htmlspecialchars( $tpl_file, ENT_QUOTES ) . "&amp;tpl_tplset=" . htmlspecialchars( $tpl['tpl_tplset'], ENT_QUOTES ) . "&amp;dirname=" . $target_mname . "' method='post'>
-	" . $xoopsGTicket->getTicketHtml( __LINE__, 1800, 'altsys_tplsform' ) . "	
+    <form name='MainForm' id='altsys_tplsform' action='?mode=admin&amp;lib=altsys&amp;page=mytplsform&amp;tpl_file="
+    . htmlspecialchars( $tpl_file, ENT_QUOTES ) . "&amp;tpl_tplset="
+    . htmlspecialchars( $tpl['tpl_tplset'], ENT_QUOTES ) . "&amp;dirname=" . $target_mname . "' method='post'>"
+    . $xoopsGTicket->getTicketHtml( __LINE__, 1800, 'altsys_tplsform' ) . "	
 	<br>
-	<textarea name='tpl_source' class=html id='altsys_tpl_source' style='width:100%; height:25vh'>" . htmlspecialchars( $tpl['tpl_source'], ENT_QUOTES ) . "</textarea>
-	<br>
-";
+	<textarea name='tpl_source' class='html' style='width:100%; height:35vh'>" . htmlspecialchars( $tpl['tpl_source'], ENT_QUOTES ) . "</textarea>
+	<br>";
+
+// Create New Template
 if ( 'create' == $edit_mode ) {
 	// create form
-	echo "
-	<label for='tpl_file'>" . _MD_A_MYTPLSFORM_LABEL_TPLFILE . "</label>
+	echo "<label for='tpl_file'>" . _MD_A_MYTPLSFORM_LABEL_TPLFILE . "</label>
 	<input type='text' name='tpl_file' id='tpl_file' value='" . htmlspecialchars( $tpl['tpl_file'], ENT_QUOTES ) . "' size='64'><br>
-	<input type='submit' name='do_create' id='do_create' value='" . _MD_A_MYTPLSFORM_BTN_CREATE . "'>";
+	<input class='button submit' type='submit' name='do_create' id='do_create' value='" . _MD_A_MYTPLSFORM_BTN_CREATE . "'>";
 } else {
 	// modify form
 	echo "<br>
-    <div class='foot'>
-	<input type='submit' name='do_modifycont' id='do_modifycont' value='" . _MD_A_MYTPLSFORM_BTN_MODIFYCONT . "'>
-    <input type='reset' name='reset' value='" . _MD_A_MYTPLSFORM_BTN_RESET . "'>
-    <input type='submit' name='do_modify' id='do_modify' value='" . _MD_A_MYTPLSFORM_BTN_MODIFYEND . "'>
-    </div>
-</form></div>";
+    <div class='adminnavi'>
+	<input class='button update' type='submit' name='do_modifycont' id='do_modifycont' value='" . _MD_A_MYTPLSFORM_BTN_MODIFYCONT . "'>
+    <input class='button reset' type='reset' name='reset' value='" . _MD_A_MYTPLSFORM_BTN_RESET . "'>
+    <input class='button submit' type='submit' name='do_modify' id='do_modify' value='" . _MD_A_MYTPLSFORM_BTN_MODIFYEND . "'>
+    </div>";
 }
+echo "</form></div>";
 
 xoops_cp_footer();

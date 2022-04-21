@@ -2,6 +2,11 @@
 // Syntax const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
 // $Id: myblocksadmin.php 1040 2011-11-06 05:24:00Z mikhail $
 // License http://creativecommons.org/licenses/by/2.5/br/
+const _MD_A_MYBLOCKSADMIN_TIPS = 'Os blocos personalizados podem ser criados usando HTML, BBCode, PHP e variáveis Smarty, 
+permitindo assim criar Componentes reutilizáveis e agir como bloco de construção para a sua aplicação.<br>
+Um único componente contém HTML, JavaScript e CSS.<br> 
+Os módulos têm vários blocos pré-construídos que oferecem funcionalidades específicas e favorecem a composição em detrimento da herança.<br>
+O editor muda de acordo com o tipo de conteúdo.';
 const _MD_A_MYBLOCKSADMIN_ACTION = "Ação" ;
 const _MD_A_MYBLOCKSADMIN_ALLPAGES = "Todas as páginas" ;
 const _MD_A_MYBLOCKSADMIN_BCACHETIME = "Tempo do Cache" ;

@@ -15,7 +15,7 @@
 
 
 <{if $actionForm->get('groupid') }>
-<h2 class="admintitle"><{$smarty.const._AD_USER_LANG_GROUP_EDIT}> (<{$actionForm->get('name')}>)</h2>
+<h2 class="admintitle"><{$smarty.const._AD_USER_LANG_GROUP_EDIT}> &raquo; <{$actionForm->get('name')}></h2>
 <{else}>
 <h2 class="admintitle"><{$smarty.const._AD_USER_LANG_GROUP_NEW}></h2>
 <{/if}>
@@ -39,7 +39,7 @@
         <tr>
             <th colspan="2">
                 <{if $actionForm->get('groupid') }>
-                <{$smarty.const._AD_USER_LANG_GROUP_EDIT}> (<{$actionForm->get('name')}>)
+                <{$smarty.const._AD_USER_LANG_GROUP_EDIT}> [ <{$actionForm->get('name')}> ]
                 <{else}>
                 <{$smarty.const._AD_USER_LANG_GROUP_NEW}>
                 <{/if}>
@@ -63,8 +63,8 @@
         <tfoot>
         <tr>
             <td colspan="2" class="foot">
-                <input class="button-cancel" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
-                <input class="button-submit" type="submit" value="<{$smarty.const._SUBMIT}>">
+                <input class="button cancel" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
+                <input class="button submit" type="submit" value="<{$smarty.const._SUBMIT}>">
             </td>
         </tr>
         </tfoot>

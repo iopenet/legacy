@@ -17,31 +17,29 @@ if ( ! file_exists( $langmanpath ) ) {
 require_once( $langmanpath );
 $langman = D3LanguageManager::getInstance();
 $langman->read( 'modinfo.php', $mydirname, $mytrustdirname, false );
-
 $constpref = '_MI_' . strtoupper( $mydirname );
 
-$modversion['name'] = 'xelFinder';
-//$modversion['name'] = $constpref.'_NAME') ;
-$modversion['description']      = constant( $constpref . '_DESC' );
-$modversion['version']          = 2.61;
-$modversion['detailed_version'] = '2.61.1';
-$modversion['credits']          = 'Naoki Sawada (aka Nao-pon). Nuno Luciano (aka gigamaster) 2020 XCL PHP7';
-$modversion['author']           = 'Naoki Sawada (aka Nao-pon) <Hypweb.net>';
-$modversion['cube_style']       = true;
-$modversion['help']             = 'help.html';
-$modversion['license']          = 'GPL';
-$modversion['official']         = 0;
-// $modversion['image']         = is_file( $mydirpath.'/images/module_xelfinder.svg' ) ? '/images/module_xelfinder.svg' : 'module_icon.php' ;
-$modversion['image']            = '/images/module_xelfinder.svg';
 $modversion['dirname']          = $mydirname;
 $modversion['trust_dirname']    = $mytrustdirname;
+$modversion['name']             = 'xelFinder';
+$modversion['version']          = '2.61';
+$modversion['detailed_version'] = '2.61.1';
+$modversion['description']      = constant( $constpref . '_DESC' );
+$modversion['author']           = 'Naoki Sawada (aka Nao-pon) <Hypweb.net>';
+$modversion['credits']          = 'Naoki Sawada (aka Nao-pon). Nuno Luciano (aka gigamaster) 2020 XCL PHP7';
+$modversion['license']          = 'GPL';
+$modversion['image']            = '/images/module_xelfinder.svg'; // $modversion['image'] = is_file( $mydirpath.'/images/module_xelfinder.svg' ) ? '/images/module_xelfinder.svg' : 'module_icon.php' ;
+$modversion['icon']             = 'images/module_icon.svg';
+$modversion['help']             = 'help.html';
+$modversion['official']         = 0;
+$modversion['cube_style']       = true;
 $modversion['read_any']         = true;
 
 // Any tables can't be touched by modulesadmin.
 $modversion['sqlfile'] = false;
 $modversion['tables']  = [];
 
-// Admin things
+// Admin
 $modversion['hasAdmin']   = 1;
 $modversion['adminindex'] = 'admin/index.php';
 $modversion['adminmenu']  = 'admin/admin_menu.php';

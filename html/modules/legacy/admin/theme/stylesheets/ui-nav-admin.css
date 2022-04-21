@@ -1,10 +1,10 @@
 /*
 	XOOPSCube Theme : XCL Admin Flex Grid
-	Distribution : XCL 2.3 Alpha
-	Version : 0.7.0
+	Distribution : XOOPSCube XCL 2.3
+	Version : 1.0.0
 	Author : Nuno Luciano aka Gigamaster
-	Date : 2020-06-11
-	URL : https://github.com/xoopscube/xcl/
+	Date : 2021-10-28
+	URL : https://github.com/xoopscube/
 
 
 	-------------------- -------------------- NAV MOBILE */
@@ -30,8 +30,8 @@
 }
 
 a.adminavi-item {
-	border-bottom		: 3px solid var( --ui-link );
-	color				: var( --ui-link );
+	border-bottom		: 3px solid var( --link );
+	color				: var( --link );
 	font-weight			: 600;
 	padding				: 10px;
 	text-decoration		: none;
@@ -43,14 +43,14 @@ a.adminavi-item:not(.selected) {
 }
 
 a.adminavi-item:not(.selected):hover {
-	color				: var(--ui-link-hover);
-	border-bottom		: 3px solid var(--ui-link-hover);
+	color				: var(--link-hover);
+	border-bottom		: 3px solid var(--link-hover);
 }
 
 a.adminavi-item.selected,
 a.adminavi-item.selected:active {
-	color		 		: var(--ui-link-hover);
-	border-bottom		: 3px solid var(--ui-link-hover);
+	color		 		: var(--link-hover);
+	border-bottom		: 3px solid var(--link-hover);
 	outline-width		: 0;
 }
 

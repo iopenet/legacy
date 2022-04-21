@@ -29,39 +29,37 @@
 <{/if}>
 
 
-<div layout="row center-justify" class="control-action">
+<{* ////— ACTION-CONTROL —\\\\ *}>
+<div layout="row center-justify" class="action-control">
 
     <div>
-    <a class="ui-btn ui-btn small" href="index.php?action=UserEdit"><{$smarty.const._AD_USER_LANG_USER_NEW}></a>
-
-    <a class="ui-btn ui-btn small" href="index.php?action=GroupList"><{$smarty.const._AD_USER_LANG_GROUP_LIST}></a>
-
-    <a class="ui-btn ui-btn small" href="<{$smarty.const.XOOPS_URL}>/modules/profile/admin/index.php?action=DefinitionsList">
-        <{$smarty.const._AD_USER_LANG_USER_NEW_FIELD}></a>
+        <a class="button button small" href="index.php?action=UserEdit"><{$smarty.const._AD_USER_LANG_USER_NEW}></a>
+        <a class="button button small" href="<{$smarty.const.XOOPS_URL}>/modules/profile/admin/index.php?action=DefinitionsList"><{$smarty.const._AD_USER_LANG_USER_NEW_FIELD}></a>
+        <a class="button button small" href="index.php?action=GroupList"><{$smarty.const._AD_USER_LANG_GROUP_LIST}></a>
     </div>
 
     <div class="control-view">
-        <button id="list" class="ui-btn" data-id="1" type="button" title="View List">
+        <button id="list" class="button" data-id="1" type="button" title="View List">
             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24">
                 <path d="M9 5v4h12V5M9 19h12v-4H9m0-1h12v-4H9M4 9h4V5H4m0 14h4v-4H4m0-1h4v-4H4v4z" fill="currentColor"/></svg>
         </button>
 
-        <button id="grid" class="ui-btn" data-id="2" type="button" title="View Grid">
+        <button id="grid" class="button" data-id="2" type="button" title="View Grid">
             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24">
                 <path d="M16 5v6h5V5m-11 6h5V5h-5m6 13h5v-6h-5m-6 6h5v-6h-5m-6 6h5v-6H4m0-1h5V5H4v6z" fill="currentColor"/></svg>
         </button>
 
-        <button id="filter" class="ui-btn" type="button" data-id="3" onclick="slideToggle('.user-filter', this)" title="View Filter">
+        <button id="filter" class="button" type="button" data-id="3" onclick="slideToggle('.user-filter', this)" title="View Filter">
             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                 <path d="M7 11h10v2H7zM4 7h16v2H4zm6 8h4v2h-4z" fill="currentColor"/></svg>
         </button>
 
-        <button id="user-search" class="ui-btn" type="button" data-id="4" onclick="slideToggle('.user-search', this)" title="User search">
+        <button id="user-search" class="button" type="button" data-id="4" onclick="slideToggle('.user-search', this)" title="User search">
             <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em" height="1em" viewBox="0 0 24 24">
                 <path d="M15.5 12c2.5 0 4.5 2 4.5 4.5c0 .88-.25 1.71-.69 2.4l3.08 3.1L21 23.39l-3.12-3.07c-.69.43-1.51.68-2.38.68c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5m0 2a2.5 2.5 0 0 0-2.5 2.5a2.5 2.5 0 0 0 2.5 2.5a2.5 2.5 0 0 0 2.5-2.5a2.5 2.5 0 0 0-2.5-2.5M10 4a4 4 0 0 1 4 4c0 .91-.31 1.75-.82 2.43c-.86.32-1.63.83-2.27 1.47L10 12a4 4 0 0 1-4-4a4 4 0 0 1 4-4M2 20v-2c0-2.12 3.31-3.86 7.5-4c-.32.78-.5 1.62-.5 2.5c0 1.29.38 2.5 1 3.5H2z" fill="currentColor"/></svg>
         </button>
 
-        <button class="help-admin ui-btn" type='button' data-id='5' data-module='user' data-help-article='#help-users' title="Help">
+        <button class="help-admin button" type='button' data-id='5' data-module='user' data-help-article='#help-users' title="<{$smarty.const._HELP}>">
             <span class="ui-icon ui-icon-help"></span>
         </button>
     </div>
@@ -91,8 +89,8 @@
     </div>
 
 
-    <div class="foot">
-        <input class="btn submit" type="submit" value="<{$smarty.const._SUBMIT}>">
+    <div layout="row centered" class="adminnavi">
+        <input class="button submit" type="submit" value="<{$smarty.const._SUBMIT}>">
     </div>
 
 </form>

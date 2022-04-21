@@ -36,7 +36,7 @@
             <{* ////— DROPDOWN SORT —\\\\ *}>
             <div class="dropdown" id="filter-sort">
 
-                <a href="#" class="dropdown-toggle ui-btn" aria-label="sort filter">
+                <a href="#" class="dropdown-toggle button" aria-label="sort filter">
                     <img class="svg" src="<{$xoops_url}>/images/icons/list-tree.svg" width="24px" height="24px" alt="options">
                 </a>
 
@@ -74,7 +74,7 @@
         <th><{$smarty.const._MD_USER_LANG_UNAME}></th>
         <th><{$smarty.const._AD_USER_LANG_RETRY}></th>
         <th><{$smarty.const._AD_USER_LANG_MESSAGE}></th>
-        <th style="text-align: center"><{$smarty.const._DELETE}></th>
+        <th class="list_control"><{$smarty.const._DELETE}></th>
         </tr>
         </thead>
         <tbody>
@@ -93,8 +93,8 @@
         <tfoot>
         <tr>
             <td colspan="5" class="foot">
-                <input class="ui-btn" type="submit" name="confirm_back" value="<{$smarty.const._CANCEL}>" onclick="javascript:history.go(-1);">
-                <input class="ui-btn submit" type="submit" value="<{$smarty.const._SUBMIT}>">
+                <input class="button cancel" type="submit" name="confirm_back" value="<{$smarty.const._CANCEL}>" onclick="javascript:history.go(-1);">
+                <input class="button submit" type="submit" value="<{$smarty.const._SUBMIT}>">
             </td>
         </tr>
         </tfoot>

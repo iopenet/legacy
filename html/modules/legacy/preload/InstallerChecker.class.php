@@ -81,7 +81,7 @@ class Legacy_InstallerChecker extends XCube_ActionFilter
 
             // PRELOAD
             // Copy preload from disabled directory
-            function preloadActive( string $pre_disable, string $pre_active ) {
+             function preloadActive( string $pre_disable, string $pre_active ) {
 
                 if( !copy( $pre_disable, $pre_active ) ) {
                     echo "File can't be copied! \n";
@@ -89,7 +89,7 @@ class Legacy_InstallerChecker extends XCube_ActionFilter
                     echo "File has been copied! \n";
                 }
 
-            }
+            } 
 
 
             // ACTION CONTROLS
@@ -104,9 +104,9 @@ class Legacy_InstallerChecker extends XCube_ActionFilter
             }
 
             if( isset( $_POST[$btn_preload] ) ) {
-                //preloadActive( $pre_disable, $pre_active );
-                (new XCube_Utils)->preloadActive( $pre_disable, $pre_active );
-                header("Refresh: 0");
+                preloadActive( $pre_disable, $pre_active );
+                //(new XCube_Utils)->preloadActive( $pre_disable, $pre_active );
+                // header("Refresh: 0");
             }
 
             if( isset($_POST['submit'] ) ) {

@@ -1,13 +1,15 @@
 <?php
 // Syntax replace define with const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
 
-const _AD_PROFILE_LANG_DEFINITIONS_DELETE = 'Remove field';
+const _AD_PROFILE_LANG_USERS = 'User management';
 const _AD_PROFILE_LANG_DEFINITIONS_EDIT = 'Edit field';
+const _AD_PROFILE_LANG_DEFINITIONS_DELETE = 'Remove field';
 const _AD_PROFILE_LANG_DEFINITIONS_VIEW = 'Display field';
 const _AD_PROFILE_TIPS_DATA_DOWNLOAD = 'User data is only available in CSV format order by user_id.';
 const _AD_PROFILE_DATA_NUM = '%d users registered.';
 const _MI_PROFILE_ADMENU_DATA_DOWNLOAD = 'Download Profiles';
 const _AD_PROFILE_DATA_DOWNLOAD_DO = 'Download CSV';
+
 const _AD_PROFILE_DESC_FIELD_SELECTBOX = 'Set options by dividing |';
 const _AD_PROFILE_DESC_FIELD_CHECKBOX = 'Set the display string when "checked" and "unchecked", divided by |. When empty, "' . _YES . '" and "' . _NO . '" is used.';
 const _AD_PROFILE_DESC_FIELD_STRING = 'Set the default String value.';

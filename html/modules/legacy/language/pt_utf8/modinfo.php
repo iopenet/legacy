@@ -43,4 +43,4 @@ const _MI_LEGACY_MENU_SMILES_MANAGE = "Ícones emotivos";
 const _MI_LEGACY_MENU_THEME_MANAGE = "Temas";
 const _MI_LEGACY_MENU_XOOPS_CONFIG = "Configurações gerais";
 const _MI_LEGACY_NAME = "Sistema";
-const _MI_LEGACY_NAME_DESC = "Este módulo provê a compatibilidade com as antigas versões 2.0.x do XOOPS. Sistema é um Software, Computador, Rede ou outro equipamento que continua a ser utilizado depois que uma empresa ou organização instala novos sistemas. Traduzido por Mikhail Miguel.";
+const _MI_LEGACY_NAME_DESC = "Módulo do sistema XOOPSCube Core fornece gerenciamento e suporte para módulos XOOPS2, D3 e serviços Cube.";

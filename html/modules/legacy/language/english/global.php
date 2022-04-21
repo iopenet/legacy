@@ -112,7 +112,7 @@ const _ASCENDING = 'Ascending order';
 const _DESCENDING = 'Descending order';
 const _BACK = 'Back';
 const _NOTITLE = 'No title';
-const _RETURN_TOP = 'returns to the top';
+const _RETURN_TOP = '↑ Top';
 
 /* Image manager */
 const _IMGMANAGER = 'Image Manager';

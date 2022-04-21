@@ -36,5 +36,5 @@ const _MI_LEGACY_MENU_PREFERENCE = "Préférences";
 const _MI_LEGACY_MENU_SMILES_MANAGE = "Emoticônes";
 const _MI_LEGACY_MENU_THEME_MANAGE = "Gestion des Themes";
 const _MI_LEGACY_MENU_XOOPS_CONFIG = "Autres Options";
-const _MI_LEGACY_NAME = "Legacy System";
-const _MI_LEGACY_NAME_DESC = "Ce module assure la compatibilité entre XOOPS Cube et v. 2.0.x.";
+const _MI_LEGACY_NAME = "Système";
+const _MI_LEGACY_NAME_DESC = "Le module central du système XOOPS Cube assure la gestion et la prise en charge des modules XOOPS2, D3 et des services Cube.";

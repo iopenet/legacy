@@ -37,8 +37,8 @@
 </form>
 
 
-<{* ////— CONTROL-ACTION —\\\\ *}>
-<div layout="row center-justify" class="control-action">
+<{* ////— ACTION-CONTROL —\\\\ *}>
+<div layout="row center-justify" class="action-control">
     <form action="./index.php" method="get">
         <input type="hidden" name="action" value="TplfileList">
         <{$smarty.const._AD_LEGACYRENDER_LANG_TPL_TPLSET}> :
@@ -68,8 +68,8 @@
         <input class="formButton" type="submit" value="<{$smarty.const._SUBMIT}>">
     </form>
     <div class="control-view">
-        <a class="ui-btn" href="./index.php?action=TplsetUpload"><{$smarty.const._AD_LEGACYRENDER_LANG_TPLSET_UPLOAD}></a>
-        <button class="help-admin ui-btn" type='button' data-module='legacyRender' data-help-article='#help-template' title="<{$smarty.const._HELP}>">
+        <a class="button" href="./index.php?action=TplsetUpload"><{$smarty.const._AD_LEGACYRENDER_LANG_TPLSET_UPLOAD}></a>
+        <button class="help-admin button" type='button' data-module='legacyRender' data-help-article='#help-template' title="<{$smarty.const._HELP}>">
             <span class="ui-icon ui-icon-help"></span>
         </button>
     </div>
@@ -86,7 +86,7 @@
             <{* ////— DROPDOWN SORT —\\\\ *}>
             <div class="dropdown" id="filter-sort">
 
-                <a href="#" class="dropdown-toggle ui-btn" aria-label="sort filter">
+                <a href="#" class="dropdown-toggle button" aria-label="sort filter">
                     <img class="svg" src="<{$xoops_url}>/images/icons/list-tree.svg" width="24px" height="24px" alt="options">
                 </a>
 
@@ -287,7 +287,7 @@
                 <{xoops_input type=hidden name=tpl_module value=$targetModule}>
                 <input type="submit" value="<{$smarty.const._AD_LEGACYRENDER_LANG_TPLFILE_UPLOAD}>">
             <{else}>
-                <input class="ui-btn" type="submit" name="confirm_back" value="<{$smarty.const._BACK}>" onclick="javascript:history.go(-1);">
+                <input class="button" type="submit" name="confirm_back" value="<{$smarty.const._BACK}>" onclick="javascript:history.go(-1);">
             <{/if}>
             </td>
         </tr>

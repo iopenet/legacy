@@ -9,44 +9,7 @@
 
 <div class="ui-dev-mode"><{$smarty.template}></div>
 
-
-<div layout="row sm-column" class="ui-card-full dashboard-options">
-
-    <{foreach item="obj" from=$objects}>
-
-        <{* ////— ASSIGN ICONS —\\\\ *}>
-
-        <{if $obj->getVar('confcat_id') == "1"}>
-            <{assign var="icon_src" value="icons/icon-settings.svg"|theme"}>
-            <{assign var="icon_alt" value=""}>
-        <{elseif $obj->getVar('confcat_id') == "4"}>
-            <{assign var="icon_src" value="icons/icon-comment-delete.svg"|theme"}>
-            <{assign var="icon_alt" value=""}>
-        <{elseif $obj->getVar('confcat_id') == "5"}>
-            <{assign var="icon_src" value="icons/icon-search-options.svg"|theme"}>
-            <{assign var="icon_alt" value=""}>
-        <{elseif $obj->getVar('confcat_id') == "6"}>
-            <{assign var="icon_src" value="icons/icon-user-mail.svg"|theme"}>
-            <{assign var="icon_alt" value=""}>
-        <{/if}>
-
-                <a class="set-link"
-                   href="./index.php?action=PreferenceEdit&amp;confcat_id=<{$obj->getVar('confcat_id')}>"
-                   title="<{$smarty.const._AD_LEGACY_LANG_CONFCAT_ID}> - <{$obj->getVar('confcat_id')}>">
-                    <span class="set-icon"><img class="svg" src="<{$icon_src}>" width="1em" height="1em" alt="<{$icon_alt}>"></span>
-                    <span class="set-name"><{$obj->getName()|xoops_escape}></span>
-                </a>
-
-        <{/foreach}>
-</div>
-
-<{if $obj->getVar('dirname')}>
-<{$obj.dirname}>
-<{/if}>
+<{include file="./components/dashboard-nav.html"}>
 
 
-<hr>
 
-<div layout="row sm-column" class="dashboard-options">
-    <{include file="./components/dashboard-nav.html"}>
-</div>

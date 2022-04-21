@@ -385,7 +385,7 @@ const _MD_AM_DEBUGMODE2 = 'MySQL/Blocks Debug';
 const _MD_AM_DEBUGMODE3 = 'Smarty Templates Debug';
 const _MD_AM_DEBUGMODEDSC = 'Several debug options. A running website should have this turned off.';
 const _MD_AM_DEFAULTTZ = '&#127760; Default timezone';
-const _MD_AM_DOBADIPS = '⛔ Enable IP bans?';
+const _MD_AM_DOBADIPS = '<a id="ip_ban">⛔ Enable IP bans?</a>';
 const _MD_AM_DOBADIPSDSC = 'Users from specified IP addresses will not be able to view your site';
 const _MD_AM_DOCENSOR = 'Enable censoring of unwanted words?';
 const _MD_AM_DOCENSORDSC = 'Words will be censored if this option is enabled. This option may be turned off for enhanced site speed.';

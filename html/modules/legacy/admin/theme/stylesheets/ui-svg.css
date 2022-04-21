@@ -1,10 +1,10 @@
 /*
-    XOOPSCube Theme : XCL Admin Flex Grid
-    Distribution : XCL 2.3 Alpha
-    Version : 0.7.0
-    Author : Nuno Luciano aka Gigamaster
-    Date : 2020-06-11
-    URL : https://github.com/xoopscube/xcl/
+	XOOPSCube Theme : XCL Admin Flex Grid
+	Distribution : XOOPSCube XCL 2.3
+	Version : 1.0.0
+	Author : Nuno Luciano aka Gigamaster
+	Date : 2021-10-28
+	URL : https://github.com/xoopscube/
 
     -------------------- -------------------- -------------------- SVG Default Settings */
 
@@ -14,7 +14,7 @@
     */
     svg {
 
-        /* filter              : drop-shadow( 0px 1px 0px var( --ui-link)); */
+        /* filter              : drop-shadow( 0px 1px 0px var( --link)); */
         -webkit-user-select : none;
         -moz-user-select    : none;
         -ms-user-select     : none;
@@ -25,7 +25,7 @@
     }
 
     svg[class|="icon"]{
-        color               : var(  --ui-link   );
+        color               : var(  --link   );
         font-size           : 24px;
     }
 
@@ -36,7 +36,7 @@
     svg path.block-icon,
     svg path.module-icon {
 
-        color              	: var(--ui-link);
+        color              	: var(--link);
         transform          	: translate(12px, 12px); /* eq. padding */
         transition         	: all 1s;
 
@@ -49,7 +49,7 @@
     svg text.block-name,
     svg text.module-name {
 
-        color              	: var(--ui-link);
+        color              	: var(--link);
         text-anchor        	: middle; /* align center */
         dominant-baseline  	: middle; /* vertical alignment fix */
         font-size          	: 24px;
@@ -73,38 +73,38 @@
 
     svg.ui-block-module {
 
-        background      : var(  --color-blue			);
+        background      : var(  --color-blue );
 
     }
 
     svg.ui-block-html  {
 
-        background      : var(  --color-blue			);
+        background      : var(  --color-blue );
 
     }
 
     svg.ui-block-html path.block-icon {
 
-        color           : var(  --color-orange		);
+        color           : var(  --color-2 );
         transform       : translate(10px, 20px);
 
     }
 
     svg.ui-block-php  {
 
-        background      : var(  --color-indigo		);
+        background      : var(  --color-indigo );
 
     }
 
     svg.ui-block-smilies {
 
-        background      : var(  --color-orange		);
+        background      : var(  --color-orange );
 
     }
 
     svg.ui-block-no-smilies {
 
-        background      : var(  --color-blue			);
+        background      : var(  --color-blue );
 
     }
 
@@ -112,50 +112,50 @@
 
     .ui-icon-amber {
 
-        background      : var(  --color-amber	);
-        color           : var(  --color-white	);
+        background      : var(  --color-amber );
+        color           : var(  --color-white );
 
     }
 
     .ui-icon-blue {
 
-        background      : var(  --color-blue		);
-        color           : var(  --color-white	);
+        background      : var(  --color-blue );
+        color           : var(  --color-white );
 
     }
 
     .ui-icon-green {
 
-        background      : var(  --color-green	);
-        color           : var(  --color-white	);
+        background      : var(  --color-green );
+        color           : var(  --color-white );
 
     }
 
     .ui-icon-indigo {
 
-        background      : var(  --color-indigo		);
-        color           : var(  --color-white	);
+        background      : var(  --color-indigo );
+        color           : var(  --color-white );
 
     }
 
     .ui-icon-orange {
 
-        background      : var(  --color-orange		);
-        color           : var(  --color-white	);
+        background      : var(  --color-orange );
+        color           : var(  --color-white );
 
     }
 
     .ui-icon-purple {
 
-        background      : var(  --color-purple		);
-        color           : var(  --color-white	);
+        background      : var(  --color-purple );
+        color           : var(  --color-white );
 
     }
 
     .ui-icon-red {
 
-        background      : var(  --color-red			);
-        color           : var(  --color-white	);
+        background      : var(  --color-red );
+        color           : var(  --color-white );
 
     }
 
@@ -167,7 +167,7 @@
 
     svg[class="ui-block-module"] {
         /* Attribute has this exact value */
-        background      : var(  --ui-color-block-module);
+        background      : var(  --color-block-module);
     }
 
     svg text[class*="block"] {

@@ -127,7 +127,7 @@ class Legacy_ModuleListAction extends Legacy_Action
         $render->setAttribute('actionForm', $this->mActionForm);
 
         //
-        // To support a template writer, this send the list of mid that
+        // To support a template writer, this sends the list of mid that
         // actionForm kept.
         //
         $t_arr = $this->mActionForm->get('name');

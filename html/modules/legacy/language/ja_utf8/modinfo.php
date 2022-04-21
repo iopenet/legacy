@@ -36,5 +36,5 @@ const _MI_LEGACY_MENU_PREFERENCE = 'プリファレンス';
 const _MI_LEGACY_MENU_SMILES_MANAGE = '顔アイコンの管理';
 const _MI_LEGACY_MENU_THEME_MANAGE = 'テーマの管理';
 const _MI_LEGACY_MENU_XOOPS_CONFIG = 'XOOPS コンフィグ';
-const _MI_LEGACY_NAME = '互換モジュール';
-const _MI_LEGACY_NAME_DESC = 'XOOPS Cube にXOOPS 2.0.x シリーズの互換性を与えます';
+const _MI_LEGACY_NAME = 'システム設定';
+const _MI_LEGACY_NAME_DESC = 'XOOPSCubeコアシステムモジュールは、XOOPS2、D3モジュール、およびCubeサービスの管理とサポートを提供します。';

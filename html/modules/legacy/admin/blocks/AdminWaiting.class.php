@@ -12,9 +12,6 @@ if (!defined('XOOPS_ROOT_PATH')) {
     exit();
 }
 
-
-
-
 /**
  * This is test menu block for control panel of legacy module.
  *

@@ -74,5 +74,5 @@ const _MI_USER_MENU_CREATE_AVATAR = "Nouveau Avatar";
 const _MI_USER_MENU_CREATE_GROUP = "Nouveau Groupe";
 const _MI_USER_MENU_CREATE_RANK = "Nouveau Rang";
 const _MI_USER_MENU_CREATE_USER = "Nouveau Utilisateur";
-const _MI_USER_NAME = "Utilisateur";
+const _MI_USER_NAME = "Utilisateurs";
 const _MI_USER_NAME_DESC = "Module de gestion des comtes utilisateurs.";

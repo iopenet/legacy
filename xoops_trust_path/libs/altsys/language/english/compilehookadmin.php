@@ -1,5 +1,5 @@
 <?php
-
+// Syntax const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
 const _TPLSADMIN_FMT_MSG_ENCLOSEBYCOMMENT = '%d template caches have been enclosed by tplsadmin comments';
 const _TPLSADMIN_DT_ENCLOSEBYCOMMENT = 'Insert comments';
 const _TPLSADMIN_DD_ENCLOSEBYCOMMENT = 'Two HTML comments will be inserted in the begging/ending point of each template. Since this rarely breaks its design, it is recommended to help professionals identify the components.';

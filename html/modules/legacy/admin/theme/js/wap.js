@@ -1,12 +1,10 @@
 /*
-    XOOPCube Theme : XCL Admin Flex Grid
-    Distribution : XCL
-    Copyright : 2005-2022 XOOPSCube Project
-    License  : BSD
-    Version : 2.3.1
-    Author : Nuno Luciano aka Gigamaster
-    Date : 2021-05-28
-    URL : https://github.com/xoopscube/xcl/
+	XOOPSCube Theme : XCL Admin Flex Grid
+	Distribution : XOOPSCube XCL 2.3
+	Version : 1.0.0
+	Author : Nuno Luciano aka Gigamaster
+	Date : 2021-10-28
+	URL : https://github.com/xoopscube/
 */
 
     $(function () {

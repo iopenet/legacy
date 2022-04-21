@@ -1,5 +1,6 @@
 <?php
 // Syntax const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
+
 const _MD_A_MYTPLSFORM_TPLSADMIN = 'テンプレート管理';
 const _MD_A_MYTPLSFORM_EDIT = 'テンプレート編集';
 const _MD_A_MYTPLSFORM_UPDATED = 'テンプレートを更新しました';

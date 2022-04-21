@@ -28,7 +28,8 @@
 <{/if}>
 
 
-<div layout="row center-justify" class="control-action">
+<{* ////— ACTION-CONTROL —\\\\ *}>
+<div layout="row center-justify" class="action-control">
     <div>
         <form action="./index.php" method="get">
             <input type="hidden" name="action" value="UserSearchList">
@@ -52,13 +53,13 @@
         </form>
     </div>
     <div class="control-view">
-        <a class="ui-btn ui-btn-small" href="<{xoops_explaceholder control=UserPagenaviOtherUrl pagenavi=$pageNavi url='./index.php?action=UserSearch'}>">
+        <a class="button button-small" href="<{xoops_explaceholder control=UserPagenaviOtherUrl pagenavi=$pageNavi url='./index.php?action=UserSearch'}>">
             <{$smarty.const._AD_USER_LANG_SEARCH_AGAIN}>
         </a>
-        <a class="ui-btn ui-btn-small" href="<{xoops_explaceholder control=UserPagenaviOtherUrl pagenavi=$pageNavi url='./index.php?action=MailjobEdit'}>">
+        <a class="button button-small" href="<{xoops_explaceholder control=UserPagenaviOtherUrl pagenavi=$pageNavi url='./index.php?action=MailjobEdit'}>">
             <{$smarty.const._AD_USER_LANG_SEND_MAIL_BY_THIS_CONDITION}>
         </a>
-        <button class="help-admin ui-btn" type='button' data-id='4' data-module='user' data-help-article='#help-ranks' title="Help">
+        <button class="help-admin button" type='button' data-id='4' data-module='user' data-help-article='#help-ranks' title="<{$smarty.const._HELP}>">
             <span class="ui-icon ui-icon-help"></span>
         </button>
     </div>
@@ -76,7 +77,7 @@
             <{* ////— DROPDOWN SORT —\\\\ *}>
             <div class="dropdown" id="filter-sort">
 
-                <a href="#" class="dropdown-toggle ui-btn" aria-label="sort filter">
+                <a href="#" class="dropdown-toggle button" aria-label="sort filter">
                     <img class="svg" src="<{$xoops_url}>/images/icons/list-tree.svg" width="24px" height="24px" alt="options">
                 </a>
 
@@ -149,14 +150,14 @@
                 </div><{* ----- /Dropdown-content *}>
             </div><{* ----- /Dropdown *}>
             </th>
-            <th><{$smarty.const._MD_USER_LANG_UID}></th>
+            <th class="list_id"><{$smarty.const._MD_USER_LANG_UID}></th>
             <th><{$smarty.const._MD_USER_LANG_UNAME}></th>
             <th><{$smarty.const._MD_USER_LANG_NAME}></th>
             <th><{$smarty.const._AD_USER_LANG_REGDATE}></th>
             <th><{$smarty.const._AD_USER_LANG_LASTLOGIN}></th>
             <th><{$smarty.const._MD_USER_LANG_POSTS}></th>
-            <th style="text-align: center"><{$smarty.const._MD_USER_LANG_LEVEL}></th>
-            <th style="text-align: center"><{$smarty.const._DELETE}><br>
+            <th class="list_control"><{$smarty.const._MD_USER_LANG_LEVEL}></th>
+            <th class="list_control"><{$smarty.const._DELETE}><br>
                 <input name="allbox" id="allbox" onclick="with(document.usersearchlistform){for(i=0;i<length;i++){if(elements[i].type=='checkbox'&&elements[i].disabled==false&&elements[i].name.indexOf('delete')>=0){elements[i].checked=this.checked;}}}" type="checkbox" value="Check All"></th>
             <th style="text-align: center"><{$smarty.const._AD_USER_LANG_CONTROL}></th>
         </tr>
@@ -165,7 +166,7 @@
         <{foreach item=user from=$objects}>
         <tr>
             <td class="list_image">
-                <img class="svg" src="<{"icons/icon-user-account.svg"|theme}>" alt="<{$smarty.const._AD_USER_LANG_USER}>" title="<{$smarty.const._AD_USER_LANG_USER}>">
+                <img class="svg" src="<{'icons/icon-user-account.svg'|theme}>" alt="<{$smarty.const._AD_USER_LANG_USER}>" title="<{$smarty.const._AD_USER_LANG_USER}>">
                 <{$user->getShow('avatar')}>
             </td>
             <td class="list_id"><{$user->getShow('uid')}></td>
@@ -194,14 +195,14 @@
             </td>
             <td class="list_control">
                 <a href="./index.php?action=UserView&amp;uid=<{$user->getShow('uid')}>" title="<{$smarty.const._VIEW}>">
-                    <img class="svg" src="<{"icons/icon-user-online.svg"|theme}>" alt="<{$smarty.const._VIEW}>">
+                    <img class="svg" src="<{'icons/icon-user-online.svg'|theme}>" alt="<{$smarty.const._VIEW}>">
                 </a>
                 <a href="./index.php?action=UserEdit&amp;uid=<{$user->getShow('uid')}>" title="<{$smarty.const._EDIT}>">
-                    <img class="svg" src="<{"icons/icon-user-edit.svg"|theme}>" alt="<{$smarty.const._EDIT}>">
+                    <img class="svg" src="<{'icons/icon-user-edit.svg'|theme}>" alt="<{$smarty.const._EDIT}>">
                 </a>
-                <{if $user->get('uid') != 1 }>
+                <{if $user->get('uid') != 1}>
                 <a href="index.php?action=UserDelete&amp;uid=<{$user->getShow('uid')}>" title="<{$smarty.const._DELETE}>">
-                    <img class="svg" src="<{"icons/icon-delete.svg"|theme}>" alt="<{$smarty.const._DELETE}>">
+                    <img class="svg" src="<{'icons/icon-delete.svg'|theme}>" alt="<{$smarty.const._DELETE}>">
                 </a>
                 <{/if}>
             </td>
@@ -211,8 +212,8 @@
         <tfoot>
         <tr>
             <td colspan="10" class="foot">
-                <input class="ui-btn" type="submit" name="confirm_back" value="<{$smarty.const._BACK}>" onclick="javascript:history.go(-1);">
-                <input class="ui-btn submit" type="submit" value="<{$smarty.const._SUBMIT}>">
+                <input class="button cancel" type="submit" name="confirm_back" value="<{$smarty.const._BACK}>" onclick="javascript:history.go(-1);">
+                <input class="button submit" type="submit" value="<{$smarty.const._SUBMIT}>">
             </td>
         </tr>
         </tfoot>

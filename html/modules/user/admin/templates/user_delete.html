@@ -10,12 +10,12 @@
 
 
 <h2 class="admintitle">
-    <{$smarty.const._AD_USER_LANG_USER_DELETE}> (<{$object->getShow('uname')}>)
+    <{$smarty.const._AD_USER_LANG_USER_DELETE}> &raquo; <{$object->getShow('uname')}>
 </h2>
 
 
 <div class="confirm">
-    <i class="red"><img src="<{"icons/icon-delete.svg"|theme}>" class="svg"></i> <{$smarty.const._AD_USER_LANG_USER_DELETE_ADVICE}>
+    <i class="red"><img src="<{'icons/icon-delete.svg'|theme}>" class="svg"></i> <{$smarty.const._AD_USER_LANG_USER_DELETE_ADVICE}>
 </div>
 
 
@@ -72,8 +72,8 @@
         <tfoot>
         <tr>
             <td colspan="2" class="foot">
-                <input class="btn cancel" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
-                <input class="button-delete" type="submit" value="<{$smarty.const._DELETE}>">
+                <input class="button cancel" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
+                <input class="button delete" type="submit" value="<{$smarty.const._DELETE}>">
             </td>
         </tr>
         </tfoot>

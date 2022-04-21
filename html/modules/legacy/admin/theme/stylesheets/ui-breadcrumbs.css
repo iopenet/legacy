@@ -1,14 +1,14 @@
 
     .ui-breadcrumbs,
     .adminnavi {
-    background      : var(  --ui-breadcrumbs-bg     );
-    border-color    : var(  --ui-breadcrumbs-border-color   );
-    border-radius   : var(  --ui-breadcrumbs-border-radius  );
-    border-style    : var(  --ui-breadcrumbs-border-radius  );
-    border-width    : var(  --ui-breadcrumbs-border-width   );
-    box-shadow      : var(  --ui-breadcrumbs-box-shadow     );
-    padding         : var(  --ui-breadcrumbs-padding        );
-    margin          : var(  --ui-breadcrumbs-margin         );
+    background      : var(  --breadcrumbs-bg     );
+    border-color    : var(  --breadcrumbs-border-color   );
+    border-radius   : var(  --breadcrumbs-border-radius  );
+    border-style    : var(  --breadcrumbs-border-radius  );
+    border-width    : var(  --breadcrumbs-border-width   );
+    box-shadow      : var(  --breadcrumbs-box-shadow     );
+    padding         : var(  --breadcrumbs-padding        );
+    margin          : var(  --breadcrumbs-margin         );
     }
 
     .pagenavi {
@@ -19,17 +19,17 @@
     .adminnavi a,
     .pagenavi a {
 
-    background      : var(  --ui-breadcrumbs-bg-link        );
+    background      : var(  --breadcrumbs-bg-link        );
 
-    border-color    : var(  --ui-breadcrumbs-border-color   );
-    border-radius   : var(  --ui-breadcrumbs-border-radius  );
-    border-style    : var(  --ui-breadcrumbs-border-radius  );
-    border-width    : var(  --ui-breadcrumbs-border-width   );
+    border-color    : var(  --breadcrumbs-border-color   );
+    border-radius   : var(  --breadcrumbs-border-radius  );
+    border-style    : var(  --breadcrumbs-border-radius  );
+    border-width    : var(  --breadcrumbs-border-width   );
 
-    box-shadow      : var(  --ui-breadcrumbs-box-shadow     );
+    box-shadow      : var(  --breadcrumbs-box-shadow     );
 
-    padding         : var(  --ui-breadcrumbs-padding        );
-    margin          : var(  --ui-breadcrumbs-margin         );
+    padding         : var(  --breadcrumbs-padding        );
+    margin          : var(  --breadcrumbs-margin         );
 
     transition      : all 0.3s ease;
 

@@ -1,10 +1,10 @@
 /*
-    XOOPSCube Theme : XCL Admin Flex Grid
-    Distribution : XCL 2.3 Alpha
-    Version : 0.7.0
-    Author : Nuno Luciano aka Gigamaster
-    Date : 2020-06-11
-    URL : https://github.com/xoopscube/xcl/
+	XOOPSCube Theme : XCL Admin Flex Grid
+	Distribution : XOOPSCube XCL 2.3
+	Version : 1.0.0
+	Author : Nuno Luciano aka Gigamaster
+	Date : 2021-10-28
+	URL : https://github.com/xoopscube/
 
     -------------------- -------------------- Admin utils */
     /*
@@ -18,13 +18,13 @@
 
 
     #dialog-online {
-        box-shadow : var(--shadow-7);
-
+        /*box-shadow : var(--shadow-7);*/
+        background: var(--color-7);
     }
 
     .ui-dialog {
-        box-shadow: var(--shadow-7);
-        background: var(--ui-dialog-bg);
+        box-shadow: var(--shadow-4);
+        background: var(--dialog-bg);
 
     }
 
@@ -53,20 +53,20 @@
 
         align-items     : center;
 
-        background      : var(  --ui-filter-background      );
+        background      : var(  --filter-background      );
 
-        border-color    : var(  --ui-filter-border-color    );
-        border-radius   : var(  --ui-filter-border-radius   );
-        border-style    : var(  --ui-filter-border-radius   );
-        border-width    : var(  --ui-filter-border-width    );
+        border-color    : var(  --filter-border-color    );
+        border-radius   : var(  --filter-border-radius   );
+        border-style    : var(  --filter-border-radius   );
+        border-width    : var(  --filter-border-width    );
 
-        box-shadow      : var(  --ui-filter-box-shadow      );
+        box-shadow      : var(  --filter-box-shadow      );
 
         display         : flex;
         flex-direction  : row;
         flex-wrap       : wrap;
-        padding         : var(  --ui-filter-padding  );
-        margin          : var(  --ui-filter-margin   );
+        padding         : var(  --filter-padding  );
+        margin          : var(  --filter-margin   );
         width           : 100%;
 
     }
@@ -91,17 +91,17 @@
 
         align-items     : center;
 
-        background      : var(  --ui-sort-background    );
+        background      : var(  --sort-background    );
 
-        border-color  	: var(  --ui-sort-border-color  );
-        border-radius 	: var(  --ui-sort-border-radius );
-        border-style  	: var(  --ui-sort-border-style  );
-        border-width  	: var(  --ui-sort-border-width  );
+        border-color  	: var(  --sort-border-color  );
+        border-radius 	: var(  --sort-border-radius );
+        border-style  	: var(  --sort-border-style  );
+        border-width  	: var(  --sort-border-width  );
 
-        box-shadow    	: var(  --ui-sort-box-shadow    );
+        box-shadow    	: var(  --sort-box-shadow    );
 
-        padding       	: var(  --ui-sort-padding       );
-        margin        	: var(  --ui-sort-margin        );
+        padding       	: var(  --sort-padding       );
+        margin        	: var(  --sort-margin        );
 
         display         : flex;
         flex-direction  : row;
@@ -169,4 +169,4 @@
     .fingerprint4 { color: var(  --color-orange   ) }
     .fingerprint5 { color: var(  --color-purple   ) }
     .fingerprint6 { color: var(  --color-amber   ) }
-    .fingerprint7 { color: var(  --ui-link   ) }
+    .fingerprint7 { color: var(  --link   ) }

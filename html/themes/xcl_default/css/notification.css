@@ -37,9 +37,13 @@
 .confirm,
 .resultMsg,
 .confirmInfo {
-    border-left       : 7px solid var(--orange-1);
+    border-left       : 7px solid var( --color-amber );
     background-image  :  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' style='vertical-align: -0.125em;' viewBox='0 0 24 24'%3E %3Cpath d='M11.5 3a9.5 9.5 0 1 1 0 19a9.5 9.5 0 0 1 0-19zm0 1a8.5 8.5 0 1 0 0 17a8.5 8.5 0 0 0 0-17zM11 8v2h1V8h-1zm0 4v5h1v-5h-1z' fill='%23face74'/%3E %3C/svg%3E");
 }
+/*.confirm {*/
+/*    */
+/*    background: var( --ui-notification-bg ) url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' style='vertical-align: -0.125em;' viewBox='0 0 24 24'%3E %3Cpath d='M11.5 3a9.5 9.5 0 1 1 0 19a9.5 9.5 0 0 1 0-19zm0 1a8.5 8.5 0 1 0 0 17a8.5 8.5 0 0 0 0-17zM11 8v2h1V8h-1zm0 4v5h1v-5h-1z' fill='%23face74'/%3E %3C/svg%3E) 1em 1em no-repeat;*/
+/*}*/
 
 .tips {
     border-left       : 7px solid var(  --blue-1    );

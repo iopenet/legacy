@@ -1,10 +1,10 @@
 <?php
 /**
  *
- * @package Legacy
- * @version $Id: index.php,v 1.3 2008/09/25 15:12:47 kilica Exp $
- * @copyright  (c) 2005-2022 The XOOPSCube Project
- * @license    GPL 2.0
+ * @package     Legacy
+ * @version     $Id: index.php,v 1.3 2008/09/25 15:12:47 kilica Exp $
+ * @copyright   (c) 2005-2022 The XOOPSCube Project
+ * @license     GPL 2.0
  *
  */
 

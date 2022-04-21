@@ -34,13 +34,13 @@
     <table class="outer">
         <thead>
         <tr>
-            <th><{$smarty.const._MD_USER_LANG_AVATAR_ID}></th>
+            <th class="list_id"><{$smarty.const._MD_USER_LANG_AVATAR_ID}></th>
             <th><{$smarty.const._AD_USER_LANG_AVATAR_NAME}></th>
             <th><{$smarty.const._AD_USER_LANG_AVATAR_MIMETYPE}></th>
             <th><{$smarty.const._AD_USER_LANG_AVATAR_DISPLAY}></th>
             <th><{$smarty.const._AD_USER_LANG_AVATAR_WEIGHT}></th>
             <th><{$smarty.const._AD_USER_LANG_AVATAR_TYPE}></th>
-            <th><{$smarty.const._DELETE}></th>
+            <th class="list_control"><{$smarty.const._DELETE}></th>
         </tr>
         </thead>
         <tbody>
@@ -51,20 +51,20 @@
                 <{if $actionForm->get('name',$aid) == $avatarObjects[$aid]->get('avatar_name')}>
                 <{$actionForm->get('name',$aid)|xoops_escape}>
                 <{else}>
-                (<{$avatarObjects[$aid]->getShow('avatar_name')}>) &raquo; <b  class="user_module_error"><{$actionForm->get('name',$aid)|xoops_escape}></b>
+                <{$avatarObjects[$aid]->getShow('avatar_name')}> &raquo; <b  class="user_module_error"><{$actionForm->get('name',$aid)|xoops_escape}></b>
                 <{/if}>
                 <input type="hidden" name="name[<{$aid}>]" value="<{$actionForm->get('name',$aid)|xoops_escape:edit}>">
             </td>
             <td class="list_type"><{$avatarObjects[$aid]->getShow('avatar_mimetype')}></td>
             <td class="list_select">
                 <{if $actionForm->get('display',$aid)|intval == $avatarObjects[$aid]->get('avatar_display')}>
-                <{if $avatarObjects[$aid]->get('avatar_display') == 1 }>
+                <{if $avatarObjects[$aid]->get('avatar_display') == 1}>
                 <{$smarty.const._YES}>
                 <{else}>
                 <{$smarty.const._NO}>
                 <{/if}>
                 <{else}>
-                (<{if $avatarObjects[$aid]->get('avatar_display') == 1 }>
+                (<{if $avatarObjects[$aid]->get('avatar_display') == 1}>
                 <{$smarty.const._YES}>
                 <{else}>
                 <{$smarty.const._NO}>
@@ -118,8 +118,8 @@
         <tfoot>
         <tr>
             <td class="foot" colspan="7">
-                <input class="btn cancel" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
-                <input class="btn submit" type="submit" value="<{$smarty.const._SUBMIT}>">
+                <input class="button cancel" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
+                <input class="button submit" type="submit" value="<{$smarty.const._SUBMIT}>">
             </td>
         </tr>
         </tfoot>

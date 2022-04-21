@@ -5,11 +5,11 @@
     <a href="<{$xoops_url}>/admin.php">Dashboard</a>
     &raquo;&raquo; <a href="./index.php"><{$smarty.const._MI_USER_NAME}></a>
     &raquo;&raquo; <a href="./index.php?action=UserSearch"><{$smarty.const._MI_USER_ADMENU_USER_SEARCH}></a>
-    &raquo;&raquo; <span class="adminnaviTitle"><{$smarty.const._AD_USER_LANG_USER_SEARCH_LIST}>( <{$smarty.const._AD_USER_LANG_USER_UPDATECONF}> )</span>
+    &raquo;&raquo; <span class="adminnaviTitle"><{$smarty.const._AD_USER_LANG_USER_SEARCH_LIST}> ( <{$smarty.const._AD_USER_LANG_USER_UPDATECONF}> )</span>
 </div>
 
 
-<h2 class="admintitle"><{$smarty.const._AD_USER_LANG_USER_SEARCH_LIST}>( <{$smarty.const._AD_USER_LANG_USER_UPDATECONF}> )</h2>
+<h2 class="admintitle"><{$smarty.const._AD_USER_LANG_USER_SEARCH_LIST}> &raquo; <{$smarty.const._AD_USER_LANG_USER_UPDATECONF}></h2>
 
 
 <div class="confirm">
@@ -34,12 +34,12 @@
     <table class="outer">
         <thead>
         <tr>
-            <th><{$smarty.const._MD_USER_LANG_UID}></th>
+            <th class="list_id"><{$smarty.const._MD_USER_LANG_UID}></th>
             <th><{$smarty.const._MD_USER_LANG_UNAME}></th>
             <th><{$smarty.const._MD_USER_LANG_NAME}></th>
             <th><{$smarty.const._MD_USER_LANG_POSTS}></th>
             <th><{$smarty.const._MD_USER_LANG_LEVEL}></th>
-            <th><{$smarty.const._DELETE}></th>
+            <th class="list_control"><{$smarty.const._DELETE}></th>
         </tr>
         </thead>
         <tbody>
@@ -53,7 +53,7 @@
                 <{if $actionForm->get('posts',$uid) == $userObjects[$uid]->get('posts')}>
                 <{$actionForm->get('posts',$uid)|xoops_escape}>
                 <{else}>
-                (<{$userObjects[$uid]->getShow('posts')}>) &raquo; <b  class="user_module_error"><{$actionForm->get('posts',$uid)|xoops_escape}></b>
+                (<{$userObjects[$uid]->getShow('posts')}>) &raquo; <b class="user_module_error"><{$actionForm->get('posts',$uid)|xoops_escape}></b>
                 <{/if}>
                 <input type="hidden" name="posts[<{$uid}>]" value="<{$actionForm->get('posts',$uid)|xoops_escape:edit}>">
             </td>
@@ -61,7 +61,7 @@
                 <{if $actionForm->get('level',$uid) == $userObjects[$uid]->get('level')}>
                 <{$actionForm->get('level',$uid)|xoops_escape}>
                 <{else}>
-                (<{$userObjects[$uid]->getShow('level')}>) &raquo; <b  class="user_module_error"><{$actionForm->get('level',$uid)|xoops_escape}></b>
+                (<{$userObjects[$uid]->getShow('level')}>) &raquo; <b class="user_module_error"><{$actionForm->get('level',$uid)|xoops_escape}></b>
                 <{/if}>
                 <input type="hidden" name="level[<{$uid}>]" value="<{$actionForm->get('level',$uid)|xoops_escape:edit}>">
             </td>
@@ -86,8 +86,8 @@
         <tfoot>
         <tr>
             <td class="foot" colspan="6">
-                <input class="btn cancel" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
-                <input class="btn submit" type="submit" value="<{$smarty.const._SUBMIT}>">
+                <input class="button cancel" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel">
+                <input class="button submit" type="submit" value="<{$smarty.const._SUBMIT}>">
             </td>
         </tr>
         </tfoot>

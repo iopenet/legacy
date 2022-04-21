@@ -2,13 +2,18 @@
 
 <{assign var=mid value=$module->mXoopsModule->getVar('mid')}>
 <{assign var=dirname value=$module->mXoopsModule->getVar('dirname', 'N')}>
+<{assign var=icon value=$module->mXoopsModule->getInfo('icon')}>
+
+<{* $module->modinfo.icon *}>
 
 <{if $module->hasAdminIndex()}>
 
 <li>
 
 	<div class="nav-block">
-		<span class="nav-module-icon"><!-- Module Icon --></span>
+		<{if $module->mXoopsModule->getInfo('icon')}>
+		<span class="nav-module-icon"><img class="svg" src="<{$xoops_url}>/modules/<{$dirname}>/<{$icon}>"></span>
+		<{/if}>
 		<span class="nav-module-name t<{$mid}>"><{$module->mXoopsModule->getVar('name')}></span>
 	</div>
 
@@ -37,7 +42,7 @@
 				<{* ---------- ---------- ---------- ---------- ---------- Module Edit *}>
 
 				<a href="<{$xoops_url}>/modules/legacy/admin/index.php?action=ModuleEdit&amp;mid=<{$mid}>" title="<{$smarty.const._EDIT}>">
-					<img class="svg edit" src="<{"icons/icon-edit.svg"|theme}>" class="svg">
+					<img class="svg edit" src="<{'icons/icon-edit.svg'|theme}>">
 				</a>
 
 

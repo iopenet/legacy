@@ -6,8 +6,8 @@
  * @version    XCL 2.3.1
  * @author     Other authors gigamaster, 2020 XCL/PHP7
  * @author     Gijoe (Peak)
- * @copyright  (c) 2005-2022 Author
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @copyright  (c) 2005-2022 Authors
+ * @license    GPL v2.0
  */
 
 if ( ! defined( 'XOOPS_ROOT_PATH' ) ) {
@@ -129,7 +129,7 @@ class MyXoopsGroupPermForm extends XoopsForm {
 	}
 
 	/**
-	 * Renders the form
+	 * Render the form
 	 *
 	 * @return string
 	 * @access public
@@ -146,6 +146,7 @@ class MyXoopsGroupPermForm extends XoopsForm {
 
 		$member_handler = xoops_gethandler( 'member' );
 		$glist          = $member_handler->getGroupList();
+
 		foreach ( array_keys( $glist ) as $i ) {
 			// get selected item id(s) for each group
 			$selected = $gperm_handler->getItemIds( $this->_permName, $i, $this->_modid );
@@ -189,16 +190,17 @@ class MyXoopsGroupPermForm extends XoopsForm {
         $ret      .= $this->_permDesc . '<br>';
 		$ret      .= "<form name='" . $this->getName() . "' id='" . $this->getName() . "' action='" . $this->getAction() . "' method='" . $this->getMethod() . "'" . $this->getExtra() . ">\n";
 		$ret      .= "<table class='outer'>\n";
+
 		$elements = &$this->getElements();
 		foreach ( array_keys( $elements ) as $i ) {
 			if ( ! is_object( $elements[ $i ] ) ) {
 				$ret .= $elements[ $i ];
 			} elseif ( ! $elements[ $i ]->isHidden() ) {
 				// group name
-				$ret .= "<tr valign='top' align='" . _GLOBAL_LEFT . "'><td class='head'>" . $elements[ $i ]->getCaption();
+				$ret .= "<tr><td class='head'><span style='font-weight: normal;'>" . $elements[ $i ]->getCaption() . '</span>';
 				// group description
 				if ( '' != $elements[ $i ]->getDescription() ) {
-					$ret .= '<br><span style="font-weight: normal;">' . $elements[ $i ]->getDescription() . '</span>';
+					$ret .= '<br>' . $elements[ $i ]->getDescription();
 				}
 				$ret .= "</td>\n<td class='even'>\n" . $elements[ $i ]->render() . "\n</td></tr>\n";
 			} else {

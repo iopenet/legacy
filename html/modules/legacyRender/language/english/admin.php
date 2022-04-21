@@ -99,4 +99,4 @@ const _AD_LEGACYRENDER_TIPS_TEMPLATE_MANAGE_1 = 'Customize your site by modifyin
 const _AD_LEGACYRENDER_TIPS_TEMPLATE_MANAGE_2 = "You can easily change the template set for your site by clicking the appropriate 'Select' button. To learn more, read the help.";
 const _AD_LEGACYRENDER_TIPS_TPLSET_UPLOAD = "If you don't input a name for your new template set, the name will be taken from the uploaded file. Please upload only a TAR.GZ file.";
 const _AD_LEGACYRENDER_LANG_HTACCESS = '.htaccess';
-const _AD_LEGACYRENDER_DESC_HTACCESS = 'If your server can handle Apache mod_rewrite, you may use cool uri by saving the settings bellow to public/ .htaccess.<br> You must to turn on Settings preference <a href="'.XOOPS_URL.'/modules/legacy/admin/index.php?action=PreferenceEdit&confcat_id=1" class="ui-btn">🆒 Cool URI</a>';
+const _AD_LEGACYRENDER_DESC_HTACCESS = 'If your server can handle Apache mod_rewrite, you may use cool uri by saving the settings bellow to public/ .htaccess.<br> You must to turn on Settings preference <a href="'.XOOPS_URL.'/modules/legacy/admin/index.php?action=PreferenceEdit&confcat_id=1" class="button">🆒 Cool URI</a>';

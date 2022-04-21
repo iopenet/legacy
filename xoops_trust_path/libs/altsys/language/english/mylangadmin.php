@@ -1,5 +1,5 @@
 <?php
-
+// Syntax const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
 const _MYLANGADMIN_H3_MODULE = 'Target module';
 const _MYLANGADMIN_CACHEUPDATED = 'The cache file has been updated';
 const _MYLANGADMIN_BTN_UPDATE = 'Update';

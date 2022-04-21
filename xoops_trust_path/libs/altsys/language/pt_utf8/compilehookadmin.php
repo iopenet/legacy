@@ -3,7 +3,7 @@
 // ** XOOPS Cube Legacy - AltSys Module - Portuguese
 // ** Por Mikhail Miguel <mikhail.miguel@gmail.com> - http://xoops.net.br/
 // ** $Id: compilehookadmin.php 1040 2011-11-06 05:24:00Z mikhail $
-// **	License http://creativecommons.org/licenses/by/2.5/br/
+// ** License http://creativecommons.org/licenses/by/2.5/br/
 
 const _TPLSADMIN_CNF_DELETEOK = "Deseja remover?" ;
 const _TPLSADMIN_CNF_ENCLOSEBYBORDEREDDIV = "Os caches dos modelos compilados serão abertos e fechados por códigos <q><code>DIV</code></q>. Confirma?" ;

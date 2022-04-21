@@ -112,7 +112,7 @@ const _ASCENDING = '昇順';
 const _DESCENDING = '降順';
 const _BACK = '戻る';
 const _NOTITLE = '無題';
-const _RETURN_TOP = 'Topへ戻る';
+const _RETURN_TOP = '↑ Topへ戻る';
 
 /* Image manager */
 const _IMGMANAGER = 'イメージ・マネジャー';
@@ -201,3 +201,9 @@ const _DEBUG_MODE_PHP = 'PHP';
 const _DEBUG_MODE_SQL = 'SQL';
 const _DEBUG_MODE_SMARTY = 'Smarty';
 const _DEBUG_MODE_DESC = 'Disable debug mode in production. Admin > Settings > Debug mode [Off].';
+
+const _SYS_OS = 'OS';
+const _SYS_SERVER = 'Server';
+const _SYS_USERAGENT = 'User agent';
+const _SYS_PHPVERSION = 'PHP version';
+const _SYS_MYSQLVERSION = 'MySQL version';

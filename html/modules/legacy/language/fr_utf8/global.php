@@ -111,7 +111,7 @@ const _ASCENDING = "Ordre ascendant";
 const _DESCENDING = "Ordre déscendant";
 const _BACK = 'Retour';
 const _NOTITLE = 'Aucun titre';
-const _RETURN_TOP = 'Retour haut de la page';
+const _RETURN_TOP = '↑ Top';
 /* Image manager */
 const _IMGMANAGER = "Gestionnaire d'images";
 const _NUMIMAGES = '%s images';
@@ -198,3 +198,9 @@ const _DEBUG_MODE_PHP = 'PHP';
 const _DEBUG_MODE_SQL = 'SQL';
 const _DEBUG_MODE_SMARTY = 'Smarty';
 const _DEBUG_MODE_DESC = 'Disable debug mode in production. Admin > Settings > Debug mode [Off].';
+
+const _SYS_OS = 'OS';
+const _SYS_SERVER = 'Server';
+const _SYS_USERAGENT = 'User agent';
+const _SYS_PHPVERSION = 'PHP version';
+const _SYS_MYSQLVERSION = 'MySQL version';

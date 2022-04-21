@@ -45,6 +45,8 @@ a[href^="https://"][target=_blank]:after {
     content: '\2197';
     position: relative;
     left: 2px;
+    display: inline-block;
+    width: 3ch;
 }
 a[href^="https://"][target=_blank]:active:after,
 a[href^="https://"][target=_blank]:hover:after,

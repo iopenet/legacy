@@ -30,15 +30,15 @@
 <{/if}>
 
 
-<{* ////— CONTROL-ACTION —\\\\ *}>
-<div layout="row center-justify md-column" class="control-action">
+<{* ////— ACTION-CONTROL —\\\\ *}>
+<div layout="row center-justify md-column" class="action-control">
     <div>
     <{include file="./components/smilies-search.html"}>
     </div>
     <div class="control-view">
-        <a class="ui-btn ui-btn-small selected" href="index.php?action=SmilesEdit"><{$smarty.const._AD_LEGACY_LANG_SMILES_NEW}></a>
-        <a class="ui-btn ui-btn-small selected" href="index.php?action=SmilesUpload"><{$smarty.const._AD_LEGACY_LANG_SMILES_UPLOAD}></a>
-        <button class="help-admin ui-btn" type='button' data-module='legacy' data-help-article='#help-smilies' title="<{$smarty.const._HELP}>">
+        <a class="button" href="index.php?action=SmilesEdit"><{$smarty.const._AD_LEGACY_LANG_SMILES_NEW}></a>
+        <a class="button" href="index.php?action=SmilesUpload"><{$smarty.const._AD_LEGACY_LANG_SMILES_UPLOAD}></a>
+        <button class="help-admin button" type='button' data-module='legacy' data-help-article='#help-smilies' title="<{$smarty.const._HELP}>">
             <span class="ui-icon ui-icon-help"></span>
         </button>
     </div>
@@ -57,7 +57,7 @@
             <{* ////— DROPDOWN SORT —\\\\ *}>
             <div class="dropdown" id="filter-sort">
 
-                <a href="#" class="dropdown-toggle ui-btn" aria-label="sort filter">
+                <a href="#" class="dropdown-toggle button" aria-label="sort filter">
                     <img class="svg" src="<{$xoops_url}>/images/icons/list-tree.svg" width="24px" height="24px" alt="options">
                 </a>
 

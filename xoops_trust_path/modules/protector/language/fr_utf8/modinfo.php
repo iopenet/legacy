@@ -18,8 +18,8 @@ define($constpref.'_FILTERS', 'filters enabled in this site');
 define($constpref.'_FILTERSDSC', 'specify file names inside of filters_byconfig/ separated with LF');
 define($constpref.'_MANIPUCHECK', 'enable manipulation checking');
 define($constpref.'_MANIPUCHECKDSC', 'notify to admin if your root folder or index.php is modified.');
-define($constpref.'_MANIPUVALUE', 'value for manipulation checking');
-define($constpref.'_MANIPUVALUEDSC', 'do not edit this field');
+define($constpref.'_MANIPUVALUE', 'Valeur pour vérifier la manipulation de fichiers');
+define($constpref.'_MANIPUVALUEDSC', '⛔ Attention, ne modifiez pas ce champ. !');
 
 // Appended by Xoops Language Checker -GIJOE- in 2009-07-06 05:46:54
 define($constpref.'_DBTRAPWOSRV', 'Never checking _SERVER for anti-SQL-Injection');

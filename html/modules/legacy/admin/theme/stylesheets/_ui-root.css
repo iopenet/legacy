@@ -1,10 +1,10 @@
 /*
-    XOOPSCube Theme : XCL Admin Flex Grid
-    Distribution : XCL 2.3 Alpha
-    Version : 0.7.0
-    Author : Nuno Luciano aka Gigamaster
-    Date : 2020-06-11
-    URL : https://github.com/xoopscube/xcl/
+	XOOPSCube Theme : XCL Admin Flex Grid
+	Distribution : XOOPSCube XCL 2.3
+	Version : 1.0.0
+	Author : Nuno Luciano aka Gigamaster
+	Date : 2021-10-28
+	URL : https://github.com/xoopscube/
 
     -------------------- -------------------- -------------------- ROOT SETTINGS */
 
@@ -12,7 +12,6 @@
 
     - ROOT Motion
 
-    - Color Theme Dark
     - Color Scheme Dark
     - Color Link Dark
 
@@ -42,9 +41,7 @@
 */
 /* -------------------- -------------------- -------------------- ROOT Motion */
 
-    /* This removes all animations and transitions
-        *	for users who prefer reduced motion !
-    */
+    /* This removes all animations and transitions	for users who prefer reduced motion ! */
     /* 	@media (prefers-reduced-motion: reduce) {
         body {
             scroll-behavior     : auto;
@@ -62,7 +59,7 @@
 :root[data-theme="dark"] {
 
     --trackBG       : hsl(228, 10%, 10%);
-    --thumbBG       : hsl(229, 20%, 21%);
+    --thumbBG       : hsl(219, 15%, 25%); /*  hsl(229, 20%, 21%);  */
 
     --color-mode    : 'dark';
 
@@ -78,24 +75,24 @@
 
 /* -------------------- -------------------- Color Scheme Dark */
 
-    --color-amber   : hsl(45, 75%, 50%);
+    --color-amber   : hsl(45, 75%, 45%);
     --color-black   : hsl(0, 0%, 10%);
     --color-blue    : hsl(210, 75%, 50%);
     --color-green   : hsl(125, 75%, 35%);
     --color-indigo  : hsl(275, 75%, 35%);
-    --color-orange  : hsl(35, 75%, 50%);
+    --color-orange  : hsl(38, 75%, 35%);
     --color-purple  : hsl(300, 75%, 25%); /* #673ab7 */
     --color-red     : hsl(5, 75%, 45%);
     --color-white   : hsl(0, 0%, 90%);
 
 /* -------------------- -------------------- Color Link Dark */
 
-    --ui-body-bg        : var(  --color-6  ); /* #232831; */
-    --ui-body-color     : var(  --color-2  );
-    --ui-link           : var(  --color-1  );
-    --ui-link-active    : #face74;
-    --ui-link-hover     : #face74;
-    --ui-link-visited   : var(  --color-1   );
+    --body-bg       : var(  --color-6  ); /* #232831; */
+    --body-color    : var(  --color-2  );
+    --link          : var(  --color-1  );
+    --link-active   : #face74;
+    --link-hover    : #face74;
+    --link-visited  : var(  --color-1   );
 
     }
  }
@@ -124,90 +121,59 @@
 
     /* -------------------- -------------------- Light Mode Colors */
 
-    --color-amber    : hsl(45, 70%, 50%);
-    --color-black    : hsl(0, 0%, 6%);
-    --color-blue     : hsl(208, 70%, 35%);
-    --color-green    : hsl(126, 70%, 35%);
-    --color-indigo   : hsl(275, 70%, 35%);
-    --color-orange   : hsl(36, 70%, 50%);
-    --color-purple   : hsl(300, 70%, 25%); /* #673ab7 */
-    --color-red      : hsl(5, 70%, 50%);
-    --color-white    : hsl(0, 0%, 90%);
-
-    /* -------------------- -------------------- Light Mode Link */
-
-    --ui-link               : var( --color-2 );
-    --ui-link-active        : var( --color-blue );
-    --ui-link-hover         : var( --color-blue );
-    --ui-link-visited       : var( --color-3 );
+    --color-amber   : hsl(45, 70%, 45%);
+    --color-black   : hsl(0, 0%, 6%);
+    --color-blue    : hsl(208, 70%, 35%);
+    --color-green   : hsl(126, 70%, 35%);
+    --color-indigo  : hsl(275, 70%, 35%);
+    --color-orange  : hsl(38, 75%, 35%);
+    --color-purple  : hsl(300, 70%, 35%); /* #673ab7 */
+    --color-red     : hsl(5, 70%, 45%);
+    --color-white   : hsl(0, 0%, 90%);
 
     /* -------------------- -------------------- Light Mode Misc */
 
-    --ui-body-bg            : var( --color-6 ); /* hsl(210, 18%, 80%); */
-    --ui-body-color         : var( --color-2 );
+    --body-bg       : var( --color-6 ); /* hsl(210, 18%, 80%); */
+    --body-color    : var( --color-2 );
 
-    --ui-breadcrumbs-bg     : var( --color-5 );
-    --ui-breadcrumbs-bg-link: var( --color-7 );
+    --breadcrumbs-bg     : var( --color-5 );
+    --breadcrumbs-bg-link: var( --color-7 );
 
-    --ui-button-bg          : var( --color-7 );
-    --ui-button-color       : var( --color-2 );
-    --ui-button-hover-txt   : var( --color-7 );
+    --button-bg          : var( --color-7 );
+    --button-color       : var( --color-2 );
+    --button-color-hover   : var( --color-7 );
 
-    /* -------------------- -------------------- CARD */
+    --card-block-bg      : var( --color-7 );
+    --card-block-image   : none;
+    --card-block-hover   : var( --color-9 );
+    --card-full-bg       : var( --color-7 );
+    --card-small-bg      : var( --color-7 );
+    --link          : var( --color-2 );
+    --link-active   : var( --color-blue );
+    --link-hover    : var( --color-blue );
+    --link-visited  : var( --color-3 );
 
-    --ui-card-block-bg      : var( --color-7 );
-    --ui-card-block-image   : none;
-    --ui-card-block-hover   : var( --color-9 );
-    --ui-card-full-bg       : var( --color-7 );
-    --ui-card-small-bg      : var( --color-7 );
+    --footer-bg          : var( --color-2 );
+    --footer-border      : 1px 0 0 0 solid var( --color-1);
+
+    --footer-color       : var( --color-1 );
+    --footer-link        : var( --color-7 );
+
+    --header-bg          : var( --color-2 );
 
     --input-bg              : var( --color-5 );
 
-    --ui-footer-bg          : var( --color-2 );
-    --ui-footer-border      : solid var( --color-1);
-    --ui-footer-border-width: 1px 0 0 0 ;
-    --ui-footer-color       : var( --color-1 );
-    --ui-footer-link        : var( --color-7 );
-
-    --ui-header-bg          : var( --color-2 );
-
-    --ui-notification-bg    : var( --color-3 );
-    --ui-notification-color : var( --color-7 );
+    --notification-bg    : var( --color-3 );
+    --notification-color : var( --color-7 );
 }
 
 
  /* -------------------- -------------------- ROOT DEFAULT */
 
-
-/*  Webkit Scrollbar */
-::-webkit-scrollbar {
-    width: 9px;
-    height: 9px;
-}
-::-webkit-scrollbar-thumb {
-    background: var( --thumbBG );
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #686c7e;
-}
-::-webkit-scrollbar-track {
-    background-color: var( --trackBG );
-}
-textarea::-webkit-resizer {
-    background-color: var( --thumbBG );
-}
-
-/* Firefox Scrollbar */
-:root {
-    scrollbar-color: var(--thumbBG) var( --trackBG ); /* thumb-color track-color */
-    scrollbar-width: thin;
-}
-
-
 :root {
 
     /* Development Mode Display Smarty Template Name : block / none */
-    --ui-dev-mode       : none;
+    --dev-mode          : none;
     /* Fallback for Custom Properties */
     /* --vh                 : 1vh; */
     --font-family       : 'Avenir', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
@@ -219,31 +185,30 @@ textarea::-webkit-resizer {
 
 /* -------------------- -------------------- -------------------- LAYOUT Grid template */
 
-    --ui-aside-bg               : var( --color-8 );
+    --aside-bg          : var( --color-8 );
 
-    --ui-footer-bg              : var( --color-9 );
-    --ui-footer-border          : solid var( --color-8 );
-    --ui-footer-border-width    : 1px 0 0 0 ;
-    --ui-footer-color           : var( --color-2 );
-    --ui-footer-link            : var( --ui-link );
+    --footer-bg         : var( --color-9 );
+    --footer-border     : 1px solid var( --color-8 ); /* border-top, ui-layout.css */
+    --footer-color      : var( --color-2 );
+    --footer-link       : var( --link );
 
-    --ui-grid-background        : none;
+    --grid-background   : none;
 
-    --ui-header-bg              : var( --color-8 );
-    --ui-header-shadow          : var( --shadow-3 );
-    --ui-header-position        : fixed;
+    --header-bg         : var( --color-8 );
+    --header-shadow     : var( --shadow-3 );
+    --header-position   : fixed;
 
-    --ui-main-background        : none;
+    --main-background   : none;
     /* -------------------- -------------------- ACCORDION */
 
-    --accordion-bg              : var(--color-8);
-    --accordion-border          : var(--border);
-    --accordion-cursor          : pointer;
-    --accordion-font            : 300 16px var(--font-family);
-    --accordion-margin          : 2px 0 0 0;
-    --accordion-radius          : var(--border-radius);
-    --accordion-shadow          : var(--shadow-2);
-    --accordion-space           : var(--space-4) var(--space-5);
+    --accordion-bg      : var(--color-8);
+    --accordion-border  : var(--border);
+    --accordion-cursor  : pointer;
+    --accordion-font    : 300 16px var(--font-family);
+    --accordion-margin  : 2px 0 0 0;
+    --accordion-radius  : var(--border-radius);
+    --accordion-shadow  : var(--shadow-2);
+    --accordion-space   : var(--space-4) var(--space-5);
 
     /*background      : linear-gradient(145deg, hsl(220, 15%, 15%), hsl(220, 21%, 15%));*/
 
@@ -256,145 +221,146 @@ textarea::-webkit-resizer {
 
     /* -------------------- -------------------- -------------------- BORDER style [default] */
 
-    --border             : var(--border-width) var(--border-style) var(--border-color);
-    --border-none        : 0;
-    --border-color       : var( --color-3 );
-    --border-radius      : 5px;
-    --border-style       : solid;
-    --border-width       : 1px;
+    --border            : var(--border-width) var(--border-style) var(--border-color);
+    --border-none       : 0;
+    --border-color      : var( --color-3 );
+    --border-radius     : 5px;
+    --border-style      : solid;
+    --border-width      : 1px;
 
 /* -------------------- -------------------- -------------------- BREADCRUMBS */
 
-    --ui-breadcrumbs-bg   	        : var( --color-7 );
+    --breadcrumbs-bg   	        : var( --color-7 );
 
-    --ui-breadcrumbs-border-color 	: var( --color-5 );
-    --ui-breadcrumbs-border-radius	: var( --border-radius );
-    --ui-breadcrumbs-border-style 	: var( --border-style );
-    --ui-breadcrumbs-border-width 	: var( --border-width );
+    --breadcrumbs-border-color 	: var( --color-5 );
+    --breadcrumbs-border-radius	: var( --border-radius );
+    --breadcrumbs-border-style 	: var( --border-style );
+    --breadcrumbs-border-width 	: var( --border-width );
 
-    --ui-breadcrumbs-box-shadow     : var( --shadow-1 );
+    --breadcrumbs-box-shadow     : var( --shadow-1 );
 
-    --ui-breadcrumbs-padding        : var( --space-3 ) var( --space-5 );
-    --ui-breadcrumbs-margin         : var( --space-3 ) 0 var( --space-6 ); /* Top & Bottom, '0' for Left & Right*/
+    --breadcrumbs-padding        : var( --space-3 ) var( --space-5 );
+    --breadcrumbs-margin         : var( --space-3 ) 0; /* Top & Bottom, '0' for Left & Right*/
 
-    --ui-breadcrumbs-bg-link        : var( --color-4 );
+    --breadcrumbs-bg-link        : var( --color-4 );
 
 
 /* -------------------- -------------------- -------------------- BUTTON style [default]  */
 
-    --ui-button-active      : 0;
-    --ui-button-bg          : var( --color-4 );
+    --button-active     : 0;
+    --button-bg         : var( --color-4 );
 
-    /* --ui-button-box-shadow  : 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); */
+    /* --button-shadow  : 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); */
 
-    --ui-button-box-shadow  : var( --shadow-1 );
+    --button-shadow  : var( --shadow-1 );
 
-    --ui-button-border      : 1px solid var( --color-6 );
-    --ui-button-radius      : var( --border-radius );
+    --button-border      : 1px solid var( --color-6 );
+    --button-radius      : var( --border-radius );
 
-    --ui-button-color       : var( --color-white );
+    --button-color       : var( --color-white );
 
-    --ui-button-font-size   : var( --size-3 );
+    --button-font-size   : var( --size-3 );
 
-    --ui-button-hover-bg    : var( --color-3 );
-    --ui-button-hover-txt   : var( --color-1 );
+    --button-bg-hover    : var( --color-3 );
+    --button-color-hover   : var( --color-1 );
 
-    --ui-button-margin      : var( --space-4 ) var( --space-2 ); /* 0.75rem 1rem; */
-    --ui-button-padding     : var( --space-5 ) var( --space-5 ); /* 0.75rem 1rem; */
+    --button-margin      : var( --space-1 ) var( --space-2 ); /* 0.75rem 1rem; */
+    --button-padding     : var( --space-4 ) var( --space-5 ); /* 0.75rem 1rem; !TODO replace var with space */
+    --button-space :var( --space-3 ) var( --space-6 );
 
 
-/* -------------------- -------------------- -------------------- CARD-BLOCK */
+        /* -------------------- -------------------- -------------------- CARD-BLOCK */
 
-    --ui-card-block-bg    	        : var( --color-6 );
-     /* --ui-card-block-bg    	: none; linear-gradient(200deg, hsla(219, 15%, 15%, 0.50), hsla(219, 15%, 10%, 0.80)); */
-    --ui-card-block-border-color  	: var( --color-8 );
-    --ui-card-block-border-radius 	: var( --border-radius );
-    --ui-card-block-border-style  	: var( --border-style );
-    --ui-card-block-border-width  	: var( --border-width );
+    --card-block-bg    	        : var( --color-6 );
+     /* --card-block-bg    	: none; linear-gradient(200deg, hsla(219, 15%, 15%, 0.50), hsla(219, 15%, 10%, 0.80)); */
+    --card-block-border-color  	: var( --color-8 );
+    --card-block-border-radius 	: var( --border-radius );
+    --card-block-border-style  	: var( --border-style );
+    --card-block-border-width  	: var( --border-width );
 
-    --ui-card-block-box-shadow      : var( --shadow-2 );
+    --card-block-box-shadow     : var( --shadow-2 );
 
-    --ui-card-block-hover           : var( --color-5      );
+    --card-block-hover          : var( --color-5      );
 
-    --ui-card-block-padding         : var( --space-6      );
-    --ui-card-block-margin          : var( --space-6      );
+    --card-block-padding        : var( --space-6      );
+    --card-block-margin         : var( --space-6      );
 
 
     /* CARD BLOCK HEADER  */
-    --ui-card-block-header-bg       : transparent ;
+    --card-block-header-bg      : transparent ;
 
-    --ui-card-block-header-border   : var( --color-4 );
-    --ui-card-block-header-height   : 3em;
-    --ui-card-block-header-padding  : var( --space-6 );
+    --card-block-header-border  : var( --color-4 );
+    --card-block-header-height  : 3em;
+    --card-block-header-padding : var( --space-6 );
 
     /* CARD BLOCK CONTENT */
-    --ui-card-block-content-bg      : transparent ;
+    --card-block-content-bg     : transparent ;
 
-    --ui-card-block-content-border	: var( --color-4 );
-    --ui-card-block-content-padding	: 0;
+    --card-block-content-border : var( --color-4 );
+    --card-block-content-padding : 0;
 
     /* CARD BLOCK ITEM    */
-    --ui-card-block-item-padding    : 0.5em 1em;
-    --ui-card-block-item-width      : 100%;
+    --card-block-item-padding   : 0.5em 1em;
+    --card-block-item-width     : 100%;
 
 
 /* -------------------- -------------------- -------------------- CARD-FULL */
 
-    --ui-card-full-bg               : var( --color-5 );
+    --card-full-bg              : var( --color-5 );
 
-    --ui-card-full-border-color     : var( --color-1 );
-    --ui-card-full-border-radius    : var( --border-radius );
-    --ui-card-full-border-style     : var( --border-style );
-    --ui-card-full-border-width     : var( --border-width );
+    --card-full-border-color    : var( --color-1 );
+    --card-full-border-radius   : var( --border-radius );
+    --card-full-border-style    : var( --border-style );
+    --card-full-border-width    : var( --border-width );
 
-    --ui-card-full-box-shadow    	: var( --shadow-1 );
+    --card-full-box-shadow    	: var( --shadow-1 );
 
-    --ui-card-full-padding          : var( --space-6 );
-    --ui-card-full-margin           : var( --space-6 ) auto;
+    --card-full-padding         : var( --space-6 );
+    --card-full-margin          : var( --space-6 ) auto;
 
 
 /* -------------------- -------------------- -------------------- CARD-SMALL */
 
-    --ui-card-small-bg              : var(--color-5);
+    --card-small-bg             : var(--color-5);
 
-    --ui-card-small-border-color    : var(--color-5);
-    --ui-card-small-border-radius   : var(--border-radius);
-    --ui-card-small-border-style    : var(--border-style);
-    --ui-card-small-border-width    : var(--border-width);
+    --card-small-border-color   : var(--color-5);
+    --card-small-border-radius  : var(--border-radius);
+    --card-small-border-style   : var(--border-style);
+    --card-small-border-width   : var(--border-width);
 
-    --ui-card-small-box-shadow      : var(--shadow-1);
+    --card-small-box-shadow     : var(--shadow-1);
 
-    --ui-card-small-box-hover       : var(--shadow-3);
+    --card-small-box-hover      : var(--shadow-3);
 
-    --ui-card-small-padding         : var(--space-7) var(--space-6);
-    --ui-card-small-margin          : var(--space-6);
+    --card-small-padding        : var(--space-7) var(--space-6);
+    --card-small-margin         : var(--space-6);
 
 
 /* -------------------- -------------------- -------------------- Color Block Type SVG Color !Todo : Refactor and rename */
 
-    --ui-color-block-html           : var( --color-7 );
-    --ui-color-block-module         : var( --color-7 );
-    --ui-color-block-php            : var( --color-7 );
-    --ui-color-block-smilies        : var( --color-7 );
+    --color-block-html          : var( --color-7 );
+    --color-block-module        : var( --color-7 );
+    --color-block-php           : var( --color-7 );
+    --color-block-smilies       : var( --color-7 );
 
 
-    --ui-dialog-bg : var( --color-5 ) !important;
-    /*--ui-widget-content-bg : var( --color-5 ) !important;*/
-    --ui-widget-content-bg : transparent !important;
-    /*--ui-widget-header-bg : var( --color-4 );*/
-    /*        --ui-widget-header-border: var( --border );*/
-    /*        --ui-widget-header-color: var( --color-3 );*/
+    --dialog-bg : var( --color-5 ) !important;
+    /*--widget-content-bg : var( --color-5 ) !important;*/
+    --widget-content-bg         : transparent !important;
+    /*--widget-header-bg : var( --color-4 );*/
+    /*        --widget-header-border: var( --border );*/
+    /*        --widget-header-color: var( --color-3 );*/
 /*ui-widget-header {*/
-/*    background: var(--ui-widget-header-bg );*/
-/*    border: var(--ui-widget-header-border);*/
-/*    color: var(--ui-widget-header-color);*/
-/*    font: var(--ui-widget-header-font);*/
+/*    background: var(--widget-header-bg );*/
+/*    border: var(--widget-header-border);*/
+/*    color: var(--widget-header-color);*/
+/*    font: var(--widget-header-font);*/
 /*}*/
     /* -------------------- -------------------- -------------------- DROPDOWN */
 
     --d-toggle-bg               : none; /*var(--color2); */
     --d-toggle-border           : none; /*var(--border);*/
-    --d-toggle-color            : var(--ui-link);
+    --d-toggle-color            : var(--link);
     --d-toggle-font             : bold 16px/1.5 sans-serif;
     --d-toggle-radius           : var(--border-radius);
     --d-toggle-shadow           : 0 0 3px 1px rgba(44, 98, 246, .5);
@@ -417,17 +383,17 @@ textarea::-webkit-resizer {
 
     /* -------------------- -------------------- -------------------- FILTER [ DATA ] */
 
-    --ui-filter-background    	: var( --color-7 );
+    --filter-background         : var( --color-7 );
 
-    --ui-filter-border-color  	: var( --color-1 );
-    --ui-filter-border-radius 	: var( --border-radius );
-    --ui-filter-border-style  	: var( --border-style );
-    --ui-filter-border-width  	: var( --border-width );
+    --filter-border-color       : var( --color-1 );
+    --filter-border-radius      : var( --border-radius );
+    --filter-border-style       : var( --border-style );
+    --filter-border-width       : var( --border-width );
 
-    --ui-filter-box-shadow    	: var( --shadow-1 );
+    --filter-box-shadow         : var( --shadow-1 );
 
-    --ui-filter-padding       	: var( --space-6 );
-    --ui-filter-margin        	: var( --space-6 ) auto;
+    --filter-padding            : var( --space-6 );
+    --filter-margin             : var( --space-6 ) auto;
 
 
 /* -------------------- -------------------- -------------------- FORM input */
@@ -439,7 +405,7 @@ textarea::-webkit-resizer {
     --input-border-style        : var( --border-style );
     --input-border-width        : var( --border-width );
 
-    --input-border-hover        : 1px solid var( --ui-link-active );
+    --input-border-hover        : 1px solid var( --link-active );
     --input-border-focus        : 1px solid var( --color-4 );
 
     --input-color               : var( --color-2 );
@@ -470,26 +436,36 @@ textarea::-webkit-resizer {
 
     /* -------------------- -------------------- BUTTON */
 
-    --button-bg                 : var(--color-4);
-    --button-color              : var(--color-9);
-    --button-border             : var(--ui-button-border);
-    --button-font               : 100 14px/1.5 sans-serif;
-    --button-margin             : var(--ui-button-margin);
-    --button-shadow             : 0 0 3px 1px rgba(44, 98, 246, 0);
-    --button-space              : var(--ui-button-padding);
-    --button-radius             : 5px;
+    --ui-button-bg              : var(--color-4);
+    --ui-button-color           : var(--color-9);
+    --ui-button-border          : var(--button-border);
+    --ui-button-font            : 100 14px/1.5 sans-serif;
+    --ui-button-margin          : var(--button-margin);
+    --ui-button-shadow          : 0 0 3px 1px rgba(44, 98, 246, 0);
+    --ui-button-space           : var(--button-padding);
+    --ui-button-radius          : 5px;
 
-    --button-transition         : all .5s var(--transition-cube);
+    --ui-button-transition      : all .5s var(--transition-cube);
 
-    --button-bg-on              : var(--ui-button-hover-bg);
-    --button-border-on          : var(--ui-button-border );
-    --button-color-on           : var( --link );
-    --button-shadow-on          : 0 0 4px 2px rgba(44, 93, 247, .85);
+    --ui-button-bg-on           : var(--button-bg-hover);
+    --ui-button-border-on       : var(--button-border );
+    --ui-button-color-on        : var( --link );
+    --ui-button-shadow-on       : 0 0 4px 2px rgba(44, 93, 247, .85);
 
-    --button-bg-active          : var(--ui-button-hover-bg);
-    --button-border-active      : 1px solid var(--link);
-    --button-color-active       : var( --link );
-    --button-shadow-active      : 0 0 4px 2px rgba(44, 93, 247, .85);
+    --ui-state-default-bg       : var(--button-bg);
+    --ui-state-default-border   : 1px solid var(--color-3);
+    --ui-state-default-color    : var(--link);
+    --ui-state-default-link     : var(--link); /*text-decoration : none;*/
+
+    --ui-state-hover-bg         : var(--button-bg-on);
+    --ui-state-hover-border     : 1px solid var(--color-3);
+    --ui-state-hover-color      : var(--link-hover);
+    --ui-state-hover-font       : var(--button-font);
+
+    --ui-button-bg-active       : var(--button-bg-hover);
+    --ui-button-border-active   : 1px solid var(--link);
+    --ui-button-color-active    : var( --link );
+    --ui-button-shadow-active   : 0 0 4px 2px rgba(44, 93, 247, .85);
 
     --ui-icon-background        : var(--link-hover); /* background-color, border */
     --ui-icon-background-border : var(--link-hover);
@@ -498,86 +474,111 @@ textarea::-webkit-resizer {
 
 /*	-------------------- -------------------- -------------------- NAV SIDE */
 
-    --ui-nav-side-background    : transparent;
-
-    --ui-nav-side-box-shadow    : none;
-
-    --ui-nav-side-color         : var( --color-1 );
-    --ui-nav-side-padding       : 60px 0;
-    --ui-nav-side-margin        : 0;
-
-    --ui-nav-side-width         : 100%;
+    --nav-side-background   : transparent;
+    --nav-side-box-shadow   : none;
+    --nav-side-color        : var( --color-1 );
+    --nav-side-padding      : 60px 0;
+    --nav-side-margin       : 0;
+    --nav-side-width        : 100%;
 
 
 /*	-------------------- -------------------- -------------------- NAV SIDE Block Module */
 
-    --ui-nav-block-background   : var( --color-7 );
-
-    --ui-nav-block-border-color : var( --ui-link-hover );
-    --ui-nav-block-border-style : solid;
-    --ui-nav-block-border-width : 3px;
-
-    --ui-nav-block-color-link   : var( --ui-link );
-
-    --ui-nav-set-height         : 8px;
-    --ui-nav-set-width          : 8px;
-
-
+    --nav-block-background  : var( --color-7 );
+    --nav-block-border-color: var( --link-hover );
+    --nav-block-border-style: solid;
+    --nav-block-border-width: 3px;
+    --nav-block-color-link  : var( --link );
+    --nav-set-height        : 8px;
+    --nav-set-width         : 8px;
 
 /*	-------------------- -------------------- -------------------- NOTIFICATION */
 
-    --ui-notification-bg        : var( --color-6 );
+    --notification-bg       : var( --color-6 );
+    --notif-border-color    : var( --color-4 );
+    --notif-border-radius   : var( --border-radius );
+    --notif-border-style    : var( --border-style );
+    --notif-border-width    : var( --border-width );
 
-    --ui-notif-border-color     : var( --color-4 );
-    --ui-notif-border-radius    : var( --border-radius );
-    --ui-notif-border-style     : var( --border-style );
-    --ui-notif-border-width     : var( --border-width );
+    --notif-box-shadow      : var(	--shadow-1 );
 
-    --ui-notif-box-shadow       : var(	--shadow-1 );
+    --notification-color    : var( --color-2 );
 
-    --ui-notification-color     : var( --color-2 );
-
-    --ui-notif-margin           : var(--space-6) auto;
-    --ui-notif-padding          : var(--space-6) var(--space-8);
-    --ui-notif-max-width        : 98%;
+    --notif-margin          : var(--space-6) auto;
+    --notif-padding         : var(--space-6) var(--space-6) var(--space-6) var(--space-9);
+    --notif-max-width       : 98%;
 
     /* -------------------- -------------------- TAB */
 
-    --tabs-bg                   : var(--color-6);
-    --tabs-border               : none;
-    --tabs-radius               : var(--border-radius);
-    --tabs-space                : none; /* var(--space-4); */
+    --tabs-bg               : var(--color-6);
+    --tabs-border           : none;
+    --tabs-radius           : var(--border-radius);
+    --tabs-space            : none; /* var(--space-4); */
 
-    --tabs-nav-bg               : var(--color-6);
-    --tabs-nav-border           : none;
-    --tabs-nav-radius           : var(--border-radius);
-    --tabs-nav-margin           : var(--space-4) var(--space-4) 0;
-    --tabs-nav-space            : var(--space-5) var(--space-5) 0;
-    /*--tabs-nav-shadow           : 0 5px 5px hsla(210, 10%, 12%, 0.9);*/
-    --tabs-nav-shadow           : none;
+    --tabs-nav-bg           : var(--color-6);
+    --tabs-nav-border       : none;
+    --tabs-nav-radius       : var(--border-radius);
+    --tabs-nav-margin       : var(--space-4) var(--space-4) 0;
+    --tabs-nav-space        : var(--space-5) var(--space-5) 0;
+    /*--tabs-nav-shadow     : 0 5px 5px hsla(210, 10%, 12%, 0.9);*/
+    --tabs-nav-shadow       : none;
 
     /* TODO */
-    --ui-tabs-loading           : var(--red-1);
-    --tab-bg                    : var(--color-4);
-    --tab-color                 : var(--link);
-    --tab-border                : var(--border);
-    --tab-radius                : var(--border-radius) var(--border-radius) 0 0;
-    --tab-space                 : var(--space-4) var(--space-4);
-    /*--tab-shadow                : 0 5px 5px hsla(210, 10%, 12%, 0.9);*/
-    --tab-shadow                : none;
+    --tabs-loading          : var(--red-1);
+    --tab-bg                : var(--color-4);
+    --tab-color             : var(--link);
+    --tab-border            : var(--border);
+    --tab-radius            : var(--border-radius) var(--border-radius) 0 0;
+    --tab-space             : var(--space-4) var(--space-4);
+    /*--tab-shadow          : 0 5px 5px hsla(210, 10%, 12%, 0.9);*/
+    /*--tab-shadow            : none; */
     /* state action */
-    --tab-bg-on                 : var(--color-4);
-    --tab-color-on              : var(--link-hover);
-    --tab-border-on             : 1px solid var(--color-3);
+    --tab-bg-on             : var(--color-4);
+    --tab-color-on          : var(--link-hover);
+    --tab-border-on         : 1px solid var(--color-3);
 
     /* tab panel */
-    --tab-panel-bg              : var(--color-7);
-    --tab-panel-border          : none;
-    --tab-panel-color           : var(--body-color);
-    --tab-panel-space           : var(--space-6); /* .5em 1em; */
+    --tab-panel-bg          : var(--color-7);
+    --tab-panel-border      : none;
+    --tab-panel-color       : var(--body-color);
+    --tab-panel-space       : var(--space-6); /* .5em 1em; */
+
+    /*	-------------------- -------------------- -------------------- TABS */
+
+    /*--tab-background        : var(  --color-7  );*/
+    /*--tab-background-hover  : var(  --color-6  );*/
+
+    /*--tab-shadow            : var(  --shadow-2 );*/
+    /*--tab-shadow-hover      : var(  --shadow-6 );*/
+    /*--tab-tbody             : transparent;*/
+    /*--tab-tfoot             : transparent;*/
+
+    /*--tab-even           : var(  --color-7  );*/
+    /*--tab-odd            : var(  --color-6  );*/
+
+    /*--tab-hover          : var(  --color-1  );*/
+    /*--tab-hover-text     : var(  --color-7  );*/
+
+    /*--tab-padding        : var(  --space-5  );*/
+
+    /*	-------------------- -------------------- -------------------- TABLE */
+
+    --table-background   : var( --color-8 );
+
+    --table-thead        : var( --color-8 );
+    --table-tbody        : inherit;
+    --table-tfoot        : var( --color-8 );
+
+    --table-even         : var( --color-8 );
+    --table-odd          : var( --color-8 );
+
+    --table-hover        : var( --color-5 );
+    --table-hover-text   : var( --color-2 );
+
+    --table-padding      : var( --space-5 );
 
 
-/*	-------------------- -------------------- -------------------- SHADOW */
+    /*	-------------------- -------------------- -------------------- SHADOW */
 
     --shadow-1          : 0 1px 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     --shadow-2          : 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.28);
@@ -596,17 +597,17 @@ textarea::-webkit-resizer {
 
 /*	-------------------- -------------------- -------------------- SORT */
 
-    --ui-sort-background    : var( --color-7 );
+    --sort-background    : var( --color-7 );
 
-    --ui-sort-border-color  : var( --border-color );
-    --ui-sort-border-radius : var( --border-radius );
-    --ui-sort-border-style  : var( --border-style );
-    --ui-sort-border-width  : var( --border-width );
+    --sort-border-color  : var( --border-color );
+    --sort-border-radius : var( --border-radius );
+    --sort-border-style  : var( --border-style );
+    --sort-border-width  : var( --border-width );
 
-    --ui-sort-box-shadow    : var( --shadow-2 );
+    --sort-box-shadow    : var( --shadow-2 );
 
-    --ui-sort-padding       : var( --space-6 ) var( --space-8 );
-    --ui-sort-margin        : var( --space-8 ) auto;
+    --sort-padding       : var( --space-6 ) var( --space-8 );
+    --sort-margin        : var( --space-8 ) auto;
 
 
 /*	-------------------- -------------------- -------------------- SPACE : relative margin and padding */
@@ -645,56 +646,42 @@ textarea::-webkit-resizer {
     --size-8       : calc(var(--size-7) * var(--size-scale-ratio));
 
 
-/*	-------------------- -------------------- -------------------- TABLE */
-
-    --ui-table-background   : var(  --color-8  );
-
-    --ui-table-thead        : transparent;
-    --ui-table-tbody        : transparent;
-    --ui-table-tfoot        : transparent;
-
-    --ui-table-even         : var(  --color-8  );
-    --ui-table-odd          : var(  --color-8  );
-
-    --ui-table-hover        : var(  --color-5  );
-    --ui-table-hover-text   : var(  --color-2  );
-
-    --ui-table-padding      : var(  --space-6  );
-
-
-/*	-------------------- -------------------- -------------------- TABS */
-
-    --ui-tab-background      : var(  --color-7  );
-    --ui-tab-background-hover: var(  --color-6  );
-
-    --ui-tab-shadow         : var(  --shadow-2 );
-    --ui-tab-shadow-hover   : var(  --shadow-6 );
-    --ui-tab-tbody          : transparent;
-    --ui-tab-tfoot          : transparent;
-
-    --ui-tab-even           : var(  --color-7  );
-    --ui-tab-odd            : var(  --color-6  );
-
-    --ui-tab-hover          : var(  --color-1  );
-    --ui-tab-hover-text     : var(  --color-7  );
-
-    --ui-tab-padding        : var(  --space-5  );
-
-
     /*	-------------------- -------------------- -------------------- @UTILS LEGACY */
 
-    --ui-adminnavi          : rgba(74, 74, 74, 0.8);
-    --ui-adminmenu          : rgba(74, 74, 74, 0.8);
-    --ui-breadcrumbs        : rgba(74, 74, 74, 0.8);
-    /*--ui-breadcrumbs-bg     : var(  --color-5  );*/
+    --adminnavi          : rgba(74, 74, 74, 0.8);
+    --adminmenu          : rgba(74, 74, 74, 0.8);
+    --breadcrumbs        : rgba(74, 74, 74, 0.8);
+    /*--breadcrumbs-bg     : var(  --color-5  );*/
 
     /*	-------------------- -------------------- -------------------- Nav Menu */
 
-    --ui-nav-hover          : rgba(255, 255, 255, .2);
-    --ui-nav-open           : rgba(0, 0, 0, 0.05);
-    --ui-nav-admin-bg       : rgba(15, 15, 15, 0.75);
-    --ui-nav-link-color     : orange;
-    --ui-nav-link-border    : 3px solid orange;
+    --nav-hover          : rgba(255, 255, 255, .2);
+    --nav-open           : rgba(0, 0, 0, 0.05);
+    --nav-admin-bg       : rgba(15, 15, 15, 0.75);
+    --nav-link-color     : orange;
+    --nav-link-border    : 3px solid orange;
+
+    /* Firefox Scrollbar */
+    /* Copy values to element */
+    scrollbar-color     : var(--thumbBG) var( --trackBG ); /* thumb-color track-color */
+    scrollbar-width     : thin;
+
 }
 
-
+/*  Webkit Scrollbar */
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+::-webkit-scrollbar-thumb {
+    background: var( --thumbBG );
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #686c7e;
+}
+::-webkit-scrollbar-track {
+    background-color: var( --trackBG );
+}
+textarea::-webkit-resizer {
+    background-color: var( --thumbBG );
+}

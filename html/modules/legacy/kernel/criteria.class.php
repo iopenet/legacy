@@ -8,17 +8,16 @@
  *
  */
 
-define('LEGACY_EXPRESSION_EQ', '=');
-define('LEGACY_EXPRESSION_NE', '<>');
-define('LEGACY_EXPRESSION_LT', '<');
-define('LEGACY_EXPRESSION_LE', '<=');
-define('LEGACY_EXPRESSION_GT', '>');
-define('LEGACY_EXPRESSION_GE', '>=');
-define('LEGACY_EXPRESSION_LIKE', 'like');
-define('LEGACY_EXPRESSION_IN', 'in');
-
-define('LEGACY_EXPRESSION_AND', 'and');
-define('LEGACY_EXPRESSION_OR', 'or');
+const LEGACY_EXPRESSION_EQ = '=';
+const LEGACY_EXPRESSION_NE = '<>';
+const LEGACY_EXPRESSION_LT = '<';
+const LEGACY_EXPRESSION_LE = '<=';
+const LEGACY_EXPRESSION_GT = '>';
+const LEGACY_EXPRESSION_GE = '>=';
+const LEGACY_EXPRESSION_LIKE = 'like';
+const LEGACY_EXPRESSION_IN = 'in';
+const LEGACY_EXPRESSION_AND = 'and';
+const LEGACY_EXPRESSION_OR = 'or';
 
  /**
   * @internal
@@ -53,9 +52,9 @@ define('LEGACY_EXPRESSION_OR', 'or');
   *
   * \note
   *   We planned modifying old Criteria of XOOPS2 for Legacy generations.
-  *   But, old Criteria class has some fatal problems for this plan unfortunately.
+  *   But, old Criteria class has some fatal problems for this plan, unfortunately.
   *   Plus, it's manner violation that old class are patched to fundamental defect
-  *   if it come to have two different class characteristics. Therefore we should
+  *   if it comes to have two different class characteristics. Therefore, we should
   *   make new Criteria that is like old Criteria.
   *   (Perhaps, old Criteria was created as Torque like)
   */

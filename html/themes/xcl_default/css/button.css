@@ -3,8 +3,12 @@
  * @version   2.3.1
  * @author    Nuno Luciano (aka gigamaster, https://github.com/gigamaster )
  * @copyright 2005-2022 The XOOPSCube Project
-*  @license   https://github.com/xoopscube/xcl/blob/master/BSD_license.txt
- * @brief    1. BADGE, 2. BUTTON (line 207)
+ * @license  BSD license
+ * @summary
+    1. BADGE
+    2. BUTTON (line 207)
+    3. CUSTOM JQUERY UI_BUTTON
+    4. OVERRIDE STYLE
  */
 
 
@@ -110,7 +114,7 @@
 }
 [data-after-type*="dot"]::after,
 [data-before-type*="dot"]::before {
-    --badge-radius     : 50%;
+    --badge-radius      : 50%;
     --badge-display     : inline-block;
     --badge-font-size   : 50%;
     --badge-height      : var(--dot-size);
@@ -125,7 +129,7 @@
 }
 [data-after-type*="pill"]::after,
 [data-before-type*="pil"]::before {
-    --badge-radius     : 1rem;
+    --badge-radius      : 1rem;
     --badge-padding     : 0.125rem 0.75rem;
     --badge-position    : relative;
     --badge-top         : -1px;
@@ -205,7 +209,7 @@
 }
 
 /* -------------------- -------------------- 2. BUTTON */
-
+a.button,
 a.ui-button,
 input[type='button'] {
     border              : var(--button-border);
@@ -231,13 +235,21 @@ button {
     margin              : 0.25em;
 }
 
-.ui-button-back,
-.ui-button-next,
-.ui-button-reload,
-.ui-button-back-label,
-.ui-button-next-label {
-
+.btn-outline {
+    align-items         : stretch;
+    background          : var(--card-bg);
+    border              : var(--card-border);
+    border-radius       : var(--card-radius);
+    display             : inline-flex;
+    margin              : var(--button-margin);
+    padding             : var(--button-space);
+    transition          : var(--button-transition);
+    /*transition          : all 0.2s ease;*/
+    scroll-snap-align   : start;
 }
+
+
+.button svg,
 .ui-button svg,
 .ui-button-back svg,
 .ui-button-next svg,
@@ -247,7 +259,7 @@ button {
 	pointer-events      : auto; /* Hack To Trigger Parent only when Hover Child */
 	vertical-align      : -0.125em;
 }
-
+.button svg:hover,
 .ui-button-back svg:hover,
 .ui-button-next svg:hover,
 .ui-button-reload svg:hover {
@@ -309,37 +321,38 @@ button {
     padding             : .5em 1.5em;
     text-align          : center;*/
 }
+.button.delete:hover,
 button.ui-button.delete:hover{
     border              : 1px dotted rgb(220, 20, 60) !important;
     background          : linear-gradient(145deg, hsla(348, 83%, 47%, 0.40), hsla(348, 83%, 47%, 0.65)) !important;
 }
+.button.delete svg,
 button.ui-button.delete svg {
     color               : rgb(220, 20, 60) !important;
     fill                : orangered !important;
 }
 
-/* JQUERY UI BUTTONS */
-
-
+/* -------------------- -------------------- 3. CUSTOM JQUERY UI BUTTONS */
 /*The DOM element that represents the button.
 This element will additionally have the ui-button-icon-only class, depending on the showLabel and icon options.*/
+.button,
 .ui-button,
 .ui-button:link,
 .ui-button:visited {
-    background          : var(--button-bg);
-    border              : var(--button-border);
-    border-radius       : var(--button-radius);
-    box-shadow          : var(--button-shadow);
-    color               : var(--button-color);
+    background          : var( --button-bg     );
+    border              : var( --button-border );
+    border-radius       : var( --button-radius );
+    box-shadow          : var( --button-shadow );
+    color               : var( --button-color  );
     cursor              : pointer;
     display             : inline-block;
-    font                : var(--button-font);
+    font                : var( --button-font   );
     line-height         : normal;
-    margin              : var(--button-margin);
-    padding             : var(--button-space); /* .4em 1em; */
+    margin              : var( --button-margin );
+    padding             : var( --button-space  ); /* .4em 1em; */
     position            : relative;
     text-align          : center;
-    transition          : var(--button-transition);
+    transition          : var( --button-transition );
     vertical-align      : middle;
     /* user select  */
     user-select         : none;
@@ -347,6 +360,11 @@ This element will additionally have the ui-button-icon-only class, depending on 
     -moz-user-select    : none;
     -ms-user-select     : none;
 }
+
+
+/* -------------------- -------------------- 4. OVERRIDE STYLE "*/
+
+
 a.btn:hover,
 a.btn:focus,
 input[type='button']:hover,
@@ -354,11 +372,11 @@ input[type='button']:focus,
 .ui-button.ui-state-active:hover,
 .ui-button:hover,
 .ui-button:focus {
-    background          : var(--button-bg-on);
-    border              : var(--button-border-on);
-    color               : var(--button-color-on);
-    border-radius       : var(--button-radius);
-    box-shadow          : var(--button-shadow-on);
+    background          : var( --button-bg-on    );
+    border              : var( --button-border-on);
+    color               : var( --button-color-on );
+    border-radius       : var( --button-radius   );
+    box-shadow          : var( --button-shadow-on);
     outline             : none;
     text-decoration     : none;
 }
@@ -368,11 +386,11 @@ input[type='button']:focus,
 /*.ui-widget-header .ui-state-active, */
 a.ui-button:active,
 .ui-button:active {
-    background          : var(--button-bg-active);
-    border              : var(--button-border-active);
-    color               : var(--button-color-active);
+    background          : var( --button-bg-active    );
+    border              : var( --button-border-active);
+    color               : var( --button-color-active );
     font-weight         : inherit;
-    box-shadow          : var(--button-shadow-active);
+    box-shadow          : var( --button-shadow-active );
 }
 
 /* The element used to display the button icon. This will only be present if an icon is provided in the icon option. */
@@ -430,21 +448,21 @@ button.ui-button::-moz-focus-inner {
     border              : 0;
     padding             : 0;
 }
-.ui-button.delete:hover {
+.delete:hover {
     border              : 1px dotted rgb(220, 20, 60) !important;
     background          : linear-gradient(145deg, hsla(348, 83%, 47%, 0.40), hsla(348, 83%, 47%, 0.65)) !important;
 }
 
-.ui-button.delete svg {
+.delete svg {
     color               : rgb(220, 20, 60) !important;
     fill                : orangered !important;
 }
-
-.ui-button.success:hover {
+.submit:hover,
+.success:hover {
     border              : 1px dotted var(--lime) !important;
     background          : linear-gradient(145deg, var(--green), var(--green-light)) !important;
 }
-.ui-button.delete svg {
+.delete svg {
     color               : var(--lime) !important;
     fill                : var(--lime) !important;
 }

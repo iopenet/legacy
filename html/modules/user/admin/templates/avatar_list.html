@@ -13,7 +13,7 @@
 
     <div class="ui-card-small">
         <div class="ui-card-small-icon ui-icon-blue">
-            <img src="<{"icons/icon-smilies-active.svg"|theme}>" class="svg" aria-label="<{$smarty.const._AD_USER_LANG_AVATAR_TOTAL}>">
+            <img src="<{'icons/icon-smilies-active.svg'|theme}>" class="svg" aria-label="<{$smarty.const._AD_USER_LANG_AVATAR_TOTAL}>">
         </div>
         <div class="ui-card-small-info">
             <h3 class="ui-card-small-title"><{$smarty.const._AD_USER_LANG_AVATAR_TOTAL}>: <strong><{$avatarTotal}></strong></h3>
@@ -23,7 +23,7 @@
 
     <div class="ui-card-small">
         <div class="ui-card-small-icon ui-icon-green">
-            <img src="<{"icons/icon-smilies-active.svg"|theme}>" class="svg" aria-label="<{$smarty.const._AD_USER_LANG_AVATAR_TYPE_S}>">
+            <img src="<{'icons/icon-smilies-active.svg'|theme}>" class="svg" aria-label="<{$smarty.const._AD_USER_LANG_AVATAR_TYPE_S}>">
         </div>
         <div class="ui-card-small-info">
             <h3 class="ui-card-small-title"><{$smarty.const._AD_USER_LANG_AVATAR_TYPE_S}>: <strong><{$savatarTotal}></strong></h3>
@@ -33,7 +33,7 @@
 
     <div class="ui-card-small">
         <div class="ui-card-small-icon ui-icon-orange">
-            <img src="<{"icons/icon-smilies.svg"|theme}>" class="svg" aria-label="<{$smarty.const._AD_USER_LANG_AVATAR_TYPE_C}>">
+            <img src="<{'icons/icon-smilies.svg'|theme}>" class="svg" aria-label="<{$smarty.const._AD_USER_LANG_AVATAR_TYPE_C}>">
         </div>
         <div class="ui-card-small-info">
             <h3 class="ui-card-small-title"><{$smarty.const._AD_USER_LANG_AVATAR_TYPE_C}> <strong><{$cavatarTotal}></strong></h3>
@@ -70,8 +70,9 @@
         <label><{$smarty.const._SEARCH}></label> <input type="text" name="search" value="<{$filterForm->mKeyword}>">
     </p>
 
-<{* ////— CONTROL-ACTION —\\\\ *}>
-<div layout="row center-justify sm-column" class="control-action">
+
+<{* ////— ACTION-CONTROL —\\\\ *}>
+<div layout="row center-justify sm-column" class="action-control">
     <div>
         <label for="option_field"><{$smarty.const._AD_USER_LANG_AVATAR_TYPE}></label>
         <select id="option_field">
@@ -107,12 +108,12 @@
             <{/if}>
             <{/foreach}>
         </select>
-        <input class="ui-btn submit" type="submit" value="<{$smarty.const._SUBMIT}>">
+        <input class="button submit" type="submit" value="<{$smarty.const._SUBMIT}>">
     </div>
     <div class="control-view">
-        <a class="ui-btn ui-btn-small" href="index.php?action=AvatarEdit"><{$smarty.const._AD_USER_LANG_AVATAR_NEW}></a>
-        <a class="ui-btn ui-btn-small" href="index.php?action=AvatarUpload"><{$smarty.const._AD_USER_LANG_AVATAR_UPLOAD}></a>
-        <button class="help-admin ui-btn" type='button' data-id='4' data-module='user' data-help-article='#help-avatars' title="Help">
+        <a class="button" href="index.php?action=AvatarEdit"><{$smarty.const._AD_USER_LANG_AVATAR_NEW}></a>
+        <a class="button" href="index.php?action=AvatarUpload"><{$smarty.const._AD_USER_LANG_AVATAR_UPLOAD}></a>
+        <button class="help-admin button" type='button' data-id='4' data-module='user' data-help-article='#help-avatars' title="<{$smarty.const._HELP}>">
             <span class="ui-icon ui-icon-help"></span>
         </button>
     </div>
@@ -131,7 +132,7 @@
             <{* ////— DROPDOWN SORT —\\\\ *}>
             <div class="dropdown" id="filter-sort">
 
-                <a href="#" class="dropdown-toggle ui-btn" aria-label="sort filter">
+                <a href="#" class="dropdown-toggle button" aria-label="sort filter">
                     <img class="svg" src="<{$xoops_url}>/images/icons/list-tree.svg" width="24px" height="24px" alt="options">
                 </a>
 
@@ -218,9 +219,9 @@
         <tbody>
         <{foreach item=obj from=$objects}>
         <{if $obj->getShow('avatar_display') == 1}>
-        <tr class="<{cycle values='odd,even'}> active">
+        <tr class="active">
             <{else}>
-        <tr class="<{cycle values='odd,even'}> inactive">
+        <tr class="inactive">
         <{/if}>
             <td class="list_id"><{$obj->getShow('avatar_id')}></td>
             <td class="list_image">
@@ -249,10 +250,10 @@
             </td>
             <td class="list_control">
                 <a href="index.php?action=AvatarEdit&amp;avatar_id=<{$obj->getShow('avatar_id')}>" title="<{$smarty.const._EDIT}>">
-                    <img src="<{"icons/icon-edit.svg"|theme}>" class="svg">
+                    <img src="<{'icons/icon-edit.svg'|theme}>" class="svg">
                 </a>
                 <a href="index.php?action=AvatarDelete&amp;avatar_id=<{$obj->getShow('avatar_id')}>" title="<{$smarty.const._DELETE}>" class="red">
-                    <img src="<{"icons/icon-delete.svg"|theme}>" class="svg">
+                    <img src="<{'icons/icon-delete.svg'|theme}>" class="svg">
                 </a>
             </td>
         </tr>
@@ -261,7 +262,7 @@
         <tfoot>
         <tr>
             <td colspan="10" class="foot">
-                <input class="btn submit" type="submit" value="<{$smarty.const._SUBMIT}>">
+                <input class="button submit" type="submit" value="<{$smarty.const._SUBMIT}>">
             </td>
         </tr>
         </tfoot>

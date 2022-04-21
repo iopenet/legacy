@@ -4,37 +4,39 @@
  * @package legacyRender
  */
 
-$modversion['name'] = _MI_LEGACYRENDER_NAME;
-$modversion['version'] = '2.31';
-$modversion['description'] = _MI_LEGACYRENDER_NAME_DESC;
-$modversion['author'] = 'The XOOPSCube Project';
-$modversion['credits'] = 'The XOOPSCube Project';
-$modversion['help'] = 'help.html';
-$modversion['license'] = 'GPL see LICENSE';
-$modversion['image'] = 'images/module_render.svg';
-$modversion['dirname'] = 'legacyRender';
 
-$modversion['cube_style'] = true;
+// Manifesto
+$modversion['dirname']          = 'legacyRender';
+$modversion['name']             = _MI_LEGACYRENDER_NAME;
+$modversion['version']          = '2.31';
+$modversion['detailed_version'] = '2.31.1';
+$modversion['description']      = _MI_LEGACYRENDER_NAME_DESC;
+$modversion['author']           = 'The XOOPSCube Project Team';
+$modversion['credits']          = 'The XOOPSCube Project Team';
+$modversion['license']          = 'GPL see LICENSE';
+$modversion['image']            = 'images/module_render.svg';
+$modversion['icon']             = 'images/module_icon.svg';
+$modversion['help']             = 'help.html';
+$modversion['cube_style']       = true;
 
-//
-// SQL File
-//
+
+// SQL
 // $modversion['sqlfile']['mysql'] = "sql/mysql.sql";
 // $modversion['tables'][] = "legacyrender_theme";
 
-//
-// Template
-//
-$modversion['templates'][1]['file']= 'legacy_render_dialog.html';
+// Menu
+$modversion['hasMain']=0;
 
-//
-// Admin things
-//
+// Admin
 $modversion['hasAdmin']=1;
 $modversion['adminindex']= 'admin/index.php';
 $modversion['adminmenu']= 'admin/menu.php';
 
-//Preference
+
+// Template
+$modversion['templates'][1]['file']= 'legacy_render_dialog.html';
+
+// Preference
 $modversion['config'][]= [
     'name'        => 'meta_keywords',
     'title'       => '_MI_LR_META_KEYWORDS',
@@ -92,8 +94,7 @@ $modversion['config'][]= [
 ];
 
 
-// Extra Meta Webmaster Tools
-
+// Meta Webmaster Tools
 $modversion['config'][]= [
     'name'        => 'meta_bing',
     'title'       => 'Bing meta tag',
@@ -139,15 +140,14 @@ $modversion['config'][]= [
     'default'     => '@cubson'
 ];
 
-// Extra Meta Webmaster Tools End
-
+// Settings
 $modversion['config'][]= [
     'name'        => 'footer',
     'title'       => '_MI_LR_FOOTER',
     'description' => '_MI_LR_FOOTER_DESC',
     'formtype'    => 'textarea',
     'valuetype'   => 'text',
-    'default'     => 'Powered by XCL 2.3.1 &copy; 2005-2022 <a href="https://github.com/xoopscube/xcl" rel="external">The XOOPSCube Project</a>'
+    'default'     => 'Powered by XCL 2.3.1 &copy; 2005-2022 <a href="https://github.com/xoopscube/" rel="external">The XOOPSCube Project</a>'
 ];
 
 $modversion['config'][]= [
@@ -202,6 +202,3 @@ $modversion['config'][]= [
     'valuetype' => 'int',
     'default'   =>0
 ];
-
-// Menu
-$modversion['hasMain']=0;

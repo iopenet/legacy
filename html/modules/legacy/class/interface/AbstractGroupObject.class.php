@@ -69,7 +69,7 @@ abstract class Legacy_AbstractGroupObject extends XoopsSimpleObject
      *
      * @return    int[]
      */
-    abstract public function isMember(/*** int ***/ $uid, /*** Enum ***/ $rank=Lenum_GroupRank::REGULAR);
+    abstract public function isMember( int $uid, /*** Enum ***/ $rank=Lenum_GroupRank::REGULAR);
 
     /**
      * countMembers
@@ -83,11 +83,11 @@ abstract class Legacy_AbstractGroupObject extends XoopsSimpleObject
     /**
      * renderUri
      *
-     * @param	string	$action
+     * @param string|null $action
      *
      * @return	string
      */
-    public function renderUri($action=null)
+    public function renderUri( string $action=null )
     {
         return Legacy_Utils::renderUri($this->getDirname(), $this->getDataname(), $this->get($this->getPrimary()), $action);
     }

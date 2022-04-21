@@ -6,9 +6,7 @@
   ~  *
   ~  * @package    XCL 2.3.1
   ~  * @author     Original Author Nuno Luciano ( @gigamaster )
-  ~ Kilica (c) 2005-2022 The XOOPS Cube Project
-  ~  * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.tx
-  ~  * @link       https://github.com/xoopscube/xcl
+  ~  * @license    GPL_V2.tx
   ~  * *
   ~  */
   -->
@@ -24,9 +22,9 @@
         data-help-module="legacy" // Module's name
         data-help-file="block.html" // !TODO if module's
         data-help-article="help-overview" // article id from module's help file
-       <button class="help-admin ui-btn" type='button' data-module='legacy' data-help-article='#help-version'>Help Admin</button>
+       <button class="help-admin button" type='button' data-module='legacy' data-help-article='#help-version'>Help Admin</button>
         or a button with icon:
-        <button class="help-admin ui-btn" type='button' data-module='legacy' data-help-article='#help-version'>
+        <button class="help-admin button" type='button' data-module='legacy' data-help-article='#help-version'>
             <span class="ui-icon ui-icon-help"></span>
         </button>
 *}>
@@ -95,6 +93,8 @@
             setTimeout(function() {
                 $('#help-data').delay(3000).load('<{$xoops_url}>/modules/legacy/admin/index.php?action=Help&dirname='+module+' '+helpArticle, function() {
                 //console.log('Load was performed=');
+               // Note Local nginx server CORS issue if FIREFOX strict mode
+              // use relative path eg. '../../'
             })}, 2500);
         });
     });

@@ -1,6 +1,9 @@
 <?php
 // Syntax const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
-
+const _MD_A_MYBLOCKSADMIN_TIPS = 'カスタムブロックはHTML、BBCode、PHP、Smarty変数を使用して作成することができます。<br>
+一つのコンポーネントはHTML、JavaScript、CSSを含んでいます。<br>
+モジュールは、特定の機能を提供し、継承よりも構成を優先するいくつかの事前構築されたブロックを持ちます。<br>
+エディタは、コンテンツの種類に応じて変化します。';
 const _MD_A_MYBLOCKSADMIN_PERMUPDATED = '権限を更新しました' ;
 const _MD_A_MYBLOCKSADMIN_BLOCKADMIN = 'ブロック管理' ;
 const _MD_A_MYBLOCKSADMIN_NAME = '名称' ;

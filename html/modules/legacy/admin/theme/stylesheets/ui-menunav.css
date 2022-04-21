@@ -1,10 +1,10 @@
 /*
-XOOPSCube Theme : XCL Admin Flex Grid
-Distribution : XCL 2.3 Alpha
-Version : 0.7.0
-Author : Nuno Luciano aka Gigamaster
-Date : 2020-06-11
-URL : https://github.com/xoopscube/xcl/
+	XOOPSCube Theme : XCL Admin Flex Grid
+	Distribution : XOOPSCube XCL 2.3
+	Version : 1.0.0
+	Author : Nuno Luciano aka Gigamaster
+	Date : 2021-10-28
+	URL : https://github.com/xoopscube/
 
 
     -------------------- -------------------- NAV IMPORT */
@@ -44,7 +44,7 @@ URL : https://github.com/xoopscube/xcl/
 
     a.adminavi-item {
     border-bottom   : 2px solid transparent;
-    color           : var(  --ui-link      );
+    color           : var(  --link      );
     padding         : 10px;
     text-decoration : none;
     transition      : .3s;
@@ -55,15 +55,15 @@ URL : https://github.com/xoopscube/xcl/
     }
 
     a.adminavi-item:not(.selected):hover {
-    color           : var(  --ui-link-hover     );
-    border-bottom   : 2px solid var(  --ui-link-hover       );
+    color           : var(  --link-hover     );
+    border-bottom   : 2px solid var(  --link-hover       );
     }
 
 
     a.adminavi-item.selected,
     a.adminavi-item.selected:active {
-    color           : var(  --ui-link-hover     );
-    border-bottom   : 2px solid var(  --ui-link-hover       );
+    color           : var(  --link-hover     );
+    border-bottom   : 2px solid var(  --link-hover       );
     outline-width   : 0;
     }
 
@@ -259,10 +259,10 @@ div.dropdown-content {
 
 /* Badge default */
 :where(div.dropdown-content) .btn {
-    background          : var( --ui-button-bg );
+    background          : var( --button-bg );
     border              : none;
     border-radius       : 7px;
-    box-shadow          : var( --ui-button-box-shadow );
+    box-shadow          : var( --button-shadow );
     color               : var( --color-1 );
     display             : inline-block;
     font-size           : 0.74rem;
@@ -271,7 +271,7 @@ div.dropdown-content {
     font-weight         : 300;
     letter-spacing      : 0.1rem;
     line-height         : 1em;
-    margin              : var( --ui-button-margin );
+    margin              : var( --button-margin );
     padding             : var( --space-4 ) var( --space-5 );
     position            : relative;
     text-align          : center;
@@ -286,5 +286,5 @@ div.dropdown-content {
     -webkit-mask-size   : 1.5em 1.5em;
 }
 :where(div.dropdown-content) .btn:hover {
-    background          : var(  --ui-button-hover-bg  );
+    background          : var(  --button-bg-hover  );
 }

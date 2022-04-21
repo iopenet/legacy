@@ -74,5 +74,5 @@ const _MI_USER_MENU_CREATE_AVATAR = 'Create avatar';
 const _MI_USER_MENU_CREATE_GROUP = 'Create group';
 const _MI_USER_MENU_CREATE_RANK = 'user rank create new';
 const _MI_USER_MENU_CREATE_USER = 'Create user';
-const _MI_USER_NAME = 'User module';
+const _MI_USER_NAME = 'User Groups';
 const _MI_USER_NAME_DESC = 'Authentication module which provides user management and group-based permissions system.';

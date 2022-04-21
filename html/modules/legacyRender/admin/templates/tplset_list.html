@@ -17,16 +17,16 @@
 <{/if}>
 
 
-<{* ////— CONTROL-ACTION —\\\\ *}>
-<div layout="row center-justify" class="control-action">
+<{* ////— ACTION-CONTROL —\\\\ *}>
+<div layout="row center-justify" class="action-control">
     <form method="get" action="index.php"><{$smarty.const._AD_LEGACYRENDER_LANG_SEARCH_TEMPLATE}> :
         <input type="hidden" name="action" value="TplfileList">
         <input type="text" name="tpl_file">
-        <input class="ui-btn" type="submit" value="<{$smarty.const._SEARCH}>">
+        <input class="button" type="submit" value="<{$smarty.const._SEARCH}>">
     </form>
     <div class="control-view">
-        <a class="ui-btn" href="./index.php?action=TplsetUpload"><{$smarty.const._AD_LEGACYRENDER_LANG_TPLSET_UPLOAD}></a>
-        <button class="help-admin ui-btn" type='button' data-module='legacyRender' data-help-article='#help-tplset' title="<{$smarty.const._HELP}>">
+        <a class="button" href="./index.php?action=TplsetUpload"><{$smarty.const._AD_LEGACYRENDER_LANG_TPLSET_UPLOAD}></a>
+        <button class="help-admin button" type='button' data-module='legacyRender' data-help-article='#help-tplset' title="<{$smarty.const._HELP}>">
             <span class="ui-icon ui-icon-help"></span>
         </button>
     </div>
@@ -56,7 +56,7 @@
         <{* ////— DROPDOWN SORT —\\\\ *}>
         <div class="dropdown" id="filter-sort">
 
-            <a href="#" class="dropdown-toggle ui-btn" aria-label="sort filter">
+            <a href="#" class="dropdown-toggle button" aria-label="sort filter">
                 <img class="svg" src="<{$xoops_url}>/images/icons/list-tree.svg" width="24px" height="24px" alt="options">
             </a>
 
@@ -225,7 +225,7 @@
     <tfoot>
     <tr>
         <td class="foot" colspan="8">
-            <a class="ui-btn" href="index.php?action=TplfileList&amp;sort=-7"><{$smarty.const._MORE}></a>
+            <a class="button" href="index.php?action=TplfileList&amp;sort=-7"><{$smarty.const._MORE}></a>
         </td>
     </tr>
     </tfoot>

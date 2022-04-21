@@ -1,4 +1,5 @@
 <?php
+
 if (!defined('XOOPS_ROOT_PATH')) {
     exit();
 }
@@ -9,18 +10,23 @@ if (!isset($root)) {
 
 $mydirpath = basename(dirname(__DIR__)) ;
 
-$modversion['name'] = _MI_MESSAGE_NAME;
-$modversion['dirname'] = basename(__DIR__);
-$modversion['version'] = '2.40';
-$modversion['description'] = _MI_MESSAGE_DESC;
-$modversion['author'] = 'Marijuana, Gigamaster (XCL23)';
-$modversion['credits'] = 'XOOPS Cube Project';
-$modversion['help'] = 'help.html';
-$modversion['license'] = 'MIT LICENSE';
-$modversion['image']       = 'images/module_message.svg';
-$modversion['mcl_update'] = 'message';
 
-$modversion['cube_style'] = true;
+// Manifesto
+$modversion['dirname']          = basename(__DIR__);
+$modversion['name']             = _MI_MESSAGE_NAME;
+$modversion['version']          = '2.40';
+$modversion['detailed_version'] = '2.41.1';
+$modversion['description']      = _MI_MESSAGE_DESC;
+$modversion['author']           = 'Marijuana';
+$modversion['credits']          = 'The XOOPSCube Project, Gigamaster (XCL23)';
+$modversion['license']          = 'MIT LICENSE';
+$modversion['image']            = 'images/module_message.svg';
+$modversion['icon']             = 'images/module_icon.svg';
+$modversion['help']             = 'help.html';
+$modversion['mcl_update']       = 'message';
+//$modversion['cube_style']       = true;
+
+// SQL
 $modversion['sqlfile']['mysql'] = 'sql/mysql.sql';
 $modversion['tables'][] = '{prefix}_{dirname}_inbox';
 $modversion['tables'][] = '{prefix}_{dirname}_outbox';
@@ -29,6 +35,7 @@ $modversion['tables'][] = '{prefix}_{dirname}_users';
 $modversion['legacy_installer']['installer']['class'] = 'myInstaller';
 $modversion['legacy_installer']['updater']['class'] = 'myUpdater';
 
+// Templates
 $modversion['templates'][] = ['file' => 'message_inboxlist.html'];
 $modversion['templates'][] = ['file' => 'message_inboxview.html'];
 $modversion['templates'][] = ['file' => 'message_outboxlist.html'];
@@ -41,6 +48,7 @@ $modversion['templates'][] = ['file' => 'message_userinfo.html'];
 $modversion['templates'][] = ['file' => 'message_blaclist.html'];
 $modversion['templates'][] = ['file' => 'message_nav.html'];
 
+// Menu
 $modversion['hasMain'] = 1;
 $modversion['sub'][] = ['name' => _MI_MESSAGE_SUB_SEND, 'url' => 'index.php?action=send'];
 $modversion['sub'][] = ['name' => _MI_MESSAGE_SUB_NEW, 'url' => 'index.php?action=new'];

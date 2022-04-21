@@ -9,13 +9,14 @@
 <h2><{$smarty.const._MI_PROFILE_LANG_DEFINITIONS_LIST}></h2>
 
 
-<{* ////— CONTROL-ACTION —\\\\ *}>
-<div layout="row center-justify" class="control-action">
+<{* ////— ACTION-CONTROL —\\\\ *}>
+<div layout="row center-justify" class="action-control">
 
-    <a class="ui-btn" href="index.php?action=DefinitionsEdit"><i class="i-add"></i> <{$smarty.const._MD_PROFILE_LANG_ADD_A_NEW_DEFINITIONS}></a>
+    <a class="button" href="index.php?action=DefinitionsEdit"><i class="i-add"></i> <{$smarty.const._MD_PROFILE_LANG_ADD_A_NEW_DEFINITIONS}></a>
 
     <div class="control-view">
-        <button class="help-admin ui-btn" type='button' data-module='profile' data-help-article='#help-overview' title="<{$smarty.const._HELP}>">
+        <a class="button" href="../../user/admin/index.php"><{$smarty.const._AD_PROFILE_LANG_USERS}></a>
+        <button class="help-admin button" type='button' data-module='profile' data-help-article='#help-overview' title="<{$smarty.const._HELP}>">
             <span class="ui-icon ui-icon-help"></span>
         </button>
     </div>
@@ -30,7 +31,7 @@
         <{* ////— DROPDOWN SORT —\\\\ *}>
         <div class="dropdown" id="filter-sort">
 
-            <a href="#" class="dropdown-toggle ui-btn" aria-label="sort filter">
+            <a href="#" class="dropdown-toggle button" aria-label="sort filter">
                 <img class="svg" src="<{$xoops_url}>/images/icons/list-tree.svg" width="24px" height="24px" alt="options">
             </a>
 

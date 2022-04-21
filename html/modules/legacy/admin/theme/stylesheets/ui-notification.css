@@ -1,10 +1,10 @@
 /*
-XOOPSCube Theme : XCL Admin Flex Gridd
-Distribution : XCL 2.3 Alpha
-Version : 0.7.0
-Author : Nuno Luciano aka Gigamaster
-Date : 2020-06-11
-URL : https://github.com/xoopscube/xcl/
+	XOOPSCube Theme : XCL Admin Flex Grid
+	Distribution : XOOPSCube XCL 2.3
+	Version : 1.0.0
+	Author : Nuno Luciano aka Gigamaster
+	Date : 2021-10-28
+	URL : https://github.com/xoopscube/
 
 -------------------- -------------------- -------------------- Notifications */
 
@@ -13,51 +13,51 @@ URL : https://github.com/xoopscube/xcl/
 
     .tips, .error, .confirm, .success {
 
-        background      : var(  --ui-notification-bg    );
+        background      : var(  --notification-bg    );
 
-        border-color    : var(  --ui-notif-border-color  );
-        border-radius   : var(  --ui-notif-border-radius );
-        border-style    : var(  --ui-notif-border-style  );
-        border-width    : var(  --ui-notif-border-width  );
+        border-color    : var(  --notif-border-color );
+        border-radius   : var(  --notif-border-radius);
+        border-style    : var(  --notif-border-style );
+        border-width    : var(  --notif-border-width );
 
-        box-shadow      : var(  --ui-notif-box-shadow    );
+        box-shadow      : var(  --notif-box-shadow   );
 
-        color           : var(  --ui-notification-color    );
+        color           : var(  --notification-color );
 
-        padding         : var(  --ui-notif-padding       );
-        margin          : var(  --ui-notif-margin        );
-        max-width       : var(  --ui-notif-max-width     );
+        padding         : var(  --notif-padding      );
+        margin          : var(  --notif-margin       );
+        max-width       : var(  --notif-max-width    );
 
     }
 
     .confirm {
-        border-left     : 7px solid var(  --color-amber     );
-        background: var(  --ui-notification-bg    ) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' style='vertical-align: -0.125em;' viewBox='0 0 24 24'%3E %3Cpath d='M11.5 3a9.5 9.5 0 1 1 0 19a9.5 9.5 0 0 1 0-19zm0 1a8.5 8.5 0 1 0 0 17a8.5 8.5 0 0 0 0-17zM11 8v2h1V8h-1zm0 4v5h1v-5h-1z' fill='%23face74'/%3E %3C/svg%3E") 1em 1em no-repeat;
+        border-left     : 7px solid var( --color-amber );
+        background      : var( --notification-bg ) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' style='vertical-align: -0.125em;' viewBox='0 0 24 24'%3E %3Cpath d='M11.5 3a9.5 9.5 0 1 1 0 19a9.5 9.5 0 0 1 0-19zm0 1a8.5 8.5 0 1 0 0 17a8.5 8.5 0 0 0 0-17zM11 8v2h1V8h-1zm0 4v5h1v-5h-1z' fill='%23face74'/%3E %3C/svg%3E") .6em 1em no-repeat;
     }
 
     .tips {
-        border-left     : 7px solid var(  --color-blue     );
-        background: var(  --ui-notification-bg    ) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' style='vertical-align: -0.125em;' viewBox='0 0 24 24'%3E %3Cpath d='M11.5 3a9.5 9.5 0 1 1 0 19a9.5 9.5 0 0 1 0-19zm0 1a8.5 8.5 0 1 0 0 17a8.5 8.5 0 0 0 0-17zM11 8v2h1V8h-1zm0 4v5h1v-5h-1z' fill='%23face74'/%3E %3C/svg%3E") 1em 1em no-repeat;
+        border-left     : 7px solid var( --color-blue );
+        background      : var( --notification-bg ) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' style='vertical-align: -0.125em;' viewBox='0 0 24 24'%3E %3Cpath d='M11.5 3a9.5 9.5 0 1 1 0 19a9.5 9.5 0 0 1 0-19zm0 1a8.5 8.5 0 1 0 0 17a8.5 8.5 0 0 0 0-17zM11 8v2h1V8h-1zm0 4v5h1v-5h-1z' fill='%23face74'/%3E %3C/svg%3E") .6em 1em no-repeat;
     }
 
     .error {
         border-left     : 7px solid var(  --color-red      );
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' style='vertical-align: -0.125em;' viewBox='0 0 24 24'%3E %3Cpath d='M1 21L11.5 2.813L22 21H1zm19.268-1L11.5 4.813L2.732 20h17.536zM11 14v-4h1v4h-1zm0 2h1v2h-1v-2z' fill='%23face74'/%3E %3C/svg%3E");
-        background-position:  1em center;
+        background-position:  .6em 1em;
         background-repeat: no-repeat;
         /* animation: warning 1s infinite alternate; */
     }
 
     .success {
         border-left     : 7px solid var(  --color-green     );
-        background: var(  --ui-notification-bg    ) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' style='vertical-align: -0.125em;' viewBox='0 0 24 24'%3E %3Cpath d='M9 19l-5.657-5.657l2.121-2.121L9 14.757l8.485-8.485l2.122 2.121L9 19zm-3.536-6.364l-.707.707L9 17.586l9.192-9.193l-.707-.707L9 16.172l-3.536-3.536z' fill='%23face74'/%3E %3C/svg%3E") 1em 1em no-repeat;
+        background: var(  --notification-bg    ) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' style='vertical-align: -0.125em;' viewBox='0 0 24 24'%3E %3Cpath d='M9 19l-5.657-5.657l2.121-2.121L9 14.757l8.485-8.485l2.122 2.121L9 19zm-3.536-6.364l-.707.707L9 17.586l9.192-9.193l-.707-.707L9 16.172l-3.536-3.536z' fill='%23face74'/%3E %3C/svg%3E") .6em 1em no-repeat;
     }
 
     .message-warning {
 
-        background      : var(  --ui-notification-bg    );
+        background      : var(  --notification-bg    );
         border          : 1px solid var(  --color-amber );
-        border-radius   : var(  --ui-notif-border-radius );
+        border-radius   : var(  --notif-border-radius );
         color           : var(  --color-white     );
         padding         : var(  --space-2       );
         animation       : badge-warning 1s infinite alternate;
@@ -81,7 +81,7 @@ URL : https://github.com/xoopscube/xcl/
     }
     100% {
         background-position: 1em center;
-        border-left     : 7px solid var(  --ui-link  );
+        border-left     : 7px solid var(  --link  );
     }
     0% {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1.5em' height='1.5em' style='vertical-align: -0.125em;' viewBox='0 0 24 24'%3E %3Cpath d='M1 21L11.5 2.813L22 21H1zm19.268-1L11.5 4.813L2.732 20h17.536zM11 14v-4h1v4h-1zm0 2h1v2h-1v-2z' fill='%23f44336'/%3E %3C/svg%3E");

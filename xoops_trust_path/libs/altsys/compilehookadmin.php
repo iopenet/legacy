@@ -6,8 +6,8 @@
  * @version    XCL 2.3.1
  * @author     Other authors gigamaster, 2020 XCL/PHP7
  * @author     Gijoe (Peak)
- * @copyright  (c) 2005-2022 Author
- * @license    https://github.com/xoopscube/xcl/blob/master/GPL_V2.txt
+ * @copyright  (c) 2005-2022 Authors
+ * @license    GPL v2.0
  */
 
 require_once __DIR__ . '/class/AltsysBreadcrumbs.class.php';
@@ -255,16 +255,16 @@ foreach ( $compile_hooks as $command => $compile_hook ) {
 		<h3>{$compile_hook['dt']}</h3>
 		<div class='ui-card-full'>
 		<p>{$compile_hook['dd']}</p>
-		<p><input type='submit' name='$command' id='$command' value='" . _GO . "' onclick='return confirm(\"{$compile_hook['conf_msg']}\");'></p>
+		<p><input class='button' type='submit' name='$command' id='$command' value='" . _GO . "' onclick='return confirm(\"{$compile_hook['conf_msg']}\");'></p>
 		</div>
 	\n";
 }
 
     echo "<div class='ui-card-full'>
 		<p>" . _TPLSADMIN_NUMCAP_COMPILEDCACHES . ": <strong>$compiledcache_num</strong></p>
-		<p><input type='submit' class='delete' name='clearcache' value='" . _DELETE . "' onclick='return confirm(\"" . _TPLSADMIN_CNF_DELETEOK . "\");'></p>
+		<p><input type='submit' class='button delete' name='clearcache' value='" . _DELETE . "' onclick='return confirm(\"" . _TPLSADMIN_CNF_DELETEOK . "\");'></p>
 		<p>" . _TPLSADMIN_NUMCAP_TPLSVARS . ": <strong>$tplsvars_num</strong></p>
-		<p><input type='submit' class='delete' name='cleartplsvars' value='" . _DELETE . "' onclick='return confirm(\"" . _TPLSADMIN_CNF_DELETEOK . "\");'></p>
+		<p><input type='submit' class='button delete' name='cleartplsvars' value='" . _DELETE . "' onclick='return confirm(\"" . _TPLSADMIN_CNF_DELETEOK . "\");'></p>
 		" . $xoopsGTicket->getTicketHtml( __LINE__ ) . "
 		</div>
 	</form>
@@ -274,7 +274,7 @@ foreach ( $compile_hooks as $command => $compile_hook ) {
 		<h3>" . _TPLSADMIN_DT_GETTPLSVARSINFO_DW . "</h3>
 		<div class='ui-card-full'>
 		<p>" . _TPLSADMIN_DD_GETTPLSVARSINFO_DW . "</p>
-		<p><input type='submit' name='as_dw_extension_zip' value='zip'> <input type='submit' name='as_dw_extension_tgz' value='tar.gz'></p>
+		<p><input class='button download' type='submit' name='as_dw_extension_zip' value='zip'> <input class='button download' type='submit' name='as_dw_extension_tgz' value='tar.gz'></p>
 		</div>
 	</form>
 
@@ -282,7 +282,7 @@ foreach ( $compile_hooks as $command => $compile_hook ) {
 		<h3>" . _TPLSADMIN_DT_GETTEMPLATES . "</h3>
 		<div class='ui-card-full'>
 		<p>" . _TPLSADMIN_DD_GETTEMPLATES . "</p>
-		<p><select name='tplset'>$tplset_options</select> <input type='submit' name='download_zip' value='zip'> <input type='submit' name='download_tgz' value='tar.gz'></p>
+		<p><select name='tplset'>$tplset_options</select> <input class='button download' type='submit' name='download_zip' value='zip'> <input class='button download' type='submit' name='download_tgz' value='tar.gz'></p>
 		</div>
 	</form>
 
@@ -290,7 +290,7 @@ foreach ( $compile_hooks as $command => $compile_hook ) {
 		<h3>" . _TPLSADMIN_DT_PUTTEMPLATES . "</h3>
 		<div class='ui-card-full'>
 		<p>" . _TPLSADMIN_DD_PUTTEMPLATES . "</p>
-		<p><select name='tplset'>$tplset_options</select> <input type='file' name='tplset_archive' size='60'> <input type='submit' value='" . _SUBMIT . "'></p>
+		<p><select name='tplset'>$tplset_options</select> <input type='file' name='tplset_archive' size='60'> <input class='button upload' type='submit' value='" . _SUBMIT . "'></p>
 		</div>
     </form>";
 

@@ -1,10 +1,10 @@
 /*
-    XOOPSCube Theme : XCL Admin Flex Grid
-    Distribution : XCL 2.3 Alpha
-    Version : 0.7.0
-    Author : Nuno Luciano aka Gigamaster
-    Date : 2020-06-11
-    URL : https://github.com/xoopscube/xcl/
+	XOOPSCube Theme : XCL Admin Flex Grid
+	Distribution : XOOPSCube XCL 2.3
+	Version : 1.0.0
+	Author : Nuno Luciano aka Gigamaster
+	Date : 2021-10-28
+	URL : https://github.com/xoopscube/
 
     -------------------- -------------------- --------------------  Table */
 
@@ -16,91 +16,97 @@ Alternative data display
 
 :where(table, table.outer, table:not([class^="cke_"])) {
 
-    background      : var(  --ui-table-background   );
-    border-color    : var(  --border-color       );
-    border-radius   : var(  --border-radius      );
-    border-style    : var(  --border-radius      );
-    border-width    : var(  --border-width       );
+    background      : var(  --table-background );
+    border-color    : var(  --border-color     );
+    border-radius   : var(  --border-radius    );
+    border-style    : var(  --border-radius    );
+    border-width    : var(  --border-width     );
     border-collapse : collapse;
     box-shadow    	: var(  --shadow-2         );
     padding       	: var(  --space-4          );
     margin        	: 0;
     width           : 100%;
 }
+
+/*table thead, table tfoot {*/
+/*    background      : inherit;*/
+/*}*/
+
 :is(table[class^="cke_"]) * {
     box-shadow    	: none;
 }
 
-:where(table:not([class^="cke_"])) thead tr {
-    background      : var( --ui-table-thead );
+:where(table:not([class^="cke_"])) thead {
+    background      : var( --table-thead );
 }
 
-:where(table:not([class^="cke_"])) tbody tr {
-    background      : var(--ui-table-tbody);
+:where(table:not([class^="cke_"])) tbody {
+    background      : var(--table-tbody);
 }
 
-:where(table:not([class^="cke_"])) tfoot tr {
-    background      : var(--ui-table-tfoot);
+:where(table:not([class^="cke_"])) tfoot {
+    background      : var(--table-tfoot);
     text-align      : center;
 }
+
 /* Apply button to table prefix start with lis_control */
 :where(td[class^="list_control"]) input[type="file"] {
-    display: none;
+    display         : none;
 }
 :where(td[class^="list_control"]) input[type="file"] + label {
-    font-size: 1.25em;
-    font-weight: 700;
-    color: white;
-    background-color: black;
-    display: inline-block;
+    font-size       : 1.25em;
+    font-weight     : 700;
+    color           : white;
+    background      : black;
+    display         : inline-block;
 }
 
 :where(td[class^="list_control"]) input[type="file"]:focus + label,
 :where(td[class^="list_control"]) input[type="file"] + label:hover {
-    background-color: red;
+    background      : red;
 }
 :where(td[class^="list_control"]) a {
-    background: var( --ui-button-bg );
-    border: none;
-    border-radius: var( --border-radius );
-    box-shadow: var( --ui-button-box-shadow );
-    color: var( --color-1 );
-    display: inline-block;
-    font-size: 1rem;
-    font-family: sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    letter-spacing: 0.1rem;
-    line-height: 1em;
-    margin: 0 .25rem; /*var( --ui-button-margin );*/
+    background      : var( --button-bg );
+    border          : none;
+    border-radius   : var( --border-radius );
+    box-shadow      : var( --button-shadow );
+    color           : var( --color-1 );
+    display         : inline-block;
+    font-size       : 1rem;
+    font-family     : sans-serif;
+    font-style      : normal;
+    font-weight     : 300;
+    letter-spacing  : 0.1rem;
+    line-height     : 1em;
+    margin          : 0 .25rem; /*var( --button-margin );*/
     /*padding: var( --space-4 ) var( --space-6 );*/
-    padding: var( --space-3 ) var( --space-4 ); /*.125rem .5rem; */
-    position: relative;
-    text-align: center;
+    padding         : var( --space-3 ) var( --space-4 ); /*.125rem .5rem; */
+    position        : relative;
+    text-align      : center;
     /* text-transform: uppercase; */
-    transition: all ease-in-out 0.2s;
-    vertical-align: baseline;
-    white-space: nowrap;
+    transition      : all ease-in-out 0.2s;
+    vertical-align  : baseline;
+    white-space     : nowrap;
 }
 
 tr, th, td {
-    padding         : var( --ui-table-padding );
+    padding         : var( --table-padding );
     font-weight     : 300;
-    border: 1px solid var(--color-6);
+    border-bottom   : 1px solid var(--color-6);
 }
 tr {
     /*border-bottom: 1px solid var(--color-6);*/
 }
 td.head{
-    vertical-align: top;
+    vertical-align  : top;
 }
 /* Alternate cycle TR class even | odd */
 :where(table.outer) tbody tr:nth-child(even) {
-    background      : var( --ui-table-even );
+    background      : var( --table-even );
 }
 /* table:not([class^="cke_"]) */
 :where(table.outer) tbody tr:nth-child(odd) {
-    background      : var( --ui-table-odd );
+    background      : var( --table-odd );
 }
 
 
@@ -108,66 +114,48 @@ div.foot,
 .pagenavi,
 table td.foot,
 .list_id,
+.list_image,
 .list_order,
 .list_date,
 .list_select,
 .list_control {
-
     text-align      : center;
-
 }
 
 table.altsys_mytplsadmin .dbtplset_active {
-
-    background      : var(  --color-green        );
-
+    background      : var( --color-green );
 }
 
 table.altsys_mytplsadmin .dbtplset_active sup {
-
     /*display       : none;*/
-
 }
 
 table.altsys_mytplsadmin .fingerprint1 {
-
-    background      : var(  --color-green        );
-
+    background      : var( --color-green );
 }
 
 table.altsys_mytplsadmin .fingerprint2 {
-
-    background      : var(  --color-green        );
-
+    background      : var( --color-green );
 }
 
 table.altsys_mytplsadmin .fingerprint3 {
-
-    background      : var(  --color-amber        );
-
+    background      : var( --color-amber );
 }
 
 table.altsys_mytplsadmin .fingerprint4 {
-
-    background      : var(  --color-blue         );
-
+    background      : var( --color-blue );
 }
 
 table.altsys_mytplsadmin .fingerprint5 {
-
-    background      : var(  --color-orange       );
-
+    background      : var( --color-orange );
 }
 
 table.altsys_mytplsadmin .fingerprint6 {
-
-    background      : var(  --color-indigo       );
-
+    background      : var( --color-indigo );
 }
 
 table.altsys_mytplsadmin .fingerprint7 {
-
-    background      : var(  --color-indigo       );
+    background      : var( --color-indigo );
 }
 
 
@@ -182,8 +170,8 @@ div > input.blockposition {
 table.outer .altsys_mytplsadmin tbody tr:hover,
 table.outer tbody tr:hover,
 .table-striped tbody tr:hover {
-    background      : var(  --ui-table-hover        );
-    color           : var(  --ui-table-hover-text   );
+    background      : var(  --table-hover        );
+    color           : var(  --table-hover-text   );
 }
 /* 	div.unselected {
 
@@ -201,4 +189,75 @@ div.disabled {
 
     background      : var(  --color-red          );
 
+}
+
+/* RESPONSIVE TABLE */
+
+table {
+    /*border: 1px solid #333300;*/
+    width: 100%;
+    margin:0;
+    padding:0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table tr {
+    border-bottom: var(--border); /*1px solid #333300;*/
+    padding: var(--space-3);
+}
+
+table th, table td {
+    padding: var(--space-5);
+    /*text-align: center;*/
+}
+
+table th {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+    table thead {
+        display: none;
+    }
+    table tr {
+        margin-bottom: 10px;
+        display: block;
+    }
+    table tr:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    table tr:before {
+        display: block;
+        border-bottom: var(--border);
+    }
+
+    table td {
+        box-sizing: border-box;
+        display: block;
+        float: left;
+        clear: left;
+        width: 100%;
+        /*text-align: right;*/
+        /*font-size: 13px;*/
+        border-bottom: var(--border);
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+
+    table td:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
 }

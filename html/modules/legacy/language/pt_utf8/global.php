@@ -123,7 +123,7 @@ const _QUOTEC = "Citando:";
 const _READS = "leituras internas";
 const _REGISTER = "Cadastrar";
 const _REPLY = "Responder";
-const _RETURN_TOP = "Topo";
+const _RETURN_TOP = "↑ Topo";
 const _RIGHT = "Direita";
 const _SEARCH = "Pesquisa";
 const _SECOND = "Um segundo";
@@ -171,3 +171,15 @@ const _YES = "Sim";
 const _YOURHOME = "Inicial";
 const XOOPS_USE_MULTIBYTES = "0";
 
+//%%%%% System %%%%%
+const _DEBUG_MODE = 'Debug';
+const _DEBUG_MODE_PHP = 'PHP';
+const _DEBUG_MODE_SQL = 'SQL';
+const _DEBUG_MODE_SMARTY = 'Smarty';
+const _DEBUG_MODE_DESC = 'Disable debug mode in production. Admin > Settings > Debug mode [Off].';
+
+const _SYS_OS = 'OS';
+const _SYS_SERVER = 'Server';
+const _SYS_USERAGENT = 'User agent';
+const _SYS_PHPVERSION = 'PHP version';
+const _SYS_MYSQLVERSION = 'MySQL version';

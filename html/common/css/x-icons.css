@@ -18,7 +18,7 @@ svg:not([fill]) {
 
     /* Icons color and size */
     /* margin-right if button text */
-    :where(.ui-btn, .ui-button) i[class^="i-"] {
+    :where(.button, .ui-button) i[class^="i-"] {
         margin-right: var(--space-4) !important;
     }
     i[class^="i-"] {
@@ -31,7 +31,6 @@ svg:not([fill]) {
         position: relative;
         opacity: 1;
         line-height: 1;
-        left: -5px;
         mask-repeat: no-repeat;
         -webkit-mask-repeat: no-repeat;
         mask-size: 100%;

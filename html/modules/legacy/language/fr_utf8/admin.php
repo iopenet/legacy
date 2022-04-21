@@ -382,7 +382,7 @@ const _MD_AM_DEBUGMODE2 = "Mise au point MySQL/Blocs";
 const _MD_AM_DEBUGMODE3 = "Mise au point des Templates Smarty";
 const _MD_AM_DEBUGMODEDSC = "Vous pouvez choisir entre plusieurs options de débogage. Un site Web courant doit avoir cette option désactivée, pour éviter l'affichage public des messages d'erreurs.";
 const _MD_AM_DEFAULTTZ = "Fuseau horaire par défaut";
-const _MD_AM_DOBADIPS = "Activer le bannissement d'IP ?";
+const _MD_AM_DOBADIPS = "<a id='ip_ban'>⛔ Activer le bannissement d'IP ?</a>";
 const _MD_AM_DOBADIPSDSC = "Les utilisateurs des adresses IP indiquées seront bannis de votre site";
 const _MD_AM_DOCENSOR = "Activer la censure des mots indésirables ?";
 const _MD_AM_DOCENSORDSC = "Les mots qui doivent être censurés si cette option est activée. Cette option peut être arrêtée pour accroÃ®tre la vitesse de votre site.";

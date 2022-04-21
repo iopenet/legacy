@@ -836,8 +836,17 @@ class Legacy_ModinfoX2DBReader extends Legacy_AbstractModinfoReader
 
     public function &_createBlockInformation(&$block)
     {
-        $info =new Legacy_BlockInformation($block->get('func_num'), $block->get('name'), $block->get('func_file'), $block->get('show_func'), $block->get('edit_func'), $block->get('template'), $block->get('options'));
+        // Blocks must be return by reference
+        $info =new Legacy_BlockInformation(
+            $block->get('func_num'),
+            $block->get('name'),
+            $block->get('func_file'),
+            $block->get('show_func'),
+            $block->get('edit_func'),
+            $block->get('template'),
+            $block->get('options'));
         return $info;
+
     }
 
     public function &loadBlockInformations()

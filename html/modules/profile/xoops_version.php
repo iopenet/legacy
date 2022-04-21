@@ -14,25 +14,25 @@ if (!defined('XOOPS_ROOT_PATH')) {
 
 $mydirpath = basename(__DIR__) ;
 
-//
-// Define a basic manifesto.
-//
+
+// Manifesto
+$modversion['dirname']          = 'profile';
 $modversion['name']             = _MI_PROFILE_LANG_PROFILE;
 $modversion['version']          = '2.31';
 $modversion['detailed_version'] = '2.31.1';
 $modversion['description']      = _MI_PROFILE_DESC_PROFILE;
 $modversion['author']           = 'Kilica. Gigamaster (XCL23/PHP7';
 $modversion['credits']          = 'Kilica, The XOOPSCube Project';
-$modversion['help']             = 'help.html';
 $modversion['license']          = 'GPL';
-$modversion['official']         = 0;
 $modversion['image']            = 'images/module_profile.svg';
-$modversion['dirname']          = 'profile';
+$modversion['icon']             = 'images/module_icon.svg';
+$modversion['help']             = 'help.html';
+$modversion['official']         = 0;
+$modversion['cube_style']       = true;
 
-$modversion['cube_style']                   = true;
 $modversion['disable_legacy_2nd_installer'] = false;
 
-
+// SQL
 $modversion['sqlfile']['mysql'] = 'sql/mysql.sql';
 
 $modversion['tables'][0] = '{prefix}_profile_definitions';
@@ -47,16 +47,12 @@ $modversion['templates'][5]['file'] = 'profile_inc_data_edit.html';
 $modversion['templates'][6]['file'] = 'profile_inc_data_view.html';
 ##[/cubson:templates]
 
-//
 // Admin panel setting
-//
 $modversion['hasAdmin']   = 1;
 $modversion['adminindex'] = 'admin/index.php?action=DefinitionsList';
 $modversion['adminmenu']  = 'admin/menu.php';
 
-//
 // Public side control setting
-//
 $modversion['hasMain'] = 0;
 // $modversion['sub'][]['name'] = "";
 // $modversion['sub'][]['url'] = "";

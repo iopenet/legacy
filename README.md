@@ -142,19 +142,21 @@ Features
 ====
 Below is a list of some of XOOPS Cube Legacy features.
 
-* Easy install procedure based on a wizard
-* Modular architecture
+* Installation wizard  
+* Admin Dashboard
+* Dashboard Update Manager 
+* Install modules, themes directly from GitHub
+* Simple Core and Modular architecture
 * Module API for unlimited expandability
-* Simple core to build up a custom cms
 * Debug function for easy development
-* Group-based permission system
-* Intuitive Interface for management
+* User Groups granular permissions
 * Smarty Template engine
 * Caching mechanism
 * Themes and Templates management
 * Embedded WYSIWYG HTML Editor
+* elFinder Web File Manager
 * Free choice of PHP, JS, CSS frameworks
-* Abundant third-party modules and extensions (preloads to customize functionality)
+* Third-party modules and extensions (preloads)
 
 ***
 

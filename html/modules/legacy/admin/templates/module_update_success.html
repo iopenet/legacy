@@ -5,15 +5,14 @@
     &raquo;&raquo; <span class="adminnaviTitle" aria-current="page"><{$smarty.const._AD_LEGACY_LANG_MODUPDATE_SUCCESS}></span>
 </div>
 
-
+<div class="ui-dev-mode"><{$smarty.template}></div>
 <h2 class="admintitle"><{$smarty.const._AD_LEGACY_LANG_MODUPDATE_SUCCESS}></h2>
 
-<div class="ui-dev-mode"><{$smarty.template}></div>
+
+<div class="tips"><{$smarty.const._AD_LEGACY_LANG_MODUPDATE_LOG}></div>
+
 
 <div class="ui-card-full">
-
-    <h4 class="admintitle"><{$smarty.const._AD_LEGACY_LANG_MODUPDATE_LOG}></h4>
-
     <div class="updateMsg">
         <ul style="max-height: 340px; overflow-y:auto;">
             <{foreach item=msg from=$log}>
@@ -36,7 +35,7 @@
 
     <div class="legacy_module_return">
 
-        <a href="index.php?action=ModuleList" class="ui-btn">
+        <a href="index.php?action=ModuleList" class="button">
             <img src="<{"icons/icon-package-open.svg"|theme}>" class="svg"> <{$smarty.const._AD_LEGACY_LANG_MODLIST}>
         </a>
 

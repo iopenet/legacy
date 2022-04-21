@@ -1,12 +1,12 @@
 <!doctype html>
-<html class="no-js" lang="<{$xoops_langcode}>">
+<html class="no-js" lang="<{$xoops_langcode}>" data-theme="dark">
 <!-- ===========================
-    XOOPSCube Theme : XCL Admin Flex Grid
-    Distribution : XCL 2.3 Alpha
-    Version : 0.7.0
-    Author : Nuno Luciano aka Gigamaster
-    Date : 2020-06-11
-    URL : https://github.com/xoopscube/xcl/
+	XOOPSCube Theme : XCL Admin Flex Grid
+	Distribution : XOOPSCube XCL 2.3
+	Version : 1.0.0
+	Author : Nuno Luciano aka Gigamaster
+	Date : 2021-10-28
+	URL : https://github.com/xoopscube/
 =========================== -->
 <head>
     <meta charset="UTF-8">
@@ -49,8 +49,9 @@
 		<!-- !TODO Check This -->
         <{stylesheet file='style.css' static='true'}>
     <!-- XCL Layout -->
+	<link type="text/css" rel="stylesheet" href="<{$xoops_url}>/modules/legacy/admin/theme/style.css">
     <link type="text/css" rel="stylesheet" href="<{$xoops_url}>/common/css/x-layout.css">
-    <link type="text/css" rel="stylesheet" href="<{$xoops_url}>/modules/legacy/admin/theme/style.css">
+
 
 
     <{* ---------- ---------- Javascript plugin *}>
@@ -58,7 +59,9 @@
         import {ThemeManager} from '<{$xoops_url}>/common/js/x-theme-manager.js';
         new ThemeManager(document.getElementById('themeToggle'));
     </script>
+
     <script src='<{$xoops_url}>/common/js/x-utils.js'></script>
+
     <link type="text/css" rel="stylesheet" href="<{$xoops_url}>/common/prismjs/prism.css">
     <{* prism.js included before closing /body }>
 
@@ -154,12 +157,12 @@
 	<{* ---------- ---------- Footer*}>
 
 
-<!--	<div class="footer">-->
+	<div class="footer">
 <!--		Powered by&nbsp;<{$smarty.const.XOOPS_VERSION}>-->
 <!--		<p><span class="footer-copy">&copy;</span> 2005-2022 <a href="https://github.com/xoopscube/" target="_blank" rel="external" class="footer-credits">The XOOPS Cube Project</a></p>-->
-<!--		<p><a href="#container" class="footer-link">Back To Top</a></p>-->
+		<p><a href="#container" class="footer-link">Back To Top</a></p>
 
-<!--	</div>-->
+	</div>
 
 	</div><{* /Layout Grid *}>
 

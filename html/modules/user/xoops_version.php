@@ -1,17 +1,20 @@
 <?php
 // $Id: xoops_version.php,v 1.11 2008/10/12 03:55:37 minahito Exp $
 
-$modversion['name'] = _MI_USER_NAME;
-$modversion['version'] = '2.31';
-$modversion['description'] = _MI_USER_NAME_DESC;
-$modversion['author'] = 'The XOOPSCube Project';
-$modversion['credits'] = 'Minahito, The XOOPSCube Project';
-$modversion['help'] = 'help.html';
-$modversion['license'] = 'GPL see LICENSE';
-$modversion['image'] = 'images/module_users.svg';
-$modversion['dirname'] = 'user';
 
-$modversion['cube_style'] = true;
+// Manifesto
+$modversion['dirname']          = 'user';
+$modversion['name']             = _MI_USER_NAME;
+$modversion['version']          = '2.31';
+$modversion['detailed_version'] = '2.31.1';
+$modversion['description']      = _MI_USER_NAME_DESC;
+$modversion['author']           = 'The XOOPSCube Project';
+$modversion['credits']          = 'Minahito, The XOOPSCube Project';
+$modversion['license']          = 'GPL see LICENSE';
+$modversion['image']            = 'images/module_users.svg';
+$modversion['icon']             = 'images/module_icon.svg';
+$modversion['help']             = 'help.html';
+$modversion['cube_style']       = true;
 
 // SQL
 $modversion['sqlfile']['mysql'] = 'sql/mysql.sql';
@@ -19,7 +22,8 @@ $modversion['sqlfile']['mysql'] = 'sql/mysql.sql';
 // Tables created by sql file (without prefix!)
 $modversion['tables'][0] = '{prefix}_{dirname}_mailjob';
 $modversion['tables'][1] = '{prefix}_{dirname}_mailjob_link';
-// Admin things
+
+// Admin
 $modversion['hasAdmin'] = 1;
 $modversion['adminindex'] = 'admin/index.php';
 $modversion['adminmenu'] = 'admin/menu.php';
@@ -27,41 +31,30 @@ $modversion['adminmenu'] = 'admin/menu.php';
 // Templates
 $modversion['templates'][1]['file'] = 'user_userinfo.html';
 $modversion['templates'][1]['description'] = 'Display a user information in userinfo.php';
-
 $modversion['templates'][2]['file'] = 'user_userform.html';
 $modversion['templates'][2]['description'] = 'Display login and register page to anonymouse user';
-
 $modversion['templates'][3]['file'] = 'user_edituser.html';
 $modversion['templates'][3]['description'] = 'When user edit own information, display this';
-
 $modversion['templates'][4]['file'] = 'user_register_form.html';
 $modversion['templates'][4]['description'] = '';
-
 $modversion['templates'][5]['file'] = 'user_register_confirm.html';
 $modversion['templates'][5]['description'] = '';
-
 $modversion['templates'][6]['file'] = 'user_lostpass.html';
 $modversion['templates'][6]['description'] = '';
-
 $modversion['templates'][7]['file'] = 'user_default.html';
 $modversion['templates'][7]['description'] = '';
-
 $modversion['templates'][8]['file'] = 'user_avatar_edit.html';
 $modversion['templates'][8]['description'] = '';
-
 $modversion['templates'][9]['file'] = 'user_register_finish.html';
 $modversion['templates'][9]['description'] = '';
-
 $modversion['templates'][10]['file'] = 'user_misc_online.html';
 $modversion['templates'][10]['description'] = '';
-
 $modversion['templates'][11]['file'] = 'user_delete.html';
 $modversion['templates'][11]['description'] = '';
-
 $modversion['templates'][12]['file'] = 'user_delete_success.html';
 $modversion['templates'][12]['description'] = '';
 
-//Preference
+// Preference
 $modversion['config'][]= [
     'name'        => 'allow_register',
     'title'       => '_MI_USER_CONF_ALLOW_REGISTER',

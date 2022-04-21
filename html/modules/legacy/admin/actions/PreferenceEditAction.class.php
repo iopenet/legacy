@@ -184,7 +184,7 @@ class Legacy_PreferenceEditAction extends Legacy_Action
         }
 
         //
-        // Make the list of user
+        // Make the list of user groups
         //
         if (in_array('user', $formtypeArr)||in_array('user_multi', $formtypeArr)) {
             $handler =& xoops_gethandler('member');

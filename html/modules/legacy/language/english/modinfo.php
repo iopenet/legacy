@@ -37,4 +37,4 @@ const _MI_LEGACY_MENU_SMILES_MANAGE = 'Smilies Management';
 const _MI_LEGACY_MENU_THEME_MANAGE = 'Theme Management';
 const _MI_LEGACY_MENU_XOOPS_CONFIG = 'Preferences';
 const _MI_LEGACY_NAME = 'Settings';
-const _MI_LEGACY_NAME_DESC = 'This module provides management and support for XOOPS2, D3 modules and Cube services.';
+const _MI_LEGACY_NAME_DESC = 'XOOPSCube Core system module provides management and support for XOOPS2, D3 modules and Cube services.';

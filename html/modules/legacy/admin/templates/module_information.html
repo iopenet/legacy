@@ -4,18 +4,21 @@
     <a href="./index.php"><{$smarty.const._MI_LEGACY_NAME}></a>
     &raquo;&raquo; <a href="./index.php?action=ModuleList"><{$smarty.const._MI_LEGACY_MENU_MODULELIST}></a>
     <{if !$installed}>
-    &raquo;&raquo; <span class="adminnaviTitle" aria-current="page"><a href="./index.php?action=InstallList"><{$smarty.const._AD_LEGACY_LANG_MODINSTALL}></a></span>
+    &raquo;&raquo; <span class="adminnaviTitle"><a href="./index.php?action=InstallList"><{$smarty.const._AD_LEGACY_LANG_MODINSTALL}></a></span>
     <{/if}>
-    &raquo;&raquo; <span class="adminnaviTitle" aria-current="page"><{$smarty.const._AD_LEGACY_LANG_INFORMATION}></span>
+    &raquo;&raquo; <span class="adminnaviTitle" aria-current="page"><{$module->modinfo.name|xoops_escape}> <{$smarty.const._AD_LEGACY_LANG_INFORMATION}></span>
 </div>
 
-<h2 class="admintitle"><{$smarty.const._AD_LEGACY_LANG_INFORMATION}></h2>
+<h2 class="admintitle">
+    <img class="svg" src="<{$xoops_url}>/modules/<{$module->getShow('dirname')}>/<{$module->modinfo.icon}>" width="1em" height="1em" alt="<{$module->getShow('name')}>" title="<{$module->getShow('name')}>">
+    <{$module->modinfo.name|xoops_escape}> &raquo; <{$smarty.const._AD_LEGACY_LANG_INFORMATION}></h2>
 
 
 <!-- ui-card-full -->
 <div class="ui-card-full">
 
 <h4 class="admintitle"><{$smarty.const._AD_LEGACY_LANG_MOD_BASIC_INFO}></h4>
+<h3></h3>
 
 <table class="outer">
     <tr>
@@ -28,7 +31,7 @@
                 <img class="svg" src="<{$xoops_url}>/modules/<{$module->getShow('dirname')}>/<{$module->modinfo.image}>" alt="<{$module->getShow('name')}>" title="<{$module->getShow('name')}>">
             </a>
             <{else}>
-            <img class="svg" src="<{$xoops_url}>/modules/<{$module->getShow('dirname')}>/<{$module->modinfo.image}>" alt="<{$module->getShow('name')}>" title="<{$module->getShow('name')}>">
+                <img class="svg" src="<{$xoops_url}>/modules/<{$module->getShow('dirname')}>/<{$module->modinfo.image}>" alt="<{$module->getShow('name')}>" title="<{$module->getShow('name')}>">
             <{/if}>
             <div class="list_imagetitle"><{$module->modinfo.name|xoops_escape}></div>
         </td>
@@ -73,7 +76,7 @@
     </tr>
 </table>
 
-<div class="return_top"><a href="#container"><{$smarty.const._RETURN_TOP}></a></div>
+<div class="return_top"><a href="#container" class="button"><{$smarty.const._RETURN_TOP}></a></div>
 
 <hr>
 
@@ -97,7 +100,7 @@
     </tr>
 </table>
 
-<div class="return_top"><a href="#container"><{$smarty.const._RETURN_TOP}></a></div>
+<div class="return_top"><a href="#container" class="button"><{$smarty.const._RETURN_TOP}></a></div>
 
 <hr>
 
@@ -144,7 +147,7 @@
     <div class="legacy_modinfo_notmounted"><{$smarty.const._AD_LEGACY_LANG_NO_SQL}></div>
     <{/if}>
 
-<div class="return_top"><a href="#container"><{$smarty.const._RETURN_TOP}></a></div>
+<div class="return_top"><a href="#container" class="button"><{$smarty.const._RETURN_TOP}></a></div>
 
 <hr>
 
@@ -185,7 +188,7 @@
 <div class="legacy_modinfo_notmounted"><{$smarty.const._AD_LEGACY_LANG_NO_MAINMENU}></div>
 <{/if}>
 
-<div class="return_top"><a href="#container"><{$smarty.const._RETURN_TOP}></a></div>
+<div class="return_top"><a href="#container" class="button"><{$smarty.const._RETURN_TOP}></a></div>
 
 <hr>
 
@@ -236,7 +239,7 @@
 <div class="legacy_modinfo_notmounted"><{$smarty.const._AD_LEGACY_LANG_NO_ADMINMENU}></div>
 <{/if}>
 
-<div class="return_top"><a href="#container"><{$smarty.const._RETURN_TOP}></a></div>
+<div class="return_top"><a href="#container" class="button"><{$smarty.const._RETURN_TOP}></a></div>
 
 <hr>
 
@@ -284,7 +287,7 @@
     <div class="legacy_modinfo_notmounted"><{$smarty.const._AD_LEGACY_LANG_NO_TEMPLATE}></div>
 <{/if}>
 
-<div class="return_top"><a href="#container"><{$smarty.const._RETURN_TOP}></a></div>
+<div class="return_top"><a href="#container" class="button"><{$smarty.const._RETURN_TOP}></a></div>
 
 <hr>
 
@@ -316,7 +319,7 @@
     <div class="legacy_modinfo_notmounted"><{$smarty.const._AD_LEGACY_LANG_NO_BLOCK}></div>
 <{/foreach}>
 
-<div class="return_top"><a href="#container"><{$smarty.const._RETURN_TOP}></a></div>
+<div class="return_top"><a href="#container" class="button"><{$smarty.const._RETURN_TOP}></a></div>
 
 <hr>
 
@@ -355,7 +358,7 @@
 </div>
 
 <{* -----
-<div class="return_top"><a href="#container"><{$smarty.const._RETURN_TOP}></a></div>
+<div class="return_top"><a href="#container" class="button"><{$smarty.const._RETURN_TOP}></a></div>
 <hr>
 <h4 class="admintitle"><{$smarty.const._AD_LEGACY_LANG_FEATURE_SVC_INFO}></h4>
 <table class="outer">

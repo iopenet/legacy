@@ -1,10 +1,10 @@
 <?php
 /**
  *
- * @package Legacy
- * @version $Id: ActionFrame.class.php,v 1.3 2008/09/25 15:11:25 kilica Exp $
- * @copyright  (c) 2005-2022 The XOOPSCube Project
- * @license    GPL 2.0
+ * @package     Legacy
+ * @version     $Id: ActionFrame.class.php,v 1.3 2008/09/25 15:11:25 kilica Exp $
+ * @copyright   (c) 2005-2022 The XOOPSCube Project
+ * @license     GPL 2.0
  *
  */
 
@@ -12,25 +12,25 @@ if (!defined('XOOPS_ROOT_PATH')) {
     exit();
 }
 
-define('LEGACY_FRAME_PERFORM_SUCCESS', 1);
-define('LEGACY_FRAME_PERFORM_FAIL', 2);
-define('LEGACY_FRAME_INIT_SUCCESS', 3);
+const LEGACY_FRAME_PERFORM_SUCCESS = 1;
+const LEGACY_FRAME_PERFORM_FAIL = 2;
+const LEGACY_FRAME_INIT_SUCCESS = 3;
 
-define('LEGACY_FRAME_VIEW_NONE', 1);
-define('LEGACY_FRAME_VIEW_SUCCESS', 2);
-define('LEGACY_FRAME_VIEW_ERROR', 3);
-define('LEGACY_FRAME_VIEW_INDEX', 4);
-define('LEGACY_FRAME_VIEW_INPUT', 5);
-define('LEGACY_FRAME_VIEW_PREVIEW', 6);
-define('LEGACY_FRAME_VIEW_CANCEL', 7);
-
+const LEGACY_FRAME_VIEW_NONE = 1;
+const LEGACY_FRAME_VIEW_SUCCESS = 2;
+const LEGACY_FRAME_VIEW_ERROR = 3;
+const LEGACY_FRAME_VIEW_INDEX = 4;
+const LEGACY_FRAME_VIEW_INPUT = 5;
+const LEGACY_FRAME_VIEW_PREVIEW = 6;
+const LEGACY_FRAME_VIEW_CANCEL = 7;
 //
 // Constants for the mode of the frame.
 //
-define('LEGACY_FRAME_MODE_MISC', 'Misc');
-define('LEGACY_FRAME_MODE_NOTIFY', 'Notify');
-define('LEGACY_FRAME_MODE_IMAGE', 'Image');
-define('LEGACY_FRAME_MODE_SEARCH', 'Search');
+const LEGACY_FRAME_MODE_MISC = 'Misc';
+const LEGACY_FRAME_MODE_NOTIFY = 'Notify';
+const LEGACY_FRAME_MODE_IMAGE = 'Image';
+const LEGACY_FRAME_MODE_SEARCH = 'Search';
+
 
 class Legacy_ActionFrame
 {
@@ -142,7 +142,7 @@ class Legacy_ActionFrame
             die();    //< TODO
         }
 
-        if (false === $this->mAction->prepare($controller, $controller->mRoot->mContext->mXoopsUser)) {
+        if ($this->mAction->prepare($controller, $controller->mRoot->mContext->mXoopsUser) === false) {
             die();    //< TODO
         }
 
@@ -187,6 +187,7 @@ class Legacy_ActionFrame
         }
     }
 }
+
 
 class Legacy_Action
 {

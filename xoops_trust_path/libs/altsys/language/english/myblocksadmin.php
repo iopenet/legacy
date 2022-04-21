@@ -1,7 +1,11 @@
 <?php
+// Syntax const v2.3.0 2021/05/15 @gigamaster XCL-PHP7
 
+const _MD_A_MYBLOCKSADMIN_TIPS = 'Custom blocks can be created using HTML, BBCode, PHP and Smarty variables.<br>
+Thus allowing to create reusable Components and act as building block for your app.<br> A single component contains HTML, JavaScript and CSS.<br>
+Modules have several pre-built blocks that offer specific functionality and favor composition over inheritance.<br>The editor will change according to the type of content.';
 const _MD_A_MYBLOCKSADMIN_PERMUPDATED = 'Permissions updated successfully';
-const _MD_A_MYBLOCKSADMIN_BLOCKADMIN = 'Blocks administration';
+const _MD_A_MYBLOCKSADMIN_BLOCKADMIN = 'Blocks management';
 const _MD_A_MYBLOCKSADMIN_NAME = 'Name';
 const _MD_A_MYBLOCKSADMIN_TITLE = 'Title';
 const _MD_A_MYBLOCKSADMIN_SIDE = 'Side';

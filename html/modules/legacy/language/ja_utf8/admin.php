@@ -282,7 +282,7 @@ const _MD_AM_DEBUGMODE2 = 'MySQL/Blocksデバグ';
 const _MD_AM_DEBUGMODE3 = 'Smartyテンプレート・デバグ';
 const _MD_AM_DEBUGMODEDSC = '（デバッグ用に使用してください。実際のサイト運営時には解除してください。）';
 const _MD_AM_DEFAULTTZ = 'デフォルト・タイムゾーン';
-const _MD_AM_DOBADIPS = 'IPアクセス拒否を有効にしますか？';
+const _MD_AM_DOBADIPS = '<a id="ip_ban">⛔ IPアクセス拒否を有効にしますか？</a>';
 const _MD_AM_DOBADIPSDSC = 'アクセス拒否IPからのユーザはあなたのサイトには入れません。';
 const _MD_AM_DOCENSOR = '禁止用語処理を有効にする';
 const _MD_AM_DOCENSORDSC = 'このオプションを有効にすると禁止用語のチェックを行うようになります。このオプションを無効にすることでサイトの処理速度が向上するかもしれません。';
@@ -397,6 +397,7 @@ const _AD_LEGACY_SYSTEMINFO = 'サイト／システム情報';
 const _AD_LEGACY_USERAGENT = 'ユーザーエージェント';
 const _AD_LEGACY_XCLEGACYVERSION = 'XC Legacyバージョン';
 const _AD_LEGACY_XCVERSION = 'XOOPS Cube バージョン';
+
 const _AD_LEGACY_ERROR_COULD_NOT_EXTEND_CONFIG_TITLE_SIZE = '{0} で設定テーブルサイズを拡張できませんでした。';
 const _AD_LEGACY_ERROR_COULD_NOT_SAVE_SMILES_FILE = '{0}のスマイリーを保存できませんでした。';
 const _AD_LEGACY_ERROR_COULD_NOT_SAVE_IMAGE_FILE = '{0}の画像を保存できませんでした。';

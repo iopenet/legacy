@@ -10,8 +10,8 @@
  * 1) We may have to move this file to other module with following namespace or
  *	  package.
  * 2) Some users and developers want free elements at $params. For example,
- *	  $params['script']... This function have not impletented that yet. At
- *	  implementing, we will have to define the rule about sanitizing.
+ *	  $params['script']... This function has not yet implemented that. A
+ *    During the implementation, we will have to define the sanitizing rule.
  * 3) Users can't set class element to this function, because XoopsForm is
  *	  used. For format xoops_xxxx functions, we may change XoopsForm class
  *	  group.
